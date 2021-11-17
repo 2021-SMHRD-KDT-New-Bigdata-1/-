@@ -43,12 +43,11 @@
 					<section id="banner" class="major">
 						<div class="inner">
 							<header class="major">
-								<h1>Hi, my name is Forty</h1>
+								<h1>All baruem</h1>
 							</header>
 							<div class="content">
-								<p>A responsive site template designed by HTML5 UP<br />
-								and released under the Creative Commons.</p>
 								<ul class="actions">
+									<li><a href="#one" class="button next scrolly">Get Started</a></li>
 									<li><a href="#one" class="button next scrolly">Get Started</a></li>
 								</ul>
 							</div>

@@ -43,7 +43,7 @@
 					<div id="main">
 
 						<!-- One -->
-							<section id="one" class="tiles">
+							<section id="one" class="tiles" style="text-alian:center">
 								<article>
 									<span class="image">
 										<img src="../../resourcess/images/pic01.jpg" alt="" />

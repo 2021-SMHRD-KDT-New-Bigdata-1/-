@@ -20,10 +20,10 @@ public class BoardController {
 
 		
 		
-		@RequestMapping("/index.do")
+		@RequestMapping("/main.do")
 		public String index() {
 			
-			return "index";
+			return "main";
 		}
 		
 	}

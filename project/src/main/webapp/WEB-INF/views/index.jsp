@@ -19,7 +19,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
+						<a href="index.do" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
 					</header>
 
 				<!-- Menu -->
@@ -46,7 +46,7 @@
 							<section id="one" class="tiles">
 								<article>
 									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
+										<img src="../../resourcess/images/pic01.jpg" alt="" />
 									</span>
 									<header class="major">
 										<h3><a href="landing.html" class="link">Aliquam</a></h3>
@@ -55,7 +55,7 @@
 								</article>
 								<article>
 									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
+										<img src="../../resourcess/images/pic02.jpg" alt="" />
 									</span>
 									<header class="major">
 										<h3><a href="landing.html" class="link">Tempus</a></h3>
@@ -64,7 +64,7 @@
 								</article>
 								<article>
 									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
+										<img src="../../resourcess/images/pic03.jpg" alt="" />
 									</span>
 									<header class="major">
 										<h3><a href="landing.html" class="link">Magna</a></h3>
@@ -73,7 +73,7 @@
 								</article>
 								<article>
 									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
+										<img src="../../resourcess/images/pic04.jpg" alt="" />
 									</span>
 									<header class="major">
 										<h3><a href="landing.html" class="link">Ipsum</a></h3>
@@ -82,7 +82,7 @@
 								</article>
 								<article>
 									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
+										<img src="../../resourcess/images/pic05.jpg" alt="" />
 									</span>
 									<header class="major">
 										<h3><a href="landing.html" class="link">Consequat</a></h3>
@@ -91,7 +91,7 @@
 								</article>
 								<article>
 									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
+										<img src="../../resourcess/images/pic06.jpg" alt="" />
 									</span>
 									<header class="major">
 										<h3><a href="landing.html" class="link">Etiam</a></h3>
@@ -185,15 +185,14 @@
 					</footer>
 
 			</div>
-
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../../resources/assets/js/jquery.min.js"></script>
+			<script src="../../resources/assets/js/jquery.scrolly.min.js"></script>
+			<script src="../../resources/assets/js/jquery.scrollex.min.js"></script>
+			<script src="../../resources/assets/js/browser.min.js"></script>
+			<script src="../../resources/assets/js/breakpoints.min.js"></script>
+			<script src="../../resources/assets/js/util.js"></script>
+			<script src="../../resources/assets/js/main.js"></script>
 
 	</body>
 </html>

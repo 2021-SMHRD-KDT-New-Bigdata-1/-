@@ -28,17 +28,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
     <link rel="manifest" href="site.webmanifest">
 
-<script>
-function login() {
-	 if ($('#login').css('display') == 'none') {
-         $('#main').css('display' , 'none')
-         $('#login').css('display' , 'block')
-      } else {
-          $('#main').css('display', 'block');
-      }
- }
-</script>
-
 </head>
 
 
@@ -67,7 +56,7 @@ function login() {
 
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="index.html" rel="home">ALL바름</a>
+                    <a href="index.html" rel="home">Spurgeon.</a>
                 </p>
             </div>
 
@@ -152,34 +141,22 @@ function login() {
                             <div class="hero__entry-image" style="background-image: url('images/thumbs/featured/featured-01_2000.jpg');"></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner">
-                                <div id="login" style="display:none">
-									<form>
-										<div class="form-group input-group">
-    										<div class="input-group-prepend" name="id">
-											    <span class="input-group-text">아이디<i class="fa fa-envelope"></i> </span>
-											 </div>
-									        <input name="user_id" class="form-control" type="text" id="input_id">
-									        
-									        <input type="button" value="ID중복체크" onclick="idCheck()">
-									        <!-- input type="submit"을 써주면 이벤트(중복확인)에 따르는 조건을 부여해도 소용없기 때문에  -->
-									        <span id="sp"></span>
-									    </div> <!-- id-group// -->
-									</form>
-								
-								</div>
-								<div id="main">
-                                    <div id="hero__entry-meta">
+                                    <div class="hero__entry-meta">
                                         <span class="cat-links">
-                                            	정교한 발음 교정
+                                            <a href="category.html">Inspiration</a>
                                         </span>
                                     </div>
                                     <h2 class="hero__entry-title">
-                                        	ALL바름
+                                        <a href="single-standard.html">
+                                            Understanding and Using Negative Space.
+                                        </a>
                                     </h2>
-                                     <button class='btn btn-info btn-sm' onclick='login()'>로그인</button>
-                                     <button class='btn btn-info btn-sm'>회원가입</button>
-                                    
-                                </div>
+                                    <p class="hero__entry-desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                                    nostrud corporis est laudantium voluptatum consectetur adipiscing. 
+                                    </p>
+                                    <a class="hero__more-link" href="single-standard.html">Read More</a>
                                 </div>
                             </div>
                         </article>

@@ -158,6 +158,9 @@ if(${vo!=null}){
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner">
                                 <div id="login" style="display:none">
+                                
+                                <!-- 로그인 form -->
+                                
                                 	<form action = "#" method = "post">
 									    <div class="form-group input-group">
 									    
@@ -180,6 +183,8 @@ if(${vo!=null}){
 									    <p class="text-center"><a href="../Search_IdPw.jsp">아이디/비밀번호찾기</a><br> 계정이 없나요? <a href="../JoinForm_0.jsp">회원가입</a> </p>  
 									</form>
                                 </div>
+                                
+                                <!-- 회원가입 form -->
                                 
                                 <div id="join" style="display:none">
 									<form>
@@ -214,8 +219,8 @@ if(${vo!=null}){
                                         <span class="cat-links">
                                             	정교한 발음 교정
                 
-                                </div>
                                         </span>
+                                </div>
                                     
                                     <div id="Allbareum">
                                     <h2 class="hero__entry-title" >

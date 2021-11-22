@@ -29,14 +29,12 @@
     <link rel="manifest" href="site.webmanifest">
 
 <script>
-function login() {
-	 if ($('#login').css('display') == 'none') {
-         $('#main').css('display' , 'none')
-         $('#login').css('display' , 'block')
-      } else {
-          $('#main').css('display', 'block');
-      }
- }
+
+$(document).ready(function() { //익명함수
+    loadList();
+ });
+
+
 </script>
 
 </head>
@@ -149,17 +147,53 @@ function login() {
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner">
                                 <div id="login" style="display:none">
+                                	<form action = "#" method = "post">
+									    <div class="form-group input-group">
+									    
+									    	<div class="input-group-prepend">
+											    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+											 </div>
+									        <input name="user_id" class="form-control" placeholder="아이디" type="text">
+									    </div> <!-- form-group// -->
+									    
+									     <div class="form-group input-group">
+									    	<div class="input-group-prepend">
+											    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+											</div>
+									        <input class="form-control" name="user_pw" placeholder="비밀번호" type="password">
+									    </div> <!-- form-group// -->
+									
+										<button type="submit" class="btn btn-primary btn-block"> 로그인  </button>
+									
+									    <p class="text-center"><a href="../Search_IdPw.jsp">아이디/비밀번호찾기</a><br> 계정이 없나요? <a href="../JoinForm_0.jsp">회원가입</a> </p>  
+									</form>
+                                </div>
+                                
+                                <div id="join" style="display:none">
 									<form>
 										<div class="form-group input-group">
     										<div class="input-group-prepend" name="id">
 											    <span class="input-group-text">아이디<i class="fa fa-envelope"></i> </span>
 											 </div>
 									        <input name="user_id" class="form-control" type="text" id="input_id">
-									        
-									        <input type="button" value="ID중복체크" onclick="idCheck()">
-									        <!-- input type="submit"을 써주면 이벤트(중복확인)에 따르는 조건을 부여해도 소용없기 때문에  -->
 									        <span id="sp"></span>
 									    </div> <!-- id-group// -->
+									    
+									    <div class="form-group input-group">
+									    	<div class="input-group-prepend">
+											    <span class="input-group-text">비밀번호<i class="fa fa-lock"></i> </span>
+											</div>
+									        <input name="user_pw" class="form-control"  type="password">
+									    </div> <!-- form-group// -->
+									    
+									    <div class="form-group input-group">
+									    	<div class="input-group-prepend">
+											    <span class="input-group-text">이름<i class="fa fa-lock"></i> </span>
+											</div>
+									        <input name="user_name" class="form-control"  type="text">
+									    </div> <!-- form-group// -->
+									    <button class='btn btn-info btn-sm'>회원가입</button>
+                                     <button class='btn btn-info btn-sm' onclick='close();'>닫기</button>
 									</form>
 								
 								</div>
@@ -172,8 +206,8 @@ function login() {
                                     <h2 class="hero__entry-title">
                                         	올바름
                                     </h2>
-                                     <button class='btn btn-info btn-sm' onclick='login()'>로그인</button>
-                                     <button class='btn btn-info btn-sm'>회원가입</button>
+                                     <button class='btn btn-info btn-sm' onclick='login();'>로그인</button>
+                                     <button class='btn btn-info btn-sm' onclick='join();'>회원가입</button>
                                     
                                 </div>
                                 </div>
@@ -804,6 +838,27 @@ function login() {
     
     <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+	<script>
+	function login(){
+		document.getElementById("login").style.display = "";
+		document.getElementById("main").style.display = "none";
+	}
+	
+	function join() {
+		  document.getElementById("join").style.display = "";
+		  document.getElementById("main").style.display = "none";
+		 }
 
+	function close(){
+	    $("main").css("display","block");
+	    $("join").css("display","none");
+	    $("login").css("display","none");
+	 }
+
+	/* function close(){
+		document.getElementById("main").style.display = "";
+		document.getElementById("join").style.display = "none";
+	} */
+	</script>
 </body>
 </html>

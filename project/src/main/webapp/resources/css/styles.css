@@ -4012,10 +4012,6 @@ body.search-is-visible .s-header__search-inner {
     content : ", ";
 }
 
-.hero__entry-meta .cat-links a:last-child::after {
-    display : none;
-}
-
 .hero__entry-title {
     font-size      : calc(var(--entry-title-size) * var(--text-multiplier));
     line-height    : 1.158;

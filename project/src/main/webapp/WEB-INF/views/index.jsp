@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en" class="no-js" >
 <head>
@@ -34,7 +35,18 @@ $(document).ready(function() { //익명함수
     loadList();
  });
 
-
+if(${vo!=null}){
+    if('${vo.userId}'==obj.userId){
+    view += "<div id='main'>";
+    view += "<div id='hero__entry-meta'>";
+    view += "<span class='cat-links'>";
+    view += "${vo.userId}님";
+    view += "</span>";
+    view += " </div>";
+    view += " <h2 class='hero__entry-title'>";
+    view += "환영합니다";
+    view += "<button class='btn btn-info btn-sm' onclick='login()'>학습하기</button>";
+    view += "<button class='btn btn-info btn-sm'>마이페이지</button>";
 </script>
 
 </head>
@@ -164,6 +176,7 @@ $(document).ready(function() { //익명함수
 									    </div> <!-- form-group// -->
 									
 										<button type="submit" class="btn btn-primary btn-block"> 로그인  </button>
+										<button type="submit" class="btn btn-primary btn-block" onclick="close();"> 닫기  </button>
 									
 									    <p class="text-center"><a href="../Search_IdPw.jsp">아이디/비밀번호찾기</a><br> 계정이 없나요? <a href="../JoinForm_0.jsp">회원가입</a> </p>  
 									</form>
@@ -193,7 +206,7 @@ $(document).ready(function() { //익명함수
 									        <input name="user_name" class="form-control"  type="text">
 									    </div> <!-- form-group// -->
 									    <button class='btn btn-info btn-sm'>회원가입</button>
-                                     <button class='btn btn-info btn-sm' onclick='close();'>닫기</button>
+                                     <button type="submit" class="btn btn-primary btn-block" onclick="close();"> 닫기  </button>
 									</form>
 								
 								</div>
@@ -845,8 +858,8 @@ $(document).ready(function() { //익명함수
 	}
 	
 	function join() {
-		  document.getElementById("join").style.display = "";
-		  document.getElementById("main").style.display = "none";
+		document.getElementById("join").style.display = "";
+		document.getElementById("main").style.display = "none";
 		 }
 
 	function close(){
@@ -854,11 +867,6 @@ $(document).ready(function() { //익명함수
 	    $("join").css("display","none");
 	    $("login").css("display","none");
 	 }
-
-	/* function close(){
-		document.getElementById("main").style.display = "";
-		document.getElementById("join").style.display = "none";
-	} */
-	</script>
+</script>
 </body>
 </html>

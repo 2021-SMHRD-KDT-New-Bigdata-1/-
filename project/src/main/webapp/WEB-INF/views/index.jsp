@@ -155,7 +155,7 @@ if(${vo!=null}){
 
                     <div class="swiper-wrapper">
                         <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" style="background-image: url('images/thumbs/featured/featured-01_2000.jpg');"></div>
+                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/featured-04_2000_01.jpg');"></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner">
                                 <div id="login" style="display:none">
@@ -227,7 +227,7 @@ if(${vo!=null}){
                             </div>
                         </article>
                         <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" style="background-image: url('images/thumbs/featured/featured-02_2000.jpg');"></div>
+                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/featured-04_2000_01.jpg');"></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner">
                                     <div class="hero__entry-meta">

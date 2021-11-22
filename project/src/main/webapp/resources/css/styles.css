@@ -3885,7 +3885,7 @@ body.search-is-visible .s-header__search-inner {
 }
 
 .hero__slider .swiper-pagination .swiper-pagination-bullet::before {
-    content : "0";
+    content : "";
 }
 
 .hero__slider .swiper-pagination .swiper-pagination-bullet:nth-child(n + 10)::before {

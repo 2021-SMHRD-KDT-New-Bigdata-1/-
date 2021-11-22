@@ -205,28 +205,7 @@ function login() {
                                 </div>
                             </div>
                         </article>
-                        <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" style="background-image: url('images/thumbs/featured/featured-03_2000.jpg');"></div>
-                            <div class="hero__entry-text">
-                                <div class="hero__entry-text-inner">
-                                    <div class="hero__entry-meta">
-                                        <span class="cat-links">
-                                            <a href="category.html">Lifestyle</a>
-                                        </span>
-                                    </div>
-                                    <h2 class="hero__entry-title">
-                                        <a href="single-standard.html">
-                                            Six Relaxation Techniques to Reduce Stress.
-                                        </a>
-                                    </h2>
-                                    <p class="hero__entry-desc">
-                                    Quasi consequatur quia excepturi ullam velit. Repellat velit vel occaecati neque perspiciatis quibusdam nulla. 
-                                    Unde et earum. Nostrum nulla optio debitis odio modi. Quis autem possimus dolores est est fugiat saepe vel aut.
-                                    </p>
-                                    <a class="hero__more-link" href="single-standard.html">Read More</a>
-                                </div>
-                            </div>
-                        </article>
+                     
                     </div> <!-- swiper-wrapper -->
 
                     <div class="swiper-pagination"></div>

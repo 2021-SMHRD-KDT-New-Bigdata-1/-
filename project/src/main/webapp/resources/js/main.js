@@ -240,6 +240,8 @@
    /* swiper
     * ------------------------------------------------------ */ 
     const ssSwiper = function() {
+    
+        var f = ["01", "02"];
 
         const mySwiper = new Swiper('.swiper-container', {
 
@@ -250,7 +252,7 @@
                 el: '.swiper-pagination',
                 clickable: true, 
                 renderBullet: function (index, className) {
-                    return '<span class="' + className + '">' + (index + 1) + '</span>';
+                    return '<span class="' + className + '">'  +f[index]+ '</span>';
                 }
             }
 

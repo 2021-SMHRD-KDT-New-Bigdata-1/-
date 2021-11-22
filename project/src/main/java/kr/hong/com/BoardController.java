@@ -26,10 +26,10 @@ public class BoardController {
 			return "index";
 		}
 		
-		@RequestMapping("/main.do")
-		public String main() {
+		@RequestMapping("/main1.do")
+		public String main1() {
 			
-			return "main";
+			return "main1";
 		}
 		
 	}

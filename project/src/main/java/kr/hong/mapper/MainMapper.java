@@ -10,4 +10,5 @@ public interface MainMapper {
 	// board table에서 게시판 리스트를 가져오는 동작구현
 	//@Select("Select * from board")
 	public String index();
+	public String main();
 }

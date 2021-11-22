@@ -26,5 +26,11 @@ public class BoardController {
 			return "index";
 		}
 		
+		@RequestMapping("/main.do")
+		public String main() {
+			
+			return "main";
+		}
+		
 	}
 

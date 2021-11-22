@@ -26,10 +26,16 @@ public class BoardController {
 			return "index";
 		}
 		
-		@RequestMapping("/main1.do")
-		public String main1() {
+		@RequestMapping("/s_home.do")
+		public String s_home() {
 			
-			return "main1";
+			return "s_home";
+		}
+		
+		@RequestMapping("/index_ca.do")
+		public String index_ca() {
+			
+			return "index_ca";
 		}
 		
 		@RequestMapping("/flask_send_data3.do")

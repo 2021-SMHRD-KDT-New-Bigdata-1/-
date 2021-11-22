@@ -32,5 +32,16 @@ public class BoardController {
 			return "main1";
 		}
 		
+		@RequestMapping("/flask_send_data3.do")
+		public String flask_send_data3() {
+			System.out.println("컨트롤러에 왔니..?");
+			return "flask_send_data3";
+		}
+		@RequestMapping("/Result3.do")
+		public String Result3() {
+			System.out.println("hi");
+			return "rece";
+		}
+		
 	}
 

@@ -170,8 +170,8 @@ if(${vo!=null}){
                                     <h2 class="hero__entry-title" >
                                         	환영합니다
                                     </h2>
-                                     <button class='btn btn-info btn-sm' onclick='login();'>로그인</button>
-                                     <button class='btn btn-info btn-sm' onclick='join();'>회원가입</button>
+                                     <button class='btn btn-info btn-sm' onclick='login();'>학습하기</button>
+                                     <button class='btn btn-info btn-sm' onclick='join();'>학습체크</button>
                                      </div>
                                                     </div>
                             </div>

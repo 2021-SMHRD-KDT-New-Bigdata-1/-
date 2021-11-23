@@ -9,7 +9,8 @@ import org.apache.ibatis.annotations.Mapper;
 public interface MainMapper {
 	// board table에서 게시판 리스트를 가져오는 동작구현
 	//@Select("Select * from board")
-	public String index();
-	public String s_home();
-	public String index_ca();
+	public String login();
+	public String studyhome();
+	public String select();
+	public String study();
 }

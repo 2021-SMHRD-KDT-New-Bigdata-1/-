@@ -19,23 +19,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BoardController {
 
 		
-		
-		@RequestMapping("/index.do")
-		public String index() {
+	
+		@RequestMapping("/study.do")
+		public String study() {
 			
-			return "index";
+			return "study";
 		}
 		
-		@RequestMapping("/s_home.do")
-		public String s_home() {
+		@RequestMapping("/studyhome.do")
+		public String studyhome() {
 			
-			return "s_home";
+			return "studyhome";
 		}
 		
-		@RequestMapping("/index_ca.do")
-		public String index_ca() {
+	
+		@RequestMapping("/login.do")
+		public String login() {
 			
-			return "index_ca";
+			return "login";
+		}
+		
+
+		@RequestMapping("/select.do")
+		public String select() {
+			
+			return "select";
 		}
 
 		@RequestMapping("/myapge.do")

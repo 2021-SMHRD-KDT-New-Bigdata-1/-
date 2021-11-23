@@ -34,6 +34,12 @@
 $(document).ready(function() {
  });
 
+$(function(){
+	$("#login_bt").one("click", function{
+		
+	})
+})
+
 if(${vo!=null}){
     if('${vo.userId}'==obj.userId){
     view += "<div id='main'>";
@@ -177,7 +183,7 @@ if(${vo!=null}){
 									        <input class="form-control" name="user_pw" placeholder="비밀번호" type="password">
 									    </div> <!-- form-group// -->
 									
-										<button type="submit" class="btn btn-primary btn-block"> 로그인  </button>
+										<button type="submit" class="btn btn-primary btn-block" id="login_bt"> 로그인  </button>
 										<button type="submit" class="btn btn-primary btn-block" onclick="close_login();"> 닫기  </button>
 									
 									    <p class="text-center"><a href="../Search_IdPw.jsp">아이디/비밀번호찾기</a><br> 계정이 없나요? <a href="../JoinForm_0.jsp">회원가입</a> </p>  
@@ -209,8 +215,8 @@ if(${vo!=null}){
 											</div>
 									        <input name="user_name" class="form-control"  type="text">
 									    </div> <!-- form-group// -->
-									    <button class='btn btn-info btn-sm'>회원가입</button>
-                                     <button type="submit" class="btn btn-primary btn-block" onclick="close_join();"> 닫기  </button>
+									    <button type="submit" class='btn btn-info btn-sm'>회원가입</button>
+                                     <button class="btn btn-primary btn-block" onclick="close_join();"> 닫기  </button>
 									</form>
 								
 								</div>
@@ -306,6 +312,7 @@ if(${vo!=null}){
 	    $("main").css("display","block");
 	    $("join").css("display","none");
 	 }
+	
 	function close_login(){
 	    $("main").css("display","block");
 	    $("login").css("display","none");

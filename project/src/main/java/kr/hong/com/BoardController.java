@@ -37,6 +37,12 @@ public class BoardController {
 			
 			return "index_ca";
 		}
+
+		@RequestMapping("/myapge.do")
+		public String myapge() {
+			
+			return "myapge";
+		}
 		
 		@RequestMapping("/flask_send_data3.do")
 		public String flask_send_data3() {

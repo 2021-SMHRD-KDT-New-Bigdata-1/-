@@ -46,10 +46,16 @@ public class BoardController {
 			return "select";
 		}
 
-		@RequestMapping("/myapge.do")
+		@RequestMapping("/mypage.do")
 		public String myapge() {
 			
-			return "myapge";
+			return "mypage";
+		}
+		
+		@RequestMapping("/main.do")
+		public String main() {
+			
+			return "main";
 		}
 		
 		@RequestMapping("/flask_send_data3.do")

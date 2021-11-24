@@ -22,6 +22,16 @@
 			      margin-bottom: 50px;
 			      border-radius: 0;
 			    }
+			    .panel-primary {
+				    border-color: #f67822;
+				}
+				
+				.panel-danger {
+				    border-color: #f67822;
+				}
+				.panel-success {
+			    	border-color: #f67822;
+				}
 			    
 			    /* Remove the jumbotron's default bottom margin */ 
 			     .jumbotron {
@@ -41,6 +51,12 @@
 				    margin-left: auto;
 				    margin-top: 50px;
 				}		    
+				
+				.panel-primary>.panel-heading {
+					    color: #fff;
+					    background-color: #f67822;
+					    border-color: #f67822;
+				}
 				
 			  </style>
 			
@@ -71,14 +87,14 @@
 							      </div>
 							    </div>
 							    <div class="col-sm-4"> 
-							      <div class="panel panel-danger">
+							      <div class="panel panel-primary">
 							        <div class="panel-heading">BLACK FRIDAY DEAL</div>
 							        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%"></div>
 							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
 							      </div>
 							    </div>
 							    <div class="col-sm-4"> 
-							      <div class="panel panel-success">
+							      <div class="panel panel-primary">
 							        <div class="panel-heading">BLACK FRIDAY DEAL</div>
 							        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%"></div>
 							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>

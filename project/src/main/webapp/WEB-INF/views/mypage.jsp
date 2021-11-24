@@ -25,7 +25,7 @@
   <link href="${pageContext.request.contextPath}/resources/chart/css/style.css" rel="stylesheet">
   <link href="${pageContext.request.contextPath}/resources/chart/css/style-responsive.css" rel="stylesheet">
   <script src="${pageContext.request.contextPath}/resources/chart/lib/chart-master/Chart.js"></script>
-
+<script src="${pageContext.request.contextPath}/resources/chart/js/Chart.js"></script>
   <!-- =======================================================
     Template Name: Dashio
     Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
@@ -375,29 +375,92 @@
                 <div class="border-head">
                   <h3>정확도</h3>
                 </div>
-                  <div class="green-panel pn">
-                    <div class="green-header">
-                      <h5>REVENUE</h5>
-                    </div>
-                    <div class="chart mt">
-                      <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="4" data-data="[300,135,667,333,526,996,564,123,890,464,655]"></div>
-                      <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#aaa" data-spot-radius="4" data-data="[300,135,667,333,526,996,564,123,890,464,950]"></div>
-                    </div>
-                    <p class="mt"><b>$ 17,980</b><br/>Month Income</p>
+                  <div class="White-panel pn">
+                    <canvas id="myChart"></canvas>
+<script>
+new Chart(document.getElementById("myChart"), {
+    type: 'line',
+    data: {
+        labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
+        datasets: [{
+            label: '테스트 데이터셋',
+            data: [
+                10,
+                3,
+                30,
+                23,
+                10,
+                5,
+                50
+            ],
+            borderColor: "rgba(255, 201, 14, 1)",
+            fill: false,
+            lineTension: 0
+        },
+        {
+        	label: '테스트 데이터셋2',
+            data: [
+                15,
+                5,
+                10,
+                15,
+                15,
+                10,
+                20
+            ],
+            borderColor: "rgba(255, 201, 14, 1)",
+            fill: false,
+            lineTension: 0
+        }
+        
+        ]
+        
+        
+    },
+    options: {
+    	maintainAspectRatio: false,
+        responsive: true,
+        title: {
+            display: true,
+            text: '라인 차트 테스트'
+        },
+        tooltips: {
+            mode: 'index',
+            intersect: false,
+        },
+        hover: {
+            mode: 'nearest',
+            intersect: true
+        },
+        scales: {
+            xAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: 'x축'
+                }
+            }],
+            yAxes: [{
+                display: true,
+                ticks: {
+                    suggestedMin: 0,
+                },
+                scaleLabel: {
+                    display: true,
+                    labelString: 'y축'
+                }
+            }]
+        }
+    }
+});
+
+</script>
                   </div>
                 </div>
                 <!-- section -->
                 <!-- section1 -->
                 <div class="col-md-4 col-sm-4 mb">
                 <div class="row mt">
-                  <div class="col-lg-6">
-                    <div class="content-panel">
-                      <h4><i class="fa fa-angle-right"></i> Selection Chart</h4>
-                      <div class="panel-body">
-                        <div id="chart-2" class="chart"></div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 </div>
                   <!-- section1 -->

@@ -33,7 +33,7 @@
 <body>
 <div style="margin-top: 180px;">
     <div class="result">
-        <h2 style="text-align: center;">00님의 단어분석결과</h2><br>
+        <h2 style="text-align: center;">님의 발음분석결과</h2><br>
     </div>
     <div id="score">
         <h4 style="text-align: center;">점수확인</h4><br><br>

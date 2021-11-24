@@ -15,4 +15,6 @@ public interface MainMapper {
 	public String study();
 	public String mypage();
 	public String main();
+	public String studyhome2();
+	
 }

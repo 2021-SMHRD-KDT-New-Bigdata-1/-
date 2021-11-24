@@ -31,22 +31,8 @@
 
 <script>
 
-$(document).ready(function() {
- });
-
-if(${vo!=null}){
-    if('${vo.userId}'==obj.userId){
-    view += "<div id='main'>";
-    view += "<div id='hero__entry-meta'>";
-    view += "<span class='cat-links'>";
-    view += "${vo.userId}님";
-    view += "</span>";
-    view += " </div>";
-    view += " <h2 class='hero__entry-title'>";
-    view += "환영합니다";
-    view += "<button class='btn btn-info btn-sm' onclick='login()'>학습하기</button>";
-    view += "<button class='btn btn-info btn-sm'>마이페이지</button>";
-</script>
+    
+    </script>
 
 </head>
 
@@ -170,10 +156,10 @@ if(${vo!=null}){
                                     <h2 class="hero__entry-title" >
                                         	환영합니다
                                     </h2>
-                                     <button class='btn btn-info btn-sm' onclick='login();'>학습하기</button>
-                                     <button class='btn btn-info btn-sm' onclick='join();'>학습체크</button>
+                                     <button class='btn btn-info btn-sm' onclick='study();'>학습하기</button>
+                                     <button class='btn btn-info btn-sm' onclick='check();'>학습체크</button>
                                      </div>
-                                                    </div>
+                                </div>
                             </div>
                         </article>
                         <article class="hero__slide swiper-slide">

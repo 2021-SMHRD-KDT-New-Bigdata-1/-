@@ -29,25 +29,7 @@
 </head>
 <body>
 
-    <table class="shadow p-4 mb-4 bg-white" style="margin: auto;" >
-        <thead>
-            <tr>
-                <th>단어</th>
-            </tr>
-        <thead>    
-            <th style="height: 60px; width: 350px; text-align: center; font-size: large;"><br>오뜨!!</th>
-        </thead>
-        <tbody>    
-            <tr>
-                <td onload="load()" style="border-bottom: 1px solid white;" ><video width="100%" height="100%" autoplay="autoplay" id="myVideo" /></td>
-            </tr>   
-            <tr>
-                <th style="height: 120px; text-align: center;">발음해보세용~<br><br>
-                <button type="button" class="btn btn-default">녹음</button></th>
-            </tr>
-        </tbody>   
-        </thead> 
-    </table><br>
+
 
     <table class="shadow p-4 mb-4 bg-white" style="margin: auto;" >
         <thead>

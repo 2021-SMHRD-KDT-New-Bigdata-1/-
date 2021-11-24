@@ -29,30 +29,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
     <link rel="manifest" href="site.webmanifest">
 
-<script>
+ <script >
 
-$(document).ready(function() {
- });
-
-$(function(){
-	$("#login_bt").one("click", function{
-		
-	})
-})
-
-if(${vo!=null}){
-    if('${vo.userId}'==obj.userId){
-    view += "<div id='main'>";
-    view += "<div id='hero__entry-meta'>";
-    view += "<span class='cat-links'>";
-    view += "${vo.userId}님";
-    view += "</span>";
-    view += " </div>";
-    view += " <h2 class='hero__entry-title'>";
-    view += "환영합니다";
-    view += "<button class='btn btn-info btn-sm' onclick='login()'>학습하기</button>";
-    view += "<button class='btn btn-info btn-sm'>마이페이지</button>";
-</script>
+  	
+  </script>
 
 </head>
 
@@ -142,8 +122,7 @@ if(${vo!=null}){
     
             </div> <!-- end s-header__search -->
 
-            <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-            
+        
 
         </header> <!-- end s-header -->
 
@@ -163,9 +142,11 @@ if(${vo!=null}){
                             <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/featured-04_2000_01.jpg');"></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner">
+                                
+           <!----------------------login/join form --------------------------------->       
                                 <div id="login" style="display:none">
                                 
-                                <!-- 로그인 form -->
+           
                                 
                                 	<form action = "#" method = "post">
 									    <div class="form-group input-group">
@@ -173,23 +154,23 @@ if(${vo!=null}){
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
 											 </div>
-									        <input name="user_id" class="form-control" placeholder="아이디" type="text">
+									        <input class="form-control" name="userId" id="userId"  placeholder="아이디" type="text">
 									    </div> <!-- form-group// -->
 									    
 									     <div class="form-group input-group">
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 											</div>
-									        <input class="form-control" name="user_pw" placeholder="비밀번호" type="password">
+									        <input class="form-control" name="userPwd"  id="userPwd" placeholder="비밀번호" type="password">
 									    </div> <!-- form-group// -->
 									
-										<button type="submit" class="btn btn-primary btn-block" id="login_bt"> 로그인  </button>
+										<button type="submit" class="btn btn-primary btn-block" id="login_bt" onclick="login_bt();"> 로그인  </button>
 										<button type="submit" class="btn btn-primary btn-block" onclick="close_login();"> 닫기  </button>
 									
-									    <p class="text-center"><a href="../Search_IdPw.jsp">아이디/비밀번호찾기</a><br> 계정이 없나요? <a href="../JoinForm_0.jsp">회원가입</a> </p>  
+									    <p class="text-center"><br> 계정이 없나요? <a href="../JoinForm_0.jsp">회원가입</a> </p>  
 									</form>
                                 </div>
-                                
+           <!----------------------login/join form --------------------------------->
                                 <!-- 회원가입 form -->
                                 
                                 <div id="join" style="display:none">
@@ -220,6 +201,7 @@ if(${vo!=null}){
 									</form>
 								
 								</div>
+			<!--  loginform...........................----------------------------------------->
 								<div id="main">
                                     <div id="hero__entry-meta">
                                         <span class="cat-links">
@@ -235,7 +217,9 @@ if(${vo!=null}){
                                      <button class='btn btn-info btn-sm' onclick='login();'>로그인</button>
                                      <button class='btn btn-info btn-sm' onclick='join();'>회원가입</button>
                                      </div>
-                                                    </div>
+                               </div>
+                               
+              <!--  loginform close...........................------------------------------------>     
                             </div>
                         </article>
                         <article class="hero__slide swiper-slide">
@@ -267,13 +251,7 @@ if(${vo!=null}){
     
                 </div> <!-- end hero slider -->
 
-                <a href="#bricks" class="hero__scroll-down smoothscroll">
-                    <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.25 6.75L4.75 12L10.25 17.25"></path>
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 12H5"></path>
-                    </svg>
-                    <span>Scroll</span>
-                </a>
+               
 
             </div> <!-- end hero -->
 

@@ -12,13 +12,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import kr.hong.mapper.MainMapper;
+
 
 @Controller
 
 
 public class BoardController {
-
 		
+		
+		@RequestMapping("/studyhome2.do")
+		public String studyhome2() {
+			
+			return "studyhome2";
+		}
 	
 		@RequestMapping("/study.do")
 		public String study() {
@@ -68,6 +75,8 @@ public class BoardController {
 			System.out.println("hi");
 			return "rece";
 		}
+		
+
 		
 	}
 

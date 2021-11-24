@@ -11,7 +11,42 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+				
+				
+			<style>
+			    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+			    .navbar {
+			      margin-bottom: 50px;
+			      border-radius: 0;
+			    }
+			    
+			    /* Remove the jumbotron's default bottom margin */ 
+			     .jumbotron {
+			      margin-bottom: 0;
+			    }
+			   
+			    /* Add a gray background color and some padding to the footer */
+			    footer {
+			      background-color: #f2f2f2;
+			      padding: 25px;
+			    }
+			    
+			    .container {
+				    padding-right: 15px;
+				    padding-left: 15px;
+				    margin-right: auto;
+				    margin-left: auto;
+				    margin-top: 50px;
+				}		    
+				
+			  </style>
+			
+				
 	</head>
+	
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -19,87 +54,39 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
+						
 					</header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit">Get Started</a></li>
-							<li><a href="#" class="button fit">Log In</a></li>
-						</ul>
-					</nav>
-
+				
 
 				<!-- Main -->
 					<div id="main">
+						<div class="container">    
+							  <div class="row">
+							    <div class="main col-lg-4">
+							      <div class="panel panel-primary">
+							        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+							        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" ></div>
+							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+							      </div>
+							    </div>
+							    <div class="col-sm-4"> 
+							      <div class="panel panel-danger">
+							        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+							        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%"></div>
+							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+							      </div>
+							    </div>
+							    <div class="col-sm-4"> 
+							      <div class="panel panel-success">
+							        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+							        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%"></div>
+							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+							      </div>
+							    </div>
+							  </div>
+						</div><br>
 
-						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Day 1</a></h3>
-										<p>Ipsum dolor sit amet</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Day 2</a></h3>
-										<p>feugiat amet tempus</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Day 3</a></h3>
-										<p>Lorem etiam nullam</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Day 4</a></h3>
-										<p>Nisl sed aliquam</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Day 5</a></h3>
-										<p>Ipsum dolor sit amet</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Day 6</a></h3>
-										<p>Feugiat amet tempus</p>
-									</header>
-								</article>
-							</section>
 
 
 					</div>

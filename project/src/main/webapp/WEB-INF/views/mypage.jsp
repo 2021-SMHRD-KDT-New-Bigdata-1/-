@@ -281,66 +281,205 @@ new Chart(document.getElementById("myChart"), {
                   </div>
                 </div>
                 <!-- section -->
-                <!-- section1 -->
-                <div class="col-md-4 col-sm-4 mb">
-                <div>
-                <canvas id="doughnut-chart" width="300" height="250"></canvas>
-<script>
-new Chart(document.getElementById("doughnut-chart"), {
-    type: 'doughnut',
-    data: {
-      labels: ["Africa", "Asia"],
-      datasets: [
-        {
-          label: "Population (millions)",
-          backgroundColor: ["#3e95cd", "#8e5ea2"],
-          data: [80,20]
-        }
-      ]
-    },
-    options: {
-    	responsive: false,
-      title: {
-        display: true,
-        text: '음절 정확도'
-      }
-    }
-});
-</script>
-              </div>  
+                <div class="row mt">
+              <!-- SERVER STATUS PANELS -->
+              <div class="col-md-4 col-sm-4 mb"> <!-- width 33% -->
+                <div class="grey-panel pn donut-chart">
+                  <div class="border-head">
+                  <h3>음절 정확도</h3>
                 </div>
-                  <!-- section1 -->
-            
+                  <div style="display:inline-block">
+                  <canvas id="doughnut-chart" height="200" width="200"></canvas>
+					</div>
+					<script>
+					new Chart(document.getElementById("doughnut-chart"), {
+					    type: 'doughnut',
+					    data: {
+					      labels: ["Africa", "Asia"],
+					      datasets: [
+					        {
+					          label: "Population (millions)",
+					          backgroundColor: ["#3e95cd", "#8e5ea2"],
+					          data: [80,20]
+					        }
+					      ]
+					    },
+					    options: {
+					    	responsive: false,
+					    }
+					});
+					</script>
+                  
+                </div>
+                <!-- /grey-panel -->
+              </div>
+              <!-- /col-md-4-->
               <div class="col-md-4 col-sm-4 mb">
-                <!-- section2 -->
-
-                <!-- section2 -->
-                
+                <div class="grey-panel pn donut-chart">
+                  <div class="border-head">
+                  <h3>단어 정확도</h3>
+                </div>
+                  <div style="display:inline-block">
+                  <canvas id="chart_test1" height="200" width="200"></canvas>
+					</div>
+					<script>
+					new Chart(document.getElementById("chart_test1"), {
+					    type: 'doughnut',
+					    data: {
+					      labels: ["Africa", "Asia"],
+					      datasets: [
+					        {
+					          label: "Population (millions)",
+					          backgroundColor: ["#3e95cd", "#8e5ea2"],
+					          data: [80,20]
+					        }
+					      ]
+					    },
+					    options: {
+					    	responsive: false,
+					    }
+					});
+					</script>
+                </div>
+                <!-- /grey-panel -->
               </div>
               <!-- /col-md-4 -->
-              
+              <div class="col-md-4 col-sm-4 mb">
+                <div class="grey-panel pn donut-chart">
+                  <div class="border-head">
+                  <h3>문장 정확도</h3>
+                </div>
+                <div style="display:inline-block">
+                  <canvas id="chart_test" height="200" width="200"></canvas>
+					</div>
+					<script>
+					new Chart(document.getElementById("chart_test"), {
+					    type: 'doughnut',
+					    data: {
+					      labels: ["Africa", "Asia"],
+					      datasets: [
+					        {
+					          label: "Population (millions)",
+					          backgroundColor: ["#3e95cd", "#8e5ea2"],
+					          data: [80,20]
+					        }
+					      ]
+					    },
+					    options: {
+					    	responsive: false,
+					    }
+					});
+					</script>
+                  
+                </div>
+                <!-- /grey-panel -->
               </div>
               <!-- /col-md-4 -->
-            </div>
-            <!-- /row -->
-            <div class="row">
-              <!-- WEATHER PANEL -->
-              <div class="col-md-4 mb">
-                
+                <!-- section1 -->
+                 
+                  </div>
+                  
+                  <div class="row mt">
+              <!-- SERVER STATUS PANELS -->
+              <div class="col-md-4 col-sm-4 mb"> <!-- width 33% -->
+                <div class="grey-panel pn donut-chart">
+                  <div class="border-head">
+                  <h3>음절 정확도</h3>
+                </div>
+                  <div style="display:inline-block">
+                  <canvas id="doughnut-chart4" height="200" width="200"></canvas>
+					</div>
+					<script>
+					new Chart(document.getElementById("doughnut-chart4"), {
+					    type: 'doughnut',
+					    data: {
+					      labels: ["Africa", "Asia"],
+					      datasets: [
+					        {
+					          label: "Population (millions)",
+					          backgroundColor: ["#3e95cd", "#8e5ea2"],
+					          data: [80,20]
+					        }
+					      ]
+					    },
+					    options: {
+					    	responsive: false,
+					    }
+					});
+					</script>
+                  
+                </div>
+                <!-- /grey-panel -->
               </div>
-              
-            </div>
-            <div class="row">
-
-              
+              <!-- /col-md-4-->
+              <div class="col-md-4 col-sm-4 mb">
+                <div class="grey-panel pn donut-chart">
+                  <div class="border-head">
+                  <h3>단어 정확도</h3>
+                </div>
+                  <div style="display:inline-block">
+                  <canvas id="chart_test3" height="200" width="200"></canvas>
+					</div>
+					<script>
+					new Chart(document.getElementById("chart_test3"), {
+					    type: 'doughnut',
+					    data: {
+					      labels: ["Africa", "Asia"],
+					      datasets: [
+					        {
+					          label: "Population (millions)",
+					          backgroundColor: ["#3e95cd", "#8e5ea2"],
+					          data: [80,20]
+					        }
+					      ]
+					    },
+					    options: {
+					    	responsive: false,
+					    }
+					});
+					</script>
+                </div>
+                <!-- /grey-panel -->
+              </div>
               <!-- /col-md-4 -->
-            </div>
-
-          </div>
+              <div class="col-md-4 col-sm-4 mb">
+                <div class="grey-panel pn donut-chart">
+                  <div class="border-head">
+                  <h3>문장 정확도</h3>
+                </div>
+                <div style="display:inline-block">
+                  <canvas id="chart_test2" height="200" width="200"></canvas>
+					</div>
+					<script>
+					new Chart(document.getElementById("chart_test2"), {
+					    type: 'doughnut',
+					    data: {
+					      labels: ["Africa", "Asia"],
+					      datasets: [
+					        {
+					          label: "Population (millions)",
+					          backgroundColor: ["#3e95cd", "#8e5ea2"],
+					          data: [80,20]
+					        }
+					      ]
+					    },
+					    options: {
+					    	responsive: false,
+					    }
+					});
+					</script>
+                  
+                </div>
+                <!-- /grey-panel -->
+              </div>
+              <!-- /col-md-4 -->
+                <!-- section1 -->
+                 
+                  </div>
           <!-- g-3 -->
-        </div>
         <!-- /row -->
       </section>
+      
     </section>
     <!--main content end-->
     <!--footer start-->

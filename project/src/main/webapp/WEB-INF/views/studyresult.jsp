@@ -58,9 +58,14 @@
     </table><br>
     </nav>
     <div id="foo_btn" style="text-align: center;">
-        <button type="button" class="btn btn-default" value="exit">나가기</button>&nbsp;&nbsp;&nbsp;&nbsp;
-        <button type="button" class="btn btn-default" value="replay">반복하기</button>
+        <button type="button" class="btn btn-default" id="exit" onclick="exit()">나가기</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-default" id="replay" onclick="replay()">반복하기</button>
     </div>
 </div><br>
+<script>
+	function exit(){
+		   location.href="studyhome.do";
+	}
+</script>
 </body>
 </html>

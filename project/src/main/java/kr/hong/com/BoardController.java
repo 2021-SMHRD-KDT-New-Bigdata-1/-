@@ -33,10 +33,10 @@ public class BoardController {
 			return "studyhome2";
 		}
 	
-		@RequestMapping("/study.do")
-		public String study() {
+		@RequestMapping("/studypage2.do")
+		public String studypage2() {
 			
-			return "study";
+			return "studypage2";
 		}
 		
 		@RequestMapping("/studyhome.do")
@@ -82,10 +82,10 @@ public class BoardController {
 			return "rece";
 		}
 		
-		@RequestMapping("/studyresult.do")
-		public String studyresult() {
+		@RequestMapping("/studyresult2.do")
+		public String studyresult2() {
 			
-			return "studyresult";
+			return "studyresult2";
 		}
 		
 

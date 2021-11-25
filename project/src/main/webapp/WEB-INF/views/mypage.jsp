@@ -289,10 +289,10 @@ new Chart(document.getElementById("myChart"), {
                   <h3>음절 정확도</h3>
                 </div>
                   <div style="display:inline-block">
-                  <canvas id="doughnut-chart" height="250" width="250"></canvas>
+                  <canvas id="chart1" height="200" width="200"></canvas>
 					</div>
 					<script>
-					new Chart(document.getElementById("doughnut-chart"), {
+					new Chart(document.getElementById("chart1"), {
 					    type: 'doughnut',
 					    data: {
 					      labels: ["Africa", "Asia"],
@@ -305,8 +305,7 @@ new Chart(document.getElementById("myChart"), {
 					      ]
 					    },
 					    options: {
-					    	maintainAspectRatio: false,
-					    	responsive: true,
+					    	responsive: false
 					    }
 					});
 					</script>
@@ -321,10 +320,10 @@ new Chart(document.getElementById("myChart"), {
                   <h3>단어 정확도</h3>
                 </div>
                   <div style="display:inline-block">
-                  <canvas id="chart_test1" height="250" width="250"></canvas>
+                  <canvas id="chart2" height="200" width="200"></canvas>
 					</div>
 					<script>
-					new Chart(document.getElementById("chart_test1"), {
+					new Chart(document.getElementById("chart2"), {
 					    type: 'doughnut',
 					    data: {
 					      labels: ["Africa", "Asia"],
@@ -337,8 +336,7 @@ new Chart(document.getElementById("myChart"), {
 					      ]
 					    },
 					    options: {
-					    	maintainAspectRatio: false,
-					    	responsive: true,
+					    	responsive: false
 					    }
 					});
 					</script>
@@ -352,10 +350,10 @@ new Chart(document.getElementById("myChart"), {
                   <h3>문장 정확도</h3>
                 </div>
                 <div style="display:inline-block">
-                  <canvas id="chart_test" height="250" width="250"></canvas>
+                  <canvas id="chart3" height="200" width="200"></canvas>
 					</div>
 					<script>
-					new Chart(document.getElementById("chart_test"), {
+					new Chart(document.getElementById("chart3"), {
 					    type: 'doughnut',
 					    data: {
 					      labels: ["Africa", "Asia"],
@@ -368,8 +366,7 @@ new Chart(document.getElementById("myChart"), {
 					      ]
 					    },
 					    options: {
-					    	maintainAspectRatio: false,
-					    	responsive: true,
+					    	responsive: false
 					    }
 					});
 					</script>
@@ -390,10 +387,10 @@ new Chart(document.getElementById("myChart"), {
                   <h3>음절 정확도</h3>
                 </div>
                   <div style="display:inline-block">
-                  <canvas id="doughnut-chart4" height="250" width="250"></canvas>
+                  <canvas id="chart4" height="200" width="200"></canvas>
 					</div>
 					<script>
-					new Chart(document.getElementById("doughnut-chart4"), {
+					new Chart(document.getElementById("chart4"), {
 					    type: 'doughnut',
 					    data: {
 					      labels: ["Africa", "Asia"],
@@ -406,8 +403,7 @@ new Chart(document.getElementById("myChart"), {
 					      ]
 					    },
 					    options: {
-					    	maintainAspectRatio: false,
-					    	responsive: true,
+					    	responsive: false 
 					    }
 					});
 					</script>
@@ -422,10 +418,10 @@ new Chart(document.getElementById("myChart"), {
                   <h3>단어 정확도</h3>
                 </div>
                   <div style="display:inline-block">
-                  <canvas id="chart_test3" height="250" width="250"></canvas>
+                  <canvas id="chart5" height="200" width="200"></canvas>
 					</div>
 					<script>
-					new Chart(document.getElementById("chart_test3"), {
+					new Chart(document.getElementById("chart5"), {
 					    type: 'doughnut',
 					    data: {
 					      labels: ["Africa", "Asia"],
@@ -438,8 +434,7 @@ new Chart(document.getElementById("myChart"), {
 					      ]
 					    },
 					    options: {
-					    	maintainAspectRatio: false,
-					    	responsive: true,
+					    	responsive: false
 					    }
 					});
 					</script>
@@ -453,10 +448,10 @@ new Chart(document.getElementById("myChart"), {
                   <h3>문장 정확도</h3>
                 </div>
                 <div style="display:inline-block">
-                  <canvas id="chart_test2" height="250" width="250"></canvas>
+                  <canvas id="chart6" height="200" width="200"></canvas>
 					</div>
 					<script>
-					new Chart(document.getElementById("chart_test2"), {
+					new Chart(document.getElementById("chart6"), {
 					    type: 'doughnut',
 					    data: {
 					      labels: ["Africa", "Asia"],
@@ -469,8 +464,7 @@ new Chart(document.getElementById("myChart"), {
 					      ]
 					    },
 					    options: {
-					    	maintainAspectRatio: false,
-					    	responsive: true,
+					    	responsive: false
 					    }
 					});
 					</script>

@@ -33,10 +33,10 @@ public class BoardController {
 			return "studyhome2";
 		}
 	
-		@RequestMapping("/study.do")
-		public String study() {
+		@RequestMapping("/studypage2.do")
+		public String studypage2() {
 			
-			return "study";
+			return "studypage2";
 		}
 		
 		@RequestMapping("/studyhome.do")
@@ -64,6 +64,21 @@ public class BoardController {
 			
 			return "mypage";
 		}
+		@RequestMapping("/sentence_main.do")
+		public String sentence_main() {
+			
+			return "sentence_main";
+		}
+		@RequestMapping("/voca_main.do")
+		public String voca_main() {
+			
+			return "voca_main";
+		}
+		@RequestMapping("/syllable_main.do")
+		public String syllable_main() {
+			
+			return "syllable_main";
+		}
 		
 		@RequestMapping("/main.do")
 		public String main() {
@@ -83,7 +98,11 @@ public class BoardController {
 		}
 		
 		@RequestMapping("/studyresult2.do")
+<<<<<<< HEAD
 		public String studyresult() {
+=======
+		public String studyresult2() {
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 			
 			return "studyresult2";
 		}

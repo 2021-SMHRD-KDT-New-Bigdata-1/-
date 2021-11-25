@@ -174,12 +174,12 @@
                                 <!-- 회원가입 form -->
                                 
                                 <div id="join" style="display:none">
-									<form>
+									<form action="join.do" method="post">
 										<div class="form-group input-group">
     										<div class="input-group-prepend" name="id">
 											    <span class="input-group-text">아이디<i class="fa fa-envelope"></i> </span>
 											 </div>
-									        <input name="user_id" class="form-control" type="text" id="input_id">
+									        <input name="user_id" class="form-control" type="text" id="user_id">
 									        <span id="sp"></span>
 									    </div> <!-- id-group// -->
 									    
@@ -187,12 +187,24 @@
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text">비밀번호<i class="fa fa-lock"></i> </span>
 											</div>
-									        <input name="user_pw" class="form-control"  type="password">
+									        <input name="user_pw" class="form-control"  type="password" id="user_pw">
 									    </div> <!-- form-group// -->
 									    
 									    <div class="form-group input-group">
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text">이름<i class="fa fa-lock"></i> </span>
+											</div>
+									        <input name="user_name" class="form-control"  type="text" id="user_name">
+									    </div> <!-- form-group// -->
+									    <div class="form-group input-group">
+									    	<div class="input-group-prepend">
+											    <span class="input-group-text">생년월일<i class="fa fa-lock"></i> </span>
+											</div>
+									        <input name="user_date" class="form-control" inplace="yyyy-mm-dd" type="text" id="user_date">
+									    </div> <!-- form-group// -->
+									    <div class="form-group input-group">
+									    	<div class="input-group-prepend">
+											    <span class="input-group-text">국적<i class="fa fa-lock"></i> </span>
 											</div>
 									        <input name="user_name" class="form-control"  type="text">
 									    </div> <!-- form-group// -->

@@ -200,13 +200,13 @@
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text">생년월일<i class="fa fa-lock"></i> </span>
 											</div>
-									        <input name="user_date" class="form-control" inplace="yyyy-mm-dd" type="text" id="user_date">
+									        <input name="user_date" class="form-control" placeholder="yyyy-mm-dd" type="text" id="user_date">
 									    </div> <!-- form-group// -->
 									    <div class="form-group input-group">
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text">국적<i class="fa fa-lock"></i> </span>
 											</div>
-									        <input name="user_name" class="form-control"  type="text">
+									        <input name="user_nationality" class="form-control"  type="text" id="user_nationality">
 									    </div> <!-- form-group// -->
 									    <button type="submit" class='btn btn-info btn-sm'>회원가입</button>
                                      <button class="btn btn-primary btn-block" onclick="close_join();"> 닫기  </button>

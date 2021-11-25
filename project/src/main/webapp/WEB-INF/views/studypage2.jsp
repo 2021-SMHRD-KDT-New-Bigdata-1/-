@@ -14,6 +14,8 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="https://kit.fontawesome.com/6d7bf23579.js" crossorigin="anonymous"></script> <!--이모티콘-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!--이모티콘-->
 <title>study</title>
 
 <meta name="viewport"
@@ -25,7 +27,14 @@
 		href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
 </noscript>
 
-
+<style>
+	 .btn-default{
+            background-color: #ff8040;
+            width: 80px;
+            color: white;
+            border-radius: 15px;
+        }
+</style>
 </head>
 <body class="is-preload">
 
@@ -33,7 +42,7 @@
 	<div id="wrapper">
 
 		<!-- Header -->
-		<header id="header" class="alt">
+		<header id="header" class="alt"> 
 			
 		
 		</header>
@@ -56,7 +65,7 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td onload="load()" style="border-bottom: 1px solid white;">
+							<td onload="load()">
 								<video width="100%" height="100%" autoplay="autoplay"
 									id="myVideo" />
 							</td>
@@ -64,7 +73,7 @@
 						<tr>
 							<th style="text-align: center;">발음해보세용~<br>
 							<br>
-								<button type="button" class="btn btn-default">녹음</button></th>
+								<button type="button" class="btn btn-default"><i class="fas fa-microphone-alt fa-2x"></i></button></th>
 						</tr>
 					</tbody>
 

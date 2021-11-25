@@ -13,12 +13,14 @@
 		<property name="username" value="allbareum" />
 		<property name="password" value="hong1234" />
 	</bean>
+	
 	<bean id="hikariDataSource"
 		class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
 		<constructor-arg ref="hikariConfig" />
 	</bean>
+	
 	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
-	    <property name="dataSource" ref="hikariDataSource"/>
+	   <property name="dataSource" ref="hikariDataSource"/>
 	</bean>
 
 </beans>

@@ -16,5 +16,5 @@ public class User {
 		private String user_joindate;
 		private String admin_yn;
 		private String user_status;
-
+		
 }

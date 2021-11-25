@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import kr.hong.domain.User;
 import kr.hong.mapper.MainMapper;
 
 
@@ -19,7 +20,9 @@ import kr.hong.mapper.MainMapper;
 
 
 public class BoardController {
-		
+
+		private MainMapper mapper;
+	
 		@RequestMapping("/index.do")
 		public String index() {
 			
@@ -107,6 +110,12 @@ public class BoardController {
 		public String studyresult2() {
 		
 			return "studyresult2";
+		}
+		@RequestMapping("/join.do")
+		public String join(User vo) {
+			mapper.join(vo);
+			
+			return "redirect:/main.do";
 		}
 		
 

@@ -62,7 +62,7 @@
 
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="index.html" rel="home">ALL바름</a>
+                    <a href="main.do" rel="home">ALL바름</a>
                 </p>
             </div>
 
@@ -148,20 +148,20 @@
                                 
            
                                 
-                                	<form action = "#" method = "post">
+                                	<form action = "login.do" method = "post">
 									    <div class="form-group input-group">
 									    
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
 											 </div>
-									        <input class="form-control" name="userId" id="userId"  placeholder="아이디" type="text">
+									        <input class="form-control" name="user_id" id="user_id"  placeholder="아이디" type="text">
 									    </div> <!-- form-group// -->
 									    
 									     <div class="form-group input-group">
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 											</div>
-									        <input class="form-control" name="userPwd"  id="userPwd" placeholder="비밀번호" type="password">
+									        <input class="form-control" name="user_pw"  id="user_pw" placeholder="비밀번호" type="password">
 									    </div> <!-- form-group// -->
 									
 										<button type="submit" class="btn btn-primary btn-block" id="login_bt" onclick="login_bt();"> 로그인  </button>
@@ -200,7 +200,7 @@
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text">생년월일<i class="fa fa-lock"></i> </span>
 											</div>
-									        <input name="user_date" class="form-control" placeholder="yyyy-mm-dd" type="text" id="user_date">
+									        <input name="user_date" class="form-control" placeholder="yyyymmdd" type="text" id="user_birthdate">
 									    </div> <!-- form-group// -->
 									    <div class="form-group input-group">
 									    	<div class="input-group-prepend">
@@ -214,6 +214,7 @@
 								
 								</div>
 			<!--  loginform...........................----------------------------------------->
+							<c:if test="${vo==null }">
 								<div id="main">
                                     <div id="hero__entry-meta">
                                         <span class="cat-links">
@@ -229,7 +230,24 @@
                                      <button class='btn btn-info btn-sm' onclick='login();'>로그인</button>
                                      <button class='btn btn-info btn-sm' onclick='join();'>회원가입</button>
                                      </div>
-                               </div>
+                             </c:if>
+                             <c:if test="${vo!=null }">
+                             	<div id="main">
+                                    <div id="hero__entry-meta">
+                                        <span class="cat-links">
+                                            	${vo.user_name }님
+                
+                                        </span>
+                                </div>
+                                    
+                                    <div id="Allbareum">
+                                    <h2 class="hero__entry-title" >
+                                        	환영합니다
+                                    </h2>
+                                     <button class='btn btn-info btn-sm' href="#">학습하기</button>
+                                     <button class='btn btn-info btn-sm' href="#">마이페이지</button>
+                                     </div>
+                             </c:if>
                                
               <!--  loginform close...........................------------------------------------>     
                             </div>
@@ -240,7 +258,7 @@
                                 <div class="hero__entry-text-inner">
                                     <div class="hero__entry-meta">
                                         <span class="cat-links">
-                                            <a href="category.html">Health</a>
+                                            <a>올바름</a>
                                         </span>
                                     </div>
                                     <h2 class="hero__entry-title">

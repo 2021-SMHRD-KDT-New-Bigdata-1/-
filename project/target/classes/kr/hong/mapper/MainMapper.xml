@@ -4,8 +4,10 @@
 <mapper namespace="kr.hong.mapper.MainMapper">
 	
 	<insert id="join" parameterType="kr.hong.domain.User">
-    insert into tbl_user(user_id, user_pw, user_name, user_birthdate, user_nationality, user_joindate, admin_yn, user_status) 
-      values (#{user_id}, #{user_pw}, #{user_name}, #{user_birthdate}, #{user_nationality}, now(), default, default)
+    	insert into tbl_user(user_id, user_pw, user_name, user_birthdate, user_nationality, user_joindate, admin_yn, user_status) 
+      	values (#{user_id}, #{user_pw}, #{user_name}, now(), #{user_nationality}, now(), 'n', 'n')
 	</insert>
-	
+	<select id="login" resultType="kr.hong.domain.User">
+	    select * from tbl_user where user_id = #{user_id} and user_pw = #{user_pw}
+	</select>
 </mapper>

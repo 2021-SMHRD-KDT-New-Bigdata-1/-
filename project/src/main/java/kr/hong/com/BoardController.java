@@ -26,13 +26,7 @@ public class BoardController {
 			return "index";
 		}
 	
-		
-		@RequestMapping("/studyhome2.do")
-		public String studyhome2() {
-			
-			return "studyhome2";
-		}
-	
+
 		@RequestMapping("/studypage2.do")
 		public String studypage2() {
 			
@@ -98,12 +92,8 @@ public class BoardController {
 		}
 		
 		@RequestMapping("/studyresult2.do")
-<<<<<<< HEAD
-		public String studyresult() {
-=======
 		public String studyresult2() {
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
-			
+		
 			return "studyresult2";
 		}
 		

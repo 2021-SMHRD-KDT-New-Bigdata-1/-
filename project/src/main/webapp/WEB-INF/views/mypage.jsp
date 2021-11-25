@@ -44,9 +44,7 @@
       <div class="sidebar-toggle-box">
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
       </div>
-      <!--logo start-->
-      <a href="index.html" class="logo"><b>DASH<span>IO</span></b></a>
-      <!--logo end-->
+      
       <div class="nav notify-row" id="top_menu">
         <!--  notification start -->
 			<ul class="nav top-menu">
@@ -57,11 +55,7 @@
         </ul>
         <!--  notification end -->
       </div>
-      <div class="top-menu">
-        <ul class="nav pull-right top-menu">
-          <li><a class="logout" href="login.html">Logout</a></li>
-        </ul>
-      </div>
+     
     </header>
     <!--header end-->
     <!-- **********************************************************************************************************************************************************
@@ -72,8 +66,8 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.html"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Sam Soffes</h5>
+
+          
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-desktop"></i>
@@ -193,7 +187,7 @@
         <div class="row">
          
                 <!-- section -->
-                <div class="col-lg-9 main-chart" style="display:inline-block">
+                <div class="col-lg-9 main-chart" >
                 <div class="border-head">
                   <h3>정확도</h3>
                 </div>

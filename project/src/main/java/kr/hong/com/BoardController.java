@@ -28,18 +28,24 @@ public class BoardController {
 			
 			return "index";
 		}
-	
 		
-		@RequestMapping("/studyhome2.do")
-		public String studyhome2() {
+		@RequestMapping("/finallresult.do")
+		public String finallresult() {
 			
-			return "studyhome2";
+			return "finallresult";
 		}
-	
-		@RequestMapping("/study.do")
-		public String study() {
+		
+		@RequestMapping("/weakpage.do")
+		public String weakpage() {
 			
-			return "study";
+			return "weakpage";
+		}
+		
+
+		@RequestMapping("/studypage2.do")
+		public String studypage2() {
+			
+			return "studypage2";
 		}
 		
 		@RequestMapping("/studyhome.do")
@@ -100,10 +106,10 @@ public class BoardController {
 			return "rece";
 		}
 		
-		@RequestMapping("/studyresult.do")
-		public String studyresult() {
-			
-			return "studyresult";
+		@RequestMapping("/studyresult2.do")
+		public String studyresult2() {
+		
+			return "studyresult2";
 		}
 		@RequestMapping("/join.do")
 		public String join(User vo) {

@@ -14,14 +14,15 @@ public interface MainMapper {
 	public String login();
 	public String studyhome();
 	public String select();
-	public String study();
+	public String studypage2();
 	public String mypage();
 	public String main();
-	public String studyhome2();
-	public String studyresult();
+	public String studyresult2();
 	public String index();
-
+	public String weakpage();
+	public String finallresult();
 	public String join(User vo);
+	
 }
 
 

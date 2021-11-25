@@ -32,6 +32,10 @@
 				.panel-success {
 			    	border-color: #f67822;
 				}
+				
+				body {
+					    margin: 0 0 0 4em;
+					}
 			    
 			    /* Remove the jumbotron's default bottom margin */ 
 			     .jumbotron {

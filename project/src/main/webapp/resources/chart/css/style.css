@@ -415,7 +415,8 @@ ul.sidebar-menu li a.active i {
 }
 
 .black-bg {
-    background: #22242a;
+    /*background: #22242a;*/
+    background-color: #000000;
     border-bottom: 1px solid #393d46;
 }
 

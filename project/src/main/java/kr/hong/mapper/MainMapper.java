@@ -2,6 +2,8 @@ package kr.hong.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import kr.hong.domain.User;
+
 // 1. Mapper interface + @(에노테이션)
 // JDBC(Java+SQL) -> 생산성이떨어진다. 유지보수가 어렵다.
 // 2. Mapper interface + XML(SQM Mapper File)
@@ -18,5 +20,8 @@ public interface MainMapper {
 	public String studyhome2();
 	public String studyresult();
 	public String index();
-	
+
+	public String join(User vo);
 }
+
+

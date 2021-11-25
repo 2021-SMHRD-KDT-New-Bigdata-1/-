@@ -23,7 +23,5 @@
 	
 	<context:component-scan base-package="kr.hong.com" />
 	
-	
-	
-	
+
 </beans:beans>

@@ -320,7 +320,7 @@ new Chart(document.getElementById("myChart"), {
                   <h3>단어 정확도</h3>
                 </div>
                   <div style="display:inline-block">
-                  <canvas id="chart2" height="250" width="250"></canvas>
+                  <canvas id="chart2" height="200" width="200"></canvas>
 					</div>
 					<script>
 					new Chart(document.getElementById("chart2"), {
@@ -350,7 +350,7 @@ new Chart(document.getElementById("myChart"), {
                   <h3>문장 정확도</h3>
                 </div>
                 <div style="display:inline-block">
-                  <canvas id="chart3" height="250" width="250"></canvas>
+                  <canvas id="chart3" height="200" width="200"></canvas>
 					</div>
 					<script>
 					new Chart(document.getElementById("chart3"), {
@@ -387,7 +387,7 @@ new Chart(document.getElementById("myChart"), {
                   <h3>음절 정확도</h3>
                 </div>
                   <div style="display:inline-block">
-                  <canvas id="chart4" height="250" width="250"></canvas>
+                  <canvas id="chart4" height="200" width="200"></canvas>
 					</div>
 					<script>
 					new Chart(document.getElementById("chart4"), {
@@ -403,7 +403,7 @@ new Chart(document.getElementById("myChart"), {
 					      ]
 					    },
 					    options: {
-					    	responsive: false
+					    	responsive: false 
 					    }
 					});
 					</script>
@@ -418,7 +418,7 @@ new Chart(document.getElementById("myChart"), {
                   <h3>단어 정확도</h3>
                 </div>
                   <div style="display:inline-block">
-                  <canvas id="chart5" height="250" width="250"></canvas>
+                  <canvas id="chart5" height="200" width="200"></canvas>
 					</div>
 					<script>
 					new Chart(document.getElementById("chart5"), {
@@ -448,7 +448,7 @@ new Chart(document.getElementById("myChart"), {
                   <h3>문장 정확도</h3>
                 </div>
                 <div style="display:inline-block">
-                  <canvas id="chart6" height="250" width="250"></canvas>
+                  <canvas id="chart6" height="200" width="200"></canvas>
 					</div>
 					<script>
 					new Chart(document.getElementById("chart6"), {

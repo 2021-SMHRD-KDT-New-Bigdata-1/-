@@ -64,6 +64,21 @@ public class BoardController {
 			
 			return "mypage";
 		}
+		@RequestMapping("/sentence_main.do")
+		public String sentence_main() {
+			
+			return "sentence_main";
+		}
+		@RequestMapping("/voca_main.do")
+		public String voca_main() {
+			
+			return "voca_main";
+		}
+		@RequestMapping("/syllable_main.do")
+		public String syllable_main() {
+			
+			return "syllable_main";
+		}
 		
 		@RequestMapping("/main.do")
 		public String main() {

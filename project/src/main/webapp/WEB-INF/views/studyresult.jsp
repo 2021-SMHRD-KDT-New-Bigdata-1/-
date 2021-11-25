@@ -54,6 +54,31 @@
                 <!--단어단위로 문장줄바꿈 => style="word-break:keep-all"-->
                 <td style="width: 50px;"><i class="far fa-smile fa-3x" style="color: orange;"></i></td>
             </tr> 
+            <tr style="text-align: center;">
+                <td>2</td>
+                <td>블로그 스킨에서 jQuery를 지원하고 있는지 반드시 확인하십시오!</td>
+                <!--단어단위로 문장줄바꿈 => style="word-break:keep-all"-->
+                <td style="width: 50px;"><i class="far fa-smile fa-3x" style="color: orange;"></i></td>
+            </tr> 
+            <tr style="text-align: center;">
+                <td>2</td>
+                <td>블로그 스킨에서 jQuery를 지원하고 있는지 반드시 확인하십시오!</td>
+                <!--단어단위로 문장줄바꿈 => style="word-break:keep-all"-->
+                <td style="width: 50px;"><i class="far fa-smile fa-3x" style="color: orange;"></i></td>
+            </tr> 
+            <tr style="text-align: center;">
+                <td>2</td>
+                <td>블로그 스킨에서 jQuery를 지원하고 있는지 반드시 확인하십시오!</td>
+                <!--단어단위로 문장줄바꿈 => style="word-break:keep-all"-->
+                <td style="width: 50px;"><i class="far fa-smile fa-3x" style="color: orange;"></i></td>
+            </tr> 
+            <tr style="text-align: center;">
+                <td>2</td>
+                <td>블로그 스킨에서 jQuery를 지원하고 있는지 반드시 확인하십시오!</td>
+                <!--단어단위로 문장줄바꿈 => style="word-break:keep-all"-->
+                <td style="width: 50px;"><i class="far fa-smile fa-3x" style="color: orange;"></i></td>
+            </tr> 
+            
         </tbody>
     </table><br>
     </nav>

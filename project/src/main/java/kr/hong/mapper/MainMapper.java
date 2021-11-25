@@ -17,5 +17,6 @@ public interface MainMapper {
 	public String main();
 	public String studyhome2();
 	public String studyresult();
+	public String index();
 	
 }

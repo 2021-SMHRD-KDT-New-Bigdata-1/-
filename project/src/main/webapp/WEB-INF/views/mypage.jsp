@@ -1,4 +1,7 @@
+
+
 <!DOCTYPE HTML>
+
 <!--
 	Forty by HTML5 UP
 	html5up.net | @ajlkn
@@ -7,14 +10,15 @@
 <html>
 	<head>
 		<title>Forty by HTML5 UP</title>
-		<meta charset="euc-kr" />
+		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/csstest.css" />
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
+		<script src="${pageContext.request.contextPath}/resources/assets/js/Chart.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-				
+			<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>	
 				
 			<style>
 			    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
@@ -26,7 +30,13 @@
 				    font: inherit;
 				    vertical-align: baseline;
 				}
-			   
+			   		#sidecontainer{
+				float:left;
+				width : 50px;
+				height : 1000px;
+				background-color:#000000;
+				}	
+		
 			   
 			    * .is-preload.alt{
 				margin: 0; padding: 0;
@@ -86,14 +96,8 @@
 					    background-color: #000000;
 					    border-color: #000000;
 				}
-				#sidecontainer{
-				float:left;
-				width : 100px;
-				height : 1000px;
-				background-color:#000000;
-				}	
 				
-					#header.alt.top {
+					.alt.top {
 						display: -moz-flex;
 						display: -webkit-flex;
 						display: -ms-flex;
@@ -115,17 +119,25 @@
 					}
 				
 				
-				.top_nav{
-				float:left important!;
+				.nav_top{
+				background-color:black;
 				}
 				
 				header nav a .pl{
 				    border: 0;
 				    display: block;
 				    font-size: 0.8em;
+				    float: left;
 				    height: inherit;
 				}
 				
+				.title_menu{
+				margin-left:50px;
+				}
+				
+				.title_menu1{
+				margin-left:150px;
+				}
 			  </style>
 			
 				
@@ -138,40 +150,217 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header" class="alt top">
-						<nav class="top_nav" >
-							<a class="pl" href="#" style="align:left;">asdf</a>
-						</nav>
+					<section>
+					<header class="nav_top">
+					<h1 class="title_name">allbareum</h1>
+					<nav class="title_menu">
+					<div>
+					<a href="#">asdf</a>
+					<a href="#">asdf</a>
+					<a href="#">asdf</a>
+					<a href="#">asdf</a>
+					</div>
+				</nav>	
 					</header>
+					</section>
 							<div id="sidecontainer" >
-				<aside id="side">
-				<p>sibal</p>
-				</aside>		
+					<ul>
+						<li>
+							<a class="pl" href="#" style="align:left;">asdf</a>
+						</li>
+						<li>
+							<a class="pl" href="#" style="align:left;">asdf</a>
+						</li>
+						<li>
+							<a class="pl" href="#" style="align:left;">asdf</a>
+						</li>
+						</ul>
 				</div>
 				
 				<!-- Main -->
 					<div id="main">
 						<div class="container">    
 							  <div class="row">
-							    <div class="main col-lg-4">
+							    <div class="col-12-large">
 							      <div class="panel panel-primary">
 							        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-							        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" ></div>
+							        <div class="panel-body">                    
+                    <canvas id="myChart"></canvas>
+                    
+<script>
+new Chart(document.getElementById("myChart"), {
+    type: 'line',
+    data: {
+        labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
+        datasets: [{
+            label: '테스트 데이터셋',
+            data: [
+                10,
+                3,
+                30,
+                23,
+                10,
+                5,
+                50
+            ],
+            borderColor: "rgba(255, 201, 14, 1)",
+            fill: false,
+            lineTension: 0
+        },
+        {
+        	label: '테스트 데이터셋2',
+            data: [
+                15,
+                5,
+                10,
+                15,
+                15,
+                10,
+                20
+            ],
+            borderColor: "rgba(255, 201, 14, 1)",
+            fill: false,
+            lineTension: 0
+        }
+        
+        ]
+        
+        
+    },
+    options: {
+    	maintainAspectRatio: false,
+        responsive: true,
+        title: {
+            display: true,
+            text: '라인 차트 테스트'
+        },
+        tooltips: {
+            mode: 'index',
+            intersect: false,
+        },
+        hover: {
+            mode: 'nearest',
+            intersect: true
+        },
+        scales: {
+            xAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: 'x축'
+                }
+            }],
+            yAxes: [{
+                display: true,
+                ticks: {
+                    suggestedMin: 0,
+                },
+                scaleLabel: {
+                    display: true,
+                    labelString: 'y축'
+                }
+            }]
+        }
+    }
+});
+
+</script>
+</div>
+							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+							      </div>
+							    </div>
+							  <div class="row">
+							    <div class="col-sm-4"> 
+							      <div class="panel panel-primary">
+							        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+							        <div class="panel-body"><canvas id="doughnut-chart1" width="300" height="250"></canvas>
+<script>
+new Chart(document.getElementById("doughnut-chart1"), {
+    type: 'doughnut',
+    data: {
+      labels: ["Africa", "Asia"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: ["#3e95cd", "#8e5ea2"],
+          data: [80,20]
+        }
+      ]
+    },
+    options: {
+    	maintainAspectRatio: false,
+        responsive: true,
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+});
+</script></div>
+							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+							      </div>
+							    </div>
+							    
+							    <div class="col-sm-4"> 
+							      <div class="panel panel-primary">
+							        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+							        <div class="panel-body"><canvas id="doughnut-chart2" width="300" height="250"></canvas>
+<script>
+new Chart(document.getElementById("doughnut-chart2"), {
+    type: 'doughnut',
+    data: {
+      labels: ["Africa", "Asia"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: ["#3e95cd", "#8e5ea2"],
+          data: [80,20]
+        }
+      ]
+    },
+    options: {
+    	maintainAspectRatio: false,
+        responsive: true,
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+});
+</script></div>
 							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
 							      </div>
 							    </div>
 							    <div class="col-sm-4"> 
 							      <div class="panel panel-primary">
 							        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-							        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%"></div>
+							        <div class="panel-body"><canvas id="doughnut-chart3" width="300" height="250"></canvas>
+<script>
+new Chart(document.getElementById("doughnut-chart3"), {
+    type: 'doughnut',
+    data: {
+      labels: ["Africa", "Asia"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: ["#3e95cd", "#8e5ea2"],
+          data: [80,20]
+        }
+      ]
+    },
+    options: {
+    	maintainAspectRatio: false,
+        responsive: true,
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+});
+</script></div>
 							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
 							      </div>
 							    </div>
-							    <div class="col-sm-4"> 
-							      <div class="panel panel-primary">
-							        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-							        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%"></div>
-							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
 							      </div>
 							    </div>
 							  </div>
@@ -196,3 +385,12 @@
 
 	</body>
 </html>
+
+function goWrite() {
+      if ($(".writeForm").css("display") == "block") {
+         $(".writeForm").slideUp(400);
+         // 글쓰기창이 부드럽게 올라감 
+      } else {
+         $(".writeForm").slideDown(400);
+         // 글쓰기창이 부드럽게 내려감
+      }

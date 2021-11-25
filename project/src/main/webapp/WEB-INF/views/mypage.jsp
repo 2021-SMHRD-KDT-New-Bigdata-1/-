@@ -193,7 +193,7 @@
         <div class="row">
          
                 <!-- section -->
-                <div class="col-lg-9 main-chart">
+                <div class="col-lg-9 main-chart" style="display:inline-block">
                 <div class="border-head">
                   <h3>정확도</h3>
                 </div>
@@ -289,7 +289,7 @@ new Chart(document.getElementById("myChart"), {
                   <h3>음절 정확도</h3>
                 </div>
                   <div style="display:inline-block">
-                  <canvas id="doughnut-chart" height="200" width="200"></canvas>
+                  <canvas id="doughnut-chart" height="250" width="250"></canvas>
 					</div>
 					<script>
 					new Chart(document.getElementById("doughnut-chart"), {
@@ -305,7 +305,8 @@ new Chart(document.getElementById("myChart"), {
 					      ]
 					    },
 					    options: {
-					    	responsive: false,
+					    	maintainAspectRatio: false,
+					    	responsive: true,
 					    }
 					});
 					</script>
@@ -320,7 +321,7 @@ new Chart(document.getElementById("myChart"), {
                   <h3>단어 정확도</h3>
                 </div>
                   <div style="display:inline-block">
-                  <canvas id="chart_test1" height="200" width="200"></canvas>
+                  <canvas id="chart_test1" height="250" width="250"></canvas>
 					</div>
 					<script>
 					new Chart(document.getElementById("chart_test1"), {
@@ -336,7 +337,8 @@ new Chart(document.getElementById("myChart"), {
 					      ]
 					    },
 					    options: {
-					    	responsive: false,
+					    	maintainAspectRatio: false,
+					    	responsive: true,
 					    }
 					});
 					</script>
@@ -350,7 +352,7 @@ new Chart(document.getElementById("myChart"), {
                   <h3>문장 정확도</h3>
                 </div>
                 <div style="display:inline-block">
-                  <canvas id="chart_test" height="200" width="200"></canvas>
+                  <canvas id="chart_test" height="250" width="250"></canvas>
 					</div>
 					<script>
 					new Chart(document.getElementById("chart_test"), {
@@ -366,7 +368,8 @@ new Chart(document.getElementById("myChart"), {
 					      ]
 					    },
 					    options: {
-					    	responsive: false,
+					    	maintainAspectRatio: false,
+					    	responsive: true,
 					    }
 					});
 					</script>
@@ -387,7 +390,7 @@ new Chart(document.getElementById("myChart"), {
                   <h3>음절 정확도</h3>
                 </div>
                   <div style="display:inline-block">
-                  <canvas id="doughnut-chart4" height="200" width="200"></canvas>
+                  <canvas id="doughnut-chart4" height="250" width="250"></canvas>
 					</div>
 					<script>
 					new Chart(document.getElementById("doughnut-chart4"), {
@@ -403,7 +406,8 @@ new Chart(document.getElementById("myChart"), {
 					      ]
 					    },
 					    options: {
-					    	responsive: false,
+					    	maintainAspectRatio: false,
+					    	responsive: true,
 					    }
 					});
 					</script>
@@ -418,7 +422,7 @@ new Chart(document.getElementById("myChart"), {
                   <h3>단어 정확도</h3>
                 </div>
                   <div style="display:inline-block">
-                  <canvas id="chart_test3" height="200" width="200"></canvas>
+                  <canvas id="chart_test3" height="250" width="250"></canvas>
 					</div>
 					<script>
 					new Chart(document.getElementById("chart_test3"), {
@@ -434,7 +438,8 @@ new Chart(document.getElementById("myChart"), {
 					      ]
 					    },
 					    options: {
-					    	responsive: false,
+					    	maintainAspectRatio: false,
+					    	responsive: true,
 					    }
 					});
 					</script>
@@ -448,7 +453,7 @@ new Chart(document.getElementById("myChart"), {
                   <h3>문장 정확도</h3>
                 </div>
                 <div style="display:inline-block">
-                  <canvas id="chart_test2" height="200" width="200"></canvas>
+                  <canvas id="chart_test2" height="250" width="250"></canvas>
 					</div>
 					<script>
 					new Chart(document.getElementById("chart_test2"), {
@@ -464,7 +469,8 @@ new Chart(document.getElementById("myChart"), {
 					      ]
 					    },
 					    options: {
-					    	responsive: false,
+					    	maintainAspectRatio: false,
+					    	responsive: true,
 					    }
 					});
 					</script>

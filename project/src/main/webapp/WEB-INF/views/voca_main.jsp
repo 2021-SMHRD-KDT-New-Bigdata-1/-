@@ -50,7 +50,7 @@
       <div class="nav notify-row" id="top_menu">
         <!--  notification start -->
 			<ul class="nav top-menu">
-          <li><a href="#">마이페이지</a></li>
+          <li><a href="#" >마이페이지</a></li>
           <li><a href="#">음절</a></li>
           <li><a href="#">단어</a></li>
           <li><a href="#">문장</a></li>
@@ -193,7 +193,7 @@
         <div class="row">
          
                 <!-- section -->
-                <div class="col-lg-9 main-chart" style="display:inline-block">
+                <div class="col-lg-12 main-chart">
                 <div class="border-head">
                   <h3>정확도</h3>
                 </div>
@@ -283,16 +283,17 @@ new Chart(document.getElementById("myChart"), {
                 <!-- section -->
                 <div class="row mt">
               <!-- SERVER STATUS PANELS -->
+              
               <div class="col-md-4 col-sm-4 mb"> <!-- width 33% -->
                 <div class="grey-panel pn donut-chart">
                   <div class="border-head">
-                  <h3>음절 정확도</h3>
+                  <h3>발음 정확도</h3>
                 </div>
                   <div style="display:inline-block">
-                  <canvas id="doughnut-chart" height="250" width="250"></canvas>
+                  <canvas id="chart1" height="200" width="200"></canvas>
 					</div>
 					<script>
-					new Chart(document.getElementById("doughnut-chart"), {
+					new Chart(document.getElementById("chart1"), {
 					    type: 'doughnut',
 					    data: {
 					      labels: ["Africa", "Asia"],
@@ -305,8 +306,38 @@ new Chart(document.getElementById("myChart"), {
 					      ]
 					    },
 					    options: {
-					    	maintainAspectRatio: false,
-					    	responsive: true,
+					    	responsive: false,
+					    }
+					});
+					</script>
+                  
+                </div>
+                <!-- /grey-panel -->
+              </div>
+              
+              <div class="col-md-4 col-sm-4 mb"> <!-- width 33% -->
+                <div class="grey-panel pn donut-chart">
+                  <div class="border-head">
+                  <h3>발음 정확도</h3>
+                </div>
+                  <div style="display:inline-block">
+                  <canvas id="chart2" height="200" width="200"></canvas>
+					</div>
+					<script>
+					new Chart(document.getElementById("chart2"), {
+					    type: 'doughnut',
+					    data: {
+					      labels: ["Africa", "Asia"],
+					      datasets: [
+					        {
+					          label: "Population (millions)",
+					          backgroundColor: ["#3e95cd", "#8e5ea2"],
+					          data: [80,20]
+					        }
+					      ]
+					    },
+					    options: {
+					    	responsive: false,
 					    }
 					});
 					</script>
@@ -318,13 +349,13 @@ new Chart(document.getElementById("myChart"), {
               <div class="col-md-4 col-sm-4 mb">
                 <div class="grey-panel pn donut-chart">
                   <div class="border-head">
-                  <h3>단어 정확도</h3>
+                  <h3>입모양 정확도</h3>
                 </div>
                   <div style="display:inline-block">
-                  <canvas id="chart_test1" height="250" width="250"></canvas>
+                  <canvas id="chart3" height="200" width="200"></canvas>
 					</div>
 					<script>
-					new Chart(document.getElementById("chart_test1"), {
+					new Chart(document.getElementById("chart3"), {
 					    type: 'doughnut',
 					    data: {
 					      labels: ["Africa", "Asia"],
@@ -337,151 +368,17 @@ new Chart(document.getElementById("myChart"), {
 					      ]
 					    },
 					    options: {
-					    	maintainAspectRatio: false,
-					    	responsive: true,
+					    	responsive: false,
 					    }
 					});
 					</script>
                 </div>
                 <!-- /grey-panel -->
               </div>
-              <!-- /col-md-4 -->
-              <div class="col-md-4 col-sm-4 mb">
-                <div class="grey-panel pn donut-chart">
-                  <div class="border-head">
-                  <h3>문장 정확도</h3>
-                </div>
-                <div style="display:inline-block">
-                  <canvas id="chart_test" height="250" width="250"></canvas>
-					</div>
-					<script>
-					new Chart(document.getElementById("chart_test"), {
-					    type: 'doughnut',
-					    data: {
-					      labels: ["Africa", "Asia"],
-					      datasets: [
-					        {
-					          label: "Population (millions)",
-					          backgroundColor: ["#3e95cd", "#8e5ea2"],
-					          data: [80,20]
-					        }
-					      ]
-					    },
-					    options: {
-					    	maintainAspectRatio: false,
-					    	responsive: true,
-					    }
-					});
-					</script>
-                  
-                </div>
-                <!-- /grey-panel -->
-              </div>
-              <!-- /col-md-4 -->
                 <!-- section1 -->
                  
                   </div>
                   
-                  <div class="row mt">
-              <!-- SERVER STATUS PANELS -->
-              <div class="col-md-4 col-sm-4 mb"> <!-- width 33% -->
-                <div class="grey-panel pn donut-chart">
-                  <div class="border-head">
-                  <h3>음절 정확도</h3>
-                </div>
-                  <div style="display:inline-block">
-                  <canvas id="doughnut-chart4" height="250" width="250"></canvas>
-					</div>
-					<script>
-					new Chart(document.getElementById("doughnut-chart4"), {
-					    type: 'doughnut',
-					    data: {
-					      labels: ["Africa", "Asia"],
-					      datasets: [
-					        {
-					          label: "Population (millions)",
-					          backgroundColor: ["#3e95cd", "#8e5ea2"],
-					          data: [80,20]
-					        }
-					      ]
-					    },
-					    options: {
-					    	maintainAspectRatio: false,
-					    	responsive: true,
-					    }
-					});
-					</script>
-                  
-                </div>
-                <!-- /grey-panel -->
-              </div>
-              <!-- /col-md-4-->
-              <div class="col-md-4 col-sm-4 mb">
-                <div class="grey-panel pn donut-chart">
-                  <div class="border-head">
-                  <h3>단어 정확도</h3>
-                </div>
-                  <div style="display:inline-block">
-                  <canvas id="chart_test3" height="250" width="250"></canvas>
-					</div>
-					<script>
-					new Chart(document.getElementById("chart_test3"), {
-					    type: 'doughnut',
-					    data: {
-					      labels: ["Africa", "Asia"],
-					      datasets: [
-					        {
-					          label: "Population (millions)",
-					          backgroundColor: ["#3e95cd", "#8e5ea2"],
-					          data: [80,20]
-					        }
-					      ]
-					    },
-					    options: {
-					    	maintainAspectRatio: false,
-					    	responsive: true,
-					    }
-					});
-					</script>
-                </div>
-                <!-- /grey-panel -->
-              </div>
-              <!-- /col-md-4 -->
-              <div class="col-md-4 col-sm-4 mb">
-                <div class="grey-panel pn donut-chart">
-                  <div class="border-head">
-                  <h3>문장 정확도</h3>
-                </div>
-                <div style="display:inline-block">
-                  <canvas id="chart_test2" height="250" width="250"></canvas>
-					</div>
-					<script>
-					new Chart(document.getElementById("chart_test2"), {
-					    type: 'doughnut',
-					    data: {
-					      labels: ["Africa", "Asia"],
-					      datasets: [
-					        {
-					          label: "Population (millions)",
-					          backgroundColor: ["#3e95cd", "#8e5ea2"],
-					          data: [80,20]
-					        }
-					      ]
-					    },
-					    options: {
-					    	maintainAspectRatio: false,
-					    	responsive: true,
-					    }
-					});
-					</script>
-                  
-                </div>
-                <!-- /grey-panel -->
-              </div>
-              <!-- /col-md-4 -->
-                <!-- section1 -->
-                 
-                  </div>
           <!-- g-3 -->
         <!-- /row -->
       </section>

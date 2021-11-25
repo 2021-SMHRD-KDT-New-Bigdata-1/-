@@ -29,10 +29,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
     <link rel="manifest" href="site.webmanifest">
 
-<script>
+ <script >
 
-    
-    </script>
+  	
+  </script>
 
 </head>
 
@@ -122,8 +122,7 @@
     
             </div> <!-- end s-header__search -->
 
-            <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-            
+        
 
         </header> <!-- end s-header -->
 
@@ -144,22 +143,83 @@
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner">
                                 
+           <!----------------------login/join form --------------------------------->       
+                                <div id="login" style="display:none">
+                                
+           
+                                
+                                	<form action = "#" method = "post">
+									    <div class="form-group input-group">
+									    
+									    	<div class="input-group-prepend">
+											    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+											 </div>
+									        <input class="form-control" name="userId" id="userId"  placeholder="아이디" type="text">
+									    </div> <!-- form-group// -->
+									    
+									     <div class="form-group input-group">
+									    	<div class="input-group-prepend">
+											    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+											</div>
+									        <input class="form-control" name="userPwd"  id="userPwd" placeholder="비밀번호" type="password">
+									    </div> <!-- form-group// -->
+									
+										<button type="submit" class="btn btn-primary btn-block" id="login_bt" onclick="login_bt();"> 로그인  </button>
+										<button type="submit" class="btn btn-primary btn-block" onclick="close_login();"> 닫기  </button>
+									
+									    <p class="text-center"><br> 계정이 없나요? <a href="../JoinForm_0.jsp">회원가입</a> </p>  
+									</form>
+                                </div>
+           <!----------------------login/join form --------------------------------->
+                                <!-- 회원가입 form -->
+                                
+                                <div id="join" style="display:none">
+									<form>
+										<div class="form-group input-group">
+    										<div class="input-group-prepend" name="id">
+											    <span class="input-group-text">아이디<i class="fa fa-envelope"></i> </span>
+											 </div>
+									        <input name="user_id" class="form-control" type="text" id="input_id">
+									        <span id="sp"></span>
+									    </div> <!-- id-group// -->
+									    
+									    <div class="form-group input-group">
+									    	<div class="input-group-prepend">
+											    <span class="input-group-text">비밀번호<i class="fa fa-lock"></i> </span>
+											</div>
+									        <input name="user_pw" class="form-control"  type="password">
+									    </div> <!-- form-group// -->
+									    
+									    <div class="form-group input-group">
+									    	<div class="input-group-prepend">
+											    <span class="input-group-text">이름<i class="fa fa-lock"></i> </span>
+											</div>
+									        <input name="user_name" class="form-control"  type="text">
+									    </div> <!-- form-group// -->
+									    <button type="submit" class='btn btn-info btn-sm'>회원가입</button>
+                                     <button class="btn btn-primary btn-block" onclick="close_join();"> 닫기  </button>
+									</form>
+								
+								</div>
+			<!--  loginform...........................----------------------------------------->
 								<div id="main">
                                     <div id="hero__entry-meta">
                                         <span class="cat-links">
-                                            	{vo.userId}님
+                                            	정교한 발음 교정
                 
                                         </span>
                                 </div>
                                     
                                     <div id="Allbareum">
                                     <h2 class="hero__entry-title" >
-                                        	환영합니다
+                                        	올바름
                                     </h2>
-                                     <button class='btn btn-info btn-sm' onclick='study();'>학습하기</button>
-                                     <button class='btn btn-info btn-sm' onclick='check();'>학습체크</button>
+                                     <button class='btn btn-info btn-sm' onclick='login();'>로그인</button>
+                                     <button class='btn btn-info btn-sm' onclick='join();'>회원가입</button>
                                      </div>
-                                </div>
+                               </div>
+                               
+              <!--  loginform close...........................------------------------------------>     
                             </div>
                         </article>
                         <article class="hero__slide swiper-slide">
@@ -191,13 +251,7 @@
     
                 </div> <!-- end hero slider -->
 
-                <a href="#bricks" class="hero__scroll-down smoothscroll">
-                    <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.25 6.75L4.75 12L10.25 17.25"></path>
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 12H5"></path>
-                    </svg>
-                    <span>Scroll</span>
-                </a>
+               
 
             </div> <!-- end hero -->
 
@@ -236,6 +290,7 @@
 	    $("main").css("display","block");
 	    $("join").css("display","none");
 	 }
+	
 	function close_login(){
 	    $("main").css("display","block");
 	    $("login").css("display","none");

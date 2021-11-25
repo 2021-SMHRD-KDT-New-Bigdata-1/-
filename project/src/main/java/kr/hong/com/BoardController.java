@@ -25,7 +25,19 @@ public class BoardController {
 			
 			return "index";
 		}
-	
+		
+		@RequestMapping("/finallresult.do")
+		public String finallresult() {
+			
+			return "finallresult";
+		}
+		
+		@RequestMapping("/weakpage.do")
+		public String weakpage() {
+			
+			return "weakpage";
+		}
+		
 
 		@RequestMapping("/studypage2.do")
 		public String studypage2() {

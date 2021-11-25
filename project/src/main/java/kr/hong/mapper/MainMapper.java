@@ -17,5 +17,7 @@ public interface MainMapper {
 	public String main();
 	public String studyresult2();
 	public String index();
+	public String weakpage();
+	public String finallresult();
 	
 }

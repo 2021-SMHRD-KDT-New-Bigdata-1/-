@@ -82,10 +82,10 @@ public class BoardController {
 			return "rece";
 		}
 		
-		@RequestMapping("/studyresult.do")
+		@RequestMapping("/studyresult2.do")
 		public String studyresult() {
 			
-			return "studyresult";
+			return "studyresult2";
 		}
 		
 

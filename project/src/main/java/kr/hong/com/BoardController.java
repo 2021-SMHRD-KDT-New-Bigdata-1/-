@@ -20,6 +20,12 @@ import kr.hong.mapper.MainMapper;
 
 public class BoardController {
 		
+		@RequestMapping("/index.do")
+		public String index() {
+			
+			return "index";
+		}
+	
 		
 		@RequestMapping("/studyhome2.do")
 		public String studyhome2() {

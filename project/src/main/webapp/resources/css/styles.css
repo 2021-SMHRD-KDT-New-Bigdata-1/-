@@ -3977,13 +3977,13 @@ body.search-is-visible .s-header__search-inner {
     text-align       : center;
     max-width        : 680px;
     max-height       : calc(20 * var(--space));
-    overflow         : hidden;
+    overflow         : auto;
     position         : relative;
 }
 
 .hero__entry-text-inner::after {
     content        : "";
-    display        : block;
+    display        : none;
     position       : absolute;
     top            : 0;
     left           : 0;

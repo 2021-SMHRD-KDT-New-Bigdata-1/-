@@ -327,7 +327,7 @@
  	}
  	
  	function logout(){
- 		location.herf = "logout.do";
+ 		location.href="logout.do";
  	}
  	
 	function login(){

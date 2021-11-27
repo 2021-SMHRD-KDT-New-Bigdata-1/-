@@ -67,7 +67,7 @@ function login() {
 
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="main.do" rel="home">ALL바름</a>
+                    <a href="main.do" rel="home" style="color:#D2691E; margin-left: 280px;" >ALL바름</a>
                 </p>
             </div>
 

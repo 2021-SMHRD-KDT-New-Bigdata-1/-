@@ -164,10 +164,10 @@ function login() {
 								<div id="main">
 								
 								    <div id="btngroup" >
-                                       <button id="btnselect"onclick=''>음절</button>
+                                       <button id="btnselect" onclick=''>음절</button>
                                     </div>
                                     <div id="btngroup">
-                                        <button id="btnselect"  onclick=''>단어</button>
+                                        <button id="btnselect" onclick=''>단어</button>
                                     </div>
                       				<div id="btngroup">
                                         <button id="btnselect" onclick=''>문장</button>

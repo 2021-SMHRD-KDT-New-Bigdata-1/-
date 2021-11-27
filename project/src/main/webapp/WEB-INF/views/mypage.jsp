@@ -17,6 +17,7 @@
 		<link href="${pageContext.request.contextPath}/resources/css/vendor.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
 		<script src="${pageContext.request.contextPath}/resources/assets/js/Chart.js"></script>
+		<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -222,13 +223,13 @@
 						<div class="container">    
 							  <div class="row">
 							  
-							  <select id="user_nationality" name="user_nationality" style="border:1px;">
+							  <select id="user_nationality" name="user_nationality" style="height:auto; font-size:25px;">
 												<option value="" selected disabled>week</option> 
 												<option value="eng">1주차</option> 
 												<option value="ko">2주차</option>
 											</select>
 							  
-							   <select id="user_nationality" name="user_nationality">
+							   <select id="user_nationality" name="user_nationality" style="height:auto; font-size:25px;">
 												<option value="" selected disabled>day</option> 
 												<option value="eng">day1</option> 
 												<option value="ko">day2</option>
@@ -427,6 +428,9 @@ new Chart(document.getElementById("doughnut-chart3"), {
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
 function submenu() {

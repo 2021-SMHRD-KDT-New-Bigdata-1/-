@@ -95,6 +95,7 @@
 					    color: #fff;
 					    background-color: #000000;
 					    border-color: #000000;
+					    align:center;
 				}
 				
 					.alt.top {
@@ -151,6 +152,10 @@
 				#pl{
 				color:white
 				}
+				
+				#chart_title{
+				text-align:center;
+				}
 			  </style>
 			
 				
@@ -205,7 +210,7 @@
 							  <div class="row">
 							    <div class="col-12-large">
 							      <div class="panel panel-primary">
-							        <div class="panel-heading">정확도</div>
+							        <div id="chart_title" class="panel-heading">정확도</div>
 							        <div class="panel-body">                    
                     <canvas id="myChart"></canvas>
                     
@@ -294,7 +299,7 @@ new Chart(document.getElementById("myChart"), {
 							  <div class="row">
 							    <div class="col-sm-4"> 
 							      <div class="panel panel-primary">
-							        <div class="panel-heading">음절</div>
+							        <div id="chart_title" class="panel-heading">음절</div>
 							        <div class="panel-body"><canvas id="doughnut-chart1" width="300" height="250"></canvas>
 <script>
 new Chart(document.getElementById("doughnut-chart1"), {
@@ -312,10 +317,6 @@ new Chart(document.getElementById("doughnut-chart1"), {
     options: {
     	maintainAspectRatio: false,
         responsive: true,
-      title: {
-        display: true,
-        text: 'Predicted world population (millions) in 2050'
-      }
     }
 });
 </script></div>
@@ -325,7 +326,7 @@ new Chart(document.getElementById("doughnut-chart1"), {
 							    
 							    <div class="col-sm-4"> 
 							      <div class="panel panel-primary">
-							        <div class="panel-heading">단어</div>
+							        <div id="chart_title" class="panel-heading">단어</div>
 							        <div class="panel-body"><canvas id="doughnut-chart2" width="300" height="250"></canvas>
 <script>
 new Chart(document.getElementById("doughnut-chart2"), {
@@ -343,10 +344,6 @@ new Chart(document.getElementById("doughnut-chart2"), {
     options: {
     	maintainAspectRatio: false,
         responsive: true,
-      title: {
-        display: true,
-        text: 'Predicted world population (millions) in 2050'
-      }
     }
 });
 </script></div>
@@ -355,7 +352,7 @@ new Chart(document.getElementById("doughnut-chart2"), {
 							    </div>
 							    <div class="col-sm-4"> 
 							      <div class="panel panel-primary">
-							        <div class="panel-heading">문장</div>
+							        <div id="chart_title" class="panel-heading">문장</div>
 							        <div class="panel-body"><canvas id="doughnut-chart3" width="300" height="250"></canvas>
 <script>
 new Chart(document.getElementById("doughnut-chart3"), {
@@ -373,10 +370,6 @@ new Chart(document.getElementById("doughnut-chart3"), {
     options: {
     	maintainAspectRatio: false,
         responsive: true,
-      title: {
-        display: true,
-        text: 'Predicted world population (millions) in 2050'
-      }
     }
 });
 </script></div>

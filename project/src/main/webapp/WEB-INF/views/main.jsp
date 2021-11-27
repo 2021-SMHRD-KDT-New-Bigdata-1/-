@@ -62,7 +62,7 @@
 
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="main.do" rel="home">ALL바름</a>
+                    <a href="main.do" rel="home" style="color:#D2691E; margin-left: 280px;" >ALL바름</a>
                 </p>
             </div>
 
@@ -139,7 +139,7 @@
 
                     <div class="swiper-wrapper">
                         <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/featured-04_2000_01.jpg');"></div>
+                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner">
                                 
@@ -180,7 +180,7 @@
     										<div class="input-group-prepend" name="id">
 											    <span class="input-group-text">아이디<i class="fa fa-envelope"></i> </span>
 											 </div>
-									        <input name="join_user_id" class="form-control" type="text" id="join_user_id">
+									        <input name="user_id" class="form-control" type="text" id="user_id" required>
 									        <span id="sp"></span>
 									    </div> <!-- id-group// -->
 									    
@@ -188,26 +188,26 @@
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text">비밀번호<i class="fa fa-lock"></i> </span>
 											</div>
-									        <input name="join_user_pw" class="form-control"  type="password" id="join_user_pw">
+									        <input name="user_pw" class="form-control"  type="password" id="user_pw" required>
 									    </div> <!-- form-group// -->
 									    
 									    <div class="form-group input-group">
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text">이름<i class="fa fa-lock"></i> </span>
 											</div>
-									        <input name="join_user_name" class="form-control"  type="text" id="join_user_name">
+									        <input name="user_name" class="form-control"  type="text" id="user_name" required>
 									    </div> <!-- form-group// -->
 									    <div class="form-group input-group">
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text">생년월일<i class="fa fa-lock"></i> </span>
 											</div>
-									        <input name="join_user_birthdate" class="form-control" placeholder="yyyymmdd" type="text" id="join_user_birthdate">
+									        <input name="user_birthdate" class="form-control" placeholder="yyyymmdd" type="text" id="user_birthdate" required>
 									    </div> <!-- form-group// -->
 									    <div class="form-group input-group">
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text">국적<i class="fa fa-lock"></i> </span>
 											</div>
-									        <select id="user_nationality" name="user_nationality">
+									        <select id="user_nationality" name="user_nationality" required>
 												<option value="" selected disabled>언어를 선택</option> 
 												<option value="eng">ENG(영어)</option> 
 												<option value="ko">KO(한글)</option>
@@ -251,7 +251,7 @@
                                     </h2>
                                      <button class='btn btn-info btn-sm' href="#">학습하기</button>
                                      <button class='btn btn-info btn-sm' href="#">마이페이지</button>
-                                     <button class='btn btn-info btn-sm' onclick="logout()">로그아웃</button>
+                                     <button type="button" class='btn btn-info btn-sm' onclick="logout()">로그아웃</button>
                                      </div>
                              </c:if>
                                
@@ -326,6 +326,10 @@
  		$("#loginForm").submit();
  	}
  	
+ 	function logout(){
+ 		location.href="logout.do";
+ 	}
+ 	
 	function login(){
 		document.getElementById("login").style.display = "";
 		document.getElementById("main").style.display = "none";
@@ -341,13 +345,15 @@
 	}
 
 	function close_join(){
-	    $("main").css("display","");
-	    $("join").css("display","none");
+		document.getElementById("join").style.display = "none";
+		document.getElementById("main").style.display = "";
+		document.getElementById("Allbareum").style.display = "";
 	 }
 	
 	function close_login(){
-	    $("main").css("display","");
-	    $("login").css("display","none");
+		document.getElementById("login").style.display = "none";
+		document.getElementById("main").style.display = "";
+		document.getElementById("Allbareum").style.display = "";
 	 }
 
 </script>

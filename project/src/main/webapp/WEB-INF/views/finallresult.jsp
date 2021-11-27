@@ -83,7 +83,7 @@
 </div><br>
 <script>
 	function exit(){
-		   location.href="studyhome.do";
+		   location.href="studyhome1.do";
 	}
 </script>
 </body>

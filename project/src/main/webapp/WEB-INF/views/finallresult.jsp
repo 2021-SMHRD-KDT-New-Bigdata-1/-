@@ -37,7 +37,7 @@
 <!-- Header -->
 <header id="header" class="alt"> </header>
 
-<div style="margin-top: 180px;">
+<div style="margin-top: 100px;">
 
 	<!-- 제목(결과) -->
     <div class="result">

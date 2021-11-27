@@ -32,7 +32,7 @@
 				}
 			   		#sidecontainer{
 				float:left;
-				width : 50px;
+				width : 80px;
 				height : 1000px;
 				background-color:#000000;
 				}	
@@ -138,6 +138,19 @@
 				.title_menu1{
 				margin-left:150px;
 				}
+				
+				.weekday{
+				float:left;
+				border:white solid white 0px 0px 1px 0px;
+				font-size:1.2rem;
+				color:rgba(255,255,255,0);
+				}
+				#week1{
+				display:none;
+				}
+				#pl{
+				color:white
+				}
 			  </style>
 			
 				
@@ -155,24 +168,33 @@
 					<h1 class="title_name">allbareum</h1>
 					<nav class="title_menu">
 					<div>
-					<a href="#">asdf</a>
-					<a href="#">asdf</a>
-					<a href="#">asdf</a>
-					<a href="#">asdf</a>
+					<a id="pl" href="#">asdf</a>
+					<a id="pl" href="#">asdf</a>
+					<a id="pl" href="#">asdf</a>
+					<a id="pl" href="#">asdf</a>
 					</div>
 				</nav>	
 					</header>
 					</section>
 							<div id="sidecontainer" >
-					<ul>
+					<ul class="weekday">
 						<li>
-							<a class="pl" href="#" style="align:left;">asdf</a>
+							<a id="pl" href="#" style="align:left;" onclick="submenu();">week1</a>
+							<ul id="week1">
+								<li><a id="pl" href="#">day1</a></li>
+								<li><a id="pl" href="#">day2</a></li>
+								<li><a id="pl" href="#">day3</a></li>
+								<li><a id="pl" href="#">day4</a></li>
+								<li><a id="pl" href="#">day5</a></li>
+								<li><a id="pl" href="#">day6</a></li>
+								<li><a id="pl" href="#">day7</a></li>
+							</ul>
 						</li>
 						<li>
-							<a class="pl" href="#" style="align:left;">asdf</a>
+							<a id="pl" href="#" style="align:left;">asdf</a>
 						</li>
 						<li>
-							<a class="pl" href="#" style="align:left;">asdf</a>
+							<a id="pl" href="#" style="align:left;">asdf</a>
 						</li>
 						</ul>
 				</div>
@@ -183,7 +205,7 @@
 							  <div class="row">
 							    <div class="col-12-large">
 							      <div class="panel panel-primary">
-							        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+							        <div class="panel-heading">정확도</div>
 							        <div class="panel-body">                    
                     <canvas id="myChart"></canvas>
                     
@@ -272,7 +294,7 @@ new Chart(document.getElementById("myChart"), {
 							  <div class="row">
 							    <div class="col-sm-4"> 
 							      <div class="panel panel-primary">
-							        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+							        <div class="panel-heading">음절</div>
 							        <div class="panel-body"><canvas id="doughnut-chart1" width="300" height="250"></canvas>
 <script>
 new Chart(document.getElementById("doughnut-chart1"), {
@@ -303,7 +325,7 @@ new Chart(document.getElementById("doughnut-chart1"), {
 							    
 							    <div class="col-sm-4"> 
 							      <div class="panel panel-primary">
-							        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+							        <div class="panel-heading">단어</div>
 							        <div class="panel-body"><canvas id="doughnut-chart2" width="300" height="250"></canvas>
 <script>
 new Chart(document.getElementById("doughnut-chart2"), {
@@ -333,7 +355,7 @@ new Chart(document.getElementById("doughnut-chart2"), {
 							    </div>
 							    <div class="col-sm-4"> 
 							      <div class="panel panel-primary">
-							        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+							        <div class="panel-heading">문장</div>
 							        <div class="panel-body"><canvas id="doughnut-chart3" width="300" height="250"></canvas>
 <script>
 new Chart(document.getElementById("doughnut-chart3"), {
@@ -383,14 +405,25 @@ new Chart(document.getElementById("doughnut-chart3"), {
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-	</body>
-</html>
+<script>
+function submenu() {
+	if($("#week1").css("display")=="none"){
+		$("#week1").slideDown(400);
+	}
+	else{
+		$("#week1").slideUp(400);
+	}
 
-function goWrite() {
+}
+</script>
+<!-- function goWrite() {
       if ($(".writeForm").css("display") == "block") {
          $(".writeForm").slideUp(400);
          // 글쓰기창이 부드럽게 올라감 
       } else {
          $(".writeForm").slideDown(400);
          // 글쓰기창이 부드럽게 내려감
-      }
+      } -->
+	</body>
+</html>
+

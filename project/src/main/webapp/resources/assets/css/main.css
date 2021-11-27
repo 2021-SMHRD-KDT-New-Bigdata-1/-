@@ -107,7 +107,7 @@ input, select, textarea {
 		background: #f2f2f2;
 	}
 
-		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+		body. *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
 			-ms-animation: none !important;
@@ -2484,7 +2484,7 @@ input, select, textarea {
 		}
 
 		table th {
-			color: #ffffff;
+			color: #79716c;
 			font-size: 0.9em;
 			font-weight: 600;
 			padding: 0 0.75em 0.75em 0.75em;

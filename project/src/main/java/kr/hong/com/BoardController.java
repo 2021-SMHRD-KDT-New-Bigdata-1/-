@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import kr.hong.domain.LoginInfo;
 import kr.hong.domain.User;
 import kr.hong.mapper.MainMapper;
 
@@ -32,11 +33,18 @@ public class BoardController {
 		}
 		
 		@RequestMapping("/login.do")
-		public String login(User user, HttpSession session) {
+		public String login(LoginInfo info, HttpSession session) {
 			
-			User vo = mapper.login(user);
+			User vo = mapper.login(info);
 			
 			session.setAttribute("vo", vo);
+			
+			return "redirect:/main.do";
+		}
+		
+		@RequestMapping("/logout.do")
+		public String logout(HttpSession session) {
+			session.invalidate();
 			
 			return "redirect:/main.do";
 		}

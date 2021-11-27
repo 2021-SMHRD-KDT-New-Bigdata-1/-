@@ -2,6 +2,7 @@ package kr.hong.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import kr.hong.domain.LoginInfo;
 import kr.hong.domain.User;
 
 // 1. Mapper interface + @(에노테이션)
@@ -11,7 +12,7 @@ import kr.hong.domain.User;
 public interface MainMapper {
 	// board table에서 게시판 리스트를 가져오는 동작구현
 	//@Select("Select * from board")
-	public User login(User user);
+	public User login(LoginInfo info);
 	public void join(User vo);
 	public String studyhome1();
 	public String studyhome2();

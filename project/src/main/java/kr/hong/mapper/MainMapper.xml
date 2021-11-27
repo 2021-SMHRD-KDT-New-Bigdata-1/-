@@ -8,6 +8,6 @@
       	values (#{user_id}, #{user_pw}, #{user_name}, now(), #{user_nationality}, now(), 'n', 'n')
 	</insert>
 	<select id="login" resultType="kr.hong.domain.User">
-	    select * from tbl_user where user_id = #{user_id} and user_pw = #{user_pw}
+	    select * from tbl_user where user_id = #{login_user_id} and user_pw = #{login_user_pw}
 	</select>
 </mapper>

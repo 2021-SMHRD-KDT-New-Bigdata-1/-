@@ -14,7 +14,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/csstest.css" />
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
+		<link href="${pageContext.request.contextPath}/resources/css/vendor.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
 		<script src="${pageContext.request.contextPath}/resources/assets/js/Chart.js"></script>
+		<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -24,18 +27,14 @@
 			    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
 			   html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 				    margin: 0;
+				    height:100%;
 				    padding: 0;
 				    border: 0;
 				    font-size: 100%;
 				    font: inherit;
 				    vertical-align: baseline;
 				}
-			   		#sidecontainer{
-				float:left;
-				width : 80px;
-				height : 1000px;
-				background-color:#000000;
-				}	
+			   		
 		
 			   
 			    * .is-preload.alt{
@@ -124,37 +123,75 @@
 				background-color:black;
 				}
 				
-				header nav a .pl{
+				/* header nav a .pl{
 				    border: 0;
 				    display: block;
 				    font-size: 0.8em;
 				    float: left;
 				    height: inherit;
-				}
+				} */
 				
 				.title_menu{
 				margin-left:50px;
+				background-color:#000000
+				}
+
+				.title_menu > ul > li{
+				background-color:#000000;
 				}
 				
-				.title_menu1{
-				margin-left:150px;
-				}
-				
-				.weekday{
+				#weekday{
 				float:left;
-				border:white solid white 0px 0px 1px 0px;
 				font-size:1.2rem;
 				color:rgba(255,255,255,0);
+				display:inline-block;
+				background-color:#000000;
 				}
-				#week1{
-				display:none;
-				}
+				
 				#pl{
-				color:white
+				color:white;
+				background-color:#000000;
+				display:block;
 				}
 				
 				#chart_title{
 				text-align:center;
+				}
+				
+				#main-menu > li {
+				  float: left;
+				  position: relative;
+				}
+				
+				#main-menu > li > a {
+				  font-size: 0.85rem;
+				  color: rgba(255,255,255,0.85);
+				  text-align: center;
+				  text-decoration: none;
+				  letter-spacing: 0.05em;
+				  display: block;
+				  padding: 14px 36px;
+				  border-right: 1px solid rgba(0,0,0,0.15);
+				  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+				}
+				#sub_menu{
+				margin:0;
+				padding:0;
+				list-style-type:none;		
+				background-color:#000000;		
+				color:white;
+				display:none;
+				}
+				
+				#title_name{
+				color:white;
+				font-size:30px;
+				}
+				#main_title_nav{
+				width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
 				}
 			  </style>
 			
@@ -170,44 +207,38 @@
 				<!-- Header -->
 					<section>
 					<header class="nav_top">
-					<h1 class="title_name">allbareum</h1>
-					<nav class="title_menu">
-					<div>
-					<a id="pl" href="#">asdf</a>
-					<a id="pl" href="#">asdf</a>
-					<a id="pl" href="#">asdf</a>
-					<a id="pl" href="#">asdf</a>
-					</div>
-				</nav>	
+					<h1 id="title_name">allbareum</h1>
+					<nav id="main_title_nav" role="navigation">
+  <ul id="main-menu">
+    <li><a href="#" onclick="submenu();">MENU1</a></li>
+    <li><a href="#" onclick="submenu();">MENU2</a></li>
+    <li><a href="#" onclick="submenu();">MENU3</a></li>
+  </ul>
+</nav>
 					</header>
 					</section>
-							<div id="sidecontainer" >
-					<ul class="weekday">
-						<li>
-							<a id="pl" href="#" style="align:left;" onclick="submenu();">week1</a>
-							<ul id="week1">
-								<li><a id="pl" href="#">day1</a></li>
-								<li><a id="pl" href="#">day2</a></li>
-								<li><a id="pl" href="#">day3</a></li>
-								<li><a id="pl" href="#">day4</a></li>
-								<li><a id="pl" href="#">day5</a></li>
-								<li><a id="pl" href="#">day6</a></li>
-								<li><a id="pl" href="#">day7</a></li>
-							</ul>
-						</li>
-						<li>
-							<a id="pl" href="#" style="align:left;">asdf</a>
-						</li>
-						<li>
-							<a id="pl" href="#" style="align:left;">asdf</a>
-						</li>
-						</ul>
-				</div>
 				
 				<!-- Main -->
 					<div id="main">
 						<div class="container">    
 							  <div class="row">
+							  
+							  <select id="user_nationality" name="user_nationality" style="height:auto; font-size:25px;">
+												<option value="" selected disabled>week</option> 
+												<option value="eng">1주차</option> 
+												<option value="ko">2주차</option>
+											</select>
+							  
+							   <select id="user_nationality" name="user_nationality" style="height:auto; font-size:25px;">
+												<option value="" selected disabled>day</option> 
+												<option value="eng">day1</option> 
+												<option value="ko">day2</option>
+												<option value="ko">day3</option>
+												<option value="ko">day4</option>
+												<option value="ko">day5</option>
+												<option value="ko">day6</option>
+												<option value="ko">day7</option>
+											</select>
 							    <div class="col-12-large">
 							      <div class="panel panel-primary">
 							        <div id="chart_title" class="panel-heading">정확도</div>
@@ -397,26 +428,21 @@ new Chart(document.getElementById("doughnut-chart3"), {
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
 function submenu() {
-	if($("#week1").css("display")=="none"){
-		$("#week1").slideDown(400);
+	if($("#sub_menu").css("display")=="none"){
+		$("#sub_menu").css("display", "block");
 	}
 	else{
-		$("#week1").slideUp(400);
+		$("#sub_menu").css("display", "none");
 	}
 
 }
 </script>
-<!-- function goWrite() {
-      if ($(".writeForm").css("display") == "block") {
-         $(".writeForm").slideUp(400);
-         // 글쓰기창이 부드럽게 올라감 
-      } else {
-         $(".writeForm").slideDown(400);
-         // 글쓰기창이 부드럽게 내려감
-      } -->
 	</body>
 </html>
 

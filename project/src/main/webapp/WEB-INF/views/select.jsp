@@ -17,12 +17,12 @@
 
     <!-- CSS
     ================================================== -->
-<link href="${pageContext.request.contextPath}/resources/css/vendor.css" rel="stylesheet" type="text/css">
-<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
-
-    <!-- favicons
-    ================================================== -->
-<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
+	<link href="${pageContext.request.contextPath}/resources/css/vendor.css" rel="stylesheet" type="text/css">
+	<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
+	
+	    <!-- favicons
+	    ================================================== -->
+	<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
     <link rel="apple-touch-icon" sizes="180x180" href="${pageContext.request.contextPath}/resources/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="${pageContext.request.contextPath}/resources/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
@@ -67,7 +67,7 @@ function login() {
 
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="index.html" rel="home">ALL바름</a>
+                    <a href="main.do" rel="home">ALL바름</a>
                 </p>
             </div>
 
@@ -143,7 +143,7 @@ function login() {
 
                     <div class="swiper-wrapper">
                         <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" style="background-image: url('images/thumbs/featured/featured-01_2000.jpg');"></div>
+                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/select_back.png');"></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner">
                                 <div id="login" style="display:none">
@@ -164,10 +164,10 @@ function login() {
 								<div id="main">
 								
 								    <div id="btngroup" >
-                                       <button id="btnselect"onclick=''>음절</button>
+                                       <button id="btnselect" onclick=''>음절</button>
                                     </div>
                                     <div id="btngroup">
-                                        <button id="btnselect"  onclick=''>단어</button>
+                                        <button id="btnselect" onclick=''>단어</button>
                                     </div>
                       				<div id="btngroup">
                                         <button id="btnselect" onclick=''>문장</button>

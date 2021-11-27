@@ -13,7 +13,9 @@ public interface MainMapper {
 	//@Select("Select * from board")
 	public User login(User user);
 	public void join(User vo);
-	public String studyhome();
+	public String studyhome1();
+	public String studyhome2();
+	public String studyhome3();
 	public String select();
 	public String studypage2();
 	public String mypage();

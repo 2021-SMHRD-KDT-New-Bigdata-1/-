@@ -104,7 +104,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #e6e6e6;
+		background: #f2f2f2;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2543,22 +2543,26 @@ input, select, textarea {
 		background-color: transparent;
 		border: 0;
 		border-radius: 0;
-		box-shadow: inset 0 0 0 2px #ffffff;
+		
 		color: #ffffff;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.8em;
 		font-weight: 600;
-		height: 3.5em;
 		letter-spacing: 0.25em;
-		line-height: 3.5em;
 		padding: 0 1.75em;
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
 	}
+	
+	input[type="button"],
+	.btnback{
+		margin-top : 0.5em;
 
+	}
+/* button 마우스 클릭 했을 때
 		input[type="submit"]:hover, input[type="submit"]:active,
 		input[type="reset"]:hover,
 		input[type="reset"]:active,
@@ -2568,19 +2572,10 @@ input, select, textarea {
 		button:active,
 		.button:hover,
 		.button:active {
-			box-shadow: inset 0 0 0 2px #9bf1ff;
-			color: #9bf1ff;
-		}
+			box-shadow: inset 0 0 0 2px white;
+			color: white;
+		}*/
 
-		input[type="submit"]:active,
-		input[type="reset"]:active,
-		input[type="button"]:active,
-		button:active,
-		.button:active {
-			background-color: rgba(155, 241, 255, 0.1);
-			box-shadow: inset 0 0 0 2px #53e3fb;
-			color: #53e3fb;
-		}
 
 		input[type="submit"].icon:before,
 		input[type="reset"].icon:before,
@@ -3616,7 +3611,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
+		background-color: #f2f2f2;
 	}
 
 		#main > * {
@@ -3801,7 +3796,8 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#wrapper {
-				padding-top: 2.75em;
+				padding-top: 2em;
+  			  	padding-left: 80px;
 			}
 
 		}

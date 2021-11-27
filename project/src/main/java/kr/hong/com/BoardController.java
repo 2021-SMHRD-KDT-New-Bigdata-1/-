@@ -66,10 +66,22 @@ public class BoardController {
 			return "studypage2";
 		}
 		
-		@RequestMapping("/studyhome.do")
-		public String studyhome() {
+		@RequestMapping("/studyhome1.do")
+		public String studyhome1() {
 			
-			return "studyhome";
+			return "studyhome1";
+		}
+		
+		@RequestMapping("/studyhome2.do")
+		public String studyhome2() {
+			
+			return "studyhome2";
+		}
+		
+		@RequestMapping("/studyhome3.do")
+		public String studyhome3() {
+			
+			return "studyhome3";
 		}
 		
 		@RequestMapping("/select.do")

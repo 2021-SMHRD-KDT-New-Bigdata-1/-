@@ -11,7 +11,8 @@ import kr.hong.domain.User;
 public interface MainMapper {
 	// board table에서 게시판 리스트를 가져오는 동작구현
 	//@Select("Select * from board")
-	public String login();
+	public User login(User user);
+	public void join(User vo);
 	public String studyhome();
 	public String select();
 	public String studypage2();
@@ -21,7 +22,7 @@ public interface MainMapper {
 	public String index();
 	public String weakpage();
 	public String finallresult();
-	public String join(User vo);
+	
 	
 }
 

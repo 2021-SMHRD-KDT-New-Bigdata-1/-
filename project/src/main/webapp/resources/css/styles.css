@@ -3894,7 +3894,7 @@ body.search-is-visible .s-header__search-inner {
 
 .hero__entry-text-inner::after {
     content        : "";
-    display        : block;
+    display        : none;
     position       : absolute;
     top            : 0;
     left           : 0;

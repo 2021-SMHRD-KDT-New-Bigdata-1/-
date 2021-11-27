@@ -7,10 +7,10 @@
 <html>
 	<head>
 		<title>Forty by HTML5 UP</title>
-		<meta charset="euc-kr" />
+		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/csstest.css" />
-		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -18,37 +18,12 @@
 				
 			<style>
 			    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
-			   html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-				    margin: 0;
-				    padding: 0;
-				    border: 0;
-				    font-size: 100%;
-				    font: inherit;
-				    vertical-align: baseline;
-				}
-			   
-			   
-			    * .is-preload.alt{
-				margin: 0; padding: 0;
-				}
-					
-					body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333;
-}		    
-			    
-			    body {
-    -webkit-text-size-adjust: none;
-}
-
 			    .navbar {
 			      margin-bottom: 50px;
 			      border-radius: 0;
 			    }
 			    .panel-primary {
-				    border-color: #000000;
+				    border-color: #f67822;
 				}
 				
 				.panel-danger {
@@ -83,47 +58,8 @@
 				
 				.panel-primary>.panel-heading {
 					    color: #fff;
-					    background-color: #000000;
-					    border-color: #000000;
-				}
-				#sidecontainer{
-				float:left;
-				width : 100px;
-				height : 1000px;
-				background-color:#000000;
-				}	
-				
-					#header.alt.top {
-						display: -moz-flex;
-						display: -webkit-flex;
-						display: -ms-flex;
-						display: flex;
-						background-color: #000000;
-						box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
-						cursor: default;
-						font-weight: 600;
-						height: 3.25em;
-						left: 0;
-						letter-spacing: 0.25em;
-						line-height: 3.25em;
-						margin: 0;
-						position: fixed;
-						text-transform: uppercase;
-						top: 0;
-						width: 100%;
-						z-index: 10000;
-					}
-				
-				
-				.top_nav{
-				float:left important!;
-				}
-				
-				header nav a .pl{
-				    border: 0;
-				    display: block;
-				    font-size: 0.8em;
-				    height: inherit;
+					    background-color: #f67822;
+					    border-color: #f67822;
 				}
 				
 			  </style>
@@ -131,24 +67,18 @@
 				
 	</head>
 	
-	<body class="is-preload alt">
+	<body class="is-preload">
 
 		<!-- Wrapper -->
-			
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header" class="alt top">
-						<nav class="top_nav" >
-							<a class="pl" href="#" style="align:left;">asdf</a>
-						</nav>
+					<header id="header" class="alt">
+						
 					</header>
-							<div id="sidecontainer" >
-				<aside id="side">
-				<p>sibal</p>
-				</aside>		
-				</div>
+
 				
+
 				<!-- Main -->
 					<div id="main">
 						<div class="container">    

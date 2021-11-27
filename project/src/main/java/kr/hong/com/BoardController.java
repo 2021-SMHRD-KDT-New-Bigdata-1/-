@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,11 +18,28 @@ import kr.hong.mapper.MainMapper;
 
 
 @Controller
-
-
 public class BoardController {
 
+		@Autowired
 		private MainMapper mapper;
+		
+		@RequestMapping("/join.do")
+		public String join(User vo) {
+			
+			mapper.join(vo);
+			
+			return "redirect:/main.do";
+		}
+		
+		@RequestMapping("/login.do")
+		public String login(User user, HttpSession session) {
+			
+			User vo = mapper.login(user);
+			
+			session.setAttribute("vo", vo);
+			
+			return "redirect:/main.do";
+		}
 	
 		@RequestMapping("/index.do")
 		public String index() {
@@ -54,14 +72,6 @@ public class BoardController {
 			return "studyhome";
 		}
 		
-	
-		@RequestMapping("/login.do")
-		public String login() {
-			
-			return "login";
-		}
-		
-
 		@RequestMapping("/select.do")
 		public String select() {
 			
@@ -111,12 +121,7 @@ public class BoardController {
 		
 			return "studyresult2";
 		}
-		@RequestMapping("/join.do")
-		public String join(User vo) {
-			mapper.join(vo);
-			
-			return "redirect:/main.do";
-		}
+
 		
 
 		

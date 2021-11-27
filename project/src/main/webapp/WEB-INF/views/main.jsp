@@ -62,7 +62,7 @@
 
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="index.html" rel="home">ALL바름</a>
+                    <a href="main.do" rel="home">ALL바름</a>
                 </p>
             </div>
 
@@ -148,26 +148,27 @@
                                 
            
                                 
-                                	<form action = "#" method = "post">
+                                	<form id="loginForm" action = "login.do" method = "post">
 									    <div class="form-group input-group">
 									    
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
 											 </div>
-									        <input class="form-control" name="userId" id="userId"  placeholder="아이디" type="text">
+									        <input class="form-control" name="login_user_id" id="login_user_id"  placeholder="아이디" type="text">
 									    </div> <!-- form-group// -->
 									    
 									     <div class="form-group input-group">
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 											</div>
-									        <input class="form-control" name="userPwd"  id="userPwd" placeholder="비밀번호" type="password">
+									        <input class="form-control" name="login_user_pw"  id="login_user_pw" placeholder="비밀번호" type="password">
 									    </div> <!-- form-group// -->
 									
-										<button type="submit" class="btn btn-primary btn-block" id="login_bt" onclick="login_bt();"> 로그인  </button>
-										<button type="submit" class="btn btn-primary btn-block" onclick="close_login();"> 닫기  </button>
+										<button type="button" class="btn btn-primary btn-block" id="login_bt" onclick="formCheck()"> 로그인  </button>
+										<button type="button" class="btn btn-primary btn-block" onclick="close_login()"> 닫기  </button>
+										
 									
-									    <p class="text-center"><br> 계정이 없나요? <a href="../JoinForm_0.jsp">회원가입</a> </p>  
+									    <p class="text-center"><br> 계정이 없나요? <a onclick="join()">회원가입</a> </p>  
 									</form>
                                 </div>
            <!----------------------login/join form --------------------------------->
@@ -179,7 +180,7 @@
     										<div class="input-group-prepend" name="id">
 											    <span class="input-group-text">아이디<i class="fa fa-envelope"></i> </span>
 											 </div>
-									        <input name="user_id" class="form-control" type="text" id="user_id">
+									        <input name="join_user_id" class="form-control" type="text" id="join_user_id">
 									        <span id="sp"></span>
 									    </div> <!-- id-group// -->
 									    
@@ -187,33 +188,38 @@
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text">비밀번호<i class="fa fa-lock"></i> </span>
 											</div>
-									        <input name="user_pw" class="form-control"  type="password" id="user_pw">
+									        <input name="join_user_pw" class="form-control"  type="password" id="join_user_pw">
 									    </div> <!-- form-group// -->
 									    
 									    <div class="form-group input-group">
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text">이름<i class="fa fa-lock"></i> </span>
 											</div>
-									        <input name="user_name" class="form-control"  type="text" id="user_name">
+									        <input name="join_user_name" class="form-control"  type="text" id="join_user_name">
 									    </div> <!-- form-group// -->
 									    <div class="form-group input-group">
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text">생년월일<i class="fa fa-lock"></i> </span>
 											</div>
-									        <input name="user_date" class="form-control" placeholder="yyyy-mm-dd" type="text" id="user_date">
+									        <input name="join_user_birthdate" class="form-control" placeholder="yyyymmdd" type="text" id="join_user_birthdate">
 									    </div> <!-- form-group// -->
 									    <div class="form-group input-group">
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text">국적<i class="fa fa-lock"></i> </span>
 											</div>
-									        <input name="user_nationality" class="form-control"  type="text" id="user_nationality">
+									        <select id="user_nationality" name="user_nationality">
+												<option value="" selected disabled>언어를 선택</option> 
+												<option value="eng">ENG(영어)</option> 
+												<option value="ko">KO(한글)</option>
+											</select>
 									    </div> <!-- form-group// -->
 									    <button type="submit" class='btn btn-info btn-sm'>회원가입</button>
-                                     <button class="btn btn-primary btn-block" onclick="close_join();"> 닫기  </button>
+                                     <button type="button" class="btn btn-primary btn-block" onclick="close_join();"> 닫기  </button>
 									</form>
 								
 								</div>
 			<!--  loginform...........................----------------------------------------->
+							<c:if test="${vo==null }">
 								<div id="main">
                                     <div id="hero__entry-meta">
                                         <span class="cat-links">
@@ -226,10 +232,28 @@
                                     <h2 class="hero__entry-title" >
                                         	올바름
                                     </h2>
-                                     <button class='btn btn-info btn-sm' onclick='login();'>로그인</button>
-                                     <button class='btn btn-info btn-sm' onclick='join();'>회원가입</button>
+                                     <button class='btn btn-info btn-sm' onclick='login()'>로그인</button>
+                                     <button class='btn btn-info btn-sm' onclick='join()'>회원가입</button>
                                      </div>
-                               </div>
+                             </c:if>
+                             <c:if test="${vo!=null }">
+                             	<div id="main">
+                                    <div id="hero__entry-meta">
+                                        <span class="cat-links">
+                                            	${vo.user_name }님
+                
+                                        </span>
+                                </div>
+                                    
+                                    <div id="Allbareum">
+                                    <h2 class="hero__entry-title" >
+                                        	환영합니다
+                                    </h2>
+                                     <button class='btn btn-info btn-sm' href="#">학습하기</button>
+                                     <button class='btn btn-info btn-sm' href="#">마이페이지</button>
+                                     <button class='btn btn-info btn-sm' onclick="logout()">로그아웃</button>
+                                     </div>
+                             </c:if>
                                
               <!--  loginform close...........................------------------------------------>     
                             </div>
@@ -240,7 +264,7 @@
                                 <div class="hero__entry-text-inner">
                                     <div class="hero__entry-meta">
                                         <span class="cat-links">
-                                            <a href="category.html">Health</a>
+                                            <a>올바름</a>
                                         </span>
                                     </div>
                                     <h2 class="hero__entry-title">
@@ -284,7 +308,24 @@
     
     <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
+ 	function formCheck(){
+ 		var userId = $("#login_user_id").val();
+ 		if(userId==""){
+ 			alert("아이디를 입력하세요");
+ 			$("#login_user_id").focus();
+ 			return false;
+ 		}
+ 		var userPwd = $("#login_user_pw").val();
+ 		if(userPwd==""){
+ 			alert("비밀번호를 입력하세요");
+ 			$("#login_user_pw").focus();
+ 			return false;
+ 		}
+ 		$("#loginForm").submit();
+ 	}
+ 	
 	function login(){
 		document.getElementById("login").style.display = "";
 		document.getElementById("main").style.display = "none";
@@ -294,19 +335,21 @@
 	
 	function join() {
 		document.getElementById("join").style.display = "";
+		document.getElementById("login").style.display = "none";
 		document.getElementById("main").style.display = "none";
 		document.getElementById("Allbareum").style.display = "none";
-		 }
+	}
 
 	function close_join(){
-	    $("main").css("display","block");
+	    $("main").css("display","");
 	    $("join").css("display","none");
 	 }
 	
 	function close_login(){
-	    $("main").css("display","block");
+	    $("main").css("display","");
 	    $("login").css("display","none");
 	 }
+
 </script>
 </body>
 </html>

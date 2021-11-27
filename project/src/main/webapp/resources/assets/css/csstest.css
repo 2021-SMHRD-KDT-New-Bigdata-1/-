@@ -7,6 +7,12 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
 html, body, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -153,7 +159,7 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: inherit;
+		color: white;
 		text-decoration: none;
 	}
 
@@ -3130,12 +3136,13 @@ input, select, textarea {
 		}
 	}
 
-	#header {
+	.nav_top {
+	color:white;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #ff8040;
+		background-color: #000000;
 		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
 		cursor: default;
 		font-weight: 600;
@@ -3151,35 +3158,6 @@ input, select, textarea {
 		z-index: 10000;
 	}
 
-		#header .logo {
-			border: 0;
-			display: inline-block;
-			font-size: 0.8em;
-			height: inherit;
-			line-height: inherit;
-			padding: 0 1.5em;
-		}
-
-			#header .logo strong {
-				-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-				-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-				-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-				transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-				background-color: #ffffff;
-				color: #242943;
-				display: inline-block;
-				line-height: 1.65em;
-				margin-right: 0.325em;
-				padding: 0 0.125em 0 0.375em;
-			}
-
-			#header .logo:hover strong {
-				background-color: #9bf1ff;
-			}
-
-			#header .logo:active strong {
-				background-color: #53e3fb;
-			}
 
 		#header nav {
 			display: -moz-flex;
@@ -3210,7 +3188,8 @@ input, select, textarea {
 			}
 
 				#header nav a:last-child {
-					padding-right: 1.5em;
+					padding-left: 1.5em;
+					margin-left:20px;
 				}
 
 				#header nav a[href="#menu"] {
@@ -3972,3 +3951,4 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+

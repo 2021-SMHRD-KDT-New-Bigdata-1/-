@@ -41,7 +41,11 @@
             color: white;
             border-radius: 15px;
         }
-        
+       
+       .is-preload{
+       		background-color:#f2f2f2;
+       
+       }
      
         
 </style>
@@ -49,11 +53,11 @@
 <body class="is-preload">
 
 	<!-- Wrapper -->
-	<div id="wrapper">
+	<div id="">
 
 		<!-- Header -->
 		<header id="header" class="alt"> 
-			
+			<button type="button" class="btnback"><i class="fas fa-arrow-left fa-2x"></i></button>
 		
 		</header>
 
@@ -61,10 +65,10 @@
 
 
 		<!----table ----->
-		<div class="word1">
+		
 			<div class="word">
 
-				<table >
+				<table class="study2table">
 					<thead>
 						<tr>
 							<th>단어</th>
@@ -81,9 +85,9 @@
 							</td>
 						</tr>
 						<tr>
-							<th style="text-align: center;">발음해보세용~<br>
-							<br>
-								<button type="button" class="btn btn-default"><i class="fas fa-microphone-alt fa-2x"></i></button></th>
+							<th style="text-align: center;"><p>발음해보세용~</p>
+								<button type="button" class="btn btn-default"><i class="fas fa-microphone-alt fa-2x"></i></button>
+							</th>
 						</tr>
 					</tbody>
 
@@ -92,7 +96,6 @@
 
 			</div>
 
-		</div>
 		<!-- table 끝읏 -->
 	</div>
 

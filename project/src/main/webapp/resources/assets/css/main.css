@@ -2464,10 +2464,17 @@ input, select, textarea {
 	}
 
 	table {
-		margin: 5em 10em 5em 2.5em;
+		margin: 5em 10em 5em 3em;
 		width: 80%;
 		height: 700px;
-	}wwww
+	}
+	
+	table .study2table {
+		margin: 5em 10em 5em 3em;
+		width: 80%;
+		height: 700px;
+	}
+	
 
 		table tbody tr {
 			border: solid 1px rgba(212, 212, 255, 0.1);

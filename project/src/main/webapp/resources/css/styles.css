@@ -386,6 +386,44 @@ img {
     border-style : none;
 }
 
+/*#btngroup{
+	border: 3px solid #ff8040; 
+	background-color: rgba(0,0,0,0); 
+	color: #ff8040; 
+	margin-top: 20px;
+	border-top-left-radius: 5px; 
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 5px; 
+	border-bottom-right-radius: 5px;
+	padding: 5px;
+}*/
+
+#btnselect button:hover{
+	
+	color:white; 
+	background-color: #ff8040; 
+	
+}
+
+
+#btnselect{
+
+	color : #ff8040;
+	font-weight : 700;
+	background : white;
+	border: 3px solid #ff8040; 
+	background-color: rgba(0,0,0,0); 
+	color: #ff8040; 
+	margin-top: 20px;
+	border-top-left-radius: 5px; 
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 5px; 
+	border-bottom-right-radius: 5px;
+	padding:12px 20px 12px 20px;
+	
+	
+}
+
 button,
 input,
 optgroup,
@@ -1804,11 +1842,7 @@ dd {
 /* --------------------------------------------------------------------
  * ## spacing
  * -------------------------------------------------------------------- */
-fieldset,
-button,
-.btn {
-    margin-bottom : var(--vspace-0_5);
-}
+
 
 input,
 textarea,
@@ -2222,129 +2256,7 @@ select:-webkit-autofill:focus {
 }
 
 
-/* ===================================================================
- * # BUTTONS
- *
- *
- * ------------------------------------------------------------------- */
-.btn,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-    --btn-height            : var(--vspace-btn);
-    display                 : inline-block;
-    font-family             : var(--font-1);
-    font-weight             : 600;
-    font-size               : var(--text-xs);
-    text-transform          : uppercase;
-    letter-spacing          : .35em;
-    height                  : var(--btn-height);
-    line-height             : calc(var(--btn-height) - 4px);
-    padding                 : 0 3.6rem;
-    margin                  : 0 0.4rem var(--vspace-0_5) 0;
-    color                   : var(--color-btn-text);
-    text-decoration         : none;
-    text-align              : center;
-    white-space             : nowrap;
-    cursor                  : pointer;
-    transition              : all .3s;
-    border-radius           : var(--border-radius);
-    background-color        : #f9fafb;
-    border                  : 2px solid var(--color-btn);
-    -webkit-font-smoothing  : antialiased;
-    -moz-osx-font-smoothing : grayscale;
-}
 
-.btn:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus,
-.btn:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover {
-    background-color : var(--color-btn-hover);
-    border-color     : var(--color-btn-hover);
-    color            : var(--color-btn-hover-text);
-    outline          : 0;
-}
-
-/* button primary
- */
-.btn.btn--primary,
-button.btn--primary,
-input[type="submit"].btn--primary,
-input[type="reset"].btn--primary,
-input[type="button"].btn--primary {
-    background   : var(--color-btn-primary);
-    border-color : var(--color-btn-primary);
-    color        : var(--color-btn-primary-text);
-}
-
-.btn.btn--primary:focus,
-button.btn--primary:focus,
-input[type="submit"].btn--primary:focus,
-input[type="reset"].btn--primary:focus,
-input[type="button"].btn--primary:focus,
-.btn.btn--primary:hover,
-button.btn--primary:hover,
-input[type="submit"].btn--primary:hover,
-input[type="reset"].btn--primary:hover,
-input[type="button"].btn--primary:hover {
-    background   : var(--color-btn-primary-hover);
-    border-color : var(--color-btn-primary-hover);
-    color        : var(--color-btn-primary-hover-text);
-}
-
-/* button modifiers
- */
-.btn.u-fullwidth,
-button.u-fullwidth {
-    width        : 100%;
-    margin-right : 0;
-}
-
-.btn--small,
-button.btn--small {
-    --btn-height : calc(var(--vspace-btn) - 1.6rem);
-}
-
-.btn--medium,
-button.btn--medium {
-    --btn-height : calc(var(--vspace-btn) + .8rem);
-}
-
-.btn--large,
-button.btn--large {
-    --btn-height : calc(var(--vspace-btn) + 1.6rem);
-}
-
-.btn--stroke,
-button.btn--stroke {
-    background  : transparent !important;
-    font-weight : 700;
-    border      : 2px solid var(--color-btn-stroke);
-    color       : var(--color-btn-stroke-text);
-}
-
-.btn--stroke:focus,
-button.btn--stroke:focus,
-.btn--stroke:hover,
-button.btn--stroke:hover {
-    background : var(--color-btn-stroke-hover) !important;
-    border     : 2px solid var(--color-btn-stroke-hover);
-    color      : var(--color-btn-stroke-hover-text);
-}
-
-.btn--pill,
-button.btn--pill {
-    padding-left  : 3.2rem !important;
-    padding-right : 3.2rem !important;
-    border-radius : 1000px !important;
-}
 
 
 /* ===================================================================
@@ -3919,7 +3831,7 @@ body.search-is-visible .s-header__search-inner {
 .hero__slide::before {
     content          : "";
     display          : block;
-    background-color : black;
+    background-color : #ff8000;
     width            : 50%;
     height           : 100%;
     position         : absolute;
@@ -3942,7 +3854,6 @@ body.search-is-visible .s-header__search-inner {
 }
 
 .hero__entry-image::before {
-    z-index        : 2;
     content        : "";
     display        : block;
     position       : absolute;
@@ -3953,8 +3864,8 @@ body.search-is-visible .s-header__search-inner {
     width          : 100%;
     height         : 100%;
     pointer-events : none;
-    background     : #ff8040;
-    background     : linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, black 94%);
+    background     : #ffa428;
+   /* background     : linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, black 94%);*/
     opacity        : 0.3;
     mix-blend-mode : multiply;
 }
@@ -3977,7 +3888,7 @@ body.search-is-visible .s-header__search-inner {
     text-align       : center;
     max-width        : 680px;
     max-height       : calc(20 * var(--space));
-    overflow         : hidden;
+    overflow         : auto;
     position         : relative;
 }
 
@@ -4287,7 +4198,7 @@ body.search-is-visible .s-header__search-inner {
     }
 
     .hero__entry-text-inner {
-        padding : 4.8rem 3.6rem 4rem;
+        padding : 6rem 6rem 6rem;
     }
 }
 
@@ -4322,7 +4233,7 @@ body.search-is-visible .s-header__search-inner {
     }
 
     .hero__entry-text-inner {
-        padding : 4.8rem 3.2rem 4rem;
+        padding : 6rem 6rem 6rem;
     }
 }
 
@@ -4370,7 +4281,7 @@ body.search-is-visible .s-header__search-inner {
     }
 
     .hero__entry-text-inner {
-        padding : 4.8rem 2.4rem 4rem;
+        padding : 6rem 6rem 6rem;
     }
 
     .hero__entry-title {

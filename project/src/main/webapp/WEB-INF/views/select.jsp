@@ -163,17 +163,17 @@ function login() {
 								</div>
 								<div id="main">
 								
-								    <div id="btn cate">
-                                       <button class='btn btn-info btn-sm' onclick=''>음절</button>
+								    <div id="btngroup" >
+                                       <button id="btnselect"onclick=''>음절</button>
                                     </div>
-                                    <div id="btn cate">
-                                        <button class='btn btn-info btn-sm' onclick=''>단어</button>
+                                    <div id="btngroup">
+                                        <button id="btnselect"  onclick=''>단어</button>
                                     </div>
-                      				<div id="btn cate">
-                                        <button class='btn btn-info btn-sm' onclick=''>문장</button>
+                      				<div id="btngroup">
+                                        <button id="btnselect" onclick=''>문장</button>
                                     </div>
-                                    <div id="btn cate">
-                                        <button class='btn btn-info btn-sm' onclick=''>취약 단어</button>
+                                    <div id="btngroup">
+                                        <button id="btnselect" onclick=''>취약 단어</button>
                                     </div>
                                      
                                 </div>

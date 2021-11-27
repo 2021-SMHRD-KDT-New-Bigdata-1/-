@@ -187,7 +187,7 @@
                      
                     </div> <!-- swiper-wrapper -->
 
-                    <div class="swiper-pagination"></div>
+                    
     
                 </div> <!-- end hero slider -->
 

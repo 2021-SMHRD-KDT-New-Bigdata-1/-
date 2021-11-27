@@ -77,6 +77,11 @@ public class BoardController {
 			
 			return "select";
 		}
+		@RequestMapping("/mypage_day.do")
+		public String mypage_day() {
+			
+			return "mypage_day";
+		}
 
 		@RequestMapping("/mypage.do")
 		public String myapge() {

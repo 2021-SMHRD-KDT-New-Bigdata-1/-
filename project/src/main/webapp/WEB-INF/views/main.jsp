@@ -62,7 +62,7 @@
 
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="main.do" rel="home" style="color:#D2691E; margin-left: 280px;" >ALL바름</a>
+                    <a href="main.do" rel="home" style="color: black; margin-left: 280px;" >ALL바름</a>
                 </p>
             </div>
 
@@ -164,8 +164,8 @@
 									        <input class="form-control" name="login_user_pw"  id="login_user_pw" placeholder="비밀번호" type="password">
 									    </div> <!-- form-group// -->
 									
-										<button type="button" class="btn btn-primary btn-block" id="login_bt" onclick="formCheck()"> 로그인  </button>
-										<button type="button" class="btn btn-primary btn-block" onclick="close_login()"> 닫기  </button>
+										<button type="button" class="btnmain" id="login_bt" onclick="formCheck()"> 로그인  </button>
+										<button type="button" class="btnmain" onclick="close_login()"> 닫기  </button>
 										
 									
 									    <p class="text-center"><br> 계정이 없나요? <a onclick="join()">회원가입</a> </p>  
@@ -213,8 +213,8 @@
 												<option value="ko">KO(한글)</option>
 											</select>
 									    </div> <!-- form-group// -->
-									    <button type="submit" class='btn btn-info btn-sm'>회원가입</button>
-                                     <button type="button" class="btn btn-primary btn-block" onclick="close_join();"> 닫기  </button>
+									    <button type="submit" class='btnmain'>회원가입</button>
+                                     <button type="button" class="btnmain" onclick="close_join();"> 닫기  </button>
 									</form>
 								
 								</div>
@@ -232,8 +232,8 @@
                                     <h2 class="hero__entry-title" >
                                         	올바름
                                     </h2>
-                                     <button class='btn btn-info btn-sm' onclick='login()'>로그인</button>
-                                     <button class='btn btn-info btn-sm' onclick='join()'>회원가입</button>
+                                     <button class='btnmain' onclick='login()'>로그인</button>
+                                     <button class='btnmain' onclick='join()'>회원가입</button>
                                      </div>
                              </c:if>
                              <c:if test="${vo!=null }">
@@ -249,9 +249,9 @@
                                     <h2 class="hero__entry-title" >
                                         	환영합니다
                                     </h2>
-                                     <button class='btn btn-info btn-sm' href="#">학습하기</button>
-                                     <button class='btn btn-info btn-sm' href="#">마이페이지</button>
-                                     <button type="button" class='btn btn-info btn-sm' onclick="logout()">로그아웃</button>
+                                     <button class='btnmain' href="#">학습하기</button>
+                                     <button class='btnmain' href="#">마이페이지</button>
+                                     <button type="button" class='btnmain' onclick="logout()">로그아웃</button>
                                      </div>
                              </c:if>
                                
@@ -259,24 +259,25 @@
                             </div>
                         </article>
                         <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/featured-04_2000_01.jpg');"></div>
+                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner">
                                     <div class="hero__entry-meta">
                                         <span class="cat-links">
-                                            <a>올바름</a>
+                                            <a>ALL BAREUM</a>
                                         </span>
                                     </div>
                                     <h2 class="hero__entry-title">
                                         <a href="single-standard.html">
-                                            10 Reasons Why Being in Nature Is Good For You.
+                                        		     정확한 입모양/발음 교정을 위해, 올바름이 함께 하겠습니다.    
+
                                         </a>
                                     </h2>
                                     <p class="hero__entry-desc">
-                                    Voluptas harum sequi rerum quasi quisquam. Est tenetur ut doloribus in aliquid animi nostrum. Tempora 
-                                    quibusdam ad nulla. Quis autem possimus dolores est est fugiat saepe vel aut. Earum consequatur.
+								                                      음성을 통해 발음을 인식합니다, 
+								                                      입모양 인식을 통해 바른 입모양을 교정을 돕습니다.
                                     </p>
-                                    <a class="hero__more-link" href="single-standard.html">Read More</a>
+                                    
                                 </div>
                             </div>
                         </article>

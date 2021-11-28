@@ -17,6 +17,13 @@
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
 	<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" /></noscript>
     <title>study</title>
+    <!-- 상단바 뒤로가기 버튼 화살표  -->	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 상단바 뒤로가기 버튼 화살표  -->	
+    
     <style>
         .btn-default{
             background-color: #ff8040;
@@ -33,8 +40,12 @@
         	position: static !important;
         	margin-top: 80px !important;
         } 
+        
+        body{
+        	background-color: #f2f2f2
+        }
     </style>
-    <head>
+ <head>
        <!-- <script>
 	        function load() {
 	            var video = document.getElementById('myVideo');
@@ -50,7 +61,9 @@
 </head>
 <body>
 <!-- Header -->
-<header id="header" class="alt"> </header>
+<header id="header" class="alt">
+	<button type="button" class="btnback"><i class="fas fa-arrow-left fa-2x"></i></button>
+ </header>
 
 <!-- 한 단어당 보여주는 결과창 -->
     <table id="result" style="margin: auto;" >

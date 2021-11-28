@@ -85,9 +85,9 @@
 							</td>
 						</tr>
 						<tr>
-							<th style="text-align: center;"><p>발음해보세용~</p>
+							<td style="text-align: center; vertical-align: middle;">발음해보세용<br>
 								<button type="button" class="btn btn-default"><i class="fas fa-microphone-alt fa-2x"></i></button>
-							</th>
+							</td>
 						</tr>
 					</tbody>
 

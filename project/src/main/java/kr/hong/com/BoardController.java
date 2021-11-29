@@ -173,13 +173,14 @@ public class BoardController {
 			return "studyresult2";
 		}
 
-		 @RequestMapping("/WordListJson.do")
-		 public List<Word> WordListJson(Model model) {
+		 @RequestMapping("/WordList1.do")
+		 public List<Word> WordList1(Model model) {
 			   
-			   List<Word> list=mapper.WordList();
+			   List<Word> list=mapper.WordList1();
 			   return list;
 		      
 		   }
+
 
 		
 	}

@@ -97,18 +97,15 @@
 					<div id="main">
 						<div class="container">    
 							  <div class="row">
+							  
+							  <button type="button" style="margin-bottom:30px; margin-left:40px; margin-right:20px;">a</button>
+							  <button type="button" style="margin-bottom:30px;">a</button>
+							  <button type="button" style="margin-bottom:30px;">a</button>
+							  
 							    <div class="main col-lg-4">
 							      <div class="panel panel-primary">
 							        <div class="panel-heading">Day1</div>
-							        <div class="panel-body">
-							        <script>
-							        function loadList(){
-							        	$ajax({
-							        		url : "WordListJson.do"
-							        	})
-							        }
-							        </script>
-							        </div>
+							        <div class="panel-body"></div>
 							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
 							      </div>
 							    </div>
@@ -158,17 +155,49 @@
 
 			
 			<script>
+			
+			$(document).ready(function() { //익명함수
+			      loadList();
+			   });
+			
 			   function loadList() {
 				      $.ajax({
-				         url : "WordListJson.do",
+				         url : "WordList1.do",
 				         type : "get",
 				         dataType : "json",
-				         success : jsonHtml,
+				         success : JSONArray jsonArray = new JSONArray(data)
+				         for(int i=0; i<JsonArray.length()/5; i++){
+				        	 word = JsonObject.get("i");
+				         },
 				         error : function() {
 				            alert("error");
 				         }
 				      });
 				   }
+			   
+			   
+	        function Wordstudy(data){
+	            view = "<div id='main'>";
+	          view +=   "<div class='container'>";
+	          view +=   "<div class='row'>";
+	          for(int i=0; (i<data.length()/5); i++){
+	             
+	        	  int count = 1;
+	              view += "<div class='col-sm-4'>";
+	              view += "<div class='panel panel-primary'>";
+	              view += "<div class='panel-heading'>STEP"+count+"</div>";
+	              
+	              $each(data, function(index, obj)){
+	                 view += "<div class='panel-body'>"+word+"</div>";
+	                 view += "<div class='panel-footer'></div>";
+	              }
+	              
+	              ;
+	              view += "</div>";
+	              view += "</div>";
+	              count += 1;
+	          }
+	         }
 			</script>
 
 

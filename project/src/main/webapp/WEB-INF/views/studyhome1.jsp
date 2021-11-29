@@ -32,6 +32,7 @@
 			    }
 			    .panel-primary {
 				    border-color: #f67822;
+				    width: 650px;
 				}
 				
 				.panel-danger {
@@ -42,7 +43,7 @@
 				}
 				
 				body {
-					    margin: 0 0 0 0em;
+					    margin: 0 0 0 0;
 					    background-color: #f2f2f2;
 					}
 			    
@@ -63,7 +64,7 @@
 				    margin-right: auto;
 				    margin-left: auto;
 				    margin-top: 50px;
-				}		    
+				}	    
 				
 				.panel-primary>.panel-heading {
 					    color: #fff;
@@ -119,25 +120,31 @@
 							  
 							  
 							    <div class="main col-lg-4">
+							      <div class="col-sm-4"> 
 							      <div class="panel panel-primary">
 							        <div class="panel-heading">Day1</div>
 							        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" ></div>
 							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
 							      </div>
+							      </div>
 							    </div>
+							    <div class="main col-lg-4">
 							    <div class="col-sm-4"> 
 							      <div class="panel panel-primary">
 							        <div class="panel-heading">Day2</div>
 							        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%"></div>
 							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
 							      </div>
+							      </div>
 							    </div>
+							    <div class="main col-lg-4">
 							    <div class="col-sm-4"> 
 							      <div class="panel panel-primary">
 							        <div class="panel-heading">Day3</div>
 							        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%"></div>
 							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
 							      </div>
+							    </div>
 							    </div>
 							  </div>
 						</div><br>

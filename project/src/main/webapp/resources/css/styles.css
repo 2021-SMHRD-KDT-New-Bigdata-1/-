@@ -2188,8 +2188,6 @@ textarea:focus,
 select:focus {
     color            : var(--color-black);
     background-color : white;
-    box-shadow       : 0 0 5px var(--color-1);
-    border           : 1px solid var(--color-1-light);
 }
 
 label,

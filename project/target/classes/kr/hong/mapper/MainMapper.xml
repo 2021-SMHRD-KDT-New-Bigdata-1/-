@@ -7,11 +7,11 @@
     	insert into tbl_user(user_id, user_pw, user_name, user_birthdate, user_nationality, user_joindate, admin_yn, user_status) 
       	values (#{user_id}, #{user_pw}, #{user_name}, now(), #{user_nationality}, now(), 'n', 'n')
 	</insert>
-	<select id="login" resultType="kr.hong.domain.User">
+	<select id="login" parameterType="kr.hong.domain.User" resultType="kr.hong.domain.User">
 	    select * from tbl_user where user_id = #{login_user_id} and user_pw = #{login_user_pw}
 	</select>
 	
 	<select id="WordList1" resultType="kr.hong.domain.Word">
-	    select * from tbl_word where word_level = 1 order by study_date asc;
+	    select * from tbl_word where word_level = 1 order by study_date asc
 	</select>
 </mapper>

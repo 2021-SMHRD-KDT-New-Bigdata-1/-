@@ -49,6 +49,9 @@ public class BoardController {
 			
 			return "redirect:/main.do";
 		}
+		
+	
+		
 	
 		@RequestMapping("/index.do")
 		public String index() {

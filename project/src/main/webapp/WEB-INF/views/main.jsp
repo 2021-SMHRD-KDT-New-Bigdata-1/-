@@ -249,7 +249,7 @@
                                     <h2 class="hero__entry-title" >
                                         	환영합니다
                                     </h2>
-                                     <button class='btnmain' href="#">학습하기</button>
+                                     <button class='btnmain' onclick="studying()">학습하기</button>
                                      <button class='btnmain' href="#">마이페이지</button>
                                      <button type="button" class='btnmain' onclick="logout()">로그아웃</button>
                                      </div>
@@ -356,6 +356,9 @@
 		document.getElementById("main").style.display = "";
 		document.getElementById("Allbareum").style.display = "";
 	 }
+	function studying(){
+ 		location.href="select.do";
+ 	}
 
 </script>
 </body>

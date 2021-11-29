@@ -97,16 +97,26 @@ public class BoardController {
 			
 			return "select";
 		}
-		@RequestMapping("/mypage_day.do")
-		public String mypage_day() {
-			
-			return "mypage_day";
-		}
 
-		@RequestMapping("/mypage.do")
-		public String myapge() {
+		@RequestMapping("/mypage_main.do")
+		public String myapge_main() {
 			
-			return "mypage";
+			return "mypage_main";
+		}
+		@RequestMapping("/mypage1.do")
+		public String myapge1() {
+			
+			return "mypage1";
+		}
+		@RequestMapping("/mypage2.do")
+		public String myapge2() {
+			
+			return "mypage2";
+		}
+		@RequestMapping("/mypage3.do")
+		public String myapge3() {
+			
+			return "mypage3";
 		}
 		@RequestMapping("/sentence_main.do")
 		public String sentence_main() {

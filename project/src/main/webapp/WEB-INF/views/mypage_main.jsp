@@ -14,14 +14,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/csstest.css" />
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
-		<link href="${pageContext.request.contextPath}/resources/css/vendor.css" rel="stylesheet" type="text/css">
-<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
 		<script src="${pageContext.request.contextPath}/resources/assets/js/Chart.js"></script>
 		<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 			<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>	
+			<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 				
 			<style>
 			    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
@@ -35,7 +34,26 @@
 				    vertical-align: baseline;
 				}
 			   		
-		
+		select {
+    --input-height      : var(--vspace-2);
+    --input-line-height : var(--vspace-1);
+    --input-vpadding    : calc(((var(--input-height) - var(--input-line-height)) / 2) - 1px);
+    display             : block;
+    height              : var(--input-height);
+    padding             : var(--input-vpadding) calc(2.4rem - 1px);
+    border              : 0;
+    outline             : 0;
+    color               : var(--color-placeholder);
+    font-family         : var(--font-1);
+    font-size           : var(--text-sm);
+    font-size           : calc(var(--text-size) * 0.8889);
+    line-height         : var(--input-line-height);
+    max-width           : 100%;
+    background-color    : var(--color-gray-3);
+    border              : 1px solid transparent;
+    transition          : all .3s ease-in-out;
+    border-radius       : var(--border-radius);
+}
 			   
 			    * .is-preload.alt{
 				margin: 0; padding: 0;
@@ -57,14 +75,8 @@
 			      border-radius: 0;
 			    }
 			    .panel-primary {
-				    border-color: #000000;
-				}
-				
-				.panel-danger {
-				    border-color: #f67822;
-				}
-				.panel-success {
-			    	border-color: #f67822;
+				    border-color: #D2691E;
+				    border:0;
 				}
 				
 				body {
@@ -92,8 +104,9 @@
 				
 				.panel-primary>.panel-heading {
 					    color: #fff;
-					    background-color: #000000;
+					    background-color: #D2691E;
 					    border-color: #000000;
+					    border:0;
 					    align:center;
 				}
 				
@@ -102,7 +115,7 @@
 						display: -webkit-flex;
 						display: -ms-flex;
 						display: flex;
-						background-color: #000000;
+						background-color: ##D2691E;
 						box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
 						cursor: default;
 						font-weight: 600;
@@ -120,7 +133,7 @@
 				
 				
 				.nav_top{
-				background-color:black;
+				background-color:#D2691E;
 				}
 				
 				/* header nav a .pl{
@@ -133,11 +146,11 @@
 				
 				.title_menu{
 				margin-left:50px;
-				background-color:#000000
+				background-color:#D2691E
 				}
 
 				.title_menu > ul > li{
-				background-color:#000000;
+				background-color:#D2691E;
 				}
 				
 				#weekday{
@@ -145,7 +158,7 @@
 				font-size:1.2rem;
 				color:rgba(255,255,255,0);
 				display:inline-block;
-				background-color:#000000;
+				background-color:#D2691E;
 				}
 				
 				#pl{
@@ -171,14 +184,13 @@
 				  letter-spacing: 0.05em;
 				  display: block;
 				  padding: 14px 36px;
-				  border-right: 1px solid rgba(0,0,0,0.15);
 				  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 				}
 				#sub_menu{
 				margin:0;
 				padding:0;
 				list-style-type:none;		
-				background-color:#000000;		
+				background-color:##D2691E;		
 				color:white;
 				display:none;
 				}
@@ -207,9 +219,9 @@
 				<!-- Header -->
 					<section>
 					<header class="nav_top">
-					<h1 id="title_name">allbareum</h1>
+					<h1 id="title_name" style="margin-left:20px;">allbareum</h1>
 					<nav id="main_title_nav" role="navigation">
-  <ul id="main-menu">
+   <ul id="main-menu" style="list-style:none;">
     <li><a href="#" onclick="submenu();">MENU1</a></li>
     <li><a href="#" onclick="submenu();">MENU2</a></li>
     <li><a href="#" onclick="submenu();">MENU3</a></li>
@@ -221,15 +233,16 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="container">    
-							  <div class="row">
-							  
-							  <select id="user_nationality" name="user_nationality" style="height:auto; font-size:25px;">
+							  <div class="row" style="margin-left:-32px;">
+							   
+
+							  <select id="my_select" style="height:auto; font-size:25px;">
 												<option value="" selected disabled>week</option> 
 												<option value="eng">1주차</option> 
 												<option value="ko">2주차</option>
 											</select>
 							  
-							   <select id="user_nationality" name="user_nationality" style="height:auto; font-size:25px;">
+							   <select id="my_select" style="height:auto; font-size:25px;">
 												<option value="" selected disabled>day</option> 
 												<option value="eng">day1</option> 
 												<option value="ko">day2</option>
@@ -239,7 +252,30 @@
 												<option value="ko">day6</option>
 												<option value="ko">day7</option>
 											</select>
-							    <div class="col-12-large">
+											 
+											 <div class="off-8-small" style="margin-top:20px; width:50%; min-width:349.5px;"> 
+							      <div class="panel panel-primary">
+							        <div id="chart_title" class="panel-heading">프로필</div>
+							        <div class="panel-body">
+									    <span>${vo.user_name}님</span><br>
+									  	<span>${vo.user_birthdate}생년월일</span><br>
+									  	<span>${vo.user_nationality}</span>
+									  	<button type="button" class="btn btn-dark btn-block" style="width:120px;">정보수정</button>
+							 		 </div>
+									</div>
+							      </div><div class="off-8-small" style="margin-top:20px; width:50%; min-width:349.5px;"> 
+							      <div class="panel panel-primary">
+							        <div id="chart_ti\tle" class="panel-heading">프로필</div>
+							        <div class="panel-body">
+									    <span>${vo.user_name}님</span><br>
+									  	<span>${vo.user_birthdate}생년월일</span><br>
+									  	<span>${vo.user_nationality}</span>
+									  	<button type="button" class="btn btn-dark btn-block" style="width:120px;">정보수정</button>
+							 		 </div>
+									</div>
+							      </div>
+											
+							    <div class="off-8-small" style="width:100%; min-width:349.5px;">
 							      <div class="panel panel-primary">
 							        <div id="chart_title" class="panel-heading">정확도</div>
 							        <div class="panel-body">                    
@@ -288,10 +324,6 @@ new Chart(document.getElementById("myChart"), {
     options: {
     	maintainAspectRatio: false,
         responsive: true,
-        title: {
-            display: true,
-            text: '라인 차트 테스트'
-        },
         tooltips: {
             mode: 'index',
             intersect: false,
@@ -328,7 +360,7 @@ new Chart(document.getElementById("myChart"), {
 							      </div>
 							    </div>
 							  <div class="row">
-							    <div class="col-sm-4"> 
+							    <div class="off-6-small"> 
 							      <div class="panel panel-primary">
 							        <div id="chart_title" class="panel-heading">음절</div>
 							        <div class="panel-body"><canvas id="doughnut-chart1" width="300" height="250"></canvas>
@@ -351,11 +383,11 @@ new Chart(document.getElementById("doughnut-chart1"), {
     }
 });
 </script></div>
-							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+						   <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
 							      </div>
 							    </div>
 							    
-							    <div class="col-sm-4"> 
+							    <div class="off-6-small"> 
 							      <div class="panel panel-primary">
 							        <div id="chart_title" class="panel-heading">단어</div>
 							        <div class="panel-body"><canvas id="doughnut-chart2" width="300" height="250"></canvas>
@@ -378,10 +410,10 @@ new Chart(document.getElementById("doughnut-chart2"), {
     }
 });
 </script></div>
-							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+						   <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
 							      </div>
 							    </div>
-							    <div class="col-sm-4"> 
+							    <div class="off-6-small"> 
 							      <div class="panel panel-primary">
 							        <div id="chart_title" class="panel-heading">문장</div>
 							        <div class="panel-body"><canvas id="doughnut-chart3" width="300" height="250"></canvas>
@@ -403,7 +435,8 @@ new Chart(document.getElementById("doughnut-chart3"), {
         responsive: true,
     }
 });
-</script></div>
+</script>
+</div>
 							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
 							      </div>
 							    </div>
@@ -418,7 +451,6 @@ new Chart(document.getElementById("doughnut-chart3"), {
 
 				
 
-			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

@@ -1367,9 +1367,6 @@ input::-moz-focus-inner {
 					width: 50%;
 				}
 
-				.row > .off-6-small {
-					margin-left: 50%;
-				}
 
 				.row > .col-7-small {
 					width: 58.33333%;
@@ -1383,9 +1380,6 @@ input::-moz-focus-inner {
 					width: 66.66667%;
 				}
 
-				.row > .off-8-small {
-					margin-left: 66.66667%;
-				}
 
 				.row > .col-9-small {
 					width: 75%;
@@ -2529,7 +2523,7 @@ input::-moz-focus-inner {
 
 /* Button */
 
-	input[type="submit"],
+	/* input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
 	button,
@@ -2738,7 +2732,7 @@ input::-moz-focus-inner {
 			pointer-events: none;
 			cursor: default;
 			opacity: 0.25;
-		}
+		} */
 
 /* Tiles */
 
@@ -3314,7 +3308,7 @@ input::-moz-focus-inner {
 
 		@media screen and (max-width: 736px) {
 
- 			#header {
+ 			/* #header {
 				height: 2.75em;
 				line-height: 2.75em;
 			}
@@ -3345,7 +3339,7 @@ input::-moz-focus-inner {
 
 							#header nav a[href="#menu"]:last-child:before, #header nav a[href="#menu"]:last-child:after {
 								right: 1.5em;
-							}
+							} */
 
 		}
 

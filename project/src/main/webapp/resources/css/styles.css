@@ -426,17 +426,17 @@ img {
 
 #btnselect{
 
-	color : #ff8040;
+	color : white;
 	font-weight : 700;
 	background : white;
 	border: 3px solid #ff8040; 
-	background-color: rgba(0,0,0,0);  
+	background-color: #ff8040;  
 	margin-top: 10px;
 	margin-bottom: 10px;
-	border-top-left-radius: 10px; 
-	border-bottom-left-radius: 10px;
-	border-top-right-radius: 10px; 
-	border-bottom-right-radius: 10px;
+	border-top-left-radius: 5px; 
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 5px; 
+	border-bottom-right-radius: 5px;
 	padding:12px 20px 12px 20px;
 	
 	
@@ -2188,8 +2188,6 @@ textarea:focus,
 select:focus {
     color            : var(--color-black);
     background-color : white;
-    box-shadow       : 0 0 5px var(--color-1);
-    border           : 1px solid var(--color-1-light);
 }
 
 label,

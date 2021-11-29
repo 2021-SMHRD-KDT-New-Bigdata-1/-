@@ -23,7 +23,7 @@ import kr.hong.mapper.MainMapper;
 public class BoardController {
 
 		@Autowired
-		private MainMapper mapper;
+		MainMapper mapper;
 		
 		@RequestMapping("/join.do")
 		public String join(User vo) {
@@ -173,13 +173,7 @@ public class BoardController {
 			return "studyresult2";
 		}
 
-		 @RequestMapping("/WordList1.do")
-		 public List<Word> WordList1(Model model) {
-			   
-			   List<Word> list=mapper.WordList1();
-			   return list;
-		      
-		   }
+		 
 
 
 		

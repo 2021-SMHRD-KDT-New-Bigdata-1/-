@@ -75,7 +75,44 @@
 				}
 				
 			  </style>
-			
+	<script>
+	$(document).ready(function() { //익명함수
+		  alert("제이쿼리 가즈앗!");
+	      loadList();
+	   });
+	
+	   function loadList() {
+		      $.ajax({
+		         url : "WordList1.do",
+		         type : "get",
+		         dataType : "json",
+		         //success : JSONArray jsonArray = new JSONArray(data)
+		         //for(int i=0; i<JsonArray.length()/5; i++){
+		        //	 word = JsonObject.get("i");
+		         //},
+		         success : jsonHtml,
+		         error : function() {
+		            alert("loadlist-error");}
+		      });
+		   }
+	function jsonHtml(data){ //콜백함수
+      view ="<table>";
+      $.each(data, function(data, obj){
+          view +="<tr>";
+          view +="<td>";
+          view +=obj.word_id;
+          view +="</td>";
+          view +="<td>";
+          view +=obj.word_content;
+          view +="</td>";
+          view +="</tr>";
+      })
+
+      view +="</table>";
+
+      $(".panel-body2").html(view);
+	}
+	</script>
 				
 	</head>
 	
@@ -114,7 +151,7 @@
 							    <div class="col-sm-4"> 
 							      <div class="panel panel-primary">
 							        <div class="panel-heading">Day2</div>
-							        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%"></div>
+							        <div class="panel-body"></div>
 							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
 							      </div>
 							    </div>
@@ -123,14 +160,14 @@
 							    <div class="col-sm-4"> 
 							      <div class="panel panel-primary">
 							        <div class="panel-heading">Day3</div>
-							        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%"></div>
+							        <div class="panel-body"></div>
 							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
 							      </div>
 							    </div>
 							    </div>
 						</div><br>
 
-
+					<div class="panel-body2">여기에요</div>
 
 					</div>
 
@@ -159,49 +196,8 @@
 
 			
 			<script>
-			
-			$(document).ready(function() { //익명함수
-			      loadList();
-			   });
-			
-			   function loadList() {
-				      $.ajax({
-				         url : "WordList1.do",
-				         type : "get",
-				         dataType : "json",
-				         success : JSONArray jsonArray = new JSONArray(data)
-				         for(int i=0; i<JsonArray.length()/5; i++){
-				        	 word = JsonObject.get("i");
-				         },
-				         error : function() {
-				            alert("error");
-				         }
-				      });
-				   }
-			   
-			   
-	        function Wordstudy(data){
-	            view = "<div id='main'>";
-	          view +=   "<div class='container'>";
-	          view +=   "<div class='row'>";
-	          for(int i=0; (i<data.length()/5); i++){
-	             
-	        	  int count = 1;
-	              view += "<div class='col-sm-4'>";
-	              view += "<div class='panel panel-primary'>";
-	              view += "<div class='panel-heading'>STEP"+count+"</div>";
-	              
-	              $each(data, function(index, obj)){
-	                 view += "<div class='panel-body'>"+word+"</div>";
-	                 view += "<div class='panel-footer'></div>";
-	              }
-	              
-	              ;
-	              view += "</div>";
-	              view += "</div>";
-	              count += 1;
-	          }
-	         }
+			   //휘 코드 안녕..
+			  
 			</script>
 
 

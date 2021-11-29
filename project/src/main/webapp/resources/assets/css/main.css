@@ -1903,6 +1903,41 @@ input, select, textarea {
 		margin: 0 0 1em 0;
 		text-transform: uppercase;
 	}
+	
+
+	.cameraInput .cameraInput1{
+		  display: inline-block;
+		    height: 40px;
+		    padding: 0 10px;
+		    vertical-align: middle;
+		    border: 1px solid #dddddd;
+		    width: 78%;
+		    color: #999999;
+	
+	}
+	
+	.cameraInput label {
+		    display: inline-block;
+		    padding: 10px 20px;
+		    color: #fff;
+		    vertical-align: middle;
+		    background-color: #ff8040;
+		    border-radius : 30px;
+		    cursor: pointer;
+		    height: 40px;
+		    margin-left: 10px;
+	}
+	
+	.cameraInput input[type="file"] {
+		    position: absolute;
+		    width: 0;
+		    height: 0;
+		    padding: 0;
+		    overflow: hidden;
+		    border: 0;
+	}
+
+
 
 	input[type="text"],
 	input[type="password"],

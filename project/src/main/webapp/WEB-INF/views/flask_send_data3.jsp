@@ -24,7 +24,8 @@ document
 
 	<form action="http://211.223.106.113:5000/dlModel" method="POST"
 	enctype = "multipart/form-data">
-		<input type="file" id="cameraInput" name="file" accept="video/*" capture="user"> 
+	
+		<input type="file" id="cameraInput" name="file" accept="video/*" capture="user">
 		<input type="submit" value="녹화완료">
 	</form>
 	

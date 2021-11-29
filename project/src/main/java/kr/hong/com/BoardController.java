@@ -51,14 +51,7 @@ public class BoardController {
 		}
 		
 	
-		
 	
-		@RequestMapping("/index.do")
-		public String index() {
-			
-			return "index";
-		}
-		
 		@RequestMapping("/finallresult.do")
 		public String finallresult() {
 			
@@ -75,7 +68,7 @@ public class BoardController {
 		@RequestMapping("/studypage1.do")
 		public String studypage1() {
 			
-			return "studypage2";
+			return "studypage1";
 		}
 		
 		@RequestMapping("/studypage2.do")
@@ -87,7 +80,7 @@ public class BoardController {
 		@RequestMapping("/studypage3.do")
 		public String studypage3() {
 			
-			return "studypage2";
+			return "studypage3";
 		}
 		
 		@RequestMapping("/studyhome1.do")

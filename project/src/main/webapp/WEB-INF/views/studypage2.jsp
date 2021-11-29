@@ -78,7 +78,7 @@
 			<button onclick="back1()" type="button" class="btnback">
 				<i class="fas fa-arrow-left fa-2x"></i>
 			</button>
-
+			<h3 class="stage_nm">단어</h3>
 		</header>
 
 
@@ -105,19 +105,16 @@
 					<tr>
 						<td style="text-align: center; vertical-align: middle;">발음해보세용<br>
 							<div class="cameraInput">
-								
+
 								<form action="http://211.223.106.113:5000/dlModel" method="POST"
 									enctype="multipart/form-data">
-									
-									<input type="hidden" class="cameraInput1" value="" placeholder="첨부파일">
-									
-									<label for="cameraInput"> 
-									<i class="fas fa-microphone-alt fa-2x"></i>
-									</label> 
-									
-									<input   type="file" id="cameraInput" name="file" accept="video/*" capture="user" />
-										 
-										<input type="submit" value="녹화완료"/>
+
+									<input type="hidden" class="cameraInput1" value=""
+										placeholder="첨부파일"> <label for="cameraInput">
+										<i class="fas fa-microphone-alt fa-2x"></i>
+									</label> <input type="file" id="cameraInput" name="file"
+										accept="video/*" capture="user" /> <input type="submit"
+										value="녹화완료" />
 								</form>
 							</div>
 

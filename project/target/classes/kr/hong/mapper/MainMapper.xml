@@ -10,4 +10,5 @@
 	<select id="login" resultType="kr.hong.domain.User">
 	    select * from tbl_user where user_id = #{login_user_id} and user_pw = #{login_user_pw}
 	</select>
+	
 </mapper>

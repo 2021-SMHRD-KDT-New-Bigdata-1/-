@@ -207,8 +207,8 @@
 									    	<div class="input-group-prepend">
 											    <span class="input-group-text">국적<i class="fa fa-lock"></i> </span>
 											</div>
-									        <select id="user_nationality" name="user_nationality" required>
-												<option value="" selected disabled>언어를 선택</option> 
+									        <select id="user_nationality" name="user_nationality" style="width: 272px;" required>
+												<option value="lang" selected>언어선택</option> 
 												<option value="eng">ENG(영어)</option> 
 												<option value="ko">KO(한글)</option>
 											</select>

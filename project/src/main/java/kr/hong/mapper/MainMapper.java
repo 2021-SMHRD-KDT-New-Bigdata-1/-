@@ -30,7 +30,7 @@ public interface MainMapper {
 	public String index();
 	public String weakpage();
 	public String finallresult();
-	public List<Word> WordList(); 
+	public List<Word> WordList1(); 
 	
 }
 

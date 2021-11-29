@@ -155,13 +155,17 @@
 
 			
 			<script>
-			function 
+			
+			$(document).ready(function() { //익명함수
+			      loadList();
+			   });
+			
 			   function loadList() {
 				      $.ajax({
 				         url : "WordListJson.do",
 				         type : "get",
 				         dataType : "json",
-				         success : jsonHtml,
+				         success : Wordstudy,
 				         error : function() {
 				            alert("error");
 				         }
@@ -177,8 +181,8 @@
 	              view += "<div class='panel panel-primary'>";
 	              view += "<div class='panel-heading'>STEP"+count+"</div>";
 	              $each(data, function(index, obj)){
-	                 view += "<div class='panel-body'></div>";
-	                 view += "<div class='panel-footer'>Buy 50 mobiles and get a gift card</div>"
+	                 view += "<div class='panel-body'>"+for(int i=0;i<5;i++)+"</div>";
+	                 view += "<div class='panel-footer'>Buy 50 mobiles and get a gift card</div>";
 	              }
 	              
 	              ;

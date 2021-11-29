@@ -164,13 +164,13 @@ function login() {
 								<div id="main">
 								
 								    <div id="btngroup" >
-                                       <button id="btnselect" onclick=''>음절</button>
+                                       <button id="btnselect" onclick="studypage1()">음절</button>
                                     </div>
                                     <div id="btngroup">
-                                        <button id="btnselect" onclick=''>단어</button>
+                                        <button id="btnselect" onclick="studypage2()">단어</button>
                                     </div>
                       				<div id="btngroup">
-                                        <button id="btnselect" onclick=''>문장</button>
+                                        <button id="btnselect" onclick="studypage3()">문장</button>
                                     </div>
                                     <div id="btngroup">
                                         <button id="btnselect" onclick=''>취약 단어</button>
@@ -203,6 +203,16 @@ function login() {
     
     <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
-
+	<script>
+	function studypage1(){
+ 		location.href="studypage1.do";
+ 	}
+	function studypage2(){
+ 		location.href="studypage2.do";
+ 	}
+	function studypage3(){
+ 		location.href="studypage3.do";
+ 	}
+	</script>
 </body>
 </html>

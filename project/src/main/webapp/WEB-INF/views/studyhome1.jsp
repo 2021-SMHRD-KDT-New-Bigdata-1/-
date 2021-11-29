@@ -72,6 +72,27 @@
 				}
 				
 			  </style>
+		<script>
+	  	$(document).ready(function(){
+			SyllableLoadList();
+	  	});
+	  	
+	  	function SyllableLoadList(){
+	  		$.ajax({
+	  			url : "SyllableListJson.do",
+	  			type : "get",
+	  			dataType : "json",
+	  			success : syllablestudy,
+	  			error : function(){ alert("error"); }
+	  		});
+	  	}
+	  	
+	  	function syllablestudy(data){
+	  		view = "<div id='main'>"
+				<div class="container">    
+				  <div class="row">
+	  	}
+		</script>
 			
 				
 	</head>

@@ -207,7 +207,7 @@ function login() {
 	function studypage1(){
  		location.href="studypage1.do";
  	}
-	function studypag2(){
+	function studypage2(){
  		location.href="studypage2.do";
  	}
 	function studypage3(){

@@ -221,17 +221,17 @@
 
 		<!-- Wrapper -->
 			
-			<div id="wrapper">
+			<div id="wrapper" style="padding:0;">
 
 				<!-- Header -->
 					<section>
 					<header class="nav_top">
 					<h1 id="title_name" style="margin-left:20px;">allbareum</h1>
 					<nav id="main_title_nav" role="navigation">
-  <ul id="main-menu" style="list-style:none;">
-    <li><a href="#" onclick="submenu();">MENU1</a></li>
-    <li><a href="#" onclick="submenu();">MENU2</a></li>
-    <li><a href="#" onclick="submenu();">MENU3</a></li>
+<ul id="main-menu" style="list-style:none;">
+    <li><a href="mypage1.do" onclick="submenu();">음절</a></li>
+    <li><a href="mypage2.do" onclick="submenu();">단어</a></li>
+    <li><a href="mypage3.do" onclick="submenu();">문장</a></li>
   </ul>
 </nav>
 					</header>
@@ -243,13 +243,13 @@
 							  <div class="row" style="margin-left:-32px;">
 							   
 
-							  <select id="my_select" style="height:auto; font-size:25px;">
+							  <select id="my_select" style="height:auto; font-size:25px; margin-left:50px;">
 												<option value="" selected disabled>week</option> 
 												<option value="eng">1주차</option> 
 												<option value="ko">2주차</option>
 											</select>
 							  
-							   <select id="my_select" style="height:auto; font-size:25px;">
+							   <select id="my_select" style="height:auto; font-size:25px; margin-left:50px;">
 												<option value="" selected disabled>day</option> 
 												<option value="eng">day1</option> 
 												<option value="ko">day2</option>
@@ -273,7 +273,7 @@ new Chart(document.getElementById("myChart"), {
     data: {
         labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
         datasets: [{
-            label: '테스트 데이터셋',
+            label: '첫날',
             data: [
                 10,
                 3,
@@ -283,12 +283,12 @@ new Chart(document.getElementById("myChart"), {
                 5,
                 50
             ],
-            borderColor: "rgba(255, 201, 14, 1)",
+            borderColor: "rgba(255, 0, 0, 1)",
             fill: false,
             lineTension: 0
         },
         {
-        	label: '테스트 데이터셋2',
+        	label: '현재',
             data: [
                 15,
                 5,
@@ -298,7 +298,7 @@ new Chart(document.getElementById("myChart"), {
                 10,
                 20
             ],
-            borderColor: "rgba(255, 201, 14, 1)",
+            borderColor: "rgba(0, 0, 255, 1)",
             fill: false,
             lineTension: 0
         }

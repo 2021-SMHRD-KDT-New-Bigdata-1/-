@@ -62,7 +62,7 @@
 
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="main.do" rel="home" style="color: black; margin-left: 280px;" >ALL바름</a>
+                    <a href="main.do" rel="home" style="color: black; margin-left: 590px;" >ALL바름</a>
                 </p>
             </div>
 
@@ -254,8 +254,9 @@
                                     </h2>
                                      <button class='btnmain' onclick="studying()">학습하기</button>
                                      <button class='btnmain' href="#">마이페이지</button>
-                                     <button type="button" class='btnmain' onclick="logout()">로그아웃</button>
-                                     </div>
+                                    
+                                     </div><br>
+                                      <p type="button" style="font-size: x-small;">학습을 종료하고 싶다면?<br><a onclick="logout()">로그아웃</a> </p> 
                              </c:if>
                                
               <!--  loginform close...........................------------------------------------>     
@@ -276,6 +277,7 @@
 
                                         </a>
                                     </h2>
+                                    
                                     <p class="hero__entry-desc">
 								                                      음성을 통해 발음을 인식합니다, 
 								                                      입모양 인식을 통해 바른 입모양을 교정을 돕습니다.

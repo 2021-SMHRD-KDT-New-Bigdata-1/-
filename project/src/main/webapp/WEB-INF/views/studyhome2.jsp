@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <!--
 	Forty by HTML5 UP
@@ -7,6 +8,7 @@
 -->
 <html>
 	<head>
+	
 		<title>Forty by HTML5 UP</title>
 		<meta charset="euc-kr" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -135,6 +137,20 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<script>
+			   function loadList() {
+				      $.ajax({
+				         url : "WordListJson.do",
+				         type : "get",
+				         dataType : "json",
+				         success : jsonHtml,
+				         error : function() {
+				            alert("error");
+				         }
+				      });
+				   }
+			</script>
 
 	</body>
 </html>

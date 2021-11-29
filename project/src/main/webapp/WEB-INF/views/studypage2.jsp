@@ -57,7 +57,7 @@
 
 		<!-- Header -->
 		<header id="header" class="alt"> 
-			<button type="button" class="btnback"><i class="fas fa-arrow-left fa-2x"></i></button>
+			<button onclick="back1()" type="button" class="btnback"><i class="fas fa-arrow-left fa-2x"></i></button>
 		
 		</header>
 
@@ -107,6 +107,10 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-
+	<script>
+		function back1(){
+				 location.href="studyhome2.do";
+		}
+	</script>
 </body>
 </html>

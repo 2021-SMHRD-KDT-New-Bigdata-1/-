@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.hong.domain.LoginInfo;
 import kr.hong.domain.User;
+import kr.hong.domain.Word;
 import kr.hong.mapper.MainMapper;
 
 
@@ -48,6 +49,9 @@ public class BoardController {
 			
 			return "redirect:/main.do";
 		}
+		
+	
+		
 	
 		@RequestMapping("/index.do")
 		public String index() {
@@ -68,8 +72,20 @@ public class BoardController {
 		}
 		
 
+		@RequestMapping("/studypage1.do")
+		public String studypage1() {
+			
+			return "studypage2";
+		}
+		
 		@RequestMapping("/studypage2.do")
 		public String studypage2() {
+			
+			return "studypage2";
+		}
+		
+		@RequestMapping("/studypage3.do")
+		public String studypage3() {
 			
 			return "studypage2";
 		}
@@ -157,7 +173,13 @@ public class BoardController {
 			return "studyresult2";
 		}
 
-		
+		 @RequestMapping("/WordList1.do")
+		 public List<Word> WordList1(Model model) {
+			   
+			   List<Word> list=mapper.WordList1();
+			   return list;
+		      
+		   }
 
 		
 	}

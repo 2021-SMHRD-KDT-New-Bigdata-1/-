@@ -1,9 +1,12 @@
 package kr.hong.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import kr.hong.domain.LoginInfo;
 import kr.hong.domain.User;
+import kr.hong.domain.Word;
 
 // 1. Mapper interface + @(에노테이션)
 // JDBC(Java+SQL) -> 생산성이떨어진다. 유지보수가 어렵다.
@@ -18,14 +21,16 @@ public interface MainMapper {
 	public String studyhome2();
 	public String studyhome3();
 	public String select();
+	public String studypage1();
 	public String studypage2();
+	public String studypage3();
 	public String mypage();
 	public String main();
 	public String studyresult2();
 	public String index();
 	public String weakpage();
 	public String finallresult();
-	
+	public List<Word> WordList1(); 
 	
 }
 

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.hong.domain.LoginInfo;
 import kr.hong.domain.User;
+import kr.hong.domain.Word;
 import kr.hong.mapper.MainMapper;
 
 
@@ -172,7 +173,13 @@ public class BoardController {
 			return "studyresult2";
 		}
 
-		
+		 @RequestMapping("/WordListJson.do")
+		 public List<Word> WordListJson(Model model) {
+			   
+			   List<Word> list=mapper.WordList();
+			   return list;
+		      
+		   }
 
 		
 	}

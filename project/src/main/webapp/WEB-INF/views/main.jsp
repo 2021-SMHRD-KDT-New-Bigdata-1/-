@@ -208,9 +208,12 @@
 											    <span class="input-group-text">국적<i class="fa fa-lock"></i> </span>
 											</div>
 									        <select id="user_nationality" name="user_nationality" style="width: 272px;" required>
-												<option value="lang" selected>언어선택</option> 
-												<option value="eng">ENG(영어)</option> 
-												<option value="ko">KO(한글)</option>
+												<option value="lang" selected>국가선택</option> 
+												<option value="USA">USA</option> 
+												<option value="KOREA">KOREA</option>
+												<option value="JAPAN">JAPAN</option>
+												<option value="CHINA">CHINA</option>
+												<option value="GERMANY">GERMANY</option>
 											</select>
 									    </div> <!-- form-group// -->
 									    <button type="submit" class='btnmain'>회원가입</button>

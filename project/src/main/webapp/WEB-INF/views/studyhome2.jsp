@@ -162,27 +162,34 @@
 			
 			   function loadList() {
 				      $.ajax({
-				         url : "WordListJson.do",
+				         url : "WordList1.do",
 				         type : "get",
 				         dataType : "json",
-				         success : Wordstudy,
+				         success : JSONArray jsonArray = new JSONArray(data)
+				         for(int i=0; i<JsonArray.length()/5; i++){
+				        	 word = JsonObject.get("i");
+				         },
 				         error : function() {
 				            alert("error");
 				         }
 				      });
 				   }
+			   
+			   
 	        function Wordstudy(data){
 	            view = "<div id='main'>";
 	          view +=   "<div class='container'>";
 	          view +=   "<div class='row'>";
-	          for(i=0; i<(data.length/5)+1; i++){
-	             int count = 1;
+	          for(int i=0; (i<data.length()/5); i++){
+	             
+	        	  int count = 1;
 	              view += "<div class='col-sm-4'>";
 	              view += "<div class='panel panel-primary'>";
 	              view += "<div class='panel-heading'>STEP"+count+"</div>";
+	              
 	              $each(data, function(index, obj)){
-	                 view += "<div class='panel-body'>"+for(int i=0;i<5;i++)+"</div>";
-	                 view += "<div class='panel-footer'>Buy 50 mobiles and get a gift card</div>";
+	                 view += "<div class='panel-body'>"+word+"</div>";
+	                 view += "<div class='panel-footer'></div>";
 	              }
 	              
 	              ;

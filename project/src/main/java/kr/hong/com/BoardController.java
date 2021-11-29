@@ -71,8 +71,20 @@ public class BoardController {
 		}
 		
 
+		@RequestMapping("/studypage1.do")
+		public String studypage1() {
+			
+			return "studypage2";
+		}
+		
 		@RequestMapping("/studypage2.do")
 		public String studypage2() {
+			
+			return "studypage2";
+		}
+		
+		@RequestMapping("/studypage3.do")
+		public String studypage3() {
 			
 			return "studypage2";
 		}

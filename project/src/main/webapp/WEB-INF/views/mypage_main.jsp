@@ -21,7 +21,7 @@
 		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 			<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>	
 			<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-				
+
 			<style>
 			    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
 			   html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -236,23 +236,6 @@
 							  <div class="row" style="margin-left:-32px;">
 							   
 
-							  <select id="my_select" style="height:auto; font-size:25px;">
-												<option value="" selected disabled>week</option> 
-												<option value="eng">1주차</option> 
-												<option value="ko">2주차</option>
-											</select>
-							  
-							   <select id="my_select" style="height:auto; font-size:25px;">
-												<option value="" selected disabled>day</option> 
-												<option value="eng">day1</option> 
-												<option value="ko">day2</option>
-												<option value="ko">day3</option>
-												<option value="ko">day4</option>
-												<option value="ko">day5</option>
-												<option value="ko">day6</option>
-												<option value="ko">day7</option>
-											</select>
-											 
 											 <div class="off-8-small" style="margin-top:20px; width:50%; min-width:349.5px;"> 
 							      <div class="panel panel-primary">
 							        <div id="chart_title" class="panel-heading">프로필</div>

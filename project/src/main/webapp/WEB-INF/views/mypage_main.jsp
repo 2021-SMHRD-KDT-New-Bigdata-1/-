@@ -53,6 +53,7 @@ select { -
 	-input-height: var(- -vspace-2); -
 	-input-line-height: var(- -vspace-1); -
 	-input-vpadding: calc((( var(- -input-height)- var(- -input-line-height))/2)-
+		
 		 1px);
 	display: block;
 	height: var(- -input-height);
@@ -264,7 +265,7 @@ footer {
 							</div>
 						</div>
 					</div>
-					
+
 
 					<div class="off-8-small" style="width: 100%; min-width: 349.5px;">
 						<div class="panel panel-primary">

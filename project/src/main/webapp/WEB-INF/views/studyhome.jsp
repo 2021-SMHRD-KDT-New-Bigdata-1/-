@@ -157,7 +157,6 @@
 	    		view += "</div>";
 	    		view += "</div>";
 	    		view += "</div>";
-	    		view += "<div class='panel-footer' style='hidden'></div>";
 	        	view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
 	    		view += "<div class='col-sm-4'>";
 	    		view += "<div class='panel panel-primary'>";
@@ -209,7 +208,6 @@
 	    		view += "</div>";
 	    		view += "</div>";
 	    		view += "</div>";
-	    		view += "<div class='panel-footer' style='hidden'></div>";
 	        	view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
 	    		view += "<div class='col-sm-4'>";
 	    		view += "<div class='panel panel-primary'>";
@@ -240,17 +238,19 @@
 		view += "<div class='panel-heading'>Day1</div>";
 		view += "<div class='panel-body'>";
 	    view +="<table>";
-	    view += "<tr>";
 	    var count = 0;
 	    var day = 2;
 	    $.each(data, function(data, obj){
 	    	if(count<4){
+	    		view += "<tr>";
 	        	view +="<td>";
 	            view += obj.sen_content;
 	            view +="</td>";
+	            view += "</tr>";
 	            count += 1;
 	    	}
 	    	else if(count == 4){
+	    		view += "<tr>";
 	    		view +="<td>";
 	            view += obj.sen_content;
 	            view +="</td>";
@@ -260,19 +260,23 @@
 	    		view += "</div>";
 	    		view += "</div>";
 	    		view += "</div>";
-	    		view += "<div class='panel-footer' style='hidden'></div>";
 	        	view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
 	    		view += "<div class='col-sm-4'>";
 	    		view += "<div class='panel panel-primary'>";
 	    		view += "<div class='panel-heading'>Day"+day+"</div>";
 	    		view += "<div class='panel-body'>";
 	    	    view +="<table>";
-	    	    view += "<tr>";
 	    	    day += 1;
 	            count = 0;
 	    	}
 	          
 	    })
+	    view += "</table>";
+	    
+	    view += "</div>";
+	    view += "</div>";
+	    view += "</div>";
+	    view += "</div>";
 	    view += "</div>";
     	view += "</div>";
     	view += "</div>";

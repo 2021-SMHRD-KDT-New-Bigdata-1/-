@@ -360,73 +360,7 @@ footer {
 						</div>
 					</div>
 					<div class="row">
-						<div class="off-6-small">
-							<div class="panel panel-primary">
-								<div id="chart_title" class="panel-heading">음절</div>
-								<div class="panel-body">
-									<canvas id="doughnut-chart1" width="300" height="250"></canvas>
-									<script>
-										new Chart(
-												document
-														.getElementById("doughnut-chart1"),
-												{
-													type : 'doughnut',
-													data : {
-														labels : [ "Africa",
-																"Asia" ],
-														datasets : [ {
-															label : "Population (millions)",
-															backgroundColor : [
-																	"#3e95cd",
-																	"#8e5ea2" ],
-															data : [ 80, 20 ]
-														} ]
-													},
-													options : {
-														maintainAspectRatio : false,
-														responsive : true,
-													}
-												});
-									</script>
-								</div>
-								<div class="panel-footer">Buy 50 mobiles and get a gift
-									card</div>
-							</div>
-						</div>
 
-						<div class="off-6-small">
-							<div class="panel panel-primary">
-								<div id="chart_title" class="panel-heading">단어</div>
-								<div class="panel-body">
-									<canvas id="doughnut-chart2" width="300" height="250"></canvas>
-									<script>
-										new Chart(
-												document
-														.getElementById("doughnut-chart2"),
-												{
-													type : 'doughnut',
-													data : {
-														labels : [ "Africa",
-																"Asia" ],
-														datasets : [ {
-															label : "Population (millions)",
-															backgroundColor : [
-																	"#3e95cd",
-																	"#8e5ea2" ],
-															data : [ 80, 20 ]
-														} ]
-													},
-													options : {
-														maintainAspectRatio : false,
-														responsive : true,
-													}
-												});
-									</script>
-								</div>
-								<div class="panel-footer">Buy 50 mobiles and get a gift
-									card</div>
-							</div>
-						</div>
 						<div class="off-6-small">
 							<div class="panel panel-primary">
 								<div id="chart_title" class="panel-heading">문장</div>

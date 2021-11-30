@@ -82,7 +82,7 @@
 <body class="is-preload">
 
 	<!-- Wrapper -->
-	
+	<div id="">
 
 		<!-- Header -->
 		<header id="header" class="alt">
@@ -101,6 +101,7 @@
 		</c:forEach>
 
 
+
 		<!----table ----->
 
 		<div class="word">
@@ -108,21 +109,14 @@
 			<table class="study2table">
 				<thead>
 					<tr>
-						<td class="cell_padding">단어</td>
+						<th>단어</th>
 					</tr>
 					<tr>
-<<<<<<< HEAD
-						<td class="cell_padding" style="text-align: center; font-size: large;"><br>오뜨!!</td>
-=======
 						<th style="text-align: center; font-size: large;"><br></th>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-<<<<<<< HEAD
-						<td class="cell_padding" onload="load()"><video width="100%" height="100%"
-=======
 					<td style="text-align: center; vertical-align: middle;">
 						
 						<video controls autoplay width="350">
@@ -135,13 +129,12 @@
 						</video>
 
 						 <td onload="load()"><video width="100%" height="100%"
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 								autoplay="autoplay" id="myVideo" /></td>
 					 -->
 					 </td>
 					</tr>
 					<tr>
-						<td class="cell_padding" style="text-align: center; vertical-align: middle;">발음해보세용
+						<td style="text-align: center; vertical-align: middle;">발음해보세용<br>
 							<div class="cameraInput">
 
 								<form action="http://211.223.106.113:5000/dlModel" method="POST"
@@ -161,12 +154,12 @@
 				</tbody>
 
 			</table>
-			
+			<br>
 
 		</div>
 
 		<!-- table 끝읏 -->
-	
+	</div>
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>

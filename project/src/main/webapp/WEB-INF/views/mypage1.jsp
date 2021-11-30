@@ -1,4 +1,5 @@
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML>
 
@@ -26,10 +27,13 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+</script>
 
+	<!--이모티콘-->
+		<link rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--이모티콘-->
 
 <style>
 /* Remove the navbar's default rounded borders and increase the bottom margin */
@@ -260,17 +264,11 @@ footer {
 		<!-- Main -->
 		<div id="main">
 			<div class="container">
-				<div class="row" style="margin-left: -32px;">
+				<div class="row" style="margin-left: -32px;margin-top: 32px;">
 
 
-					<select id="my_select"
-						style="height: auto; font-size: 25px; margin-left: 50px;">
-						<option value="" selected disabled>week</option>
-						<option value="eng">1주차</option>
-						<option value="ko">2주차</option>
-					</select> <select id="my_select"
-						style="height: auto; font-size: 25px; margin-left: 50px;">
-						<option value="" selected disabled>day</option>
+					 <select id="my_select" style="margin-left:auto; margin-right:auto;" >
+						<option value="" selected disabled><a><i class="fas fa-angle-down">day</i></a></option>
 						<option value="eng">day1</option>
 						<option value="ko">day2</option>
 						<option value="ko">day3</option>
@@ -304,7 +302,7 @@ footer {
 																		30, 23,
 																		10, 5,
 																		50 ],
-																borderColor : "rgba(255, 0, 0, 1)",
+																borderColor : "#ffbb40",
 																fill : false,
 																lineTension : 0
 															},
@@ -314,7 +312,7 @@ footer {
 																		10, 15,
 																		15, 10,
 																		20 ],
-																borderColor : "rgba(0, 0, 255, 1)",
+																borderColor : "#6e9b52",
 																fill : false,
 																lineTension : 0
 															}
@@ -363,18 +361,18 @@ footer {
 					<div class="col-12-small"
 						style="width: 50%; margin-top: 30px;">
 						<div class="panel panel-primary">
-							<div id="chart_title" class="panel-heading">정확도</div>
+							<div id="chart_title" class="panel-heading">음성 정확도</div>
 							<div class="panel-body">
 								<canvas id="doughnut-chart" width="300" height="250"></canvas>
 								<script>
 								new Chart(document.getElementById("doughnut-chart"), {
 								    type: 'doughnut',
 								    data: {
-								      labels: ["Africa", "Asia"],
+								      labels: ["정확도", "부정확도"],
 								      datasets: [
 								        {
 								          label: "Population (millions)",
-								          backgroundColor: ["#3e95cd", "#8e5ea2"],
+								          backgroundColor: ["#3c80e5", "#9b938a"],
 								          data: [80,20]
 								        }
 								      ]
@@ -397,18 +395,18 @@ footer {
 					<div class="col-12-small"
 						style="width: 50%; margin-top: 30px;">
 						<div class="panel panel-primary">
-							<div id="chart_title" class="panel-heading">정확도</div>
+							<div id="chart_title" class="panel-heading">입모양 정확도</div>
 							<div class="panel-body">
 								<canvas id="doughnut-chart1" width="300" height="250"></canvas>
 								<script>
 								new Chart(document.getElementById("doughnut-chart1"), {
 								    type: 'doughnut',
 								    data: {
-								      labels: ["Africa", "Asia"],
+								      labels: ["정확도", "부정확도"],
 								      datasets: [
 								        {
 								          label: "Population (millions)",
-								          backgroundColor: ["#3e95cd", "#8e5ea2"],
+								          backgroundColor: ["#3c80e5", "#9b938a"],
 								          data: [80,20]
 								        }
 								      ]

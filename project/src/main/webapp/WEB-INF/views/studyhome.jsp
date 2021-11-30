@@ -101,7 +101,7 @@
 		      url : "SylList.do",
 		      type : "get",
 		      dataType : "json",
-		      success : jsonHtml,
+		      success : jsonHtml1,
 		      error : function() {
 		      	alert("syllist-error");}
 		      });
@@ -111,7 +111,7 @@
 		      url : "WordList.do",
 		      type : "get",
 		      dataType : "json",
-		      success : jsonHtml,
+		      success : jsonHtml2,
 		      error : function() {
 		      	alert("wordlist-error");}
 		      });
@@ -121,20 +121,20 @@
 		      url : "SenList.do",
 		      type : "get",
 		      dataType : "json",
-		      success : jsonHtml,
+		      success : jsonHtml3,
 		      error : function() {
 		      	alert("senlist-error");}
 		      });
 	}
-	function jsonHtml(data){ //콜백함수
+	function jsonHtml1(data){ //콜백함수
       view ="<table>";
       $.each(data, function(data, obj){
           view +="<tr>";
           view +="<td>";
-          view +=obj.word_id;
+          view +=obj.syl_id;
           view +="</td>";
           view +="<td>";
-          view +=obj.word_content;
+          view +=obj.syl_content;
           view +="</td>";
           view +="</tr>";
       })
@@ -143,6 +143,40 @@
 
       $(".panel-body2").html(view);
 	}
+	function jsonHtml2(data){ //콜백함수
+	      view ="<table>";
+	      $.each(data, function(data, obj){
+	          view +="<tr>";
+	          view +="<td>";
+	          view +=obj.word_id;
+	          view +="</td>";
+	          view +="<td>";
+	          view +=obj.word_content;
+	          view +="</td>";
+	          view +="</tr>";
+	      })
+
+	      view +="</table>";
+
+	      $(".panel-body2").html(view);
+		}
+	function jsonHtml3(data){ //콜백함수
+	      view ="<table>";
+	      $.each(data, function(data, obj){
+	          view +="<tr>";
+	          view +="<td>";
+	          view +=obj.sen_id;
+	          view +="</td>";
+	          view +="<td>";
+	          view +=obj.sen_content;
+	          view +="</td>";
+	          view +="</tr>";
+	      })
+
+	      view +="</table>";
+
+	      $(".panel-body2").html(view);
+		}
 	</script>
 				
 	</head>

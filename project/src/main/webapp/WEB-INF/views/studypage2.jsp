@@ -142,6 +142,12 @@
 		function back1() {
 			location.href = "studyhome2.do";
 		}
+
+        $(function getVideo(){
+            $('#camcorder').change(function(e){
+                $('#mov').attr('src', URL.createObjectURL(e.target.files[0]));
+            });
+        });
 	</script>
 </body>
 </html>

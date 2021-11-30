@@ -81,13 +81,8 @@
 </head>
 <body class="is-preload">
 
-<<<<<<< HEAD
    <!-- Wrapper -->
    <div id="">
-=======
-	<!-- Wrapper -->
-	<div id="">
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 
       <!-- Header -->
       <header id="header" class="alt">
@@ -106,34 +101,11 @@
       </c:forEach>
 
 
-<<<<<<< HEAD
-=======
-
-		<!----table ----->
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 
       <!----table ----->
 
-<<<<<<< HEAD
       <div class="word">
-=======
-			<table class="study2table">
-				<thead>
-					<tr>
-						<th>단어</th>
-					</tr>
-					<tr>
-						<th style="text-align: center; font-size: large;"><br></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-					<td style="text-align: center; vertical-align: middle;">
-						
-						<video controls autoplay width="350">
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 
-<<<<<<< HEAD
          <table class="study2table">
             <thead>
                <tr>
@@ -148,32 +120,13 @@
                <td style="text-align: center; vertical-align: middle;">
                   
                   <video controls autoplay width="350">
-=======
-						    <source src="${pageContext.request.contextPath}/resources/images/004_58_C.mp4"
-						            type="video/mp4">
-						
-						</video>
-						<!--<video id="myVideo" source ="C:/Users/smhrd/Deep Learning/web/show_video/001_1_C.mp4" type="video/mp4">
-						</video>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 
-<<<<<<< HEAD
                       <source src="${pageContext.request.contextPath}/resources/images/003_51_C.mp4"
                               type="video/mp4">
                   
                   </video>
                   <!--<video id="myVideo" source ="C:/Users/smhrd/Deep Learning/web/show_video/001_1_C.mp4" type="video/mp4">
                   </video>
-=======
-						 <td onload="load()"><video width="100%" height="100%"
-								autoplay="autoplay" id="myVideo" /></td>
-					 -->
-					 </td>
-					</tr>
-					<tr>
-						<td style="text-align: center; vertical-align: middle;">발음해보세용<br>
-							<div class="cameraInput">
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 
                    <td onload="load()"><video width="100%" height="100%"
                         autoplay="autoplay" id="myVideo" /></td>
@@ -196,24 +149,14 @@
                         </form>
                      </div>
 
-<<<<<<< HEAD
                   </td>
                </tr>
             </tbody>
-=======
-			</table>
-			<br>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 
          </table>
          <br>
 
-<<<<<<< HEAD
       </div>
-=======
-		<!-- table 끝읏 -->
-	</div>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 
       <!-- table 끝읏 -->
    </div>

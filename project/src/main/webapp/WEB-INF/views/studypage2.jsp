@@ -116,11 +116,19 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr><td style="vertical-align: middle;">
-						<video id="myVideo" class="video-js vjs-default-skin">
+					<tr>
+					<td style="text-align: center; vertical-align: middle;">
+						
+						<video controls autoplay width="350">
+
+						    <source src="${pageContext.request.contextPath}/resources/images/001_7_C.mp4"
+						            type="video/mp4">
+						
+						</video>
+						<!--<video id="myVideo" source ="C:/Users/smhrd/Deep Learning/web/show_video/001_1_C.mp4" type="video/mp4">
 						</video>
 
-						<!-- <td onload="load()"><video width="100%" height="100%"
+						 <td onload="load()"><video width="100%" height="100%"
 								autoplay="autoplay" id="myVideo" /></td>
 					 -->
 					 </td>
@@ -172,35 +180,7 @@
 		//});
 		//});
 		
-		$(document).ready(function() {
-			let options = {
-				sources : [ {
-					src : "C:/Users/smhrd/Deep Learning/web/show_video",
-					type : "video/mp4"
-				} ],
-				playbackRates : [ .5, .75, 1, 1.25, 1.5 ],
-				//poster : "[이미지 주소 등록]",
-				controls : true,
-				preload : "auto",
-				width : 540,
-				height : 320,
-				controlBar : {
-					playToggle : false,
-					pictureInPictureToggle : false,
-					remainingTimeDisplay : true,
-					progressControl : false,
-					qualitySelector : true,
-				}
-			};
-
-			var player = videojs('myVideo', options);
-			player.src([ {
-				src : 'C:/Users/smhrd/Deep Learning/web/show_video/001_1_C',
-				type : 'video/mp4',
-				label : '480P',
-				selected : true,
-			}]);
-		})
+		
 	</script>
 </body>
 </html>

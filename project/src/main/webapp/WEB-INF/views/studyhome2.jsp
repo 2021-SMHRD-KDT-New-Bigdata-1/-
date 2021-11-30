@@ -77,7 +77,7 @@
 			  </style>
 	<script>
 	//querystring
-	var num = getParameterByName("num");
+	var num = '${num}';
 	
 	$(document).ready(function() { //익명함수
 		  alert("제이쿼리 가즈앗!");
@@ -127,19 +127,49 @@
 		      });
 	}
 	function jsonHtml(data){ //콜백함수
-      view ="<table>";
-      $.each(data, function(data, obj){
-          view +="<tr>";
-          view +="<td>";
-          view +=obj.word_id;
-          view +="</td>";
-          view +="<td>";
-          view +=obj.word_content;
-          view +="</td>";
-          view +="</tr>";
-      })
-
-      view +="</table>";
+		view = "<div id='wrapper'>";
+		view += "<div id='main'>";
+		view += "<div class='container'>";
+		view += "<div class='row'>";
+		view += "<div class='main col-lg-4'>";
+		view += "<div class='col-sm-4'>";
+		view += "<div class='panel panel-primary'>";
+		view += "<div class='panel-heading'>Day1</div>";
+		view += "<div class='panel-body'>";
+	    view +="<table>";
+	    view += "<tr>";
+	    var count = 0;
+	    var day = 2;
+	    $.each(data, function(data, obj){
+	    	if(count<4){
+	        	view +="<td>";
+	            view += obj.word_content;
+	            view +="</td>";
+	            count += 1;
+	    	}
+	    	else if(count == 4){
+	    		view +="<td>";
+	            view += obj.word_content;
+	            view +="</td>";
+	            view +="</tr>";
+	            view +="</table>";
+	            view += "</div>";
+	    		view += "</div>";
+	    		view += "</div>";
+	    		view += "</div>";
+	        	view += "<div class='main col-lg-4'>";
+	    		view += "<div class='col-sm-4'>";
+	    		view += "<div id=day"++"class='panel panel-primary'>";
+	    		view += "<div class='panel-heading'>Day"+day+"</div>";
+	    		view += "<div class='panel-body'>";
+	    	    view +="<table>";
+	    	    view += "<tr>";
+	    	    day += 1;
+	            count = 0;
+	    	}
+	          
+	    })
+	    view += "<div class='panel-footer' style='hidden'>";
 
       $(".panel-body2").html(view);
 	}
@@ -165,38 +195,6 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="container">    
-							  <div class="row">
-							  
-							 
-							  
-							    <div class="main col-lg-4">
-							    <div class="col-sm-4"> 
-							      <div class="panel panel-primary">
-							        <div class="panel-heading">Day1</div>
-							        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" ></div>
-							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-							      </div>
-							      </div>
-							    </div>
-							    <div class="main col-lg-4">
-							    <div class="col-sm-4"> 
-							      <div class="panel panel-primary">
-							        <div class="panel-heading">Day2</div>
-							        <div class="panel-body"></div>
-							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-							      </div>
-							    </div>
-							    </div>
-							   <div class="main col-lg-4">
-							    <div class="col-sm-4"> 
-							      <div class="panel panel-primary">
-							        <div class="panel-heading">Day3</div>
-							        <div class="panel-body"></div>
-							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-							      </div>
-							    </div>
-							    </div>
-						</div><br>
 
 					<div class="panel-body2">여기에요</div>
 
@@ -204,6 +202,7 @@
 
 				
 
+			</div>
 			</div>
 
 		<!-- Scripts -->

@@ -65,10 +65,10 @@
 
 		<!-- Header -->
 		<header id="header" class="alt">
-			<button onclick="back1()" type="button" class="btnback">
+			<button onclick="back1()" type="button" class="btnback" style="color:white;">
 				<i class="fas fa-arrow-left fa-2x"></i>
 			</button>
-			<h3 class="stage_nm">음절</h3>
+			<!-- <h3 class="stage_nm" style="margin-top:12px; color:white;">음절발음하기</h3> -->
 		</header>
 
 
@@ -81,7 +81,7 @@
 			<table class="study2table">
 				<thead>
 					<tr>
-						<th>단어</th>
+						<th style="font-size:1em;">음절학습하기</th>
 					</tr>
 					<tr>
 						<th style="text-align: center; font-size: large;"><br>오뜨!!</th>

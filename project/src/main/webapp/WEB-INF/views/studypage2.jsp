@@ -74,7 +74,7 @@
 <body class="is-preload">
 
 	<!-- Wrapper -->
-	<div id="">
+	
 
 		<!-- Header -->
 		<header id="header" class="alt">
@@ -86,7 +86,6 @@
 
 
 
-
 		<!----table ----->
 
 		<div class="word">
@@ -94,19 +93,19 @@
 			<table class="study2table">
 				<thead>
 					<tr>
-						<th>단어</th>
+						<td class="cell_padding">단어</td>
 					</tr>
 					<tr>
-						<th style="text-align: center; font-size: large;"><br>오뜨!!</th>
+						<td class="cell_padding" style="text-align: center; font-size: large;"><br>오뜨!!</td>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td onload="load()"><video width="100%" height="100%"
+						<td class="cell_padding" onload="load()"><video width="100%" height="100%"
 								autoplay="autoplay" id="myVideo" /></td>
 					</tr>
 					<tr>
-						<td style="text-align: center; vertical-align: middle;">발음해보세용<br>
+						<td class="cell_padding" style="text-align: center; vertical-align: middle;">발음해보세용
 							<div class="cameraInput">
 
 								<form action="http://211.223.106.113:5000/dlModel" method="POST"
@@ -126,12 +125,12 @@
 				</tbody>
 
 			</table>
-			<br>
+			
 
 		</div>
 
 		<!-- table 끝읏 -->
-	</div>
+	
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>

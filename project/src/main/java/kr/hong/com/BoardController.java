@@ -83,23 +83,13 @@ public class BoardController {
 			return "studypage3";
 		}
 		
-		@RequestMapping("/studyhome1.do")
-		public String studyhome1() {
+		@RequestMapping("/studyhome.do")
+		public String studyhome(String num, Model model) {
+			model.addAttribute("num", num);
 			
-			return "studyhome1";
+			return "studyhome";
 		}
 		
-		@RequestMapping("/studyhome2.do")
-		public String studyhome2() {
-			
-			return "studyhome2";
-		}
-		
-		@RequestMapping("/studyhome3.do")
-		public String studyhome3() {
-			
-			return "studyhome3";
-		}
 		
 		@RequestMapping("/select.do")
 		public String select() {
@@ -127,21 +117,6 @@ public class BoardController {
 			
 			return "mypage3";
 		}
-		@RequestMapping("/sentence_main.do")
-		public String sentence_main() {
-			
-			return "sentence_main";
-		}
-		@RequestMapping("/voca_main.do")
-		public String voca_main() {
-			
-			return "voca_main";
-		}
-		@RequestMapping("/syllable_main.do")
-		public String syllable_main() {
-			
-			return "syllable_main";
-		}
 		
 		@RequestMapping("/main.do")
 		public String main() {
@@ -153,17 +128,6 @@ public class BoardController {
 		public String flask_send_data3() {
 			System.out.println("컨트롤러에 왔니..?");
 			return "flask_send_data3";
-		}
-		@RequestMapping("/Result3.do")
-		public String Result3() {
-			System.out.println("hi");
-			return "rece";
-		}
-		
-		@RequestMapping("/studyresult2.do")
-		public String studyresult2() {
-		
-			return "studyresult2";
 		}
 
 		 

@@ -14,4 +14,16 @@
 	<select id="WordList1" resultType="kr.hong.domain.Word">
 	    select * from tbl_word where word_level = 1 order by study_date asc
 	</select>
+	
+	<!-- 신규 -->
+	<select id="SylList" resultType="kr.hong.domain.Syllable">
+	    select * from tbl_syllable order by study_date asc
+	</select>
+		<select id="WordList" resultType="kr.hong.domain.Word">
+	    select * from tbl_word order by study_date asc
+	</select>
+		<select id="SenList" resultType="kr.hong.domain.Sentence">
+	    select * from tbl_sentence order by study_date asc
+	</select>
+	
 </mapper>

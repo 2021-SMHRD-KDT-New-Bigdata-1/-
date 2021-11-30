@@ -5,6 +5,8 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import kr.hong.domain.LoginInfo;
+import kr.hong.domain.Sentence;
+import kr.hong.domain.Syllable;
 import kr.hong.domain.User;
 import kr.hong.domain.Word;
 
@@ -30,7 +32,10 @@ public interface MainMapper {
 	public String index();
 	public String weakpage();
 	public String finallresult();
-	public List<Word> WordList1(); 
+	public List<Word> WordList1(); //기존
+	public List<Syllable> SylList(); 
+	public List<Word> WordList(); 
+	public List<Sentence> SenList(); 
 	
 }
 

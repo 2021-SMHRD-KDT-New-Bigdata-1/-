@@ -253,7 +253,7 @@
                                         	환영합니다
                                     </h2>
                                      <button class='btnmain' onclick="studying()">학습하기</button>
-                                     <button class='btnmain' href="#">마이페이지</button>
+                                     <button class='btnmain' onclick="mypageGo()">마이페이지</button>
                                     
                                      </div><br>
                                       <p type="button" style="font-size: small;">학습을 종료하고 싶다면?<br><a onclick="logout()">로그아웃</a> </p> 
@@ -364,7 +364,9 @@
 	function studying(){
  		location.href="select.do";
  	}
-
+	function mypageGo(){
+		location.href="mypage_main.do";
+	}
 </script>
 </body>
 </html>

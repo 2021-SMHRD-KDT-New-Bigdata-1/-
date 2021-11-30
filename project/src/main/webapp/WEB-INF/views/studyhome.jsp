@@ -143,13 +143,13 @@
 	    $.each(data, function(data, obj){
 	    	if(count<4){
 	        	view +="<td>";
-	            view += obj.syl_content;
+	            view += obj.content;
 	            view +="</td>";
 	            count += 1;
 	    	}
 	    	else if(count == 4){
 	    		view +="<td>";
-	            view += obj.syl_content;
+	            view += obj.content;
 	            view +="</td>";
 	            view +="</tr>";
 	            view +="</table>";
@@ -194,13 +194,13 @@
 	    $.each(data, function(data, obj){
 	    	if(count<4){
 	        	view +="<td>";
-	            view += obj.word_content;
+	            view += obj.content;
 	            view +="</td>";
 	            count += 1;
 	    	}
 	    	else if(count == 4){
 	    		view +="<td>";
-	            view += obj.word_content;
+	            view += obj.content;
 	            view +="</td>";
 	            view +="</tr>";
 	            view +="</table>";
@@ -244,7 +244,7 @@
 	    	if(count<4){
 	    		view += "<tr>";
 	        	view +="<td>";
-	            view += obj.sen_content;
+	            view += obj.content;
 	            view +="</td>";
 	            view += "</tr>";
 	            count += 1;
@@ -252,7 +252,7 @@
 	    	else if(count == 4){
 	    		view += "<tr>";
 	    		view +="<td>";
-	            view += obj.sen_content;
+	            view += obj.content;
 	            view +="</td>";
 	            view +="</tr>";
 	            view +="</table>";

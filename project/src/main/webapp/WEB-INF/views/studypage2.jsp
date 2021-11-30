@@ -119,7 +119,7 @@ video{
 	<div class="word">
 
 		<c:forEach var="list" items="${list}">
-			<p>${list.word_content}</p>
+			<p>${list.content}</p>
 		</c:forEach>
 		
 		<table class="study2table">

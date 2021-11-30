@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,13 +100,24 @@ video{
 
 </head>
 <body class="is-preload">
-
+	<% String day = request.getParameter("day");%>
+	
 	<!-- Wrapper -->
 
 	<!-- Header -->
 
 	<div class="word1">
-		<button onclick="back1()" type="button" class="btnback">
+	<c:choose>
+	<c:when test="${fn:length(list[0].content)==1}" >
+		<button onclick="back1(1)" type="button" class="btnback">
+	</c:when>
+	<c:when test="${fn:length(list[0].content)>1 and fn:length(list[0].content)<6}" >
+		<button onclick="back1(2)" type="button" class="btnback">
+	</c:when>
+	<c:otherwise>
+		<button onclick="back1(3)" type="button" class="btnback">
+	</c:otherwise>
+	</c:choose>
 			<i class="fas fa-arrow-left fa-2x"></i>
 		</button>
 		<h3 class="stage_nm">${day}</h3>
@@ -113,18 +125,14 @@ video{
 	</div>
 
 
-
-
 	<!----table ----->
 
 	<div class="word">
 		
-		<% String day = request.getParameter("day");%>
 		Day <%=day %> 단어 : [
 		<c:forEach var="list" items="${list}" varStatus="status">
 			${list.content}
 			<!-- ${status.count} -->
-			
 		</c:forEach> ]
 		<br>
 		
@@ -191,9 +199,9 @@ video{
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
-	var cnt = 0;
+		var cnt = 0;
 	
-		function back1() {
+		function back1(num) {
 			location.href = "studyhome.do?num=" + num;
 		}
 		
@@ -215,6 +223,8 @@ video{
 			$("#test602").text('('+(cnt+1)+'/5)');
 			}
 		}
+		
+		
 
 		//$(function getVideo(){
 		//    $('#camcorder').change(function(e){

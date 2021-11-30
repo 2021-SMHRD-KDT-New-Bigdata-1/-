@@ -337,8 +337,6 @@
 							    </div>
 						</div><br>
 
-=======
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 					<div class="panel-body2">여기에요</div>
 
 

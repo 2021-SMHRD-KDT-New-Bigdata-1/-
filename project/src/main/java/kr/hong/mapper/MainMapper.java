@@ -19,13 +19,19 @@ public interface MainMapper {
 	//@Select("Select * from board")
 	public User login(LoginInfo info);
 	public void join(User vo);
-	public String studyhome1();
-	public String studyhome2();
-	public String studyhome3();
+	//public String studyhome1();
+	//public String studyhome2();
+	//public String studyhome3();
+	public String studyhome(String num); //new
 	public String select();
-	public String studypage1();
-	public String studypage2();
-	public String studypage3();
+	//public String studypage1();
+	public String studypage2(String day);
+	//public String studypage3();
+	
+	public List<Syllable> studypage2_sy(String day);
+	public List<Word> studypage2_wo(String day);
+	public List<Sentence> studypage2_sen(String day);
+	
 	public String mypage();
 	public String main();
 	public String studyresult2();
@@ -33,9 +39,9 @@ public interface MainMapper {
 	public String weakpage();
 	public String finallresult();
 	public List<Word> WordList1(); //기존
-	public List<Syllable> SylList(); 
-	public List<Word> WordList(); 
-	public List<Sentence> SenList(); 
+	public List<Syllable> SylList(); //new
+	public List<Word> WordList();  //new 
+	public List<Sentence> SenList(); //new
 	
 }
 

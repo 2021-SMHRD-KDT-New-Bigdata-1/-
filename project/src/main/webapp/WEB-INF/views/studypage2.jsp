@@ -58,6 +58,9 @@
 	
 </script>
 <script>
+	
+
+
 	document.getElementById("cameraInput").addEventListener(
 			"change",
 			function() {
@@ -140,7 +143,7 @@
 	<script src="assets/js/main.js"></script>
 	<script>
 		function back1() {
-			location.href = "studyhome2.do";
+			location.href = "studyhome.do?num="+num;
 		}
 
         $(function getVideo(){

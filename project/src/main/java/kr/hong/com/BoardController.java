@@ -14,6 +14,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.hong.domain.LoginInfo;
+import kr.hong.domain.Sentence;
+import kr.hong.domain.Syllable;
 import kr.hong.domain.User;
 import kr.hong.domain.Word;
 import kr.hong.mapper.MainMapper;
@@ -65,36 +67,40 @@ public class BoardController {
 			return "weakpage";
 		}
 		
-
-		@RequestMapping("/studypage1.do")
-		public String studypage1() {
-			
-			return "studypage1";
-		}
-		
 		@RequestMapping("/studypage2.do")
 		public String studypage2() {
 			System.out.println("컨트롤러에 왔니..?");
 			return "studypage2";
 		}
 		
-		@RequestMapping("/studypage3.do")
-		public String studypage3() {
-			
-			return "studypage3";
+		@RequestMapping("/studypage2_sy.do")
+		public String studypage2_sy(String day, Model model){
+			List<Syllable> list = mapper.studypage2_sy(day);
+			model.addAttribute("list", list);
+			return "studypage2";
 		}
+		@RequestMapping("/studypage2_wo.do")
+		public String studypage2_wo(String day,Model model){
+			System.out.println("여긴 옴?");
+			List<Word> list = mapper.studypage2_wo(day);
+			System.out.println("2");
+			model.addAttribute("list", list);
+			System.out.println("3");
+			return "studypage2";
+		}
+		@RequestMapping("/studypage2_sen.do")
+		public String studypage2_sen(String day,Model model){
+			List<Sentence> list = mapper.studypage2_sen(day);
+			model.addAttribute("list", list);
+			return "studypage2";
+		}
+		
 		
 		@RequestMapping("/studyhome.do")
 		public String studyhome(String num, Model model) {
 			model.addAttribute("num", num);
 			
 			return "studyhome";
-		}
-		
-		@RequestMapping("/studyhome2.do")
-		public String studyhome2() {
-			
-			return "studyhome2";
 		}
 		
 		

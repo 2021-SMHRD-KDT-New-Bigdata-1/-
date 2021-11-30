@@ -121,7 +121,7 @@
 						
 						<video controls autoplay width="350">
 
-						    <source src="${pageContext.request.contextPath}/resources/images/004_58_C.mp4"
+						    <source src="${pageContext.request.contextPath}/resources/images/003_51_C.mp4"
 						            type="video/mp4">
 						
 						</video>

@@ -80,7 +80,7 @@
 	var num = '${num}';
 	
 	$(document).ready(function() { //익명함수
-		  alert("제이쿼리 가즈앗!");
+		  //alert("제이쿼리 가즈앗!");
 		
 		if(num==1){
 	    	Syl_loadList();
@@ -133,7 +133,7 @@
 		view += "<div class='row'>";
 		view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
 		view += "<div class='col-sm-4'>";
-		view += "<div class='panel panel-primary'>";
+		view += "<div class='panel panel-primary' onclick=studypageGo("+1+",1)>";
 		view += "<div class='panel-heading'>Day1</div>";
 		view += "<div class='panel-body'>";
 	    view +="<table>";
@@ -157,10 +157,9 @@
 	    		view += "</div>";
 	    		view += "</div>";
 	    		view += "</div>";
-	    		view += "<div class='panel-footer' style='hidden'></div>";
 	        	view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
 	    		view += "<div class='col-sm-4'>";
-	    		view += "<div class='panel panel-primary'>";
+	    		view += "<div class='panel panel-primary' onclick=studypageGo("+day+",1)>";
 	    		view += "<div class='panel-heading'>Day"+day+"</div>";
 	    		view += "<div class='panel-body'>";
 	    	    view +="<table>";
@@ -185,7 +184,7 @@
 		view += "<div class='row'>";
 		view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
 		view += "<div class='col-sm-4'>";
-		view += "<div class='panel panel-primary'>";
+		view += "<div class='panel panel-primary' onclick=studypageGo("+1+",2)>";
 		view += "<div class='panel-heading'>Day1</div>";
 		view += "<div class='panel-body'>";
 	    view +="<table>";
@@ -209,10 +208,9 @@
 	    		view += "</div>";
 	    		view += "</div>";
 	    		view += "</div>";
-	    		view += "<div class='panel-footer' style='hidden'></div>";
 	        	view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
 	    		view += "<div class='col-sm-4'>";
-	    		view += "<div class='panel panel-primary'>";
+	    		view += "<div class='panel panel-primary' onclick=studypageGo("+day+",2)>";
 	    		view += "<div class='panel-heading'>Day"+day+"</div>";
 	    		view += "<div class='panel-body'>";
 	    	    view +="<table>";
@@ -236,21 +234,23 @@
 		view += "<div class='row'>";
 		view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
 		view += "<div class='col-sm-4'>";
-		view += "<div class='panel panel-primary'>";
+		view += "<div class='panel panel-primary' onclick=studypageGo("+1+",3)>";
 		view += "<div class='panel-heading'>Day1</div>";
 		view += "<div class='panel-body'>";
 	    view +="<table>";
-	    view += "<tr>";
 	    var count = 0;
 	    var day = 2;
 	    $.each(data, function(data, obj){
 	    	if(count<4){
+	    		view += "<tr>";
 	        	view +="<td>";
 	            view += obj.sen_content;
 	            view +="</td>";
+	            view += "</tr>";
 	            count += 1;
 	    	}
 	    	else if(count == 4){
+	    		view += "<tr>";
 	    		view +="<td>";
 	            view += obj.sen_content;
 	            view +="</td>";
@@ -260,25 +260,42 @@
 	    		view += "</div>";
 	    		view += "</div>";
 	    		view += "</div>";
-	    		view += "<div class='panel-footer' style='hidden'></div>";
 	        	view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
 	    		view += "<div class='col-sm-4'>";
-	    		view += "<div class='panel panel-primary'>";
+	    		view += "<div class='panel panel-primary' onclick=studypageGo("+day+",3)>";
 	    		view += "<div class='panel-heading'>Day"+day+"</div>";
 	    		view += "<div class='panel-body'>";
 	    	    view +="<table>";
-	    	    view += "<tr>";
 	    	    day += 1;
 	            count = 0;
 	    	}
 	          
 	    })
+	    view += "</table>";
+	    
+	    view += "</div>";
+	    view += "</div>";
+	    view += "</div>";
+	    view += "</div>";
 	    view += "</div>";
     	view += "</div>";
     	view += "</div>";
     	view += "</div>";
 
       $(".panel-body2").html(view);
+	}
+	
+	function studypageGo(day, num){
+		if(num==1){
+			location.href="studypage2_sy.do?day="+day;
+		}else if(num==2){
+			location.href="studypage2_wo.do?day="+day;
+		}else if(num==3){
+			location.href="studypage2_sen.do?day="+day;
+		}else{
+			alert("studypageGo 오류!");
+		}
+		
 	}
 	</script>
 				
@@ -300,8 +317,11 @@
 				
 
 				<!-- Main -->
-							  
-					<div class="panel-body2">여기에요</div>
+
+							
+			</div><br>
+
+			<div class="panel-body2"></div>
 
 
 				

@@ -205,7 +205,7 @@ function login() {
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 	<script>
 	function studyhome(num){
- 		location.href="studyhome.do?num"+num;
+ 		location.href="studyhome.do?num="+num;
  	}
 	</script>
 </body>

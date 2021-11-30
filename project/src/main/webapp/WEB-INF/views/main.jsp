@@ -365,7 +365,7 @@
  		location.href="select.do";
  	}
 	function mypageGo(){
-		loacation.href="mypage_main.do";
+		location.href="mypage_main.do";
 	}
 </script>
 </body>

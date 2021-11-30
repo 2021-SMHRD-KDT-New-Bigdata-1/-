@@ -76,25 +76,56 @@
 				
 			  </style>
 	<script>
+	//querystring
+	var num = getParameterByName("num");
+	
 	$(document).ready(function() { //익명함수
 		  alert("제이쿼리 가즈앗!");
-	      loadList();
+		
+		if(num==1){
+	    	Syl_loadList();
+		}
+		else if(num==2){
+			Word_loadList();
+		}
+		else if(num==3){
+			Sen_loadList();
+		}
+		else{
+			alert("num인식안됨");
+		}
 	   });
 	
-	   function loadList() {
-		      $.ajax({
-		         url : "WordList1.do",
-		         type : "get",
-		         dataType : "json",
-		         //success : JSONArray jsonArray = new JSONArray(data)
-		         //for(int i=0; i<JsonArray.length()/5; i++){
-		        //	 word = JsonObject.get("i");
-		         //},
-		         success : jsonHtml,
-		         error : function() {
-		            alert("loadlist-error");}
+	function Syl_loadList() {
+		   $.ajax({
+		      url : "SylList.do",
+		      type : "get",
+		      dataType : "json",
+		      success : jsonHtml,
+		      error : function() {
+		      	alert("syllist-error");}
 		      });
-		   }
+	}
+	function Word_loadList() {
+		   $.ajax({
+		      url : "WordList.do",
+		      type : "get",
+		      dataType : "json",
+		      success : jsonHtml,
+		      error : function() {
+		      	alert("wordlist-error");}
+		      });
+	}
+	function Sen_loadList() {
+		   $.ajax({
+		      url : "SenList.do",
+		      type : "get",
+		      dataType : "json",
+		      success : jsonHtml,
+		      error : function() {
+		      	alert("senlist-error");}
+		      });
+	}
 	function jsonHtml(data){ //콜백함수
       view ="<table>";
       $.each(data, function(data, obj){

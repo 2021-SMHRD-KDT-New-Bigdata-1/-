@@ -7,6 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import kr.hong.domain.Sentence;
+import kr.hong.domain.Syllable;
 import kr.hong.domain.User;
 import kr.hong.domain.Word;
 import kr.hong.mapper.MainMapper;
@@ -17,10 +19,24 @@ public class AjaxController { //ajax를 통한 컨트롤러 통신
 	@Autowired
 	MainMapper mapper;
 	
-	@RequestMapping("/WordList1.do")
-	 public List<Word> WordList1(Model model) {
+	@RequestMapping("/SylList.do")
+	 public List<Syllable> SylList(Model model) {
 		   
-		   List<Word> list=mapper.WordList1();
+		   List<Syllable> list=mapper.SylList();
+		   return list;
+	      
+	   }
+	@RequestMapping("/WordList.do")
+	 public List<Word> WordList(Model model) {
+		   
+		   List<Word> list=mapper.WordList();
+		   return list;
+	      
+	   }
+	@RequestMapping("/SenList.do")
+	 public List<Sentence> SenList(Model model) {
+		   
+		   List<Sentence> list=mapper.SenList();
 		   return list;
 	      
 	   }

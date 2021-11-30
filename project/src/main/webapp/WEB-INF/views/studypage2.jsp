@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,9 +82,16 @@
 			<button onclick="back1()" type="button" class="btnback">
 				<i class="fas fa-arrow-left fa-2x"></i>
 			</button>
-			<h3 class="stage_nm">단어</h3>
+			<h3 class="stage_nm">${day}</h3>
 		</header>
+	
+	
+	<c:forEach var="list" items="${list}">
+    
+    <p>${list.word_content}</p>
 
+    
+    </c:forEach>
 
 
 
@@ -97,7 +105,7 @@
 						<th>단어</th>
 					</tr>
 					<tr>
-						<th style="text-align: center; font-size: large;"><br>오뜨!!</th>
+						<th style="text-align: center; font-size: large;"><br></th>
 					</tr>
 				</thead>
 				<tbody>

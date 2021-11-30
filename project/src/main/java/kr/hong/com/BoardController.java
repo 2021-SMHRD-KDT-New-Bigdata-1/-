@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.hong.domain.LoginInfo;
+import kr.hong.domain.Mypage;
 import kr.hong.domain.Sentence;
 import kr.hong.domain.Syllable;
 import kr.hong.domain.User;
@@ -110,16 +111,20 @@ public class BoardController {
 			return "select";
 		}
 
-		@RequestMapping("/mypage_main.do")
-		public String myapge_main() {
-			
-			return "mypage_main";
-		}
 		@RequestMapping("/mypage1.do")
-		public String myapge1() {
+		public String myapge1(String num, Model model) {
+			model.addAttribute("num", num);
 			
 			return "mypage1";
 		}
+		
+		@RequestMapping("/Syllable_test.do")
+		public String Syllable_test(User user, Model model) {
+			List<Mypage> list = mapper.mypage1_sy(user);
+			
+			return "mypage1";
+		}
+		
 		@RequestMapping("/mypage2.do")
 		public String myapge2() {
 			

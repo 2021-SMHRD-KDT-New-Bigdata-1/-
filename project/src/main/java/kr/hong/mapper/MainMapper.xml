@@ -34,6 +34,36 @@
 		<select id="studypage2_sen" parameterType="String" resultType="kr.hong.domain.Sentence">
 	    select * from tbl_sentence where study_date = #{day}
 	</select>
+	<select id="mypage1_sy" parameterType="kr.hong.domain.User" resultType="kr.hong.domain.Mypage">
+	    SELECT s.study_date, AVG(t.accuracy) 
+	    FROM tbl_syllable AS s
+		JOIN tbl_syllable_test AS t
+		ON t.num = s.num
+		WHERE t.user_id = #{user_id}
+		group by s.study_date
+		having COUNT(*)=5
+		order by s.study_date;
+	</select>
+	<select id="mypage1_wo" parameterType="kr.hong.domain.User" resultType="kr.hong.domain.Mypage">
+	    SELECT s.study_date, AVG(t.accuracy) 
+	    FROM tbl_word AS w
+		JOIN tbl_word_test AS t
+		ON t.num = s.num
+		WHERE t.user_id = #{user_id}
+		group by s.study_date
+		having COUNT(*)=5
+		order by s.study_date;
+	</select>
+	<select id="mypage1_se" parameterType="kr.hong.domain.User" resultType="kr.hong.domain.Mypage">
+	    SELECT s.study_date, AVG(t.accuracy) 
+	    FROM tbl_sentence AS s
+		JOIN tbl_sentence_test AS t
+		ON t.num = s.num
+		WHERE t.user_id = #{user_id}
+		group by s.study_date
+		having COUNT(*)=5
+		order by s.study_date;
+	</select>
 	
 	
 </mapper> 

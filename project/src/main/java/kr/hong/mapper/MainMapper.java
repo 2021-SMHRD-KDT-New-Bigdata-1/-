@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import kr.hong.domain.LoginInfo;
+import kr.hong.domain.Mypage;
 import kr.hong.domain.Sentence;
 import kr.hong.domain.Syllable;
 import kr.hong.domain.User;
@@ -31,6 +32,10 @@ public interface MainMapper {
 	public List<Syllable> studypage2_sy(String day);
 	public List<Word> studypage2_wo(String day);
 	public List<Sentence> studypage2_sen(String day);
+	
+	public List<Mypage> mypage1_sy(User vo);
+	public List<Mypage> mypage1_wo(User vo);
+	public List<Mypage> mypage1_se(User vo);
 	
 	public String mypage();
 	public String main();

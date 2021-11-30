@@ -1,5 +1,5 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML>
 
 <!--
@@ -60,6 +60,7 @@ select { -
 	-input-height: var(- -vspace-2); -
 	-input-line-height: var(- -vspace-1); -
 	-input-vpadding: calc((( var(- -input-height)- var(- -input-line-height))/2)-
+		
 		 1px);
 	display: block;
 	height: var(- -input-height);
@@ -279,7 +280,7 @@ footer {
 					</select>
 
 
-					<div class="off-8-small"
+					<div class="col-12-small"
 						style="width: 100%; min-width: 349.5px; margin-top: 30px;">
 						<div class="panel panel-primary">
 							<div id="chart_title" class="panel-heading">정확도</div>
@@ -358,41 +359,73 @@ footer {
 								card</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="off-6-small">
-							<div class="panel panel-primary">
-								<div id="chart_title" class="panel-heading">음절</div>
-								<div class="panel-body">
-									<canvas id="doughnut-chart1" width="300" height="250"></canvas>
-									<script>
-										new Chart(
-												document
-														.getElementById("doughnut-chart1"),
-												{
-													type : 'doughnut',
-													data : {
-														labels : [ "Africa",
-																"Asia" ],
-														datasets : [ {
-															label : "Population (millions)",
-															backgroundColor : [
-																	"#3e95cd",
-																	"#8e5ea2" ],
-															data : [ 80, 20 ]
-														} ]
-													},
-													options : {
-														maintainAspectRatio : false,
-														responsive : true,
-													}
-												});
-									</script>
-								</div>
-								<div class="panel-footer">Buy 50 mobiles and get a gift
-									card</div>
+					<div class="col-12-small"
+						style="width: 50%; margin-top: 30px;">
+						<div class="panel panel-primary">
+							<div id="chart_title" class="panel-heading">정확도</div>
+							<div class="panel-body">
+								<canvas id="doughnut-chart" width="300" height="250"></canvas>
+								<script>
+								new Chart(document.getElementById("doughnut-chart"), {
+								    type: 'doughnut',
+								    data: {
+								      labels: ["Africa", "Asia"],
+								      datasets: [
+								        {
+								          label: "Population (millions)",
+								          backgroundColor: ["#3e95cd", "#8e5ea2"],
+								          data: [80,20]
+								        }
+								      ]
+								    },
+								    options: {
+								    	maintainAspectRatio: false,
+								        responsive: true,
+								      title: {
+								        display: true,
+								        text: 'Predicted world population (millions) in 2050'
+								      }
+								    }
+								});
+								</script>
 							</div>
+							<div class="panel-footer">Buy 50 mobiles and get a gift
+								card</div>
 						</div>
-
+					</div>
+					<div class="col-12-small"
+						style="width: 50%; margin-top: 30px;">
+						<div class="panel panel-primary">
+							<div id="chart_title" class="panel-heading">정확도</div>
+							<div class="panel-body">
+								<canvas id="doughnut-chart1" width="300" height="250"></canvas>
+								<script>
+								new Chart(document.getElementById("doughnut-chart1"), {
+								    type: 'doughnut',
+								    data: {
+								      labels: ["Africa", "Asia"],
+								      datasets: [
+								        {
+								          label: "Population (millions)",
+								          backgroundColor: ["#3e95cd", "#8e5ea2"],
+								          data: [80,20]
+								        }
+								      ]
+								    },
+								    options: {
+								    	maintainAspectRatio: false,
+								        responsive: true,
+								      title: {
+								        display: true,
+								        text: 'Predicted world population (millions) in 2050'
+								      }
+								    }
+								});
+								</script>
+							</div>
+							<div class="panel-footer">Buy 50 mobiles and get a gift
+								card</div>
+						</div>
 					</div>
 				</div>
 			</div>

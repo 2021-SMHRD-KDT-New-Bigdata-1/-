@@ -1347,10 +1347,6 @@ input::-moz-focus-inner {
 					margin-left: 25%;
 				}
 
-				.row > .col-4-small {
-					width: 33.33333%;
-				}
-
 				.row > .off-4-small {
 					margin-left: 33.33333%;
 				}

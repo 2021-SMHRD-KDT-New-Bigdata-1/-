@@ -74,7 +74,7 @@ public class BoardController {
 		
 		@RequestMapping("/studypage2.do")
 		public String studypage2() {
-			
+			System.out.println("컨트롤러에 왔니..?");
 			return "studypage2";
 		}
 		
@@ -138,7 +138,7 @@ public class BoardController {
 		
 		@RequestMapping("/studyresult2.do")
 		public String studyresult2() {
-		
+			System.out.println("hi");
 			return "studyresult2";
 		}
 

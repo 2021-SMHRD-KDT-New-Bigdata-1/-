@@ -84,9 +84,10 @@ public class BoardController {
 		}
 		
 		@RequestMapping("/studyhome.do")
-		public String studyhome(String num) {
+		public String studyhome(String num, Model model) {
+			model.addAttribute("num", num);
 			
-			return "studyhome?num"+num;
+			return "studyhome";
 		}
 		
 		

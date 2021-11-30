@@ -77,7 +77,7 @@
 			  </style>
 	<script>
 	//querystring
-	var num = getParameterByName("num");
+	var num = '${num}';
 	
 	$(document).ready(function() { //익명함수
 		  alert("제이쿼리 가즈앗!");

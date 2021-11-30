@@ -56,7 +56,18 @@ table {
 	border-spacing: 0;
 }
 
-/*테이블 css*/
+.word {
+    border: 1px solid;
+    border-color: gray;
+    height: 800px;
+    width: 650px;
+    padding: 2em 2em 2em 2em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*테이블 css
 table, tr, td {
 
 	border : 1px solid #7d7d7d;
@@ -86,7 +97,7 @@ margin-right : auto;
 
 
 
-/*테이블 css 끝*/
+테이블 css 끝*/
 
 body {
 	-webkit-text-size-adjust: none;
@@ -2504,13 +2515,20 @@ input, select, textarea {
 
 /* Table */
 
+	div .word1{
+		width: 100%;
+        height: 20%;
+        background-color: #ff8040;
+        color: white;
+        
+	}
 	
-	/*div .word{
+	div .word{
 		
 		width: 100%;
-        height: 100%;
+        height: 80%;
 		
-	}*/
+	}
 
 
 	.table-wrapper {
@@ -2530,7 +2548,7 @@ input, select, textarea {
 	table .study2table {
 		margin: 5em 10em 5em 3em;
 		width: 80%;
-		height: 700px;
+		height: 500px;
 	}
 	
 
@@ -2552,12 +2570,12 @@ input, select, textarea {
 			color: #79716c;
 			font-size: 0.9em;
 			font-weight: 600;
-			padding: 0 0.75em 0.75em 0.75em;
+			padding: 1em 0.75em 0.75em 0.75em;
 			text-align: left;
 		}
 
 		table thead {
-			border-bottom: solid 2px rgba(212, 212, 255, 0.1);
+			border-bottom: solid 1px #79716c;
 		}
 
 		table tfoot {

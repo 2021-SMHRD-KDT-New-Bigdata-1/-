@@ -87,6 +87,7 @@ video{
 	
 </script>
 <script>
+	
 	document.getElementById("cameraInput").addEventListener(
 			"change",
 			function() {
@@ -117,16 +118,26 @@ video{
 	<!----table ----->
 
 	<div class="word">
-
-		<c:forEach var="list" items="${list}">
-			<p>${list.content}</p>
-		</c:forEach>
+		
+		<% String day = request.getParameter("day");%>
+		Day <%=day %> 단어 : [
+		<c:forEach var="list" items="${list}" varStatus="status">
+			${list.content}
+			<!-- ${status.count} -->
+			
+		</c:forEach> ]
+		<br>
+		
+		<p id='test602'>(1/5)</p>
+		
+		
+		
 		
 		<table class="study2table">
 			<thead>
 				
 				<tr>
-					<td style="text-align: center; font-size: large;">학습 단어 : </td>
+					<td style="text-align: center; font-size: large;" id='test60' onclick=testfn()>학습 단어 : ${list[0].content} (${list[0].id}) </td>
 				</tr>
 			</thead>
 			<tbody>
@@ -180,8 +191,29 @@ video{
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
+	var cnt = 0;
+	
 		function back1() {
 			location.href = "studyhome.do?num=" + num;
+		}
+		
+		function testfn(){
+			//alert(cnt);
+			if (cnt==0){
+				$("#test60").text('학습 단어: ${list[1].content} (${list[1].id})');
+			}else if(cnt==1){
+				$("#test60").text('학습 단어: ${list[2].content} (${list[2].id})');
+			}else if(cnt==2){
+				$("#test60").text('학습 단어: ${list[3].content} (${list[3].id})');
+			}else if(cnt==3){
+				$("#test60").text('학습 단어: ${list[4].content} (${list[4].id})');
+			}else{
+				alert("다섯단어 끝");
+			}
+			cnt = cnt + 1;
+			if (cnt<5){
+			$("#test602").text('('+(cnt+1)+'/5)');
+			}
 		}
 
 		//$(function getVideo(){

@@ -34,7 +34,7 @@
 			    }
 			    .panel-primary {
 				    border-color: #f67822;
-				     width: 650px;
+				     width: 550px;
 				}
 				
 				.panel-danger {
@@ -127,56 +127,163 @@
 		      });
 	}
 	function jsonHtml1(data){ //콜백함수
-      view ="<table>";
-      $.each(data, function(data, obj){
-          view +="<tr>";
-          view +="<td>";
-          view +=obj.syl_id;
-          view +="</td>";
-          view +="<td>";
-          view +=obj.syl_content;
-          view +="</td>";
-          view +="</tr>";
-      })
+		view = "<div id='wrapper'>";
+		view += "<div id='main'>";
+		view += "<div class='container'>";
+		view += "<div class='row'>";
+		view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
+		view += "<div class='col-sm-4'>";
+		view += "<div class='panel panel-primary'>";
+		view += "<div class='panel-heading'>Day1</div>";
+		view += "<div class='panel-body'>";
+	    view +="<table>";
+	    view += "<tr>";
+	    var count = 0;
+	    var day = 2;
+	    $.each(data, function(data, obj){
+	    	if(count<4){
+	        	view +="<td>";
+	            view += obj.syl_content;
+	            view +="</td>";
+	            count += 1;
+	    	}
+	    	else if(count == 4){
+	    		view +="<td>";
+	            view += obj.syl_content;
+	            view +="</td>";
+	            view +="</tr>";
+	            view +="</table>";
+	            view += "</div>";
+	    		view += "</div>";
+	    		view += "</div>";
+	    		view += "</div>";
+	        	view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
+	    		view += "<div class='col-sm-4'>";
+	    		view += "<div class='panel panel-primary'>";
+	    		view += "<div class='panel-heading'>Day"+day+"</div>";
+	    		view += "<div class='panel-body'>";
+	    	    view +="<table>";
+	    	    view += "<tr>";
+	    	    day += 1;
+	            count = 0;
+	    	}
 
-      view +="</table>";
+	          
+	    })
+	    view += "</div>";
+    	view += "</div>";
+    	view += "</div>";
+    	view += "</div>";
 
       $(".panel-body2").html(view);
 	}
 	function jsonHtml2(data){ //콜백함수
-	      view ="<table>";
-	      $.each(data, function(data, obj){
-	          view +="<tr>";
-	          view +="<td>";
-	          view +=obj.word_id;
-	          view +="</td>";
-	          view +="<td>";
-	          view +=obj.word_content;
-	          view +="</td>";
-	          view +="</tr>";
-	      })
+		view = "<div id='wrapper'>";
+		view += "<div id='main'>";
+		view += "<div class='container'>";
+		view += "<div class='row'>";
+		view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
+		view += "<div class='col-sm-4'>";
+		view += "<div class='panel panel-primary'>";
+		view += "<div class='panel-heading'>Day1</div>";
+		view += "<div class='panel-body'>";
+	    view +="<table>";
+	    view += "<tr>";
+	    var count = 0;
+	    var day = 2;
+	    $.each(data, function(data, obj){
+	    	if(count<4){
+	        	view +="<td>";
+	            view += obj.word_content;
+	            view +="</td>";
+	            count += 1;
+	    	}
+	    	else if(count == 4){
+	    		view +="<td>";
+	            view += obj.word_content;
+	            view +="</td>";
+	            view +="</tr>";
+	            view +="</table>";
+	            view += "</div>";
+	    		view += "</div>";
+	    		view += "</div>";
+	    		view += "</div>";
+	        	view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
+	    		view += "<div class='col-sm-4'>";
+	    		view += "<div class='panel panel-primary'>";
+	    		view += "<div class='panel-heading'>Day"+day+"</div>";
+	    		view += "<div class='panel-body'>";
+	    	    view +="<table>";
+	    	    view += "<tr>";
+	    	    day += 1;
+	            count = 0;
+	    	}
+	          
+	    })
+	    view += "</div>";
+    	view += "</div>";
+    	view += "</div>";
+    	view += "</div>";
 
-	      view +="</table>";
-
-	      $(".panel-body2").html(view);
-		}
+      $(".panel-body2").html(view);
+	}
 	function jsonHtml3(data){ //콜백함수
-	      view ="<table>";
-	      $.each(data, function(data, obj){
-	          view +="<tr>";
-	          view +="<td>";
-	          view +=obj.sen_id;
-	          view +="</td>";
-	          view +="<td>";
-	          view +=obj.sen_content;
-	          view +="</td>";
-	          view +="</tr>";
-	      })
+		view = "<div id='wrapper'>";
+		view += "<div id='main'>";
+		view += "<div class='container'>";
+		view += "<div class='row'>";
+		view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
+		view += "<div class='col-sm-4'>";
+		view += "<div class='panel panel-primary'>";
+		view += "<div class='panel-heading'>Day1</div>";
+		view += "<div class='panel-body'>";
+	    view +="<table>";
+	    var count = 0;
+	    var day = 2;
+	    $.each(data, function(data, obj){
+	    	if(count<4){
+	    		view += "<tr>";
+	        	view +="<td>";
+	            view += obj.sen_content;
+	            view +="</td>";
+	            view += "</tr>";
+	            count += 1;
+	    	}
+	    	else if(count == 4){
+	    		view += "<tr>";
+	    		view +="<td>";
+	            view += obj.sen_content;
+	            view +="</td>";
+	            view +="</tr>";
+	            view +="</table>";
+	            view += "</div>";
+	    		view += "</div>";
+	    		view += "</div>";
+	    		view += "</div>";
+	        	view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
+	    		view += "<div class='col-sm-4'>";
+	    		view += "<div class='panel panel-primary'>";
+	    		view += "<div class='panel-heading'>Day"+day+"</div>";
+	    		view += "<div class='panel-body'>";
+	    	    view +="<table>";
+	    	    day += 1;
+	            count = 0;
+	    	}
+	          
+	    })
+	    view += "</table>";
+	    
+	    view += "</div>";
+	    view += "</div>";
+	    view += "</div>";
+	    view += "</div>";
+	    view += "</div>";
+    	view += "</div>";
+    	view += "</div>";
+    	view += "</div>";
 
-	      view +="</table>";
-
-	      $(".panel-body2").html(view);
-		}
+      $(".panel-body2").html(view);
+	}
 	</script>
 				
 	</head>
@@ -197,10 +304,8 @@
 				
 
 				<!-- Main -->
-					<div id="main">
-						<div class="container">    
-							  <div class="row">
 							  
+<<<<<<< HEAD
 							 
 							  
 							    <div class="main col-lg-4">
@@ -215,7 +320,7 @@
 							    <div class="main col-lg-4">
 							    <div class="col-sm-4"> 
 							      <div class="panel panel-primary">
-							        <div class="panel-heading">Day2</div>
+						        <div class="panel-heading">Day2</div>
 							        <div class="panel-body"></div>
 							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
 							      </div>
@@ -234,11 +339,9 @@
 
 					<div class="panel-body2">여기에요</div>
 
-					</div>
 
 				
 
-			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

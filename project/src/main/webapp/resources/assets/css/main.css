@@ -2500,9 +2500,11 @@ input, select, textarea {
 
 	table {
 	background-color:#FFFFFF;
-		margin: 5em 10em 5em 3em;
+		margin-right:auto;
+		margin-left:auto;
+		background-color:white;
 		width: 80%;
-		height: 700px;
+		height: auto;
 	}
 	
 	table .study2table {

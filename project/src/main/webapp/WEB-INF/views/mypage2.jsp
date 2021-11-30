@@ -102,7 +102,7 @@ body {
 
 .panel-primary {
 	border-color: #D2691E;
-	border: 0;
+	border-radius: 10px;
 }
 
 body {
@@ -125,15 +125,15 @@ footer {
 	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 50px;
 }
 
 .panel-primary>.panel-heading {
+	font-size: 1rem;
+    font-weight: bolder;
 	color: #fff;
-	background-color: #D2691E;
-	border-color: #000000;
-	border: 0;
+	background-color: #ff8040;
 	align: center;
+	border-block-color: unset;
 }
 
 .alt.top {
@@ -158,7 +158,7 @@ footer {
 }
 
 .nav_top {
-	background-color: #D2691E;
+	background-color: #ff8040;
 }
 
 /* header nav a .pl{
@@ -201,7 +201,8 @@ footer {
 }
 
 #main-menu>li>a {
-	font-size: 0.85rem;
+	 font-size: 1rem;
+    font-weight: bolder;
 	color: rgba(255, 255, 255, 0.85);
 	text-align: center;
 	text-decoration: none;
@@ -245,7 +246,7 @@ footer {
 		<!-- Header -->
 		<section>
 			<header class="nav_top">
-				<h1 id="title_name" style="margin-left: 20px;">allbareum</h1>
+				<h1 id="title_name" style="margin-left: 20px;"><a href="main.do">Allbareum</a></h1>
 				<nav id="main_title_nav" role="navigation">
 					<ul id="main-menu" style="list-style: none;">
 						<li><a href="mypage1.do" onclick="submenu();">음절</a></li>

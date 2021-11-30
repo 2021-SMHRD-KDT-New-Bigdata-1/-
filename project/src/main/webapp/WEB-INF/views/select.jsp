@@ -145,7 +145,7 @@ function login() {
                         <article class="hero__slide swiper-slide">
                             <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/select_back.png');"></div>
                             <div class="hero__entry-text">
-                                <div class="hero__entry-text-inner">
+                                <div class="hero__entry-text-inner" style="width: 345px;">
                                 <div id="login" style="display:none">
 									<form>
 										<div class="form-group input-group">
@@ -162,18 +162,19 @@ function login() {
 								
 								</div>
 								<div id="main">
-								
+									<span class="cat-links">${vo.user_name }님</span>
+									<div><h2 class="hero_entry-title" style="margin-top: 5px;">뭐 할래?</h2></div>
 								    <div id="btngroup" >
-                                       <button id="btnselect" onclick="studyhome(1)">음절</button>
+                                       <button id="btnselect" onclick="studyhome(1)">음절(Syllable)</button>
                                     </div>
                                     <div id="btngroup">
-                                        <button id="btnselect" onclick="studyhome(2)">단어</button>
+                                        <button id="btnselect" onclick="studyhome(2)">단어(Word)</button>
                                     </div>
                       				<div id="btngroup">
-                                        <button id="btnselect" onclick="studyhome(3)">문장</button>
+                                        <button id="btnselect" onclick="studyhome(3)">문장(Sentense)</button>
                                     </div>
                                     <div id="btngroup">
-                                        <button id="btnselect" onclick=''>취약 단어</button>
+                                        <button id="btnselect" onclick=''>취약 단어(Vulnerable)</button>
                                     </div>
                                      
                                 </div>

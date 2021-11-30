@@ -42,7 +42,37 @@
 		border-radius: 10px;
 	}
 </style>
-
+<script>
+		
+		function WordList() {
+			   $.ajax({
+			      url : "WordList.do",
+			      type : "get",
+			      dataType : "json",
+			      success : jsonHtml,
+			      error : function() {
+			      	alert("word-error");}
+			      });
+		}
+		
+		function jsonhtml(data){
+			view = "<nav>";
+			view += "<ul class='style1'>";
+			view += "<li class='first'>";
+			view += "<p class='date'>";
+			view += "</p>";
+			var count = 0;
+			var day = 0;
+			$.each(data, function(num, model) {
+				view += "<h3>"+model.study_date+"</h3>";
+				view += "<p>"+model.word_content+"</p>";
+			})
+			
+			view += "</li>";
+			view += "</ul>";
+			view += "</nav>";
+		}
+</script>
 </head>
 <body>
 	<!-- Header -->
@@ -52,7 +82,7 @@
 
 		<!-- 제목(결과) -->
 		<div class="result">
-			<h2 style="text-align: center; color: black;">${vo.user_name }님의 발음분석결과</h2>
+			<h2 style="text-align: center; color: black;">${vo.user_name}님의 발음분석결과</h2>
 			<br>
 		</div>
 		<div id="score">
@@ -70,8 +100,8 @@
 						<c:if test="${score >= 60 }"> <i class="far fa-meh fa-3x" style="color: orange;"></i></c:if>
 						<c:if test="${score >= 40 }"> <i class="far fa-tired fa-3x" style="color: red;"></i></c:if>
 					</p>
-					<h3>${vo.study_date}</h3>
-					<p>${vo.word_content}</p>
+					<h3>${model.study_date}</h3>
+					<p>${model.word_content}</p>
 				</li>
 				
 			</ul>

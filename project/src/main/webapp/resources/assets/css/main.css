@@ -2499,6 +2499,7 @@ input, select, textarea {
 	}
 
 	table {
+	background-color:#FFFFFF;
 		margin-right:auto;
 		margin-left:auto;
 		background-color:white;

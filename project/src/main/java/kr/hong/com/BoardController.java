@@ -84,7 +84,7 @@ public class BoardController {
 		}
 		
 		@RequestMapping("/studyhome.do")
-		public String studyhome(int num) {
+		public String studyhome(String num) {
 			
 			return "studyhome?num"+num;
 		}

@@ -215,7 +215,7 @@
 							    <div class="main col-lg-4">
 							    <div class="col-sm-4"> 
 							      <div class="panel panel-primary">
-							        <div class="panel-heading">Day2</div>
+						        <div class="panel-heading">Day2</div>
 							        <div class="panel-body"></div>
 							        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
 							      </div>

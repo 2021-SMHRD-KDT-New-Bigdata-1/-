@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +31,17 @@
 	<link rel="stylesheet"
 		href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
 </noscript>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+	integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+	crossorigin="anonymous"></script>
+<link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
 
+<link
+	href="https://unpkg.com/@silvermine/videojs-quality-selector/dist/css/quality-selector.css"
+	rel="stylesheet">
+<script
+	src="https://unpkg.com/@silvermine/videojs-quality-selector/dist/js/silvermine-videojs-quality-selector.min.js"></script>
 <!-- 상단바 뒤로가기 버튼 화살표  -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -58,9 +69,6 @@
 	
 </script>
 <script>
-	
-
-
 	document.getElementById("cameraInput").addEventListener(
 			"change",
 			function() {
@@ -81,9 +89,16 @@
 			<button onclick="back1()" type="button" class="btnback">
 				<i class="fas fa-arrow-left fa-2x"></i>
 			</button>
-			<h3 class="stage_nm">단어</h3>
+			<h3 class="stage_nm">${day}</h3>
 		</header>
 
+
+		<c:forEach var="list" items="${list}">
+
+			<p>${list.word_content}</p>
+
+
+		</c:forEach>
 
 
 		<!----table ----->
@@ -96,13 +111,34 @@
 						<td class="cell_padding">단어</td>
 					</tr>
 					<tr>
+<<<<<<< HEAD
 						<td class="cell_padding" style="text-align: center; font-size: large;"><br>오뜨!!</td>
+=======
+						<th style="text-align: center; font-size: large;"><br></th>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
+<<<<<<< HEAD
 						<td class="cell_padding" onload="load()"><video width="100%" height="100%"
+=======
+					<td style="text-align: center; vertical-align: middle;">
+						
+						<video controls autoplay width="350">
+
+						    <source src="${pageContext.request.contextPath}/resources/images/001_7_C.mp4"
+						            type="video/mp4">
+						
+						</video>
+						<!--<video id="myVideo" source ="C:/Users/smhrd/Deep Learning/web/show_video/001_1_C.mp4" type="video/mp4">
+						</video>
+
+						 <td onload="load()"><video width="100%" height="100%"
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 								autoplay="autoplay" id="myVideo" /></td>
+					 -->
+					 </td>
 					</tr>
 					<tr>
 						<td class="cell_padding" style="text-align: center; vertical-align: middle;">발음해보세용
@@ -142,14 +178,16 @@
 	<script src="assets/js/main.js"></script>
 	<script>
 		function back1() {
-			location.href = "studyhome.do?num="+num;
+			location.href = "studyhome.do?num=" + num;
 		}
 
-        $(function getVideo(){
-            $('#camcorder').change(function(e){
-                $('#mov').attr('src', URL.createObjectURL(e.target.files[0]));
-            });
-        });
+		//$(function getVideo(){
+		//    $('#camcorder').change(function(e){
+		//      $('#mov').attr('src', URL.createObjectURL(e.target.files[0]));
+		//});
+		//});
+		
+		
 	</script>
 </body>
 </html>

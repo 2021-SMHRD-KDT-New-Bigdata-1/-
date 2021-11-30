@@ -9,11 +9,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class Word {
-		private int word_num;
-		private String word_content;
-		private int word_level;
+		private int num;
+		private String content;
+		private int level;
 		private String study_date;
-		private int word_id;
-		private String word_pron;
+		private int id;
+		private String pron;
 	
 }

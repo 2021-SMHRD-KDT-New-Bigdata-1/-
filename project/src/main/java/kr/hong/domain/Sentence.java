@@ -9,11 +9,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class Sentence {
-		private int sen_num;
-		private String sen_content;
-		private int sen_level;
+		private int num;
+		private String content;
+		private int level;
 		private String study_date;
-		private int sen_id;
-		private String sen_pron;
+		private int id;
+		private String pron;
 	
 }

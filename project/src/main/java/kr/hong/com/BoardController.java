@@ -91,6 +91,12 @@ public class BoardController {
 			return "studyhome";
 		}
 		
+		@RequestMapping("/studyhome2.do")
+		public String studyhome2() {
+			
+			return "studyhome2";
+		}
+		
 		
 		@RequestMapping("/select.do")
 		public String select() {

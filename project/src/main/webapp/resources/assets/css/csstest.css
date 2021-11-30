@@ -163,10 +163,10 @@ input::-moz-focus-inner {
 		text-decoration: none;
 	}
 
-		a:hover {
+		/*a:hover {
 			border-bottom-color: transparent;
 			color: #9bf1ff !important;
-		}
+		}*/
 
 		a:active {
 			color: #53e3fb !important;
@@ -3581,7 +3581,8 @@ input::-moz-focus-inner {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
+		background-color: #f2f2f2;
+		padding: 0 4em;
 	}
 
 		#main > * {

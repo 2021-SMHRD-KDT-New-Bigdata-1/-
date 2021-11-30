@@ -77,6 +77,60 @@ input::-moz-focus-inner {
 	appearance: none;
 } */
 
+/*select 시작*/
+
+/*#my_select {
+ 	--input-height: var(--vspace-2);
+    --input-line-height: var(--vspace-1);
+    --input-vpadding: calc(((var(--input-height) - var(--input-line-height)) / 2) - 1px);
+    display: block;
+    height: var(--input-height);
+    border: 0;
+    outline: 0;
+    color: #5cb231;
+    font-family: var(--font-1);
+    font-size: var(--text-sm);
+    font-size: calc(var(--text-size) * 0.8889);
+    line-height: var(--input-line-height);
+    max-width: 300px;
+    background-color: #white;
+    border: 3px solid #5cb231;
+    transition: all .3s ease-in-out;
+    border-radius: var(--border-radius);
+}*/
+
+select#my_select { 
+    -webkit-appearance: none; /* 네이티브 외형 감추기 */ 
+    -moz-appearance: none; 
+    appearance: none;
+     background: url(이미지 경로) no-repeat 95% 50%; /* 화살표 모양의 이미지 */ 
+} 
+select#my_select::-ms-expand { display: none; }
+
+#my_select {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+#my_select {
+    height: 28px;
+    cursor: pointer;
+   background:url('../img/input_arrow.png') no-repeat 93% 90%/12px auto;
+ }
+#my_select{
+    display: block;
+    width: 300px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 2px solid #ff8000;
+}
+/*select 끝*/
+
 /* Basic */
 
 	@-ms-viewport {
@@ -116,6 +170,7 @@ input::-moz-focus-inner {
 			-webkit-transition: none !important;
 			-ms-transition: none !important;
 			transition: none !important;
+			color:
 		}
 
 /* Type */

@@ -174,7 +174,7 @@ function login() {
                                         <button id="btnselect" onclick="studyhome(3)">문장(Sentense)</button>
                                     </div>
                                     <div id="btngroup">
-                                        <button id="btnselect" onclick='Syl_weak()'>취약 단어(Vulnerable)</button>
+                                        <button id="btnselect" onclick='Syl_weak()'>복습 (Review)</button>
                                     </div>
                                      
                                 </div>

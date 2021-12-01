@@ -68,7 +68,7 @@ table {
 }
 
 td.studycolor {
-    background-color: #4fff42;
+    background-color: #ffaf42;
     border-radius: 5px;
     padding: 1em 1em 1em 1em;
 }
@@ -2559,6 +2559,7 @@ input, select, textarea {
 			font-weight: 600;
 			padding: 1em 0.75em 0.75em 0.75em;
 			text-align: left;
+			background-color:#ff8040;
 		}
 
 		table thead {

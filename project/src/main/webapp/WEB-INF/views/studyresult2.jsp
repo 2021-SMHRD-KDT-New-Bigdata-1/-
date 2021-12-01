@@ -56,12 +56,18 @@
 #result {
 	clear: both !important;
 	position: static !important;
-	margin-top: 80px !important;
+	margin-top: 120px !important;
+	height: 800px;
 }
 
 body {
 	background-color: #f2f2f2
 }
+
+
+
+}
+
 </style>
 <head>
 <!-- <script>
@@ -87,15 +93,12 @@ body {
 		<button type="button" class="btnback">
 			<i class="fas fa-arrow-left fa-2x"></i>
 		</button>
+	
 	</header>
 
 	<!-- 한 단어당 보여주는 결과창 -->
 	<table id="result" style="margin: auto;">
-		<thead>
-			<tr>
-				<th class="myResult">분석결과</th>
-			</tr>
-			</thead>
+		
 			<tbody>
 			<tr>
 				<th style="height: 60px; width: 350px; text-align: center; font-size: large; word-break: keep-all;">
@@ -103,13 +106,13 @@ body {
 				</th>
 			</tr>
 			<tr>
-				<td style="border: 1px solid white;">
+				<td style="border: 1px solid white;background-color: white; ">
 				결과는 <%=data %>
 				</td>
 					<!-- <video width="30%" height="30%" autoplay="autoplay" id="myVideo"></td> -->
 			</tr>
 			<tr>
-				<th style="padding-top: 40px; height: 120px; text-align: center;">
+				<th style=" height: 120px; text-align: center;">
 					<button type="submit" class="btn btn-default" id="return" onclick="history.back()">다시하기</button> &nbsp; &nbsp;
 					<button type="submit" class="btn btn-default" id="pass">넘어가기</button> &nbsp; &nbsp;
 					<button class="btn btn-default" id="synonym">유사단어</button>

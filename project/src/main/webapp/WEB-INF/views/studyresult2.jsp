@@ -119,7 +119,7 @@ table td {
 		
 			<tbody>
 			<tr>
-				<td colspan="3" calss="resultt" style="height: 150px; width: 350px; 
+				<td colspan="3" class="result" style="height: 150px; width: 350px; 
 				 text-align: center; font-size: large; word-break: keep-all;">
 					발음 정확도 : <%=speak_acc %> 점 <br>
 					입모양 정확도 : <%=lip_acc %> 점
@@ -139,7 +139,7 @@ table td {
 			<tr>
 				<td colspan="3" calss="resultb" style=" height: 200px; text-align: center;">
 					<button type="submit" class="btn btn-default" id="return" onclick="history.back()">다시하기</button> &nbsp; &nbsp;
-					<button class="btn btn-default" id="pass" onclick=insert_plus_nextFn(<%=speak_acc%>,<%=lip_acc%>,<%=word_num%>,<%=word_idx%>,<%=list_cnt%>,<%=day%>,<%=cate%>)>넘어가기</button> &nbsp; &nbsp;
+					<button class="btn btn-default" id="pass" onclick="insert_plus_nextFn( <%=speak_acc%>,<%=lip_acc%>,<%=word_num%>,<%=word_idx%>,<%=list_cnt%>,<%=day%>,<%=cate%> )">넘어가기</button> &nbsp; &nbsp;
 					<button class="btn btn-default" id="synonym">유사단어</button>
 				</td>
 			</tr>

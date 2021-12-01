@@ -83,11 +83,8 @@ public class BoardController {
 		}
 		@RequestMapping("/studypage2_wo.do")
 		public String studypage2_wo(String day,Model model){
-			System.out.println("여긴 옴?");
 			List<Word> list = mapper.studypage2_wo(day);
-			System.out.println("2");
 			model.addAttribute("list", list);
-			System.out.println("3");
 			return "studypage2";
 		}
 		@RequestMapping("/studypage2_sen.do")
@@ -144,37 +141,35 @@ public class BoardController {
 			return "select";
 		}
 
-		@RequestMapping("/mypage1.do")
-		public String mypage1(String num, Model model) {
-			model.addAttribute("num", num);
-			
-			return "mypage1";
-		}
-		
 		@RequestMapping("/Syllable_test.do")
 		public String Syllable_test(HttpSession session, Model model) {
-			System.out.println("되냐?0");
 			User vo  = (User)session.getAttribute("vo");
-			System.out.println("되냐?1");
 			String id = vo.getUser_id();
-			System.out.println("되냐?2");
 			List<Mypage> list = mapper.mypage1_sy(id);
-			System.out.println("되냐?3");
 			model.addAttribute("list", list);
-			System.out.println(list);
 			return "mypage1";
 		}
 		
-		@RequestMapping("/mypage2.do")
-		public String myapge2() {
-			
-			return "mypage2";
+		@RequestMapping("/Word_test.do")
+		public String Word_test(HttpSession session, Model model) {
+			User vo  = (User)session.getAttribute("vo");
+			String id = vo.getUser_id();
+			List<Mypage> list = mapper.mypage1_wo(id);
+			model.addAttribute("list", list);
+			return "mypage1";
 		}
-		@RequestMapping("/mypage3.do")
-		public String myapge3() {
-			
-			return "mypage3";
+		
+		@RequestMapping("/Sentence_test.do")
+		public String Sentence_test(HttpSession session, Model model) {
+			User vo  = (User)session.getAttribute("vo");
+			String id = vo.getUser_id();
+			List<Mypage> list = mapper.mypage1_se(id);
+			model.addAttribute("list", list);
+			return "mypage1";
 		}
+		
+
+		
 		
 		@RequestMapping("/main.do")
 		public String main() {

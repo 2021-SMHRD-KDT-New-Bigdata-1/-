@@ -35,32 +35,32 @@
 	    select * from tbl_sentence where study_date = #{day}
 	</select>
 	<select id="mypage1_sy" parameterType="String" resultType="kr.hong.domain.Mypage">
-	    SELECT s.study_date, AVG(t.accuracy) AS acc
-	    FROM tbl_syllable AS s
+		SELECT s.study_date, AVG((t.speak_accuracy+t.lip_accuracy)/2) AS accuracy
+		FROM tbl_syllable AS s
 		JOIN tbl_syllable_test AS t
 		ON t.num = s.num
-		WHERE t.user_id = #{id}
-		GROUP BY s.study_date
-		HAVING COUNT(*)=5
-		ORDER BY s.study_date
-	</select>
-	<select id="mypage1_wo" parameterType="String" resultType="kr.hong.domain.Mypage">
-	    SELECT w.study_date, AVG(t.accuracy) AS acc
-	    FROM tbl_word AS w
-		JOIN tbl_word_test AS t
-		ON t.num = s.num
-		WHERE t.user_id = #{id}
+		WHERE t.user_id = 'guest'
 		group by s.study_date
 		having COUNT(*)=5
-		order by s.study_date
+		order by s.study_date;
+	</select>
+	<select id="mypage1_wo" parameterType="String" resultType="kr.hong.domain.Mypage">
+		SELECT w.study_date, AVG((t.speak_accuracy+t.lip_accuracy)/2) AS accuracy
+		FROM tbl_word AS w
+		JOIN tbl_word_test AS t
+		ON t.num = s.num
+		WHERE t.user_id = 'guest'
+		group by s.study_date
+		having COUNT(*)=5
+		order by s.study_date;
 	</select>
 	
 	<select id="mypage1_se" parameterType="String" resultType="kr.hong.domain.Mypage">
-	    SELECT s.study_date, AVG(t.accuracy) AS acc
-	    FROM tbl_sentence AS s
+		SELECT s.study_date, AVG((t.speak_accuracy+t.lip_accuracy)/2) AS accuracy
+		FROM tbl_sentence AS s
 		JOIN tbl_sentence_test AS t
 		ON t.num = s.num
-		WHERE t.user_id = #{id}
+		WHERE t.user_id = 'guest'
 		group by s.study_date
 		having COUNT(*)=5
 		order by s.study_date;
@@ -74,8 +74,73 @@
 		WHERE t.user_id = #{id}
 		order by s.study_date;
 	</select>
+	
+	<select id="mypage1_step_sy1" parameterType="String" resultType="kr.hong.domain.Test">
+	    SELECT s.num, s.content, s.study_date, SUM(t.speak_accuracy+t.lip_accuracy)/2 AS accuracy
+		FROM tbl_syllable AS s
+		JOIN tbl_syllable_test AS t
+		ON s.num = t.num
+		WHERE t.user_id = #{id} AND study_date = #{num}-1
+		GROUP BY s.num
+		order by s.study_date;
+	</select>
+	<select id="mypage1_step_sy2" parameterType="String" resultType="kr.hong.domain.Test">
+	    SELECT s.num, s.content, s.study_date, SUM(t.speak_accuracy+t.lip_accuracy)/2 AS accuracy
+		FROM tbl_syllable AS s
+		JOIN tbl_syllable_test AS t
+		ON s.num = t.num
+		WHERE t.user_id = #{id} AND study_date = #{num}
+		GROUP BY s.num
+		order by s.study_date;
+	</select>
+	<select id="mypage1_step_wo1" parameterType="String" resultType="kr.hong.domain.Test">
+	    SELECT w.num, w.content, w.study_date, SUM(t.speak_accuracy+t.lip_accuracy)/2 AS accuracy
+		FROM tbl_word AS w
+		JOIN tbl_word_test AS t
+		ON w.num = t.num
+		WHERE t.user_id = #{id} AND study_date = #{num}-1
+		GROUP BY w.num
+		order by w.study_date;
+	</select>
+	<select id="mypage1_step_wo2" parameterType="String" resultType="kr.hong.domain.Test">
+	    SELECT w.num, w.content, w.study_date, SUM(t.speak_accuracy+t.lip_accuracy)/2 AS accuracy
+		FROM tbl_word AS w
+		JOIN tbl_word_test AS t
+		ON w.num = t.num
+		WHERE t.user_id = #{id} AND study_date = #{num}
+		GROUP BY w.num
+		order by w.study_date;
+	</select>
+	<select id="mypage1_step_se1" parameterType="String" resultType="kr.hong.domain.Test">
+	    SELECT s.num, s.content, s.study_date, SUM(t.speak_accuracy+t.lip_accuracy)/2 AS accuracy
+		FROM tbl_sentence AS s
+		JOIN tbl_sentence_test AS t
+		ON s.num = t.num
+		WHERE t.user_id = #{id} AND study_date = #{num}-1
+		GROUP BY s.num
+		order by s.study_date;
+	</select>
+	<select id="mypage1_step_se2" parameterType="String" resultType="kr.hong.domain.Test">
+	    SELECT s.num, s.content, s.study_date, SUM(t.speak_accuracy+t.lip_accuracy)/2 AS accuracy
+		FROM tbl_sentence AS s
+		JOIN tbl_sentence_test AS t
+		ON s.num = t.num
+		WHERE t.user_id = #{id} AND study_date = #{num}
+		GROUP BY s.num
+		order by s.study_date;
+	</select>
+	<select id="speak_acc_sy1" parameterType="String" resultType="int">
+	   	SELECT COUNT(num)
+		FROM tbl_syllable_test
+		WHERE user_id = #{id}
+	</select>
+	<select id="speak_acc_sy2" parameterType="String" resultType="int">
+	    SELECT COUNT(num)
+		FROM tbl_syllable_test
+		WHERE user_id = #{id} AND weak = 'y'
+	</select>
 
-		<select id="Word_weak" parameterType="String" resultType="kr.hong.domain.Test">
+	<select id="Word_weak" parameterType="String" resultType="kr.hong.domain.Test">
 	    SELECT s.content, t.accuracy, t.weak
 	    FROM tbl_word AS s
 		JOIN tbl_word_test AS t

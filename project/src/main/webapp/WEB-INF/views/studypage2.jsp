@@ -64,28 +64,25 @@
 	background-color: #f2f2f2;
 }
 
-.word1{
-	background-color:#ff8040;
+.word1 {
+	background-color: #ff8040;
 	height: 45px;
 }
 
-table{
+table {
 	width: 100%;
-    height: 95%;
-    border: 2px solid;
-    border-collapse: seperate !important;
-    border-radius: 10px;
-    border-style: hidden;
-    box-shadow:#f2c587;
-
+	height: 95%;
+	border: 2px solid;
+	border-collapse: seperate !important;
+	border-radius: 10px;
+	border-style: hidden;
+	box-shadow: #f2c587;
 }
 
-video{
-    width: 100%;
-    height: 350px;
+video {
+	width: 100%;
+	height: 350px;
 }
-
-
 }
 </style>
 <!-- flask -->
@@ -106,83 +103,154 @@ video{
 
 </head>
 <body class="is-preload">
-	<% String day = request.getParameter("day");%>
-	
+	<%
+		String day = request.getParameter("day");
+	%>
+
 	<!-- Wrapper -->
 
 	<!-- Header -->
 
 	<div class="word1">
-	<c:choose>
-	<c:when test="${fn:length(list[0].content)==1}" >
-		<button onclick="back1(1)" type="button" class="btnback">
-	</c:when>
-	<c:when test="${fn:length(list[0].content)>1 and fn:length(list[0].content)<6}" >
-		<button onclick="back1(2)" type="button" class="btnback">
-	</c:when>
-	<c:otherwise>
-		<button onclick="back1(3)" type="button" class="btnback">
-	</c:otherwise>
-	</c:choose>
-			<i class="fas fa-arrow-left fa-2x"></i>
+		<c:choose>
+			<c:when test="${fn:length(list[0].content)==1}">
+				<button onclick="back1(1)" type="button" class="btnback">
+			</c:when>
+			<c:when
+				test="${fn:length(list[0].content)>1 and fn:length(list[0].content)<6}">
+				<button onclick="back1(2)" type="button" class="btnback">
+			</c:when>
+			<c:otherwise>
+				<button onclick="back1(3)" type="button" class="btnback">
+			</c:otherwise>
+		</c:choose>
+		<i class="fas fa-arrow-left fa-2x"></i>
 		</button>
 		<h3 class="stage_nm">${day}</h3>
-		
+
 	</div>
 
 
 	<!----table ----->
 
 	<div class="word">
+
+
+		Day
+		<%=day%>
+		단어 : [
+
+		
+		<c:set var="zero" value="${list[0].content }" />
+		<c:set var="one" value="${list[1].content }" />
+		<c:set var="two" value="${list[2].content }" />
+		<c:set var="three" value="${list[3].content }" />
+		<c:set var="four" value="${list[4].content }" />
 		
 		Day <%=day %> 단어 : [
 		<c:forEach var="list" items="${list}" varStatus="status">
 			${list.content}
 			<!-- ${status.count} -->
-		</c:forEach> ]
-		<br>
+		</c:forEach>
+		] <br>
+
+			<c:choose>
+				<c:when test="${list.content eq one}" >${list.id }</c:when>
+				<c:when test="${list.content eq two}" >${list.id }</c:when>
+				<c:when test="${list.content eq three}" >${list.id }</c:when>
+				<c:when test="${list.content eq four}" >${list.id }</c:when>
+				<c:otherwise>${list.id }</c:otherwise>
+			</c:choose>
+		<!--<c:set var="i" value="${i+1}" />-->
 		
 		<p id='test602'>(1/5)</p>
+
+
+
+		<div class="studycolor"></div>
 		
-		
+		<c:set var="one" value="$" />
 		
 		<div class="studycolor">
 			
 		</div>
 		<table class="study2table">
 			<thead>
-				
+
 				<tr>
-					<td class="studycolor" style="text-align: center; font-size: large;" id='test60' onclick=testfn()>학습 단어 : ${list[0].content} (${list[0].id}) </td>
+					<td class="studycolor"
+						style="text-align: center; font-size: large;" id='test60'
+						onclick=testfn()>학습 단어 : ${list[0].content} (${list[0].id})</td>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td class ="studycolor2" style="text-align: center; vertical-align: middle;">
-					<video controls autoplay width="350">
+					<td class="studycolor2"
+						style="text-align: center; vertical-align: middle;"><video
+							controls autoplay width="350">
 
-							<source src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"
+							<source
+								src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"
 								type="video/mp4">
 
-						</video> 
-						
-                </td>
+						</video></td>
 				</tr>
 				<tr>
-						<td class ="studycolor2" style="text-align: center; font-size: large;">발음해보세요 !</td>
+					<td class="studycolor2"
+						style="text-align: center; font-size: large;">발음해보세요 !</td>
 				</tr>
 				<tr>
-					<td class="studycolor" style="text-align: center; vertical-align: middle;">
+					<td class="studycolor"
+						style="text-align: center; vertical-align: middle;">
 						<div class="cameraInput">
 
 							<form action="http://211.223.106.113:5000/dlModel" method="POST"
 								enctype="multipart/form-data">
-								
+
 								<!-- type hidden으로 바꿔줄거 -->
 								<input type="text" id="h_idx" name="h_idx" value="${list[0].id}">
+
+								<input type="text" id="h_cnt" name="h_cnt" value="0"> <input
+									type="text" id="h_day" name="h_day" value="<%=day%>">
+
+
+
+							<!-- 	<c:choose>
+									<c:when test="${cameraInput == null}">
+										<input type="hidden" class="cameraInput1" value="" placeholder="첨부파일">
+										<label for="cameraInput"> 
+											<i class="fas fa-microphone-alt fa-2x"></i>
+										</label>
+										<input type="file" id="cameraInput" name="file" accept="video/*" capture="user" />
+									</c:when>
+
+									<c:otherwise>
+										<input type="submit" value="녹완"/>
+									</c:otherwise>
+								</c:choose> -->
+								
+  
+								<input type="hidden" class="cameraInput1" value="" placeholder="첨부파일"> 
+									<label for="cameraInput"> <i class="fas fa-microphone-alt fa-2x"></i>
+								</label> 
+								<input type="file" id="cameraInput" name="file" accept="video/*" capture="user" /> 
+								<button type="submit" class="btn-default" >분석</button>
+								<!-- css 넣어주기,, button -->
+
+=======
 								<input type="text" id="h_cnt" name="h_cnt" value="0">
 								<input type="text" id="h_day" name="h_day" value="<%=day %>">
-								
+								<c:choose>
+								<c:when test="${fn:length(list[0].content)==1}" >
+									<input type="text" id="h_num" name="h_num" value="1">
+								</c:when>
+								<c:when test="${fn:length(list[0].content)>1 and fn:length(list[0].content)<6}" >
+									<input type="text" id="h_num" name="h_num" value="2">
+								</c:when>
+								<c:otherwise>
+									<input type="text" id="h_num" name="h_num" value="3">
+								</c:otherwise>
+								</c:choose>
 								
 								
 								<input type="hidden" class="cameraInput1" value=""
@@ -191,6 +259,7 @@ video{
 								</label> <input type="file" id="cameraInput" name="file"
 									accept="video/*" capture="user" /> <input type="submit"
 									value="녹화완료" />
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 							</form>
 						</div>
 
@@ -243,12 +312,9 @@ video{
 		}
 		
 		
+		
+		
 
-		//$(function getVideo(){
-		//    $('#camcorder').change(function(e){
-		//      $('#mov').attr('src', URL.createObjectURL(e.target.files[0]));
-		//});
-		//});
 	</script>
 </body>
 </html>

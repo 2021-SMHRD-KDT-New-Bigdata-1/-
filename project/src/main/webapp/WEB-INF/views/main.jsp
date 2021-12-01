@@ -365,7 +365,7 @@
  		location.href="select.do";
  	}
 	function mypageGo(num){
-		location.href="mypage1.do?num="+num;
+		location.href="Syllable_test.do?num="+num;
 	}
 </script>
 </body>

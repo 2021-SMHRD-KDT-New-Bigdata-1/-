@@ -112,16 +112,23 @@ public class BoardController {
 		}
 
 		@RequestMapping("/mypage1.do")
-		public String myapge1(String num, Model model) {
+		public String mypage1(String num, Model model) {
 			model.addAttribute("num", num);
 			
 			return "mypage1";
 		}
 		
 		@RequestMapping("/Syllable_test.do")
-		public String Syllable_test(User user, Model model) {
-			List<Mypage> list = mapper.mypage1_sy(user);
-			
+		public String Syllable_test(HttpSession session, Model model) {
+			System.out.println("되냐?0");
+			User vo  = (User)session.getAttribute("vo");
+			System.out.println("되냐?1");
+			String id = vo.getUser_id();
+			System.out.println("되냐?2");
+			List<Mypage> list = mapper.mypage1_sy(id);
+			System.out.println("되냐?3");
+			model.addAttribute("list", list);
+			System.out.println(list);
 			return "mypage1";
 		}
 		

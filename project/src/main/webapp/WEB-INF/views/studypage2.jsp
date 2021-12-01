@@ -134,12 +134,12 @@ video {
 	<!----table ----->
 
 	<div class="word">
-<<<<<<< HEAD
+
 
 		Day
 		<%=day%>
 		단어 : [
-=======
+
 		
 		<c:set var="zero" value="${list[0].content }" />
 		<c:set var="one" value="${list[1].content }" />
@@ -148,15 +148,12 @@ video {
 		<c:set var="four" value="${list[4].content }" />
 		
 		Day <%=day %> 단어 : [
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 		<c:forEach var="list" items="${list}" varStatus="status">
-<<<<<<< HEAD
 			${list.content}
 			<!-- ${status.count} -->
 		</c:forEach>
 		] <br>
 
-=======
 			<c:choose>
 				<c:when test="${list.content eq one}" >${list.id }</c:when>
 				<c:when test="${list.content eq two}" >${list.id }</c:when>
@@ -164,25 +161,19 @@ video {
 				<c:when test="${list.content eq four}" >${list.id }</c:when>
 				<c:otherwise>${list.id }</c:otherwise>
 			</c:choose>
-		</c:forEach> ]
-		<br>
 		<!--<c:set var="i" value="${i+1}" />-->
 		
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 		<p id='test602'>(1/5)</p>
-<<<<<<< HEAD
 
 
 
 		<div class="studycolor"></div>
-=======
 		
 		<c:set var="one" value="$" />
 		
 		<div class="studycolor">
 			
 		</div>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 		<table class="study2table">
 			<thead>
 

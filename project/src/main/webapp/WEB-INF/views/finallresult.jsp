@@ -14,7 +14,6 @@
 	<link href="${pageContext.request.contextPath}/resources/default.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="${pageContext.request.contextPath}/resources/fonts.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
-	<link href="${pageContext.request.contextPath}/resources/css/vendor.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
@@ -27,28 +26,63 @@
 	<title>최종학습페이지</title>
 <style>
 	
-	body{
-		background-color:white;
-	} /* 이거 지우면 다시 배경색 되돌아감~ */
+	 /* 이거 지우면 다시 배경색 되돌아감~ */
+	
+	.all{
+		margin-top: 120px;
+	}
 	
 	h2{
 		vertical-align: middle;
 		text-align: center;
 		color:black;
+		margin:auto;
+	}
+	#day{
+		color: white; 
+	    background-color: #ff8040;
+	    border-radius: 10px;
+	    text-align: center;
+	    margin: auto;
+	    font-size: xx-large;
 	}
 	
-	#foo_btn button {
-		background-color: #ff8040;
-		width: 100px;
-		color: white;
-		border-radius: 10px;
+	
+	nav{
+		width: 600px;
+		margin: auto;
 	}
 	
-	.b_utton{
-		vertical-align: middle;
+	ul {
+		padding: 0;
+		padding-left: 0;
+	}
+	
+	div.b_utton{
+		height: 100px;
+		text-align: center;
+		margin: auto;
+	}
+	
+	li.first {
+		padding-left: 0;
+	}
+	
+	#btnselect{
+		margin-top: 20px;
+	}
+	
+	#list55{
+		color: black;
 		text-align: center;
 	}
-	
+		
+	.contents{
+		height: 400px;
+		padding-top: 45px;
+		font-size: x-large;
+	}
+
 	.far fa-laugh-wink fa-3x{
 		color: green;
 	}
@@ -59,9 +93,6 @@
 	
 	.far fa-laugh-tired fa-3x{
 		color: red;
-	}
-	h3{
-		color:white;
 	}
 	
 </style>
@@ -101,31 +132,36 @@
 	<!-- Header -->
 	<header id="header" class="alt"> </header>
 
-	<div style="margin-top: 100px;">
+	<div class="all">
 
 		<!-- 제목(결과) -->
 		<div class="result">
 			<h2>${vo.user_name}님의 발음분석결과</h2>
-			<br>
 		</div>
 		
 		<!-- 점수표출 -->
 		<div id="score">
-			<h2 class="score1">{}총점수보여주기</h2>
+			<h2 class="score1">100</h2>
 		</div>
 
 		<!-- 결과리스트  -->
 		<nav>
-			<ul style="background-color:white;">
+			<ul>
 				<li class="first">
 					<p class="date">
 						<c:if test="${score >= 90 }"> <i class="far fa-laugh-wink fa-3x"></i></c:if>
 						<c:if test="${score >= 60 }"> <i class="far fa-meh fa-3x"></i></c:if>
 						<c:if test="${score >= 40 }"> <i class="far fa-tired fa-3x"></i></c:if>
-						
 					</p>
-					<h3>{study_date}</h3> <!-- day1 -->
-					<p>{word_content}</p> <!-- 제시 단어 리스트 쫘라락 -->
+					
+					<div id="day">{study_date}dffadsaf</div> <!-- day1 -->
+					<div class="contents">
+					<p id="list55">가<i class="far fa-laugh-wink fa-1x"></i></p> <!-- 제시 단어 리스트 쫘라락 -->
+					<p id="list55">{word_content}sdf</p>
+					<p id="list55">{word_content}sdf</p> 
+					<p id="list55">{word_content}sdf</p> 
+					<p id="list55">{word_content}sdf</p> 
+					</div>
 				</li>
 				
 			</ul>

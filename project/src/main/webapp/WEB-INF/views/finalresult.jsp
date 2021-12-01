@@ -96,37 +96,6 @@
 	}
 	
 </style>
-<script>
-		
-		function WordList() {
-			   $.ajax({
-			      url : "WordList.do",
-			      type : "get",
-			      dataType : "json",
-			      success : jsonHtml,
-			      error : function() {
-			      	alert("word-error");}
-			      });
-		}
-		
-		function jsonhtml(data){
-			view = "<nav>";
-			view += "<ul class='style1'>";
-			view += "<li class='first'>";
-			view += "<p class='date'>";
-			view += "</p>";
-			var count = 0;
-			var day = 0;
-			$.each(data, function(num, model) {
-				view += "<h3>"+model.study_date+"</h3>";
-				view += "<p>"+model.word_content+"</p>";
-			})
-			
-			view += "</li>";
-			view += "</ul>";
-			view += "</nav>";
-		}
-</script>
 </head>
 <body> <!-- 배경색 돌아가고 싶으면 css -->
 	<!-- Header -->

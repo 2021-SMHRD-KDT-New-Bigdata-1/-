@@ -7,16 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-public class Test {
-		private int num;
+public class MypageStep {
+		private String num;
 		private String content;
-		private String user_id;
 		private String study_date;
-		private String reg_date;
-		private float lip_accuracy;
-		private String weak;
-		private float speak_accuracy;
 		private float accuracy;
-		
 }

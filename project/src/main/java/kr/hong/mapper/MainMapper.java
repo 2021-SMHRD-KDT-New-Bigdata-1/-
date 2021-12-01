@@ -5,10 +5,12 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.ui.Model;
 
 import kr.hong.domain.LoginInfo;
 import kr.hong.domain.Mypage;
+import kr.hong.domain.MypageStep;
 import kr.hong.domain.Sentence;
 import kr.hong.domain.Syllable;
 import kr.hong.domain.Test;
@@ -42,12 +44,12 @@ public interface MainMapper {
 	public List<Mypage> mypage1_wo(String id);
 	public List<Mypage> mypage1_se(String id);
 	
-	public List<Test> mypage1_step_sy1(String num);
-	public List<Test> mypage1_step_sy2(String num);
-	public List<Test> mypage1_step_wo1(String num);
-	public List<Test> mypage1_step_wo2(String num);
-	public List<Test> mypage1_step_se1(String num);
-	public List<Test> mypage1_step_se2(String num);
+	public List<MypageStep> mypage1_step_sy1(@Param("id")String id, @Param("step")String step);
+	public List<MypageStep> mypage1_step_sy2(@Param("id")String id, @Param("step")String step);
+	public List<MypageStep> mypage2_step_wo1(@Param("id")String id, @Param("step")String step);
+	public List<MypageStep> mypage2_step_wo2(@Param("id")String id, @Param("step")String step);
+	public List<MypageStep> mypage3_step_se1(@Param("id")String id, @Param("step")String step);
+	public List<MypageStep> mypage3_step_se2(@Param("id")String id, @Param("step")String step);
 	
 	public String mypage();
 	public String main();

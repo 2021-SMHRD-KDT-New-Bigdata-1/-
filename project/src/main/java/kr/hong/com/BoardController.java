@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.hong.domain.LoginInfo;
 import kr.hong.domain.Mypage;
+import kr.hong.domain.MypageStep;
 import kr.hong.domain.Sentence;
 import kr.hong.domain.Syllable;
 import kr.hong.domain.Test;
@@ -43,7 +44,7 @@ public class BoardController {
 			User vo = mapper.login(info);
 			
 			session.setAttribute("vo", vo);
-			
+			System.out.println(vo.getUser_id());
 			return "redirect:/main.do";
 		}
 		
@@ -142,7 +143,7 @@ public class BoardController {
 		}
 
 		@RequestMapping("/Syllable_test.do")
-		public String Syllable_test(HttpSession session, Model model) {
+		public String Syllable_test(HttpSession session, Model model, String num) {
 			User vo  = (User)session.getAttribute("vo");
 			String id = vo.getUser_id();
 			List<Mypage> list = mapper.mypage1_sy(id);
@@ -151,7 +152,7 @@ public class BoardController {
 		}
 		
 		@RequestMapping("/Word_test.do")
-		public String Word_test(HttpSession session, Model model) {
+		public String Word_test(HttpSession session, Model model, String num) {
 			User vo  = (User)session.getAttribute("vo");
 			String id = vo.getUser_id();
 			List<Mypage> list = mapper.mypage1_wo(id);
@@ -160,7 +161,7 @@ public class BoardController {
 		}
 		
 		@RequestMapping("/Sentence_test.do")
-		public String Sentence_test(HttpSession session, Model model) {
+		public String Sentence_test(HttpSession session, Model model, String num) {
 			User vo  = (User)session.getAttribute("vo");
 			String id = vo.getUser_id();
 			List<Mypage> list = mapper.mypage1_se(id);
@@ -168,7 +169,53 @@ public class BoardController {
 			return "mypage1";
 		}
 		
-
+		@RequestMapping("/Step_Result_sy.do")
+		public String Step_Result_sy(String step, HttpSession session, Model model) {
+			
+			User vo = (User)session.getAttribute("vo");
+			String id = vo.getUser_id();
+			List<MypageStep> step_list1 = mapper.mypage1_step_sy1(id, step);
+			model.addAttribute("step_list1", step_list1);
+			
+			List<MypageStep> step_list2 = mapper.mypage1_step_sy2(id, step);
+			model.addAttribute("step_list2", step_list2);
+			
+			List<Mypage> list = mapper.mypage1_sy(id);
+			model.addAttribute("list", list);
+			return "mypage1";
+		}
+		
+		@RequestMapping("/Step_Result_wo.do")
+		public String Step_Result_wo(String step, HttpSession session, Model model) {
+			
+			User vo = (User)session.getAttribute("vo");
+			String id = vo.getUser_id();
+			List<MypageStep> step_list1 = mapper.mypage2_step_wo1(id, step);
+			model.addAttribute("step_list1", step_list1);
+			
+			List<MypageStep> step_list2 = mapper.mypage2_step_wo2(id, step);
+			model.addAttribute("step_list2", step_list2);
+			
+			List<Mypage> list = mapper.mypage1_wo(id);
+			model.addAttribute("list", list);
+			return "mypage2";
+		}
+		
+		@RequestMapping("/Step_Result_se.do")
+		public String Step_Result_se(String step, HttpSession session, Model model) {
+			
+			User vo = (User)session.getAttribute("vo");
+			String id = vo.getUser_id();
+			List<MypageStep> step_list1 = mapper.mypage3_step_se1(id, step);
+			model.addAttribute("step_list1", step_list1);
+			
+			List<MypageStep> step_list2 = mapper.mypage3_step_se2(id, step);
+			model.addAttribute("step_list2", step_list2);
+			
+			List<Mypage> list = mapper.mypage1_se(id);
+			model.addAttribute("list", list);
+			return "mypage3";
+		}
 		
 		
 		@RequestMapping("/main.do")

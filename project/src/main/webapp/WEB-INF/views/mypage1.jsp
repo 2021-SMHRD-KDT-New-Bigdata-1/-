@@ -244,12 +244,10 @@ footer {
 </head>
 
 <script>
-var num = '${num}';
-
 
 // 음절, 단어, 문장 STEP별 정확도 불러오기
 function Syllable_test() {
-      location.href="Syllable_test.do";
+    location.href="Syllable_test.do";
 }
 function Word_test() {
 	  location.href="Word_test.do";
@@ -258,9 +256,8 @@ function Sentence_test() {
 	  location.href="Sentence_test.do";
 }
 
-// STEP선택시 해당하는 STEP 단어들 정확도 불러오기
-function Step_Result(num){
-	location.href="Step_Result.do?num="+num;
+function Step_Result_sy(step) {
+    location.href="Step_Result_sy.do?step="+step;
 }
 </script>
 
@@ -290,7 +287,7 @@ function Step_Result(num){
             <div class="row" style="margin-left: -32px;margin-top: 32px;">
 
                 <select id="my_select" style="margin-left:auto; margin-right:auto; text-align:center;"
-                onchange="Step_Result(this.options[this.selectedIndex].value)" >
+                onchange="Step_Result_sy(this.options[this.selectedIndex].value)" >
                   <option value="" selected disabled><a><i class="fas fa-angle-down">STEP</i></a></option>
                   <c:if test="${list==null}">
                	  </c:if>
@@ -321,18 +318,18 @@ function Step_Result(num){
                                        datasets : [
                                              {
                                                 label : '이전학습',
-                                                data : [ ${acc_list1[0].accuracy*10}, ${acc_list1[1].accuracy*10},
-                                                	${acc_list1[2].accuracy*10}, ${acc_list1[3].accuracy*10},
-                                                	${acc_list1[4].accuracy*10} ],
+                                                data : [ ${step_list1[0].accuracy*10}, ${step_list1[1].accuracy*10},
+                                                	${step_list1[2].accuracy*10}, ${step_list1[3].accuracy*10},
+                                                	${step_list1[4].accuracy*10} ],
                                                 borderColor : "#ffbb40",
                                                 fill : false,
                                                 lineTension : 0
                                              },
                                              {
                                                 label : '선택한학습',
-                                                data : [ ${acc_list2[0].accuracy*10}, ${acc_list2[1].accuracy*10},
-                                                	${acc_list2[2].accuracy*10}, ${acc_list2[3].accuracy*10},
-                                                	${acc_list2[4].accuracy*10} ],
+                                                data : [ ${step_list2[0].accuracy*10}, ${step_list2[1].accuracy*10},
+                                                	${step_list2[2].accuracy*10}, ${step_list2[3].accuracy*10},
+                                                	${step_list2[4].accuracy*10} ],
                                                 borderColor : "#6e9b52",
                                                 fill : false,
                                                 lineTension : 0

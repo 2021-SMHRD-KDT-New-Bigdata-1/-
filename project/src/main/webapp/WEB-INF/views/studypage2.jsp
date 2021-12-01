@@ -148,12 +148,11 @@ video {
 		<c:set var="three" value="${list[3].content }" />
 		<c:set var="four" value="${list[4].content }" />
 		
-		Day <%=day %> 단어 : [
+		
 		<c:forEach var="list" items="${list}" varStatus="status">
 			${list.content}
 			<!-- ${status.count} -->
-		</c:forEach>
-		] <br>
+		
 
 			<c:choose>
 				<c:when test="${list.content eq one}" >${list.id }</c:when>
@@ -162,6 +161,8 @@ video {
 				<c:when test="${list.content eq four}" >${list.id }</c:when>
 				<c:otherwise>${list.id }</c:otherwise>
 			</c:choose>
+			</c:forEach>
+		] <br>
 		<!--<c:set var="i" value="${i+1}" />-->
 		
 		<p id='test602'>(1/5)</p>

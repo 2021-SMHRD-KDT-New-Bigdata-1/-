@@ -45,7 +45,7 @@
 		ORDER BY s.study_date
 	</select>
 	<select id="mypage1_wo" parameterType="String" resultType="kr.hong.domain.Mypage">
-	    SELECT s.study_date, AVG(t.accuracy) AS acc
+	    SELECT w.study_date, AVG(t.accuracy) AS acc
 	    FROM tbl_word AS w
 		JOIN tbl_word_test AS t
 		ON t.num = s.num
@@ -54,6 +54,7 @@
 		having COUNT(*)=5
 		order by s.study_date
 	</select>
+	
 	<select id="mypage1_se" parameterType="String" resultType="kr.hong.domain.Mypage">
 	    SELECT s.study_date, AVG(t.accuracy) AS acc
 	    FROM tbl_sentence AS s
@@ -62,8 +63,36 @@
 		WHERE t.user_id = #{id}
 		group by s.study_date
 		having COUNT(*)=5
-		order by s.study_date
+		order by s.study_date;
 	</select>
+	
+	<select id="Syl_weak" parameterType="String" resultType="kr.hong.domain.Test">
+	    SELECT s.content, t.accuracy, t.weak
+	    FROM tbl_syllable AS s
+		JOIN tbl_syllable_test AS t
+		ON t.num = s.num
+		WHERE t.user_id = #{id}
+		order by s.study_date;
+	</select>
+
+		<select id="Word_weak" parameterType="String" resultType="kr.hong.domain.Test">
+	    SELECT s.content, t.accuracy, t.weak
+	    FROM tbl_word AS s
+		JOIN tbl_word_test AS t
+		ON t.num = s.num
+		WHERE t.user_id = #{id}
+		order by s.study_date;
+	</select>
+	
+	<select id="Sen_weak" parameterType="String" resultType="kr.hong.domain.Test">
+	    SELECT s.content, t.accuracy, t.weak
+	    FROM tbl_sentence AS s
+		JOIN tbl_sentence_test AS t
+		ON t.num = s.num
+		WHERE t.user_id = #{id}
+		order by s.study_date;
+	</select>
+
 	
 	
 </mapper> 

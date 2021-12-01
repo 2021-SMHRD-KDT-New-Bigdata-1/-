@@ -174,7 +174,7 @@ function login() {
                                         <button id="btnselect" onclick="studyhome(3)">문장 (Sentense)</button>
                                     </div>
                                     <div id="btngroup">
-                                        <button id="btnselect" onclick=''>복습 (Review)</button>
+                                        <button id="btnselect" onclick='Syl_weak()'>복습 (Review)</button>
                                     </div>
                                      
                                 </div>
@@ -207,6 +207,9 @@ function login() {
 	<script>
 	function studyhome(num){
  		location.href="studyhome.do?num="+num;
+ 	}
+	function Syl_weak(){
+ 		location.href="Syl_weak.do";
  	}
 	</script>
 </body>

@@ -3212,7 +3212,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #ffaf42;
+		background-color: #ff8040;
 		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
 		cursor: default;
 		font-weight: 600;
@@ -3352,6 +3352,7 @@ input, select, textarea {
 			-ms-animation: none;
 			animation: none;
 			background: #black;
+			background-color: #ffaf42;
 			box-shadow: none;
 			position: absolute;
 		}

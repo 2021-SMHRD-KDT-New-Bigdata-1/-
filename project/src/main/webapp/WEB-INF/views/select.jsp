@@ -165,16 +165,16 @@ function login() {
 									<span class="cat-links">${vo.user_name }님</span>
 									<div><h2 class="hero_entry-title" style="margin-top: 5px;">원하는 학습을 선택하세요.</h2></div>
 								    <div id="btngroup" >
-                                       <button id="btnselect" onclick="studyhome(1)">음절(Syllable)</button>
+                                       <button id="btnselect" onclick="studyhome(1)">음절 (Syllable)</button>
                                     </div>
                                     <div id="btngroup">
-                                        <button id="btnselect" onclick="studyhome(2)">단어(Word)</button>
+                                        <button id="btnselect" onclick="studyhome(2)">단어 (Word)</button>
                                     </div>
                       				<div id="btngroup">
-                                        <button id="btnselect" onclick="studyhome(3)">문장(Sentense)</button>
+                                        <button id="btnselect" onclick="studyhome(3)">문장 (Sentense)</button>
                                     </div>
                                     <div id="btngroup">
-                                        <button id="btnselect" onclick=''>복습(Review)</button>
+                                        <button id="btnselect" onclick=''>복습 (Review)</button>
                                     </div>
                                      
                                 </div>

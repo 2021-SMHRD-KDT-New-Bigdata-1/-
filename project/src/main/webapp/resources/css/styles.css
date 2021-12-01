@@ -433,6 +433,7 @@ img {
     margin-top: 10px;
     font-weight: 700;
     font-size: large;
+    width: -webkit-fill-available;
     margin-bottom: 10px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;

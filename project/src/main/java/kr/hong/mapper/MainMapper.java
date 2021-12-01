@@ -33,7 +33,7 @@ public interface MainMapper {
 	public List<Word> studypage2_wo(String day);
 	public List<Sentence> studypage2_sen(String day);
 	
-	public List<Mypage> mypage1_sy(User vo);
+	public List<Mypage> mypage1_sy(String id);
 	public List<Mypage> mypage1_wo(User vo);
 	public List<Mypage> mypage1_se(User vo);
 	

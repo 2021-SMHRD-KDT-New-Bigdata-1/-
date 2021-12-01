@@ -26,13 +26,15 @@
 
 	<title>최종학습페이지</title>
 <style>
-
-	#line>#index {
-		width: 40px;
-	}
 	
-	#line>#emo {
-		width: 60px;
+	body{
+		background-color:white;
+	} /* 이거 지우면 다시 배경색 되돌아감~ */
+	
+	h2{
+		vertical-align: middle;
+		text-align: center;
+		color:black;
 	}
 	
 	#foo_btn button {
@@ -41,6 +43,27 @@
 		color: white;
 		border-radius: 10px;
 	}
+	
+	.b_utton{
+		vertical-align: middle;
+		text-align: center;
+	}
+	
+	.far fa-laugh-wink fa-3x{
+		color: green;
+	}
+	
+	.far fa-laugh-meh fa-3x{
+		color: orange;
+	}
+	
+	.far fa-laugh-tired fa-3x{
+		color: red;
+	}
+	h3{
+		color:white;
+	}
+	
 </style>
 <script>
 		
@@ -74,7 +97,7 @@
 		}
 </script>
 </head>
-<body>
+<body> <!-- 배경색 돌아가고 싶으면 css -->
 	<!-- Header -->
 	<header id="header" class="alt"> </header>
 
@@ -82,33 +105,34 @@
 
 		<!-- 제목(결과) -->
 		<div class="result">
-			<h2 style="text-align: center; color: black;">${vo.user_name}님의 발음분석결과</h2>
+			<h2>${vo.user_name}님의 발음분석결과</h2>
 			<br>
 		</div>
+		
+		<!-- 점수표출 -->
 		<div id="score">
-			<h4 style="text-align: center; color: black;">점수확인</h4>
-			<br>
-			<br>
+			<h2 class="score1">{}총점수보여주기</h2>
 		</div>
 
 		<!-- 결과리스트  -->
 		<nav>
-			<ul class="style1">
+			<ul style="background-color:white;">
 				<li class="first">
 					<p class="date">
-						<c:if test="${score >= 90 }"> <i class="far fa-laugh-wink fa-3x" style="color: green;"></i></c:if>
-						<c:if test="${score >= 60 }"> <i class="far fa-meh fa-3x" style="color: orange;"></i></c:if>
-						<c:if test="${score >= 40 }"> <i class="far fa-tired fa-3x" style="color: red;"></i></c:if>
+						<c:if test="${score >= 90 }"> <i class="far fa-laugh-wink fa-3x"></i></c:if>
+						<c:if test="${score >= 60 }"> <i class="far fa-meh fa-3x"></i></c:if>
+						<c:if test="${score >= 40 }"> <i class="far fa-tired fa-3x"></i></c:if>
+						
 					</p>
-					<h3>${model.study_date}</h3>
-					<p>${model.word_content}</p>
+					<h3>{study_date}</h3> <!-- day1 -->
+					<p>{word_content}</p> <!-- 제시 단어 리스트 쫘라락 -->
 				</li>
 				
 			</ul>
 
 			<br>
 		</nav>
-		<div style="vertical-align: middle; text-align: center;" >
+		<div class="b_utton">
 			<button id="btnselect" onclick="exit()">나가기</button>&nbsp;&nbsp;&nbsp;&nbsp;
 			<button id="btnselect" onclick="replay()">반복하기</button>
 		</div>
@@ -117,14 +141,8 @@
 	<br>
 	<script>
 		function exit() {
-			location.href = "studyhome1.do";
+			location.href = "studyhome.do";
 		}
-		
-		/* 
-		function replay(){
-			location.href = ""
-		}
-		*/
 
 	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

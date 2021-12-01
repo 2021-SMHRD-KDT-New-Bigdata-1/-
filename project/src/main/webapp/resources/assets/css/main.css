@@ -2631,6 +2631,7 @@ input, select, textarea {
 	.btnback{
 		margin-top : 0.5em;
 		border:none;
+		color:white;
 
 	}
 /* button 마우스 클릭 했을 때

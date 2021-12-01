@@ -169,7 +169,14 @@ video{
 
 							<form action="http://211.223.106.113:5000/dlModel" method="POST"
 								enctype="multipart/form-data">
-
+								
+								<!-- type hidden으로 바꿔줄거 -->
+								<input type="text" id="h_idx" name="h_idx" value="${list[0].id}">
+								<input type="text" id="h_cnt" name="h_cnt" value="0">
+								<input type="text" id="h_day" name="h_day" value="<%=day %>">
+								
+								
+								
 								<input type="hidden" class="cameraInput1" value=""
 									placeholder="첨부파일"> <label for="cameraInput"> <i
 									class="fas fa-microphone-alt fa-2x"></i>
@@ -200,7 +207,9 @@ video{
 	<script src="assets/js/main.js"></script>
 	<script>
 		var cnt = 0;
-	
+		$('input[id=h_cnt]').attr('value',cnt);
+		
+		
 		function back1(num) {
 			location.href = "studyhome.do?num=" + num;
 		}
@@ -221,6 +230,7 @@ video{
 			cnt = cnt + 1;
 			if (cnt<5){
 			$("#test602").text('('+(cnt+1)+'/5)');
+			$('input[id=h_cnt]').attr('value',cnt);
 			}
 		}
 		

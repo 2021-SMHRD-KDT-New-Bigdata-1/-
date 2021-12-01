@@ -78,6 +78,12 @@ td.studycolor2 {
     background: #f2f2f2;
 }
 
+td.results{
+	
+	background-color: #ffaf42;
+	
+}
+
 
 
 /* 학습페이지 테이블 규격 맞추기 끝!!!!!!!!!!!!!!!*/
@@ -3352,7 +3358,7 @@ input, select, textarea {
 			-ms-animation: none;
 			animation: none;
 			background: #black;
-			background-color: #ffaf42;
+			background-color: #ff8040;
 			box-shadow: none;
 			position: absolute;
 		}

@@ -211,25 +211,12 @@ video {
 								<!-- type hidden으로 바꿔줄거 -->
 								<input type="text" id="h_idx" name="h_idx" value="${list[0].id}">
 
-								<input type="text" id="h_cnt" name="h_cnt" value="0"> <input
-									type="text" id="h_day" name="h_day" value="<%=day%>">
+								<input type="text" id="h_cnt" name="h_cnt" value="0"> 
+								<input type="text" id="h_day" name="h_day" value="<%=day%>">
 
 
 
-							<!-- 	<c:choose>
-									<c:when test="${cameraInput == null}">
-										<input type="hidden" class="cameraInput1" value="" placeholder="첨부파일">
-										<label for="cameraInput"> 
-											<i class="fas fa-microphone-alt fa-2x"></i>
-										</label>
-										<input type="file" id="cameraInput" name="file" accept="video/*" capture="user" />
-									</c:when>
-
-									<c:otherwise>
-										<input type="submit" value="녹완"/>
-									</c:otherwise>
-								</c:choose> -->
-								
+			
   
 								<input type="hidden" class="cameraInput1" value="" placeholder="첨부파일"> 
 									<label for="cameraInput"> <i class="fas fa-microphone-alt fa-2x"></i>
@@ -238,7 +225,7 @@ video {
 								<button type="submit" class="btn-default" >분석</button>
 								<!-- css 넣어주기,, button -->
 
-=======
+
 								<input type="text" id="h_cnt" name="h_cnt" value="0">
 								<input type="text" id="h_day" name="h_day" value="<%=day %>">
 								<c:choose>
@@ -253,14 +240,14 @@ video {
 								</c:otherwise>
 								</c:choose>
 								
-								
+								<!-- 
 								<input type="hidden" class="cameraInput1" value=""
 									placeholder="첨부파일"> <label for="cameraInput"> <i
 									class="fas fa-microphone-alt fa-2x"></i>
 								</label> <input type="file" id="cameraInput" name="file"
 									accept="video/*" capture="user" /> <input type="submit"
 									value="녹화완료" />
-
+ -->
 							</form>
 						</div>
 

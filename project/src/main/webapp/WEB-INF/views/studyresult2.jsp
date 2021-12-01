@@ -61,13 +61,18 @@
 }
 
 body {
-	background-color: #ffaf42;
+	background-color: #f2f2f2;
 }
 h4{
     margin-top: 15px;
     margin-bottom: 10px;
     color: white;
     font-weight: 900;
+}
+
+table td {
+    background: #ffaf42;
+
 }
 
 
@@ -107,22 +112,28 @@ h4{
 		
 			<tbody>
 			<tr>
-				<th style="height: 60px; width: 350px; text-align: center; font-size: large; word-break: keep-all;">
+				<td colspan="3" calss="resultt" style="height: 150px; width: 350px; 
+				 text-align: center; font-size: large; word-break: keep-all;">
 					내부구성에따라 상단과 하단으로 옷장/옷장, 옷장/이불장으로 선택하여 사용할 수 있습니다.
-				</th>
+				</td>
 			</tr>
 			<tr>
+				<td class="results"></td>
+				
 				<td style="border: 3px solid ; border-color: #ff8040; background-color: white; ">
 				결과는 <%=data %>
 				</td>
+				
+				<td class="results"></td>
+				
 					<!-- <video width="30%" height="30%" autoplay="autoplay" id="myVideo"></td> -->
 			</tr>
 			<tr>
-				<th style=" height: 120px; text-align: center;">
+				<td colspan="3" calss="resultb" style=" height: 200px; text-align: center;">
 					<button type="submit" class="btn btn-default" id="return" onclick="history.back()">다시하기</button> &nbsp; &nbsp;
 					<button type="submit" class="btn btn-default" id="pass">넘어가기</button> &nbsp; &nbsp;
 					<button class="btn btn-default" id="synonym">유사단어</button>
-				</th>
+				</td>
 			</tr>
 		</tbody>
 	</table>

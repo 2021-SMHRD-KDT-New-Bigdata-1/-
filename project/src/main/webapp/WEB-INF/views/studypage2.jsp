@@ -146,7 +146,9 @@ video{
 		
 		
 		
-		
+		<div class="studycolor">
+			
+		</div>
 		<table class="study2table">
 			<thead>
 				

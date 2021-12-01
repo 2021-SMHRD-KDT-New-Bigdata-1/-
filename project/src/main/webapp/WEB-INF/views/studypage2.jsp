@@ -200,11 +200,18 @@ video {
 
 							<form action="http://211.223.106.113:5000/dlModel" method="POST"
 								enctype="multipart/form-data">
+								
 								<!-- type hidden으로 바꿔줄거 -->
-								<input type="text" id="h_idx" name="h_idx" value="${list[0].num}">
-								<input type="text" id="h_idx" name="h_idx" value="${list[0].id}">
+								<c:forEach var="list" items="${list}" varStatus="status">
+								<c:if test="${status.index eq cnt}">
+									<input type="text" id="h_idx" name="h_idx" value="${list.num}">
+									<input type="text" id="h_idx" name="h_idx" value="${list.id}">
+								</c:if>
+								</c:forEach>
+								
 								<input type="text" id="h_cnt" name="h_cnt" value="${cnt}"> 
 								<input type="text" id="h_day" name="h_day" value="<%=day%>">
+								
 								<c:choose>
 									<c:when test="${fn:length(list[0].content)==1}" >
 										<input type="text" id="h_cate" name="h_cate" value="1">
@@ -263,47 +270,9 @@ video {
 	<script src="assets/js/main.js"></script>
 	<script>
 		
-		$('input[id=h_cnt]').attr('value',cnt);
-		if (cnt==0){
-			$("#test60").text('학습 단어: ${list[1].content} (${list[1].id})');
-		}else if(cnt==1){
-			$("#test60").text('학습 단어: ${list[2].content} (${list[2].id})');
-		}else if(cnt==2){
-			$("#test60").text('학습 단어: ${list[3].content} (${list[3].id})');
-		}else if(cnt==3){
-			$("#test60").text('학습 단어: ${list[4].content} (${list[4].id})');
-		}else{
-			alert("다섯단어 끝");
-		}
-		
-		
 		function back1(cate) {
 			location.href = "studyhome.do?cate=" + cate;
 		}
-		
-		function testfn(){
-			//alert(cnt);
-			if (cnt==0){
-				$("#test60").text('학습 단어: ${list[1].content} (${list[1].id})');
-			}else if(cnt==1){
-				$("#test60").text('학습 단어: ${list[2].content} (${list[2].id})');
-			}else if(cnt==2){
-				$("#test60").text('학습 단어: ${list[3].content} (${list[3].id})');
-			}else if(cnt==3){
-				$("#test60").text('학습 단어: ${list[4].content} (${list[4].id})');
-			}else{
-				alert("다섯단어 끝");
-			}
-			cnt = cnt + 1;
-			if (cnt<5){
-			$("#test602").text('('+(cnt+1)+'/5)');
-			$('input[id=h_cnt]').attr('value',cnt);
-			}
-		}
-		
-		
-		
-		
 
 	</script>
 </body>

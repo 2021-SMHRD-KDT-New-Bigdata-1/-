@@ -247,12 +247,11 @@ public class BoardController {
 		@RequestMapping("/test_insert.do")
 		public String test_insert(String speak_accuracy, String lip_accuracy, String num, String id, String cnt, String day, String cate,
 				Model model, HttpSession Session) {
-			System.out.println(num);
-			System.out.println(speak_accuracy);
-			System.out.println(lip_accuracy);
-			System.out.println(id);
-			System.out.println(cnt);
-			
+			//System.out.println(num);
+			//System.out.println(speak_accuracy);
+			//System.out.println(lip_accuracy);
+			//System.out.println(id);
+			//System.out.println(cnt);
 			
 			User vo = (User)Session.getAttribute("vo");
 			String user_id = vo.getUser_id();
@@ -274,7 +273,7 @@ public class BoardController {
 				model.addAttribute("list", list);
 			}else{System.out.println("test_insert 오류");}
 			
-			//model.addAttribute("cnt",cnt);
+			model.addAttribute("cnt",cnt);
 			return "studypage2";
 		}
 

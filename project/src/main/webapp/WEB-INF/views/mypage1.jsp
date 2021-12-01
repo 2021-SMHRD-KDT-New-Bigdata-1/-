@@ -243,57 +243,14 @@ footer {
 </head>
 
 <script>
-var num = '${num}';
-
-$(document).ready(function() { //익명함수
-     //alert("제이쿼리 가즈앗!");
-   
-   if(num==1){
-       Syllable_test();
-   }
-   else if(num==2){
-      Word_test();
-   }
-   else if(num==3){
-      Sentence_test();
-   }
-   else{
-      alert("num인식안됨");
-   }
-   });
-   
-function Syllabe_test() {
-      $.ajax({
-         url : "Syllable_test.do",
-         type : "get",
-         dataType : "json",
-         success : jsonHtml1,
-         error : function() {
-            alert("syllabe_test-error");}
-         });
+function Syllable_test(num) {
+      location.href="mypage1.do?num="+num;
 }
-function Word_test() {
-      $.ajax({
-         url : "Word_test.do",
-         type : "get",
-         dataType : "json",
-         success : jsonHtml2,
-         error : function() {
-            alert("word_test-error");}
-         });
+function Word_test(num) {
+	  location.href="mypage1.do?num="+num;
 }
-function Sentence_test() {
-      $.ajax({
-         url : "Sentence_test.do",
-         type : "get",
-         dataType : "json",
-         success : jsonHtml3,
-         error : function() {
-            alert("sentence_test-error");}
-         });
-}
-function jsonHtml1(){
-	
+function Sentence_test(num) {
+	  location.href="mypage1.do?num="+num;
 }
 </script>
 
@@ -309,9 +266,9 @@ function jsonHtml1(){
             <h1 id="title_name" style="margin-left: 20px;"><a href="main.do">Allbareum</a></h1>
             <nav id="main_title_nav" role="navigation">
                <ul id="main-menu" style="list-style: none;">
-                  <li><a onclick="submenu(1);">음절</a></li>
-                  <li><a onclick="submenu(2);">단어</a></li>
-                  <li><a onclick="submenu(3);">문장</a></li>
+                  <li><a onclick="Syllable_test(1);">음절</a></li>
+                  <li><a onclick="Word_test(2);">단어</a></li>
+                  <li><a onclick="Sentence_test(3);">문장</a></li>
                </ul>
             </nav>
          </header>
@@ -322,15 +279,15 @@ function jsonHtml1(){
          <div class="container">
             <div class="row" style="margin-left: -32px;margin-top: 32px;">
 
-
                 <select id="my_select" style="margin-left:auto; margin-right:auto; text-align:center;" >
-                  <option value="" selected disabled><a><i class="fas fa-angle-down">step1</i></a></option>
-                  <option value="eng">step2</option>
-                  <option value="ko">step3</option>
-                  <option value="ko">step4</option>
-                  <option value="ko">step5</option>
-                  <option value="ko">step6</option>
-                  <option value="ko">step7</option>
+                  <option value=""><a><i class="fas fa-angle-down">step</i></a></option>
+                  <c:if test="${list==null}">
+               	  </c:if>
+                  <c:if test="${list!=null }">
+                  	<c:forEach var="list" items="${list}" varStatus="status">
+                  		<option value="${list.study_date }">STEP${list.study_date}</option>
+                  	</c:forEach>
+                  </c:if>
                </select>
 
 
@@ -507,11 +464,5 @@ function jsonHtml1(){
    <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-   <script>
-      function submenu(num) {
-         location.href="mypage1.do?num"+num;
-
-      }
-   </script>
 </body>
 </html>

@@ -110,9 +110,9 @@ body {
 			</tr>
 			<tr>
 				<th style="padding-top: 40px; height: 120px; text-align: center;">
-					<button type="button" class="btn btn-default">다시하기</button>&nbsp;&nbsp;
-					<button type="button" class="btn btn-default">넘어가기</button>&nbsp;&nbsp;
-					<button type="button" class="btn btn-default">유사단어</button>
+					<button type="submit" class="btn btn-default" id="return" onclick="history.back()">다시하기</button> &nbsp; &nbsp;
+					<button type="submit" class="btn btn-default" id="pass">넘어가기</button> &nbsp; &nbsp;
+					<button class="btn btn-default" id="synonym">유사단어</button>
 				</th>
 			</tr>
 		</tbody>

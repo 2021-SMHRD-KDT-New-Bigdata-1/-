@@ -55,49 +55,36 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+/* 학습페이지 테이블 규격 맞추기 */
 .word {
-    border: 1px solid;
-    border-color: gray;
-    height: 800px;
+    /* border: 1px solid; */
+    /* border-color: gray; */
+    height: 900px;
     width: 650px;
     padding: 2em 2em 2em 2em;
     margin-left: auto;
     margin-right: auto;
+    background: white;
+}
+
+td.studycolor {
+    background-color: #f2c587;
+    border-radius: 5px;
+    padding: 1em 1em 1em 1em;
 }
 
 
-/*테이블 css
-table, tr, td {
-
-	border : 1px solid #7d7d7d;
-	
-	border-collapse: collapse;
-
-}
-
-.cell_padding {
-
-padding : 1em;
-
+td.studycolor2 {
+    background: #f2f2f2;
 }
 
 
 
-.table_center {
-
-display : table;
-
-margin-left : auto;
-
-margin-right : auto;
-
-}
+/* 학습페이지 테이블 규격 맞추기 끝!!!!!!!!!!!!!!!*/
 
 
 
 
-테이블 css 끝*/
 
 body {
 	-webkit-text-size-adjust: none;
@@ -3856,7 +3843,7 @@ input, select, textarea {
 		-webkit-transition: -webkit-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
 		-ms-transition: -ms-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
 		transition: filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
-		padding-top: 3.25em;
+		padding-top: 1em;
 		
 	}
 

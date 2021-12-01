@@ -66,11 +66,12 @@
 
 .word1{
 	background-color:#ff8040;
+	height: 45px;
 }
 
 table{
 	width: 100%;
-    height: 100%;
+    height: 95%;
 
 }
 
@@ -145,12 +146,12 @@ video{
 			<thead>
 				
 				<tr>
-					<td style="text-align: center; font-size: large;" id='test60' onclick=testfn()>학습 단어 : ${list[0].content} (${list[0].id}) </td>
+					<td class="studycolor" style="text-align: center; font-size: large;" id='test60' onclick=testfn()>학습 단어 : ${list[0].content} (${list[0].id}) </td>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td style="text-align: center; vertical-align: middle;">
+					<td class ="studycolor2" style="text-align: center; vertical-align: middle;">
 					<video controls autoplay width="350">
 
 							<source src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"
@@ -161,10 +162,10 @@ video{
                 </td>
 				</tr>
 				<tr>
-						<td style="text-align: center; font-size: large;">발음해보세요 !</td>
+						<td class ="studycolor2" style="text-align: center; font-size: large;">발음해보세요 !</td>
 				</tr>
 				<tr>
-					<td style="text-align: center; vertical-align: middle;">
+					<td class="studycolor" style="text-align: center; vertical-align: middle;">
 						<div class="cameraInput">
 
 							<form action="http://211.223.106.113:5000/dlModel" method="POST"

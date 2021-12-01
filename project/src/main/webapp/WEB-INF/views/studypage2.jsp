@@ -129,16 +129,28 @@ video{
 
 	<div class="word">
 		
+		<c:set var="zero" value="${list[0].content }" />
+		<c:set var="one" value="${list[1].content }" />
+		<c:set var="two" value="${list[2].content }" />
+		<c:set var="three" value="${list[3].content }" />
+		<c:set var="four" value="${list[4].content }" />
+		
 		Day <%=day %> 단어 : [
 		<c:forEach var="list" items="${list}" varStatus="status">
-			${list.content}
-			<!-- ${status.count} -->
+			<c:choose>
+				<c:when test="${list.content eq one}" >${list.id }</c:when>
+				<c:when test="${list.content eq two}" >${list.id }</c:when>
+				<c:when test="${list.content eq three}" >${list.id }</c:when>
+				<c:when test="${list.content eq four}" >${list.id }</c:when>
+				<c:otherwise>${list.id }</c:otherwise>
+			</c:choose>
 		</c:forEach> ]
 		<br>
+		<!--<c:set var="i" value="${i+1}" />-->
 		
 		<p id='test602'>(1/5)</p>
 		
-		
+		<c:set var="one" value="$" />
 		
 		
 		<table class="study2table">
@@ -174,7 +186,17 @@ video{
 								<input type="text" id="h_idx" name="h_idx" value="${list[0].id}">
 								<input type="text" id="h_cnt" name="h_cnt" value="0">
 								<input type="text" id="h_day" name="h_day" value="<%=day %>">
-								
+								<c:choose>
+								<c:when test="${fn:length(list[0].content)==1}" >
+									<input type="text" id="h_num" name="h_num" value="1">
+								</c:when>
+								<c:when test="${fn:length(list[0].content)>1 and fn:length(list[0].content)<6}" >
+									<input type="text" id="h_num" name="h_num" value="2">
+								</c:when>
+								<c:otherwise>
+									<input type="text" id="h_num" name="h_num" value="3">
+								</c:otherwise>
+								</c:choose>
 								
 								
 								<input type="hidden" class="cameraInput1" value=""

@@ -47,7 +47,7 @@ public interface MainMapper {
 	public String studyresult2();
 	public String index();
 	public String weakpage();
-	public String finallresult();
+	public String finalresult();
 	public List<Word> WordList1(); //기존
 	public List<Syllable> SylList(); //new
 	public List<Word> WordList();  //new 

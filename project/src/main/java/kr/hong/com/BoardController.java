@@ -56,10 +56,10 @@ public class BoardController {
 		
 	
 	
-		@RequestMapping("/finallresult.do")
-		public String finallresult() {
+		@RequestMapping("/finalresult.do")
+		public String finalresult() {
 			
-			return "finallresult";
+			return "finalresult";
 		}
 		
 		

@@ -39,8 +39,15 @@ public interface MainMapper {
 	public List<Sentence> studypage2_sen(String day);
 	
 	public List<Mypage> mypage1_sy(String id);
-	public List<Mypage> mypage1_wo(User vo);
-	public List<Mypage> mypage1_se(User vo);
+	public List<Mypage> mypage1_wo(String id);
+	public List<Mypage> mypage1_se(String id);
+	
+	public List<Test> mypage1_step_sy1(String num);
+	public List<Test> mypage1_step_sy2(String num);
+	public List<Test> mypage1_step_wo1(String num);
+	public List<Test> mypage1_step_wo2(String num);
+	public List<Test> mypage1_step_se1(String num);
+	public List<Test> mypage1_step_se2(String num);
 	
 	public String mypage();
 	public String main();

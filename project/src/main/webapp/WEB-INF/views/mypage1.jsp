@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE HTML>
 
 <!--
@@ -243,14 +244,23 @@ footer {
 </head>
 
 <script>
-function Syllable_test(num) {
-      location.href="mypage1.do?num="+num;
+var num = '${num}';
+
+
+// 음절, 단어, 문장 STEP별 정확도 불러오기
+function Syllable_test() {
+      location.href="Syllable_test.do";
 }
-function Word_test(num) {
-	  location.href="mypage1.do?num="+num;
+function Word_test() {
+	  location.href="Word_test.do";
 }
-function Sentence_test(num) {
-	  location.href="mypage1.do?num="+num;
+function Sentence_test() {
+	  location.href="Sentence_test.do";
+}
+
+// STEP선택시 해당하는 STEP 단어들 정확도 불러오기
+function Step_Result(num){
+	location.href="Step_Result.do?num="+num;
 }
 </script>
 
@@ -266,9 +276,9 @@ function Sentence_test(num) {
             <h1 id="title_name" style="margin-left: 20px;"><a href="main.do">Allbareum</a></h1>
             <nav id="main_title_nav" role="navigation">
                <ul id="main-menu" style="list-style: none;">
-                  <li><a onclick="Syllable_test(1);">음절</a></li>
-                  <li><a onclick="Word_test(2);">단어</a></li>
-                  <li><a onclick="Sentence_test(3);">문장</a></li>
+                  <li><a onclick="Syllable_test();">음절</a></li>
+                  <li><a onclick="Word_test();">단어</a></li>
+                  <li><a onclick="Sentence_test();">문장</a></li>
                </ul>
             </nav>
          </header>
@@ -279,8 +289,9 @@ function Sentence_test(num) {
          <div class="container">
             <div class="row" style="margin-left: -32px;margin-top: 32px;">
 
-                <select id="my_select" style="margin-left:auto; margin-right:auto; text-align:center;" >
-                  <option value=""><a><i class="fas fa-angle-down">step</i></a></option>
+                <select id="my_select" style="margin-left:auto; margin-right:auto; text-align:center;"
+                onchange="Step_Result(this.options[this.selectedIndex].value)" >
+                  <option value="" selected disabled><a><i class="fas fa-angle-down">STEP</i></a></option>
                   <c:if test="${list==null}">
                	  </c:if>
                   <c:if test="${list!=null }">
@@ -289,6 +300,7 @@ function Sentence_test(num) {
                   	</c:forEach>
                   </c:if>
                </select>
+
 
 
                <div class="col-12-small"
@@ -305,25 +317,22 @@ function Sentence_test(num) {
                                     type : 'line',
                                     data : {
                                        labels : [ '1', '2', '3',
-                                             '4', '5', '6', '7',
-                                             '8' ],
+                                             '4', '5'],
                                        datasets : [
                                              {
                                                 label : '이전학습',
-                                                data : [ 10, 3,
-                                                      30, 23,
-                                                      10, 5,
-                                                      50 ],
+                                                data : [ ${acc_list1[0].accuracy*10}, ${acc_list1[1].accuracy*10},
+                                                	${acc_list1[2].accuracy*10}, ${acc_list1[3].accuracy*10},
+                                                	${acc_list1[4].accuracy*10} ],
                                                 borderColor : "#ffbb40",
                                                 fill : false,
                                                 lineTension : 0
                                              },
                                              {
-                                                label : '현재',
-                                                data : [ 15, 5,
-                                                      10, 15,
-                                                      15, 10,
-                                                      20 ],
+                                                label : '선택한학습',
+                                                data : [ ${acc_list2[0].accuracy*10}, ${acc_list2[1].accuracy*10},
+                                                	${acc_list2[2].accuracy*10}, ${acc_list2[3].accuracy*10},
+                                                	${acc_list2[4].accuracy*10} ],
                                                 borderColor : "#6e9b52",
                                                 fill : false,
                                                 lineTension : 0
@@ -348,7 +357,7 @@ function Sentence_test(num) {
                                              display : true,
                                              scaleLabel : {
                                                 display : true,
-                                                labelString : 'STEP'
+                                                labelString : 'STEP 정확도 비교'
                                              }
                                           } ],
                                           yAxes : [ {
@@ -366,8 +375,6 @@ function Sentence_test(num) {
                                  });
                         </script>
                      </div>
-                     <div class="panel-footer">Buy 50 mobiles and get a gift
-                        card</div>
                   </div>
                </div>
                <div class="col-12-small"
@@ -380,7 +387,7 @@ function Sentence_test(num) {
                         new Chart(document.getElementById("doughnut-chart"), {
                             type: 'doughnut',
                             data: {
-                              labels: ["정확도", "부정확도"],
+                              labels: ["정상발음", "취약발음"],
                               datasets: [
                                 {
                                   label: "Population (millions)",
@@ -400,8 +407,6 @@ function Sentence_test(num) {
                         });
                         </script>
                      </div>
-                     <div class="panel-footer">Buy 50 mobiles and get a gift
-                        card</div>
                   </div>
                </div>
                <div class="col-12-small"
@@ -434,8 +439,6 @@ function Sentence_test(num) {
                         });
                         </script>
                      </div>
-                     <div class="panel-footer">Buy 50 mobiles and get a gift
-                        card</div>
                   </div>
                </div>
             </div>

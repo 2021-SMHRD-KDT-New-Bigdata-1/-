@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 public class Test {
 		private int num;
 		private String content;
+		private String user_id;
 		private String study_date;
 		private String reg_date;
 		private float lip_accuracy;

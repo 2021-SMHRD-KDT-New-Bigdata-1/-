@@ -72,6 +72,11 @@
 table{
 	width: 100%;
     height: 95%;
+    border: 2px solid;
+    border-collapse: seperate !important;
+    border-radius: 10px;
+    border-style: hidden;
+    box-shadow:#f2c587;
 
 }
 

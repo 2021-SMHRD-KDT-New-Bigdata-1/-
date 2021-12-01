@@ -256,7 +256,7 @@
                                      <button class='btnmain' onclick="mypageGo(1)">마이페이지</button>
                                     
                                      </div><br>
-                                      <p type="button" style="font-size: small;">학습을 종료하고 싶다면?<br><a onclick="logout()">로그아웃</a> </p> 
+                                      <p type="button" style="font-size: initial;">학습을 종료하려면?<a onclick="logout()">로그아웃</a> </p> 
                              </c:if>
                                
               <!--  loginform close...........................------------------------------------>     

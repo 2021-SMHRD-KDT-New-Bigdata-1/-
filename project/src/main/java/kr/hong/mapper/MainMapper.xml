@@ -157,7 +157,19 @@
 		WHERE t.user_id = #{id}
 		order by s.study_date;
 	</select>
-
+	
+	<insert id="sy_test_insert" parameterType="map">
+		insert into tbl_syllable_test(num, speak_accuracy, user_id, weak, lip_accuracy) values(#{num}, #{speak_accuracy}, #{user_id}, #{weak}, #{lip_accuracy})
+	</insert>
+	
+	<insert id="wo_test_insert" parameterType="map">
+		insert into tbl_word_test(num, speak_accuracy, user_id, weak, lip_accuracy) values(#{num}, #{speak_accuracy}, #{user_id}, #{weak}, #{lip_accuracy})
+	</insert>
+	
+	<insert id="sen_test_insert" parameterType="map">
+		insert into tbl_sentence_test(num, speak_accuracy, user_id, weak, lip_accuracy) values(#{num}, #{speak_accuracy}, #{user_id}, #{weak}, #{lip_accuracy})
+	</insert>
+	
 	
 	
 </mapper> 

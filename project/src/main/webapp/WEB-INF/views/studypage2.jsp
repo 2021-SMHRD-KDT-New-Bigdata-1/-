@@ -137,35 +137,19 @@ video {
 	<div class="word">
 
 
-		Day
+		Step
 		<%=day%>
 		단어 : [
 
-		
-		<c:set var="zero" value="${list[0].content }" />
-		<c:set var="one" value="${list[1].content }" />
-		<c:set var="two" value="${list[2].content }" />
-		<c:set var="three" value="${list[3].content }" />
-		<c:set var="four" value="${list[4].content }" />
+	
 		
 		
 		<c:forEach var="list" items="${list}" varStatus="status">
 			${list.content}
-			<!-- ${status.count} -->
-		
-
-			<c:choose>
-				<c:when test="${list.content eq one}" >${list.id }</c:when>
-				<c:when test="${list.content eq two}" >${list.id }</c:when>
-				<c:when test="${list.content eq three}" >${list.id }</c:when>
-				<c:when test="${list.content eq four}" >${list.id }</c:when>
-				<c:otherwise>${list.id }</c:otherwise>
-			</c:choose>
-			</c:forEach>
+		</c:forEach>
 		] <br>
 		<!--<c:set var="i" value="${i+1}" />-->
-		
-		<p id='test602'>(1/5)</p>
+
 
 
 
@@ -181,8 +165,16 @@ video {
 
 				<tr>
 					<td class="studycolor"
-						style="text-align: center; font-size: large;" id='test60'
-						onclick=testfn()>학습 단어 : ${list[0].content} (${list[0].id})</td>
+						style="text-align: center; font-size: large;" id='test60'>
+						<c:forEach var="list" items="${list}" varStatus="status">
+						<c:if test="${status.index eq cnt}">
+							학습 단어 : ${list.content} (${list.id})
+						</c:if>
+						</c:forEach>
+
+					</td>
+					
+					
 				</tr>
 			</thead>
 			<tbody>
@@ -272,6 +264,17 @@ video {
 	<script>
 		
 		$('input[id=h_cnt]').attr('value',cnt);
+		if (cnt==0){
+			$("#test60").text('학습 단어: ${list[1].content} (${list[1].id})');
+		}else if(cnt==1){
+			$("#test60").text('학습 단어: ${list[2].content} (${list[2].id})');
+		}else if(cnt==2){
+			$("#test60").text('학습 단어: ${list[3].content} (${list[3].id})');
+		}else if(cnt==3){
+			$("#test60").text('학습 단어: ${list[4].content} (${list[4].id})');
+		}else{
+			alert("다섯단어 끝");
+		}
 		
 		
 		function back1(cate) {

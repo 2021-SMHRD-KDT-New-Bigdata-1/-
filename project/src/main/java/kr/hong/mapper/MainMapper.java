@@ -65,6 +65,11 @@ public interface MainMapper {
 	public List<Test> Syl_weak(String id);
 	public List<Test> Word_weak(String id);
 	public List<Test> Sen_weak(String id);
+	
+	//test_insert
+	public void sy_test_insert(@Param("num") int num,@Param("speak_accuracy") String speak_accuracy,@Param("lip_accuracy")String lip_accuracy, @Param("user_id")String user_id,@Param("weak")String weak);
+	public void wo_test_insert(String num, String speak_accuracy,String lip_accuracy, String user_id,String weak);
+	public void sen_test_insert(String num, String speak_accuracy,String lip_accuracy, String user_id,String weak);
 }
 
 

@@ -95,7 +95,14 @@ table td {
 </head>
 <body>
 	<%
-		String data = request.getParameter("result");
+		String speak_acc = request.getParameter("speak_acc");
+		String lip_acc = request.getParameter("lip_acc");
+		String word_num = request.getParameter("word_num");
+		String word_idx = request.getParameter("word_idx");
+		int list_cnt = Integer.parseInt(request.getParameter("list_cnt"));
+		String day = request.getParameter("day");
+		String cate = request.getParameter("cate");
+	
 	%>
 
 	<!-- Header -->
@@ -114,14 +121,15 @@ table td {
 			<tr>
 				<td colspan="3" calss="resultt" style="height: 150px; width: 350px; 
 				 text-align: center; font-size: large; word-break: keep-all;">
-					내부구성에따라 상단과 하단으로 옷장/옷장, 옷장/이불장으로 선택하여 사용할 수 있습니다.
+					발음 정확도 : <%=speak_acc %> 점 <br>
+					입모양 정확도 : <%=lip_acc %> 점
 				</td>
 			</tr>
 			<tr>
 				<td class="results"></td>
 				
 				<td style="border: 3px solid ; border-color: #ff8040; background-color: white; ">
-				결과는 <%=data %>
+				
 				</td>
 				
 				<td class="results"></td>
@@ -131,11 +139,20 @@ table td {
 			<tr>
 				<td colspan="3" calss="resultb" style=" height: 200px; text-align: center;">
 					<button type="submit" class="btn btn-default" id="return" onclick="history.back()">다시하기</button> &nbsp; &nbsp;
-					<button type="submit" class="btn btn-default" id="pass">넘어가기</button> &nbsp; &nbsp;
+					<button class="btn btn-default" id="pass" onclick=insert_plus_nextFn(<%=speak_acc%>,<%=lip_acc%>,<%=word_num%>,<%=word_idx%>,<%=list_cnt%>,<%=day%>,<%=cate%>)>넘어가기</button> &nbsp; &nbsp;
 					<button class="btn btn-default" id="synonym">유사단어</button>
 				</td>
 			</tr>
 		</tbody>
 	</table>
+<script>
+	function insert_plus_nextFn(speak_acc,lip_acc,word_num,word_idx,cnt,day,cate){
+		//alert("버튼 누름");
+		alert(speak_acc+" "+lip_acc+" "+word_num+" "+word_idx+" "+(cnt+1)+" "+day+" "+cate);
+		location.href= "test_insert.do?speak_accuracy="+speak_acc+"&lip_accuracy="+lip_acc
+				+"&num="+word_num+"&id="+word_idx+"&cnt="+(cnt+1)+"&day="+day+"&cate="+cate;
+	}
+</script>
+	
 </body>
 </html>

@@ -243,7 +243,40 @@ public class BoardController {
 			System.out.println("hi");
 			return "studyresult2";
 		}
-
+		
+		@RequestMapping("/test_insert.do")
+		public String test_insert(String speak_accuracy, String lip_accuracy, String num, String id, String cnt, String day, String cate,
+				Model model, HttpSession Session) {
+			System.out.println(num);
+			System.out.println(speak_accuracy);
+			System.out.println(lip_accuracy);
+			System.out.println(id);
+			System.out.println(cnt);
+			
+			
+			User vo = (User)Session.getAttribute("vo");
+			String user_id = vo.getUser_id();
+			
+			String weak="N";
+			if(Integer.parseInt(speak_accuracy) < 50 || Integer.parseInt(lip_accuracy) < 50) {weak="Y";}
+			
+			if(cate.equals("1")) {
+				mapper.sy_test_insert(Integer.parseInt(num), speak_accuracy, lip_accuracy, user_id, weak); //test 테이블에 인서트하는 mapper
+				List<Syllable> list = mapper.studypage2_sy(day); //cate,day 에 맞는 단어 뽑는 mapper
+				model.addAttribute("list", list);
+			}else if(cate.equals("2")) {
+				mapper.wo_test_insert(num, speak_accuracy, lip_accuracy, user_id, weak );
+				List<Word> list = mapper.studypage2_wo(day);
+				model.addAttribute("list", list);
+			}else if(cate.equals("3")) {
+				mapper.sen_test_insert(num, speak_accuracy, lip_accuracy, user_id, weak);
+				List<Sentence> list = mapper.studypage2_sen(day);
+				model.addAttribute("list", list);
+			}else{System.out.println("test_insert 오류");}
+			
+			//model.addAttribute("cnt",cnt);
+			return "studypage2";
+		}
 
 
 		

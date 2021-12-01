@@ -25,8 +25,12 @@
 
 	<title>최종학습페이지</title>
 <style>
-	
-	 /* 이거 지우면 다시 배경색 되돌아감~ */
+
+	.day{
+		margin-left:auto;
+		margin-right: 70px;
+		font-size:x-large;
+	}
 	
 	.all{
 		margin-top: 120px;
@@ -38,18 +42,20 @@
 		color:black;
 		margin:auto;
 	}
-	#day{
+	#avg{
 		color: white; 
 	    background-color: #ff8040;
-	    border-radius: 10px;
+		margin-top: 21px;
+		margin-bottom: 24px;
 	    text-align: center;
 	    margin: auto;
 	    font-size: xx-large;
+	    font-weight: bold;
 	}
 	
 	
 	nav{
-		width: 600px;
+		width: 622px;
 		margin: auto;
 	}
 	
@@ -68,19 +74,29 @@
 		padding-left: 0;
 	}
 	
-	#btnselect{
-		margin-top: 20px;
+	#btnexit{
+	    margin-top: 0;
+	    border: 1px solid #ff8040;
+	    background-color: #ff8040;
+	    border-radius: 17px;
+	    height: 50px;
+	    width: 128px;
+	    color: white;
+		font-weight:900;
 	}
 	
 	#list55{
 		color: black;
 		text-align: center;
+		margin: 56px;
 	}
 		
 	.contents{
-		height: 400px;
-		padding-top: 45px;
+		height: 600px;
+		padding-top: 20px;
 		font-size: x-large;
+		border: 2px solid #ffaf42;
+		background-color: white;
 	}
 
 	.far fa-laugh-wink fa-3x{
@@ -99,7 +115,7 @@
 </head>
 <body> <!-- 배경색 돌아가고 싶으면 css -->
 	<!-- Header -->
-	<header id="header" class="alt"> </header>
+	<header id="header" class="alt"><p class="day">DAY1</p></header>
 
 	<div class="all">
 
@@ -109,9 +125,9 @@
 		</div>
 		
 		<!-- 점수표출 -->
-		<div id="score">
+		<!-- <div id="score">
 			<h2 class="score1">100</h2>
-		</div>
+		</div>  -->
 
 		<!-- 결과리스트  -->
 		<nav>
@@ -123,13 +139,13 @@
 						<c:if test="${score >= 40 }"> <i class="far fa-tired fa-3x"></i></c:if>
 					</p>
 					
-					<div id="day">{study_date}dffadsaf</div> <!-- day1 -->
+					<div id="avg">평균 몇점</div> <!-- day1 -->
 					<div class="contents">
 					<p id="list55">가<i class="far fa-laugh-wink fa-1x"></i></p> <!-- 제시 단어 리스트 쫘라락 -->
-					<p id="list55">{word_content}sdf</p>
-					<p id="list55">{word_content}sdf</p> 
-					<p id="list55">{word_content}sdf</p> 
-					<p id="list55">{word_content}sdf</p> 
+					<p id="list55">문제제시hhajfdakhffkjhdjkfdaajlkfd j;fdaj;fadaklal</p>
+					<p id="list55">문제제시</p> 
+					<p id="list55">문제제시</p> 
+					<p id="list55">문제제시</p> 
 					</div>
 				</li>
 				
@@ -138,8 +154,8 @@
 			<br>
 		</nav>
 		<div class="b_utton">
-			<button id="btnselect" onclick="exit()">나가기</button>&nbsp;&nbsp;&nbsp;&nbsp;
-			<button id="btnselect" onclick="replay()">반복하기</button>
+			<button id="btnexit" onclick="exit()">나가기</button>&nbsp;&nbsp;&nbsp;&nbsp;
+			<button id="btnexit" onclick="replay()">반복하기</button>
 		</div>
 		
 	</div>

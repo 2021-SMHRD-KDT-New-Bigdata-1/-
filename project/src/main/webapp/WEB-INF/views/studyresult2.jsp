@@ -61,9 +61,14 @@
 }
 
 body {
-	background-color: #f2f2f2
+	background-color: #ffaf42;
 }
-
+h4{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 900;
+}
 
 
 }
@@ -93,6 +98,7 @@ body {
 		<button type="button" class="btnback">
 			<i class="fas fa-arrow-left fa-2x"></i>
 		</button>
+		<h4 >결과 확인</h4>
 	
 	</header>
 
@@ -106,7 +112,7 @@ body {
 				</th>
 			</tr>
 			<tr>
-				<td style="border: 1px solid white;background-color: white; ">
+				<td style="border: 3px solid ; border-color: #ff8040; background-color: white; ">
 				결과는 <%=data %>
 				</td>
 					<!-- <video width="30%" height="30%" autoplay="autoplay" id="myVideo"></td> -->

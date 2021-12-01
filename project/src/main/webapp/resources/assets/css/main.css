@@ -64,7 +64,7 @@ table {
     padding: 2em 2em 2em 2em;
     margin-left: auto;
     margin-right: auto;
-    background: white;
+    background: #f2f2f2;
 }
 
 td.studycolor {
@@ -2559,7 +2559,7 @@ input, select, textarea {
 			font-weight: 600;
 			padding: 1em 0.75em 0.75em 0.75em;
 			text-align: left;
-			background-color:#ff8040;
+			background-color:#ffaf42;
 		}
 
 		table thead {
@@ -3212,7 +3212,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #ff8040;
+		background-color: #ffaf42;
 		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
 		cursor: default;
 		font-weight: 600;

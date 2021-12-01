@@ -126,6 +126,7 @@ video {
 		</c:choose>
 		<i class="fas fa-arrow-left fa-2x"></i>
 		</button>
+		
 		<h3 class="stage_nm">${day}</h3>
 
 	</div>
@@ -259,7 +260,7 @@ video {
 								</label> <input type="file" id="cameraInput" name="file"
 									accept="video/*" capture="user" /> <input type="submit"
 									value="녹화완료" />
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
+
 							</form>
 						</div>
 

@@ -14,5 +14,6 @@ public class Test {
 		private String study_date;
 		private String reg_date;
 		private float accuracy;
-	
+		private String weak;
+		
 }

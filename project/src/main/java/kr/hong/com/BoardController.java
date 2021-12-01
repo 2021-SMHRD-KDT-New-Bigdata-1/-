@@ -17,6 +17,7 @@ import kr.hong.domain.LoginInfo;
 import kr.hong.domain.Mypage;
 import kr.hong.domain.Sentence;
 import kr.hong.domain.Syllable;
+import kr.hong.domain.Test;
 import kr.hong.domain.User;
 import kr.hong.domain.Word;
 import kr.hong.mapper.MainMapper;
@@ -55,10 +56,10 @@ public class BoardController {
 		
 	
 	
-		@RequestMapping("/finallresult.do")
-		public String finallresult() {
+		@RequestMapping("/finalresult.do")
+		public String finalresult() {
 			
-			return "finallresult";
+			return "finalresult";
 		}
 		
 		
@@ -95,6 +96,38 @@ public class BoardController {
 			model.addAttribute("list", list);
 			return "studypage2";
 		}
+		
+		
+		@RequestMapping("/Syl_weak.do") 
+		public String Syl_weak(HttpSession session, Model model){
+		User vo = (User)session.getAttribute("vo");
+		String id = vo.getUser_id();
+		List<Test> list = mapper.Syl_weak(id);
+		model.addAttribute("list", list);
+		return "weakselect"; 
+		 }
+		
+		@RequestMapping("/Word_weak.do") 
+		public String Word_weak(HttpSession session, Model model){
+			User vo = (User)session.getAttribute("vo");
+			String id = vo.getUser_id();
+			List<Test> list = mapper.Word_weak(id);
+			model.addAttribute("list", list);
+			System.out.println(list);
+			return "weakselect"; 
+		}
+		
+		@RequestMapping("/Sen_weak.do") 
+		public String Sen_weak(HttpSession session, Model model){
+			User vo = (User)session.getAttribute("vo");
+			String id = vo.getUser_id();
+			List<Test> list = mapper.Sen_weak(id);
+			model.addAttribute("list", list);
+			System.out.println(list);
+			return "weakselect"; 
+		}
+		 
+		 
 		
 		
 		@RequestMapping("/studyhome.do")
@@ -166,7 +199,6 @@ public class BoardController {
 			return "studyresult2";
 		}
 
-		 
 
 
 		

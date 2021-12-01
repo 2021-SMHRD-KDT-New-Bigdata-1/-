@@ -2,12 +2,16 @@ package kr.hong.mapper;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.ui.Model;
 
 import kr.hong.domain.LoginInfo;
 import kr.hong.domain.Mypage;
 import kr.hong.domain.Sentence;
 import kr.hong.domain.Syllable;
+import kr.hong.domain.Test;
 import kr.hong.domain.User;
 import kr.hong.domain.Word;
 
@@ -28,6 +32,7 @@ public interface MainMapper {
 	//public String studypage1();
 	public String studypage2(String day);
 	//public String studypage3();
+	public String weakselect(String num);
 	
 	public List<Syllable> studypage2_sy(String day);
 	public List<Word> studypage2_wo(String day);
@@ -42,12 +47,15 @@ public interface MainMapper {
 	public String studyresult2();
 	public String index();
 	public String weakpage();
-	public String finallresult();
+	public String finalresult();
 	public List<Word> WordList1(); //기존
 	public List<Syllable> SylList(); //new
 	public List<Word> WordList();  //new 
 	public List<Sentence> SenList(); //new
-	
+	//new
+	public List<Test> Syl_weak(String id);
+	public List<Test> Word_weak(String id);
+	public List<Test> Sen_weak(String id);
 }
 
 

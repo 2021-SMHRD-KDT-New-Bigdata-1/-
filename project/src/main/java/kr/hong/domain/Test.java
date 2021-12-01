@@ -13,6 +13,8 @@ public class Test {
 		private String content;
 		private String study_date;
 		private String reg_date;
-		private float accuracy;
-	
+		private float lip_accuracy;
+		private String weak;
+		private float speak_accuracy;
+		
 }

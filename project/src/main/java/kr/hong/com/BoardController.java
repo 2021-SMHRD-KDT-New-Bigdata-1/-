@@ -80,18 +80,21 @@ public class BoardController {
 		public String studypage2_sy(String day, Model model){
 			List<Syllable> list = mapper.studypage2_sy(day);
 			model.addAttribute("list", list);
+			model.addAttribute("cnt",0);
 			return "studypage2";
 		}
 		@RequestMapping("/studypage2_wo.do")
 		public String studypage2_wo(String day,Model model){
 			List<Word> list = mapper.studypage2_wo(day);
 			model.addAttribute("list", list);
+			model.addAttribute("cnt",0);
 			return "studypage2";
 		}
 		@RequestMapping("/studypage2_sen.do")
 		public String studypage2_sen(String day,Model model){
 			List<Sentence> list = mapper.studypage2_sen(day);
 			model.addAttribute("list", list);
+			model.addAttribute("cnt",0);
 			return "studypage2";
 		}
 		
@@ -129,8 +132,8 @@ public class BoardController {
 		
 		
 		@RequestMapping("/studyhome.do")
-		public String studyhome(String num, Model model) {
-			model.addAttribute("num", num);
+		public String studyhome(String cate, Model model) {
+			model.addAttribute("cate", cate);
 			
 			return "studyhome";
 		}

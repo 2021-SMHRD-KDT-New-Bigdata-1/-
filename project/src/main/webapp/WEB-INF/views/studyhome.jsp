@@ -77,22 +77,22 @@
 			  </style>
 	<script>
 	//querystring
-	var num = '${num}';
+	var cate = '${cate}';
 	
 	$(document).ready(function() { //익명함수
 		  //alert("제이쿼리 가즈앗!");
 		
-		if(num==1){
+		if(cate==1){
 	    	Syl_loadList();
 		}
-		else if(num==2){
+		else if(cate==2){
 			Word_loadList();
 		}
-		else if(num==3){
+		else if(cate==3){
 			Sen_loadList();
 		}
 		else{
-			alert("num인식안됨");
+			alert("cate인식안됨");
 		}
 	   });
 	
@@ -285,12 +285,12 @@
       $(".panel-body2").html(view);
 	}
 	
-	function studypageGo(day, num){
-		if(num==1){
+	function studypageGo(day, cate){
+		if(cate==1){
 			location.href="studypage2_sy.do?day="+day;
-		}else if(num==2){
+		}else if(cate==2){
 			location.href="studypage2_wo.do?day="+day;
-		}else if(num==3){
+		}else if(cate==3){
 			location.href="studypage2_sen.do?day="+day;
 		}else{
 			alert("studypageGo 오류!");

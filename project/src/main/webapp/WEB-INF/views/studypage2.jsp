@@ -208,13 +208,22 @@ video {
 
 							<form action="http://211.223.106.113:5000/dlModel" method="POST"
 								enctype="multipart/form-data">
-
 								<!-- type hidden으로 바꿔줄거 -->
+								<input type="text" id="h_idx" name="h_idx" value="${list[0].num}">
 								<input type="text" id="h_idx" name="h_idx" value="${list[0].id}">
-
-								<input type="text" id="h_cnt" name="h_cnt" value="0"> 
+								<input type="text" id="h_cnt" name="h_cnt" value="${cnt}"> 
 								<input type="text" id="h_day" name="h_day" value="<%=day%>">
-
+								<c:choose>
+									<c:when test="${fn:length(list[0].content)==1}" >
+										<input type="text" id="h_cate" name="h_cate" value="1">
+									</c:when>
+									<c:when test="${fn:length(list[0].content)>1 and fn:length(list[0].content)<6}" >
+										<input type="text" id="h_cate" name="h_cate" value="2">
+									</c:when>
+									<c:otherwise>
+										<input type="text" id="h_cate" name="h_cate" value="3">
+									</c:otherwise>
+								</c:choose>
 
 
 			
@@ -227,19 +236,8 @@ video {
 								<!-- css 넣어주기,, button -->
 
 
-								<input type="text" id="h_cnt" name="h_cnt" value="0">
-								<input type="text" id="h_day" name="h_day" value="<%=day %>">
-								<c:choose>
-								<c:when test="${fn:length(list[0].content)==1}" >
-									<input type="text" id="h_num" name="h_num" value="1">
-								</c:when>
-								<c:when test="${fn:length(list[0].content)>1 and fn:length(list[0].content)<6}" >
-									<input type="text" id="h_num" name="h_num" value="2">
-								</c:when>
-								<c:otherwise>
-									<input type="text" id="h_num" name="h_num" value="3">
-								</c:otherwise>
-								</c:choose>
+								
+								
 								
 								<!-- 
 								<input type="hidden" class="cameraInput1" value=""
@@ -272,12 +270,12 @@ video {
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
-		var cnt = 0;
+		
 		$('input[id=h_cnt]').attr('value',cnt);
 		
 		
-		function back1(num) {
-			location.href = "studyhome.do?num=" + num;
+		function back1(cate) {
+			location.href = "studyhome.do?cate=" + cate;
 		}
 		
 		function testfn(){

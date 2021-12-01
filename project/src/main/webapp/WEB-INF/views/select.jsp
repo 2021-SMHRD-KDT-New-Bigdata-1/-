@@ -205,8 +205,8 @@ function login() {
     <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 	<script>
-	function studyhome(num){
- 		location.href="studyhome.do?num="+num;
+	function studyhome(cate){
+ 		location.href="studyhome.do?cate="+cate;
  	}
 	function Syl_weak(){
  		location.href="Syl_weak.do";

@@ -114,8 +114,8 @@
 	
 </style>
 <script>
-	var h_cate = $("#h_c").val();
-	var h_day = $("#h_d").val();
+	var h_cate = $("input[id=h_c]").val();
+	var h_day = $("input[id=h_d]").val();
 
 	$(document).ready(function() { //익명함수
 		  
@@ -126,7 +126,7 @@
 	    	Syl_testList();
 		}
 		else if(h_cate==2){
-			Word_testList(;
+			Word_testList();
 		}
 		else if(h_cate==3){
 			Sen_testList();

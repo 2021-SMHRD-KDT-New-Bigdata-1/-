@@ -138,7 +138,7 @@ video {
 
 
 		Step
-		<%=day%>
+		<%=day%>  (${cnt+1}/5)
 		<!-- 단어 : [
 
 	
@@ -166,22 +166,26 @@ video {
 				<tr>
 					<td class="studycolor"
 						style="text-align: center; font-size: large;" id='test60'>
-						<c:forEach var="list" items="${list}" varStatus="status">
-						<c:if test="${status.index eq cnt}">
-							학습 단어 : <b>${list.content} (${list.id}) </b>
-						</c:if>
-						</c:forEach>
-
+						학습 단어
 					</td>
-					
-					
+											
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td class="studycolor2"
+						style="text-align: center; font-size: large;">
+						<c:forEach var="list" items="${list}" varStatus="status">
+						<c:if test="${status.index eq cnt}">
+							<h2>${list.content}</h2> <!-- id출력은   (${list.id}) -->
+						</c:if>
+						</c:forEach>						
+					</td>
+				</tr>
+				<tr>
+					<td class="studycolor2"
 						style="text-align: center; vertical-align: middle;"><video
-							controls width="350">
+							controls autoplay muted playsinline width="350">
 
 							<source
 								src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"

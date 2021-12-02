@@ -126,7 +126,7 @@
 	    	Syl_testList();
 		}
 		else if(h_cate==2){
-			Word_testList(;
+			Word_testList();
 		}
 		else if(h_cate==3){
 			Sen_testList();

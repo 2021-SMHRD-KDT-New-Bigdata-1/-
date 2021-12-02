@@ -173,8 +173,10 @@ video {
 			</thead>
 			<tbody>
 				<tr>
-					<td class="studycolor2"
-						style="text-align: center; font-size: large;">
+					<td class="studycolor2" style="text-align: center; vertical-align: middle;">
+						<video controls autoplay muted playsinline width="350">
+
+						
 						<c:forEach var="list" items="${list}" varStatus="status">
 						<c:if test="${status.index eq cnt}">
 							<h2>${list.content}</h2> <!-- id출력은   (${list.id}) -->
@@ -186,10 +188,7 @@ video {
 					<td class="studycolor2"
 						style="text-align: center; vertical-align: middle;"><video
 							controls autoplay muted playsinline width="350">
-
-							<source
-								src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"
-								type="video/mp4">
+	<source src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4" type="video/mp4">
 
 						</video></td>
 				</tr>

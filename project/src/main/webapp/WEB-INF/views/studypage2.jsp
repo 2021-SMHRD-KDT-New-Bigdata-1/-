@@ -139,7 +139,7 @@ video {
 
 		Step
 		<%=day%>
-		단어 : [
+		<!-- 단어 : [
 
 	
 		
@@ -147,7 +147,7 @@ video {
 		<c:forEach var="list" items="${list}" varStatus="status">
 			${list.content}
 		</c:forEach>
-		] <br>
+		] <br> -->
 		<!--<c:set var="i" value="${i+1}" />-->
 
 
@@ -168,7 +168,7 @@ video {
 						style="text-align: center; font-size: large;" id='test60'>
 						<c:forEach var="list" items="${list}" varStatus="status">
 						<c:if test="${status.index eq cnt}">
-							학습 단어 : ${list.content} (${list.id})
+							학습 단어 : <b>${list.content} (${list.id}) </b>
 						</c:if>
 						</c:forEach>
 
@@ -204,23 +204,23 @@ video {
 								<!-- type hidden으로 바꿔줄거 -->
 								<c:forEach var="list" items="${list}" varStatus="status">
 								<c:if test="${status.index eq cnt}">
-									<input type="text" id="h_num" name="h_num" value="${list.num}">
-									<input type="text" id="h_idx" name="h_idx" value="${list.id}">
+									<input type="hidden" id="h_num" name="h_num" value="${list.num}">
+									<input type="hidden" id="h_idx" name="h_idx" value="${list.id}">
 								</c:if>
 								</c:forEach>
 								
-								<input type="text" id="h_cnt" name="h_cnt" value="${cnt}"> 
-								<input type="text" id="h_day" name="h_day" value="<%=day%>">
+								<input type="hidden" id="h_cnt" name="h_cnt" value="${cnt}"> 
+								<input type="hidden" id="h_day" name="h_day" value="<%=day%>">
 								
 								<c:choose>
 									<c:when test="${fn:length(list[0].content)==1}" >
-										<input type="text" id="h_cate" name="h_cate" value="1">
+										<input type="hidden" id="h_cate" name="h_cate" value="1">
 									</c:when>
 									<c:when test="${fn:length(list[0].content)>1 and fn:length(list[0].content)<6}" >
-										<input type="text" id="h_cate" name="h_cate" value="2">
+										<input type="hidden" id="h_cate" name="h_cate" value="2">
 									</c:when>
 									<c:otherwise>
-										<input type="text" id="h_cate" name="h_cate" value="3">
+										<input type="hidden" id="h_cate" name="h_cate" value="3">
 									</c:otherwise>
 								</c:choose>
 

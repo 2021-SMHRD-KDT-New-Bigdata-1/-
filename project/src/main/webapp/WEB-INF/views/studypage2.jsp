@@ -204,7 +204,7 @@ video {
 								<!-- type hidden으로 바꿔줄거 -->
 								<c:forEach var="list" items="${list}" varStatus="status">
 								<c:if test="${status.index eq cnt}">
-									<input type="text" id="h_idx" name="h_idx" value="${list.num}">
+									<input type="text" id="h_num" name="h_num" value="${list.num}">
 									<input type="text" id="h_idx" name="h_idx" value="${list.id}">
 								</c:if>
 								</c:forEach>

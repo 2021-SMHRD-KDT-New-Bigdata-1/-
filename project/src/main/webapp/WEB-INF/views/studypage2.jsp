@@ -84,7 +84,7 @@ video {
 	width: 100%;
 	height: 350px;
 }
-}
+
 </style>
 <!-- flask -->
 <script type="text/javascript"
@@ -179,6 +179,7 @@ video {
 							var="list" items="${list}" varStatus="status">
 							<c:if test="${status.index eq cnt}">
 								<h2>${list.content}</h2>
+								[${list.pron}]
 								<!-- id출력은   (${list.id}) -->
 							</c:if>
 						</c:forEach>
@@ -198,7 +199,7 @@ video {
 				</tr>
 				<tr>
 					<td class="studycolor2"
-						style="text-align: center; font-size: large;">발음해보세요 !</td>
+						style="text-align: center; font-size: large;">발음해보세요</td>
 				</tr>
 				<tr>
 					<td class="studycolor"
@@ -238,11 +239,12 @@ video {
 
 
 								<input type="hidden" class="cameraInput1" value=""
-									placeholder="첨부파일"> <label for="cameraInput"> <i
+									placeholder="첨부파일" > <label for="cameraInput"> <i
 									class="fas fa-microphone-alt fa-2x"></i>
 								</label> <input type="file" id="cameraInput" name="file"
-									accept="video/*" capture="user" />
-								<button type="submit" class="btn-default" onclick="Loading();">분석</button>
+									accept="video/*" capture="user" onclick='vdclickFn()'/>
+								<button type="submit" class="cameraInput" onclick="Loading();">분석</button>
+								<p id='vdcheck'>&nbsp;</p>
 								<!-- css 넣어주기,, button -->
 
 

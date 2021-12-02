@@ -125,8 +125,8 @@
 	String cate = request.getParameter("cate"); //음절/단어/문장
 	%>
 	<!-- 히든으로 바꿀거임 -->
-	<input type='text' id='h_c' name='h_c' value='<%=cate%>' >
-	<input type='text' id='h_d' name='h_d' value="<%=day%>" >
+	<input type='hidden' id='h_c' name='h_c' value='<%=cate%>' >
+	<input type='hidden' id='h_d' name='h_d' value="<%=day%>" >
 
 	<!-- 배경색 돌아가고 싶으면 css -->
 	<!-- Header -->

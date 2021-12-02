@@ -22,6 +22,7 @@ import kr.hong.domain.Syllable;
 import kr.hong.domain.Test;
 import kr.hong.domain.User;
 import kr.hong.domain.Word;
+import kr.hong.domain.weak;
 import kr.hong.mapper.MainMapper;
 
 
@@ -162,7 +163,7 @@ public class BoardController {
 			String id = vo.getUser_id();
 			List<Mypage> list = mapper.mypage1_wo(id);
 			model.addAttribute("list", list);
-			return "mypage1";
+			return "mypage2";
 		}
 		
 		@RequestMapping("/Sentence_test.do")
@@ -171,7 +172,7 @@ public class BoardController {
 			String id = vo.getUser_id();
 			List<Mypage> list = mapper.mypage1_se(id);
 			model.addAttribute("list", list);
-			return "mypage1";
+			return "mypage3";
 		}
 		
 		@RequestMapping("/Step_Result_sy.do")
@@ -297,7 +298,7 @@ public class BoardController {
 		public String syl_weakstudy(Model model, HttpSession session, int num){
 		User vo = (User)session.getAttribute("vo");
 		String id = vo.getUser_id();
-		Test list = mapper.syl_weakstudy(num, id);
+		weak list = mapper.syl_weakstudy(num, id);
 		System.out.println(list);
 		System.out.println(id);
 		model.addAttribute("list", list);
@@ -310,7 +311,7 @@ public class BoardController {
 			String id = vo.getUser_id();
 			System.out.println(num);
 			System.out.println(id);
-			Test list = mapper.word_weakstudy(num, id);
+			weak list = mapper.word_weakstudy(num, id);
 			System.out.println(list);
 			model.addAttribute("list", list);
 			return "weakpage"; 
@@ -321,8 +322,7 @@ public class BoardController {
 		User vo = (User)session.getAttribute("vo");
 		String id = vo.getUser_id();
 		System.out.println(num);
-		System.out.println(id);
-		Test list = mapper.sen_weakstudy(num, id);
+		weak list = mapper.sen_weakstudy(num, id);
 		System.out.println(list);
 		model.addAttribute("list", list);
 		return "weakpage";   

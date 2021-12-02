@@ -122,7 +122,7 @@ table td {
 		
 			<tbody>
 			<tr>
-				<td colspan="3" class="result" style="height: 150px; width: 350px; 
+				<td  colspan="3" class="result" style="height: 150px; width: 350px; 
 				 text-align: center; font-size: large; word-break: keep-all;">
 					발음 정확도 : <%=speak_acc %> 점 <br>
 					입모양 정확도 : <%=lip_acc %> 점

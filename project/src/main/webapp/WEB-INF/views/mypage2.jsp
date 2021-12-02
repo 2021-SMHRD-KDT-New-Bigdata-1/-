@@ -31,6 +31,13 @@
    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
 </script>
 
+<!-- 상단바 뒤로가기 버튼 화살표  -->   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 상단바 뒤로가기 버튼 화살표  -->  
+
    <!--이모티콘-->
       <link rel="stylesheet"
          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -251,6 +258,20 @@ footer {
     background:url('../../resources/assets/images/img_193723.png') no-repeat 93% 90%/12px auto;
     border: 2px solid #ff8000;
    }
+   
+ .mypage_logo {
+    color: white;
+    padding-left: 580px;
+    font-size: x-large;'
+}
+
+button.btnback{
+	all:unset; 
+	margin-left:25px; 
+	margin-top:5px;
+	color:white;
+}
+ 
 
 </style>
 
@@ -284,7 +305,10 @@ function Step_Result_wo(step) {
       <!-- Header -->
       <section>
          <header class="nav_top">
-            <h1 id="title_name" style="margin-left: 20px;"><a href="main.do">Allbareum</a></h1>
+           <div>
+		         <button onclick="back()"type="button" class="btnback"><i class="fas fa-arrow-left fa-2x"></i></button>
+		            <a href="main.do" class="mypage_logo">Allbareum</a>
+        	 </div>  
             <nav id="main_title_nav" role="navigation">
                <ul id="main-menu" style="list-style: none;">
                   <li><a onclick="Syllable_test();">음절</a></li>
@@ -298,7 +322,7 @@ function Step_Result_wo(step) {
       <!-- Main -->
       <div id="main">
          <div class="container">
-            <div class="row" style="margin-left: -32px;margin-top: 32px;">
+            <div class="row" style="margin-left: -20px;margin-top: 32px; margin-top:80px;">
 
                 <select id="my_select" style="margin-left:auto; margin-right:auto; text-align:center;"
                 onchange="Step_Result_wo(this.options[this.selectedIndex].value)" >
@@ -315,7 +339,7 @@ function Step_Result_wo(step) {
 
 
                <div class="col-12-small"
-                  style="width: 100%; min-width: 349.5px; margin-top: 50px;">
+                  style="width: 100%; min-width: 349.5px; margin-top: 60px;">
                   <div class="panel panel-primary">
                      <div id="chart_title" class="panel-heading">정확도</div>
                      <div class="panel-body">
@@ -389,7 +413,7 @@ function Step_Result_wo(step) {
                   </div>
                </div>
                <div class="col-12-small"
-                  style="width: 50%; margin-top: 30px;">
+                  style="width: 50%; margin-top: 40px;">
                   <div class="panel panel-primary">
                      <div id="chart_title" class="panel-heading">음성 정확도</div>
                      <div class="panel-body">
@@ -421,7 +445,7 @@ function Step_Result_wo(step) {
                   </div>
                </div>
                <div class="col-12-small"
-                  style="width: 50%; margin-top: 30px;">
+                  style="width: 50%; margin-top: 40px;">
                   <div class="panel panel-primary">
                      <div id="chart_title" class="panel-heading">입모양 정확도</div>
                      <div class="panel-body">

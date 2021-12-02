@@ -163,7 +163,7 @@ public class BoardController {
 			String id = vo.getUser_id();
 			List<Mypage> list = mapper.mypage1_wo(id);
 			model.addAttribute("list", list);
-			return "mypage1";
+			return "mypage2";
 		}
 		
 		@RequestMapping("/Sentence_test.do")
@@ -172,7 +172,7 @@ public class BoardController {
 			String id = vo.getUser_id();
 			List<Mypage> list = mapper.mypage1_se(id);
 			model.addAttribute("list", list);
-			return "mypage1";
+			return "mypage3";
 		}
 		
 		@RequestMapping("/Step_Result_sy.do")

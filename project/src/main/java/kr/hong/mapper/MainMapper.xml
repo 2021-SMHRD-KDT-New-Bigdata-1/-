@@ -190,28 +190,28 @@
 		insert into tbl_sentence_test(num, speak_accuracy, user_id, weak, lip_accuracy) values(#{num}, #{speak_accuracy}, #{user_id}, #{weak}, #{lip_accuracy})
 	</insert>
 	
-	<select id="syl_weakstudy" parameterType = "String" resultType="kr.hong.domain.Test">
+	<select id="syl_weakstudy" parameterType = "map" resultType="kr.hong.domain.Test">
 	    SELECT s.content, t.user_id, t.num
 	    FROM tbl_syllable AS s
 		JOIN tbl_syllable_test AS t
 		ON t.num = s.num
-		WHERE t.user_id = #{id} and t.num=#{num}
+		WHERE t.user_id = #{id} AND t.num=#{num}
 	</select>
 	
-	<select id="word_weakstudy" parameterType = "String" resultType="kr.hong.domain.Test">
+	<select id="word_weakstudy" parameterType = "map" resultType="kr.hong.domain.Test">
 	    SELECT s.content, t.user_id, t.num
 	    FROM tbl_syllable AS s
 		JOIN tbl_syllable_test AS t
 		ON t.num = s.num
-		WHERE t.user_id = #{id} and t.num=#{num}
+		WHERE t.user_id = #{id} AND t.num=#{num}
 	</select>
 	
-	<select id="sen_weakstudy" parameterType = "String" resultType="kr.hong.domain.Test">
+	<select id="sen_weakstudy" parameterType = "map" resultType="kr.hong.domain.Test">
 	    SELECT s.content, t.user_id, t.num
 	    FROM tbl_syllable AS s
 		JOIN tbl_syllable_test AS t
 		ON t.num = s.num
-		WHERE t.user_id = #{id} and t.num=#{num}
+		WHERE t.user_id = #{id} AND t.num=#{num}
 	</select>
 	
 </mapper> 

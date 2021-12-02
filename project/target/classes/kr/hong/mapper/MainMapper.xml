@@ -28,7 +28,7 @@
 	
 	<!-- test result -->
 	<select id="Syl_testList" parameterType="map" resultType="kr.hong.domain.Test_result">
-		select t.speak_accuracy, t.user_id, t.weak, t.lip_accuracy, w.study_date, w.id 
+		select w.content, t.speak_accuracy, t.user_id, t.weak, t.lip_accuracy, w.study_date, w.id 
 		from tbl_syllable_test as t 
 		JOIN tbl_syllable as w 
 		on t.num = w.num 
@@ -36,7 +36,7 @@
 		and w.study_date=#{day}
 	</select>
 	<select id="Word_testList" parameterType="map" resultType="kr.hong.domain.Test_result">
-		select t.speak_accuracy, t.user_id, t.weak, t.lip_accuracy, w.study_date, w.id 
+		select w.content, t.speak_accuracy, t.user_id, t.weak, t.lip_accuracy, w.study_date, w.id 
 		from tbl_word_test as t 
 		JOIN tbl_word as w 
 		on t.num = w.num 
@@ -44,7 +44,7 @@
 		and w.study_date=#{day}
 	</select>
 	<select id="Sen_testList" parameterType="map" resultType="kr.hong.domain.Test_result">
-		select t.speak_accuracy, t.user_id, t.weak, t.lip_accuracy, w.study_date, w.id 
+		select w.content, t.speak_accuracy, t.user_id, t.weak, t.lip_accuracy, w.study_date, w.id 
 		from tbl_sentence_test as t 
 		JOIN tbl_sentence as w 
 		on t.num = w.num 

@@ -286,16 +286,15 @@ footer {
                      			
                      			<tr style="width:100%;">
                      			<c:choose>
-								<c:when test="${fn:length(list.content)==1}" >
-									<td style="float:left; margin-left:40px;" onclick="syl_weakstudy(${list.num})">${list.content },${list.num }</td>
+								<c:when test="${list.num  < 200 && list.num>=0}" >
+									<td style="float:left; margin-left:40px;" onclick="syl_weakstudy(${list.id})">단어 : ${list.content },번호 : ${list.num },아이디 : ${list.id }</td>
 								</c:when>
-								<c:when test="${list.id} > 1000" >
-									<td style="float:left; margin-left:40px;" onclick="sen_weakstudy(${list.num})">${list.content },번호:${list.num},아이디:${list.id }</td>
+								<c:when test="${list.num < 500 && list.num > 200}" >
+									<td style="float:left; margin-left:40px;" onclick="sen_weakstudy(${list.id})">문장 : ${list.content },번호:${list.num},아이디:${list.id }</td>
 								</c:when>
-								<c:otherwise>
-									<td style="float:left; margin-left:40px;" onclick="word_weakstudy(${list.num})">${list.content },${list.num }</td>
-								</c:otherwise>
-								
+								<c:when test="${list.num < 1500 && list.num > 500}">
+									<td style="float:left; margin-left:40px;" onclick="word_weakstudy(${list.id})">단어 : ${list.content },번호 : ${list.num },아이디 : ${list.id }</td>
+								</c:when>
 								</c:choose>
                      			<td style="float:right; margin-right:50px;">입모양 : ${list.lip_accuracy }, 발음 : ${list.speak_accuracy }</td></tr>
                      	</c:forEach>
@@ -342,15 +341,17 @@ footer {
 	      location.href="Sen_weak.do";
 	}
    
+   
    function syl_weakstudy(num){
 	   location.href="syl_weakstudy.do?num="+num;
    }
-   function word_weakstudy(num){
-	   location.href="word_weakstudy.do?num="+num;
-   }
-   function sen_weakstudy(num){
+	   function sen_weakstudy(num){
 	   location.href="sen_weakstudy.do?num="+num;
    }
+	   function word_weakstudy(num){
+	   location.href="word_weakstudy.do?num="+num;
+   }
+
    
    </script>
 </body>

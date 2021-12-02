@@ -242,7 +242,7 @@ video {
 									class="fas fa-microphone-alt fa-2x"></i>
 								</label> <input type="file" id="cameraInput" name="file"
 									accept="video/*" capture="user" />
-								<button type="submit" class="btn-default" onclick="Loading();">분석</button>
+								<button type="submit" class="cameraInput" onclick="Loading();">분석</button>
 								<!-- css 넣어주기,, button -->
 
 

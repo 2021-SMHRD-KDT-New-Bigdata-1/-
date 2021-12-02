@@ -31,8 +31,8 @@ section, summary, time, mark, audio, video {
 
 @font-face {
 
-    src : url("../webfonts/BMJUA_ttf.ttf"); 
-    font-family: "jua";
+    src : url("../webfonts/tway_fly.ttf"); 
+    font-family: "twayfly";
 
 }
 
@@ -72,7 +72,7 @@ blockquote, q {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-	font-family: "jua";
+	font-family: "twayfly";
 }
 /* 학습페이지 테이블 규격 맞추기 */
 .word {

@@ -112,10 +112,31 @@
 	}
 	
 </style>
+<script>
+		var num = '${num}';
+	
+	$(document).ready(function() { //익명함수
+		  //alert("제이쿼리 가즈앗!");
+		
+		if(num==1){
+	    	Syl_loadList();
+		}
+		else if(num==2){
+			Word_loadList();
+		}
+		else if(num==3){
+			Sen_loadList();
+		}
+		else{
+			alert("num인식안됨");
+		}
+	   });
+	
+</script>
 </head>
 <body> <!-- 배경색 돌아가고 싶으면 css -->
 	<!-- Header -->
-	<header id="header" class="alt"><p class="day">DAY1</p></header>
+	<header id="header" class="alt"><p class="day">STEP1</p></header>
 
 	<div class="all">
 

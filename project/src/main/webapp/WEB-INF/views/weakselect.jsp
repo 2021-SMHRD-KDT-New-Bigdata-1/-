@@ -1,5 +1,3 @@
-weakselect
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -48,7 +46,6 @@ html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
    header, hgroup, menu, nav, output, ruby, section, summary, time, mark,
    audio, video {
    margin: 0;
-   height: 100%;
    padding: 0;
    border: 0;
    font-size: 100%;

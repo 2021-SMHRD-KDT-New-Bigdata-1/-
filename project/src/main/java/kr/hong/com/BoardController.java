@@ -281,7 +281,32 @@ public class BoardController {
 			return "studypage2";
 		}
 
-
+		@RequestMapping("/syl_weakstudy.do") 
+		public String syl_weakstudy(Model model, HttpSession session, String num){
+		User vo = (User)session.getAttribute("vo");
+		String id = vo.getUser_id();
+		List<Test> list = mapper.syl_weakstudy(num, id);
+		model.addAttribute("list", list);
+		return "weakstudy"; 
+		 }
+		
+		@RequestMapping("/word_weakstudy.do") 
+		public String word_weakstudy(Model model, HttpSession session, String num){
+			User vo = (User)session.getAttribute("vo");
+			String id = vo.getUser_id();
+			List<Test> list = mapper.word_weakstudy(num, id);
+			model.addAttribute("list", list);
+			return "weakstudy"; 
+		}
+		
+		@RequestMapping("/sen_weakstudy.do") 
+		public String sen_weakstudy(Model model, HttpSession session, String num){
+			User vo = (User)session.getAttribute("vo");
+			String id = vo.getUser_id();
+			List<Test> list = mapper.sen_weakstudy(num, id);
+			model.addAttribute("list", list);
+			return "weakstudy"; 
+		}
 		
 	}
 

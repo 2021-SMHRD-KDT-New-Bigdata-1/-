@@ -84,7 +84,7 @@ video {
 	width: 100%;
 	height: 350px;
 }
-}
+
 </style>
 <!-- flask -->
 <script type="text/javascript"

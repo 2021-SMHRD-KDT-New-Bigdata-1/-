@@ -29,10 +29,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
     <link rel="manifest" href="site.webmanifest">
 
- <script >
-
-  	
-  </script>
 
 </head>
 
@@ -62,7 +58,7 @@
 
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="main.do" rel="home" style="color: black; margin-left: 590px;" >ALL바름</a>
+                    <a href="main.do" rel="home" style="color: black; margin-left: 590px; font-family: NanumSquareExtraBold;" >All바름</a>
                 </p>
             </div>
 
@@ -272,15 +268,20 @@
                                         </span>
                                     </div>
                                     <h2 class="hero__entry-title">
-                                        <a href="single-standard.html">
+<<<<<<< HEAD
+                                        <a >
                                         		     정확한 입모양/발음 교정을 위해, 올바름이 함께 하겠습니다.    
+=======
+                                        <a style="font-family: GmarketSansBold; font-size:x-large;">
+                                        		     정확한 입모양/발음 교정은  
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 
-                                        </a>
+                                        </a><br>
+                                        <a style="font-family: NanumSquareExtraBold; font-size:xx-large;">올바름이 함께 하겠습니다. </a>
                                     </h2>
                                     
                                     <p class="hero__entry-desc">
-								                                      음성을 통해 발음을 인식합니다, 
-								                                      입모양 인식을 통해 바른 입모양을 교정을 돕습니다.
+								                                     음성과 입모양 인식을 통해 발음교정을 돕습니다.
                                     </p>
                                     
                                 </div>

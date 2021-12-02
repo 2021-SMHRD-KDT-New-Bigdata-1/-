@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 
 public class Test {
 		private int num;
+		private int id;
 		private String content;
 		private String user_id;
 		private String study_date;

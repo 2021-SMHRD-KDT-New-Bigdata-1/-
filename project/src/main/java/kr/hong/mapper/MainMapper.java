@@ -15,6 +15,7 @@ import kr.hong.domain.PronAcc;
 import kr.hong.domain.Sentence;
 import kr.hong.domain.Syllable;
 import kr.hong.domain.Test;
+import kr.hong.domain.Test_result;
 import kr.hong.domain.User;
 import kr.hong.domain.Word;
 
@@ -75,6 +76,12 @@ public interface MainMapper {
 	public void sy_test_insert(@Param("num") int num,@Param("speak_accuracy") String speak_accuracy,@Param("lip_accuracy")String lip_accuracy, @Param("user_id")String user_id,@Param("weak")String weak);
 	public void wo_test_insert(@Param("num") int num,@Param("speak_accuracy") String speak_accuracy,@Param("lip_accuracy")String lip_accuracy, @Param("user_id")String user_id,@Param("weak")String weak);
 	public void sen_test_insert(@Param("num") int num,@Param("speak_accuracy") String speak_accuracy,@Param("lip_accuracy")String lip_accuracy, @Param("user_id")String user_id,@Param("weak")String weak);
+	
+	//test result
+	public List<Test_result> Syl_testList(@Param("id")String id, @Param("day")String day);
+	public List<Test_result> Word_testList(@Param("id")String id, @Param("day")String day);
+	public List<Test_result> Sen_testList(@Param("id")String id, @Param("day")String day);
+	
 	//weakpage
 	public Test syl_weakstudy(@Param("num")int num, @Param("id")String id);
 	public Test word_weakstudy(@Param("num")int num, @Param("id")String id);

@@ -114,12 +114,12 @@
 	
 </style>
 <script>
-	var h_cate = $("#h_c").val();
-	var h_day = $("#h_d").val();
+	var h_cate = $("input[id=h_c]").val();
+	var h_day = $("input[id=h_d]").val();
 
 	$(document).ready(function() { //익명함수
 		  
-		//alert("제이쿼리 가장");
+		alert("제이쿼리 가장");
 
 		
 		if(h_cate==1){
@@ -137,35 +137,52 @@
 	   });
 	
 	function Syl_testList() {
+		alert("syn_test다녀올게용");
 		   $.ajax({
 		      url : "Syl_testList.do?day="+h_day,
 		      type : "get",
 		      dataType : "json",
-		      success : jsonHtml1,
+		      success : jsonHtml,
 		      error : function() {
 		      	alert("syl_testlist-error");}
 		      });
 	}
 	function Word_testList() {
+		alert("word_test다녀올게용");
 		   $.ajax({
 		      url : "WordtestList.do?day="+h_day,
 		      type : "get",
 		      dataType : "json",
-		      success : jsonHtml2,
+		      success : jsonHtml,
 		      error : function() {
 		      	alert("word_testlist-error");}
 		      });
 	}
 	function Sen_testList() {
+		alert("sen_test다녀올게용");
 		   $.ajax({
 		      url : "SentestList.do?day="+h_day,
 		      type : "get",
 		      dataType : "json",
-		      success : jsonHtml3,
+		      success : jsonHtml,
 		      error : function() {
 		      	alert("sen_testlist-error");}
 		      });
 	}
+	
+	function jsonHtml(data){ //콜백함수
+		
+		view="<div>";
+		    $.each(data, function(data, obj){
+			view+="<p>";
+			view+= obj.content;
+			view+="</p>";
+		    })
+
+		view+="</div>";
+	     	$(".602").html(view);
+
+		}
 	
 </script>
 </head>
@@ -187,6 +204,13 @@
 		<!-- 제목(결과) -->
 		<div class="result">
 			<h2>${vo.user_name}님의 발음분석결과</h2>
+		</div>
+		
+		<div class="602">
+		여기에여
+		</div>
+		<div class="6021">
+		여기에여
 		</div>
 		
 		<!-- 점수표출 -->

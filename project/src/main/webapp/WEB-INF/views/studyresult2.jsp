@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="js ss-loaded">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,6 +24,7 @@
 	rel="stylesheet" type="text/css" media="all" />
 <link href="${pageContext.request.contextPath}/resources/fonts.css"
 	rel="stylesheet" type="text/css" media="all" />
+	
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
 <noscript>
@@ -94,6 +95,7 @@ table td {
         </script> -->
 </head>
 <body>
+
 	<%
 		String speak_acc = request.getParameter("speak_acc");
 		String lip_acc = request.getParameter("lip_acc");

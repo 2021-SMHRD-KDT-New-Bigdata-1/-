@@ -28,6 +28,7 @@
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
+	
 <noscript>
 	<link rel="stylesheet"
 		href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
@@ -90,18 +91,8 @@ video {
 	src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js">
 	
 </script>
-<link rel="stylesheet" href="styles.css">
-<style type="text/css">
-#loading {
-	height: 150vw;
-}
 
-#loading-image {
-	margin-top: 60pt;
-	height: 200pt;
-	width: 400pt;
-}
-</style>
+
 <script>
 	document.getElementById("cameraInput").addEventListener(
 			"change",
@@ -113,7 +104,7 @@ video {
 <!-- flask close -->
 
 </head>
-<body class="is-preload">
+<body class="is-preload" id="is-preload">
 	<%
 		String day = request.getParameter("day");
 	%>
@@ -141,7 +132,10 @@ video {
 		<h3 class="stage_nm">${day}</h3>
 
 	</div>
-
+	<div id="loadingd">
+		
+            <img id="limg"src="${pageContext.request.contextPath}/resources/images/loading2.gif" alt="분석 중..." >
+		</div>
 
 	<!----table ----->
 
@@ -165,11 +159,9 @@ video {
 
 
 
-		<div class="studycolor"></div>
-
-		<c:set var="one" value="$" />
-
-		<div class="studycolor"></div>
+		
+       
+    
 		<table class="study2table">
 			<thead>
 
@@ -189,7 +181,9 @@ video {
 								<h2>${list.content}</h2>
 								<!-- id출력은   (${list.id}) -->
 							</c:if>
-						</c:forEach></td>
+						</c:forEach>
+						
+						</td>
 
 				</tr>
 				<tr>
@@ -248,7 +242,7 @@ video {
 									class="fas fa-microphone-alt fa-2x"></i>
 								</label> <input type="file" id="cameraInput" name="file"
 									accept="video/*" capture="user" />
-								<button type="submit" class="btn-default">분석</button>
+								<button type="submit" class="btn-default" onclick="Loading();">분석</button>
 								<!-- css 넣어주기,, button -->
 
 
@@ -277,40 +271,9 @@ video {
 
 	<!-- table 끝읏 -->
 
-	<!-- 
-            <div class="loading1">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-  
-            </div>
-        <div class="wait">1분 이상 걸릴 수 있습니다.<br>
-        잠시만 기다려주세요.</div>
-
-	<script type="text/javascript">
-		window.onbeforeunload = function() {
-			$('#loading').show();
-		} //현재 페이지에서 다른 페이지로 넘어갈 때 표시해주는 기능
-		$(window).load(function() { //페이지가 로드 되면 로딩 화면을 없애주는 것
-			$('#loading').hide();
-		});
-	</script> -->
+	
+     
+	
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -319,9 +282,24 @@ video {
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	
 	<script>
 		function back1(cate) {
 			location.href = "studyhome.do?cate=" + cate;
+		}
+		function Loading(){
+			if($("#loadingd").css("display")=="none"){
+				$(".word").css("display","none")
+				$("#loadingd").css("display","block");
+			}else{
+				
+			}
+			
+			//div word를 없애기~
+			
+			// loadingd를 열기~
+			//$(".loadingd").css("display","block")
+			 
 		}
 	</script>
 </body>

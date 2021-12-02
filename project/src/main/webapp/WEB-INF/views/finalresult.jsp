@@ -114,14 +114,80 @@
 	
 </style>
 <script>
-	var h_cate = $("input[id=h_c]").val();
-	var h_day = $("input[id=h_d]").val();
 
-	$(document).ready(function() { //익명함수
-		  
-		alert("제이쿼리 가장");
+	
+	
+</script>
+</head>
+<body> 
+	<%
+	String day = request.getParameter("day");
+	String cate = request.getParameter("cate"); //음절/단어/문장
+	%>
+	<!-- 히든으로 바꿀거임 -->
+	<input type='text' id='h_c' name='h_c' value='<%=cate%>' >
+	<input type='text' id='h_d' name='h_d' value="<%=day%>" >
+
+	<!-- 배경색 돌아가고 싶으면 css -->
+	<!-- Header -->
+	<header id="header" class="alt"><p class="day">STEP1</p></header>
+
+	<div class="all">
+
+		<!-- 제목(결과) -->
+		<div class="result">
+			<h2>${vo.user_name}님의 발음분석결과</h2>
+		</div>
+		
+
 
 		
+		<!-- 점수표출 -->
+		<!-- <div id="score">
+			<h2 class="score1">100</h2>
+		</div>  -->
+
+		<!-- 결과리스트  -->
+		<nav>
+			<ul>
+				<li class="first">
+					<p class="date">
+						<c:if test="${score >= 90 }"> <i class="far fa-laugh-wink fa-3x"></i></c:if>
+						<c:if test="${score >= 60 }"> <i class="far fa-meh fa-3x"></i></c:if>
+						<c:if test="${score >= 40 }"> <i class="far fa-tired fa-3x"></i></c:if>
+					</p>
+					
+					<div id="avg">평균 몇점</div> <!-- day1 -->
+					<div class="contents">
+					<p id="list55">가<i class="far fa-laugh-wink fa-1x"></i></p> <!-- 제시 단어 리스트 쫘라락 -->
+						<div class="602">
+						여기에여
+						</div>
+					</div>
+				</li>
+				
+			</ul>
+
+			<br>
+		</nav>
+		<div class="b_utton">
+			<button id="btnexit" onclick="exit()">나가기</button>&nbsp;&nbsp;&nbsp;&nbsp;
+			<button id="btnexit" onclick="replay(<%=day%>,<%=cate%>)">반복하기</button>
+		</div>
+		
+	</div>
+	<br>
+	<script>
+	
+	var h_cate = $("#h_c").val();
+	var h_day = $("input[name=h_d]").val();
+	
+	$(document).ready(function() { //익명함수
+		  
+		//alert("제이쿼리 가장");
+		//alert(h_cate);
+		//alert(h_day);
+
 		if(h_cate==1){
 	    	Syl_testList();
 		}
@@ -174,9 +240,14 @@
 		
 		view="<div>";
 		    $.each(data, function(data, obj){
-			view+="<p>";
+			view+="<p id='list55'>";
 			view+= obj.content;
-			view+="</p>";
+			view+="발음 점수 : ";
+			view+= obj.speak_accuracy;
+			
+			view+= " / 입모양 점수 : "
+			view+= obj.lip_accuracy;
+			view+=" </p>";
 		    })
 
 		view+="</div>";
@@ -184,72 +255,6 @@
 
 		}
 	
-</script>
-</head>
-<body> 
-	<%
-	String day = request.getParameter("day");
-	String cate = request.getParameter("cate"); //음절/단어/문장
-	%>
-	<!-- 히든으로 바꿀거임 -->
-	<input type='text' id='h_c' value='<%=cate%>' >
-	<input type='text' id='h_d' value='<%=day%>' >
-	
-	<!-- 배경색 돌아가고 싶으면 css -->
-	<!-- Header -->
-	<header id="header" class="alt"><p class="day">STEP1</p></header>
-
-	<div class="all">
-
-		<!-- 제목(결과) -->
-		<div class="result">
-			<h2>${vo.user_name}님의 발음분석결과</h2>
-		</div>
-		
-		<div class="602">
-		여기에여
-		</div>
-		<div class="6021">
-		여기에여
-		</div>
-		
-		<!-- 점수표출 -->
-		<!-- <div id="score">
-			<h2 class="score1">100</h2>
-		</div>  -->
-
-		<!-- 결과리스트  -->
-		<nav>
-			<ul>
-				<li class="first">
-					<p class="date">
-						<c:if test="${score >= 90 }"> <i class="far fa-laugh-wink fa-3x"></i></c:if>
-						<c:if test="${score >= 60 }"> <i class="far fa-meh fa-3x"></i></c:if>
-						<c:if test="${score >= 40 }"> <i class="far fa-tired fa-3x"></i></c:if>
-					</p>
-					
-					<div id="avg">평균 몇점</div> <!-- day1 -->
-					<div class="contents">
-					<p id="list55">가<i class="far fa-laugh-wink fa-1x"></i></p> <!-- 제시 단어 리스트 쫘라락 -->
-					<p id="list55">문제제시hhajfdakhffkjhdjkfdaajlkfd j;fdaj;fadaklal</p>
-					<p id="list55">문제제시</p> 
-					<p id="list55">문제제시</p> 
-					<p id="list55">문제제시</p> 
-					</div>
-				</li>
-				
-			</ul>
-
-			<br>
-		</nav>
-		<div class="b_utton">
-			<button id="btnexit" onclick="exit()">나가기</button>&nbsp;&nbsp;&nbsp;&nbsp;
-			<button id="btnexit" onclick="replay(<%=day%>,<%=cate%>)">반복하기</button>
-		</div>
-		
-	</div>
-	<br>
-	<script>
 	
 		function exit() {
 			location.href = "select.do";
@@ -267,6 +272,6 @@
 		}
 		
 	</script>
-	
+
 </body>
 </html>

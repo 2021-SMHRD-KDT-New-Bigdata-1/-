@@ -220,7 +220,7 @@
 	</insert>
 	
 	<select id="syl_weakstudy" parameterType = "map" resultType="kr.hong.domain.Test">
-	    SELECT s.content, t.user_id, t.num
+	    SELECT s.content, t.user_id, t.num, s.id
 	    FROM tbl_syllable AS s
 		JOIN tbl_syllable_test AS t
 		ON t.num = s.num
@@ -228,17 +228,17 @@
 	</select>
 	
 	<select id="word_weakstudy" parameterType = "map" resultType="kr.hong.domain.Test">
-	    SELECT s.content, t.user_id, t.num
-	    FROM tbl_syllable AS s
-		JOIN tbl_syllable_test AS t
+	    SELECT s.content, t.user_id, t.num, s.id
+	    FROM tbl_word AS s
+		JOIN tbl_word_test AS t
 		ON t.num = s.num
 		WHERE t.user_id = #{id} AND t.num=#{num}
 	</select>
 	
 	<select id="sen_weakstudy" parameterType = "map" resultType="kr.hong.domain.Test">
-	    SELECT s.content, t.user_id, t.num
-	    FROM tbl_syllable AS s
-		JOIN tbl_syllable_test AS t
+	    SELECT s.content, t.user_id, t.num, s.id
+	    FROM tbl_sentence AS s
+		JOIN tbl_sentence_test AS t
 		ON t.num = s.num
 		WHERE t.user_id = #{id} AND t.num=#{num}
 	</select>

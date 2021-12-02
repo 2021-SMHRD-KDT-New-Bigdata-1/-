@@ -29,15 +29,23 @@ section, summary, time, mark, audio, video {
 }
 /*sdfklsdjflsdjkl*/
 
-@font-face {
-
-    src : url("../webfonts/tway_fly.ttf"); 
-    font-family: "twayfly";
-
+/*@font-face {
+    src : url("../webfonts/Goyang.ttf"); 
+    font-family: "GoyangIlsan";
 }
+@font-face {
+    src : url("../webfonts/ONE-Mobile Title.ttf"); 
+    font-family: "ONE-Mobile Titler";
+}*/
 
-
-
+@font-face { /*프리텐다드*/
+    src: url("../webfonts/pretenard-Ragular.ttf");
+    font-family: "Pretendard-Regular";
+}
+@font-face { /*고운돋움*/
+    src: url("../webfonts/GowonDodum-Ragular.ttf.url");
+    font-family: "GowunDodum-Regular";
+}
  
 
 *{
@@ -72,7 +80,7 @@ blockquote, q {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-	font-family: "twayfly";
+	font-family: "Pretendard-Regular";
 }
 /* 학습페이지 테이블 규격 맞추기 */
 .word {

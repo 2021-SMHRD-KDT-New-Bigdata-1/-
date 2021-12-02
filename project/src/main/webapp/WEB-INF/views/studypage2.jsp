@@ -176,7 +176,7 @@ video {
 			<tbody>
 				<tr>
 					<td class="studycolor2"
-						style="text-align: center; font-size: large;"><c:forEach
+						style="text-align: center; font-size: large; font-family: GowunDodum-Regular;"><c:forEach
 							var="list" items="${list}" varStatus="status">
 							<c:if test="${status.index eq cnt}">
 								<h2>${list.content}</h2>

@@ -222,7 +222,7 @@ footer {
    margin: 0;
    padding: 0;
    list-style-type: none;
-   background-color: ##D2691E;
+   background-color: #D2691E;
    color: white;
    display: none;
 }
@@ -238,6 +238,20 @@ footer {
    justify-content: center;
    position: relative;
 }
+
+#my_select{
+    display: block;
+    width: 300px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+    
+    background:url('../../resources/assets/images/img_193723.png') no-repeat 93% 90%/12px auto;
+    border: 2px solid #ff8000;
+   }
+
 </style>
 
 

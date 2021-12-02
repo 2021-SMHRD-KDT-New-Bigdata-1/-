@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import kr.hong.domain.LoginInfo;
 import kr.hong.domain.Mypage;
 import kr.hong.domain.MypageStep;
+import kr.hong.domain.PronAcc;
 import kr.hong.domain.Sentence;
 import kr.hong.domain.Syllable;
 import kr.hong.domain.Test;
@@ -50,6 +51,10 @@ public interface MainMapper {
 	public List<MypageStep> mypage2_step_wo2(@Param("id")String id, @Param("step")String step);
 	public List<MypageStep> mypage3_step_se1(@Param("id")String id, @Param("step")String step);
 	public List<MypageStep> mypage3_step_se2(@Param("id")String id, @Param("step")String step);
+	
+	public List<PronAcc> mypage1_pron_acc(@Param("id")String id, @Param("step")String step);
+	public List<PronAcc> mypage2_pron_acc(@Param("id")String id, @Param("step")String step);
+	public List<PronAcc> mypage3_pron_acc(@Param("id")String id, @Param("step")String step);
 	
 	public String mypage();
 	public String main();

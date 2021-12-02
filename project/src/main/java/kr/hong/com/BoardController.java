@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import kr.hong.domain.LoginInfo;
 import kr.hong.domain.Mypage;
 import kr.hong.domain.MypageStep;
+import kr.hong.domain.PronAcc;
 import kr.hong.domain.Sentence;
 import kr.hong.domain.Syllable;
 import kr.hong.domain.Test;
@@ -183,6 +184,9 @@ public class BoardController {
 			List<MypageStep> step_list2 = mapper.mypage1_step_sy2(id, step);
 			model.addAttribute("step_list2", step_list2);
 			
+			List<PronAcc> pron_acc = mapper.mypage1_pron_acc(id, step);
+			model.addAttribute("pron_acc", pron_acc);
+			System.out.println(pron_acc);
 			List<Mypage> list = mapper.mypage1_sy(id);
 			model.addAttribute("list", list);
 			return "mypage1";

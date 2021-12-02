@@ -84,6 +84,20 @@ video {
 	width: 100%;
 	height: 350px;
 }
+.step{
+	background-color: #ffaf42;
+    border: 0px;
+    width: 60px;
+    height: 42.2px;
+    position: absolute;
+    left: 75%;
+    top: 117px;
+    text-align: center;
+    border-left: 1px solid #ce712e;
+    /* padding-left: 5px; */
+    padding: 0 0 0em 1em;
+
+}
 
 </style>
 <!-- flask -->
@@ -158,8 +172,7 @@ video {
 
 
 		
-       <div style="background-color:#ffaf42; border:0px; width:60px; height:42.2px;
-       		position: absolute; left:80%; top:83px; text-align:center;">Step
+       <div class="step">Step
 		<%=day%>
 		(${cnt+1}/5)</div>
     

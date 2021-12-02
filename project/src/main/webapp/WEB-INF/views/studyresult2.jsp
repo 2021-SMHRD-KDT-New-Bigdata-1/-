@@ -113,7 +113,6 @@ table td {
 			<i class="fas fa-arrow-left fa-2x"></i>
 		</button>-->
 		
-	
 	</header>
 
 	<!-- 한 단어당 보여주는 결과창 -->

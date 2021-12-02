@@ -15,6 +15,7 @@
 	<link href="${pageContext.request.contextPath}/resources/fonts.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<noscript>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
 	</noscript>
@@ -24,7 +25,7 @@
 	<!--이모티콘-->
 
 	<title>최종학습페이지</title>
-<style>
+	<style>
 
 	.day{
 		margin-left:auto;
@@ -113,28 +114,66 @@
 	
 </style>
 <script>
-		var num = '${num}';
 	
 	$(document).ready(function() { //익명함수
-		  //alert("제이쿼리 가즈앗!");
+		  
+		//alert("제이쿼리 가장");
+		var h_cate = $("#h_60").val();
 		
-		if(num==1){
-	    	Syl_loadList();
+		if(h_cate==1){
+	    	Syl_testList();
 		}
-		else if(num==2){
-			Word_loadList();
+		else if(h_cate==2){
+			Word_testList();
 		}
-		else if(num==3){
-			Sen_loadList();
+		else if(h_cate==3){
+			Sen_testList();
 		}
 		else{
-			alert("num인식안됨");
+			alert("h_cate인식안됨");
 		}
 	   });
 	
+	function Syl_testList() {
+		   $.ajax({
+		      url : "Syl_testList.do",
+		      type : "get",
+		      dataType : "json",
+		      success : jsonHtml1,
+		      error : function() {
+		      	alert("syl_testlist-error");}
+		      });
+	}
+	function Word_testList() {
+		   $.ajax({
+		      url : "WordtestList.do",
+		      type : "get",
+		      dataType : "json",
+		      success : jsonHtml2,
+		      error : function() {
+		      	alert("word_testlist-error");}
+		      });
+	}
+	function Sen_testList() {
+		   $.ajax({
+		      url : "SentestList.do",
+		      type : "get",
+		      dataType : "json",
+		      success : jsonHtml3,
+		      error : function() {
+		      	alert("sen_testlist-error");}
+		      });
+	}
+	
 </script>
 </head>
-<body> <!-- 배경색 돌아가고 싶으면 css -->
+<body> 
+	<%
+	String day = request.getParameter("day");
+	String cate = request.getParameter("cate"); //음절/단어/문장
+	%>
+	<input type='text' id='h_60' value='<%=cate%>' >
+	<!-- 배경색 돌아가고 싶으면 css -->
 	<!-- Header -->
 	<header id="header" class="alt"><p class="day">STEP1</p></header>
 
@@ -176,17 +215,29 @@
 		</nav>
 		<div class="b_utton">
 			<button id="btnexit" onclick="exit()">나가기</button>&nbsp;&nbsp;&nbsp;&nbsp;
-			<button id="btnexit" onclick="replay()">반복하기</button>
+			<button id="btnexit" onclick="replay(<%=day%>,<%=cate%>)">반복하기</button>
 		</div>
 		
 	</div>
 	<br>
 	<script>
+	
 		function exit() {
-			location.href = "studyhome.do";
+			location.href = "select.do";
 		}
-
+		function replay(day, cate){
+			if(cate==1){
+				location.href="studypage2_sy.do?day="+day;
+			}else if(cate==2){
+				location.href="studypage2_wo.do?day="+day;
+			}else if(cate==3){
+				location.href="studypage2_sen.do?day="+day;
+			}else{
+				alert("replay 오류!");
+			}
+		}
+		
 	</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
 </body>
 </html>

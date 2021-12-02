@@ -281,6 +281,7 @@ public class BoardController {
 			return "studypage2";
 		}
 
+
 		@RequestMapping("/syl_weakstudy.do") 
 		public String syl_weakstudy(Model model, HttpSession session, int num){
 		User vo = (User)session.getAttribute("vo");
@@ -309,5 +310,6 @@ public class BoardController {
 			return "weakpage"; 
 		}
 		
+
 	}
 

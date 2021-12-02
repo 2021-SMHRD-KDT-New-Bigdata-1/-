@@ -216,7 +216,7 @@
 	function Word_testList() {
 		alert("word_test다녀올게용");
 		   $.ajax({
-		      url : "WordtestList.do?day="+h_day,
+		      url : "Word_testList.do?day="+h_day,
 		      type : "get",
 		      dataType : "json",
 		      success : jsonHtml,
@@ -227,7 +227,7 @@
 	function Sen_testList() {
 		alert("sen_test다녀올게용");
 		   $.ajax({
-		      url : "SentestList.do?day="+h_day,
+		      url : "Sen_testList.do?day="+h_day,
 		      type : "get",
 		      dataType : "json",
 		      success : jsonHtml,

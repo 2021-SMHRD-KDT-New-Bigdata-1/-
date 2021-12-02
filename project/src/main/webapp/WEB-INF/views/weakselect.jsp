@@ -279,8 +279,8 @@ footer {
                      <c:if test="${list!=null }">
                      		<table>
                      			<tr style="width:100%;">
-                     			<td style="float:left; margin-left:40px; text-align:center; font-size:20px; font-weight: bold;">취약단어</td>
-                     			<td style="float:right; margin-right:50px; text-align:center; font-size:20px; font-weight: bold;">정확도</td>
+                     			<td style="float:left; margin-left:90px; text-align:center; font-size:20px; font-weight: bold;">취약단어</td>
+                     			<td style="float:right; margin-right:90px; text-align:center; font-size:20px; font-weight: bold;">정확도</td>
                      			</tr>
                      	<c:forEach var="list" items="${list}" varStatus="status">
                      			

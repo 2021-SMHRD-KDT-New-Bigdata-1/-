@@ -73,6 +73,7 @@ h4{
 
 table td {
     background: #ffaf42;
+    
 
 }
 
@@ -130,7 +131,7 @@ table td {
 			<tr>
 				<td class="results"></td>
 				
-				<td style="border: 3px solid ; border-color: #ff8040; background-color: white; ">
+				<td style="width: 400px; border: 3px solid ; border-color: #ff8040; background-color: white; ">
 				
 				</td>
 				

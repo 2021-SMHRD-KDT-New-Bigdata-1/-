@@ -268,13 +268,13 @@
                                         </span>
                                     </div>
                                     <h2 class="hero__entry-title">
-<<<<<<< HEAD
+
                                         <a >
                                         		     정확한 입모양/발음 교정을 위해, 올바름이 함께 하겠습니다.    
-=======
+
                                         <a style="font-family: GmarketSansBold; font-size:x-large;">
                                         		     정확한 입모양/발음 교정은  
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
+
 
                                         </a><br>
                                         <a style="font-family: NanumSquareExtraBold; font-size:xx-large;">올바름이 함께 하겠습니다. </a>

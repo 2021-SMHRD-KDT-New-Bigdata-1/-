@@ -114,17 +114,19 @@
 	
 </style>
 <script>
-	
+	var h_cate = $("#h_c").val();
+	var h_day = $("#h_d").val();
+
 	$(document).ready(function() { //익명함수
 		  
-		//alert("제이쿼리 가장");
-		var h_cate = $("#h_60").val();
+		alert("제이쿼리 가장");
+
 		
 		if(h_cate==1){
 	    	Syl_testList();
 		}
 		else if(h_cate==2){
-			Word_testList();
+			Word_testList(;
 		}
 		else if(h_cate==3){
 			Sen_testList();
@@ -135,35 +137,52 @@
 	   });
 	
 	function Syl_testList() {
+		alert("syn_test다녀올게용");
 		   $.ajax({
-		      url : "Syl_testList.do",
+		      url : "Syl_testList.do?day="+h_day,
 		      type : "get",
 		      dataType : "json",
-		      success : jsonHtml1,
+		      success : jsonHtml,
 		      error : function() {
 		      	alert("syl_testlist-error");}
 		      });
 	}
 	function Word_testList() {
+		alert("word_test다녀올게용");
 		   $.ajax({
-		      url : "WordtestList.do",
+		      url : "WordtestList.do?day="+h_day,
 		      type : "get",
 		      dataType : "json",
-		      success : jsonHtml2,
+		      success : jsonHtml,
 		      error : function() {
 		      	alert("word_testlist-error");}
 		      });
 	}
 	function Sen_testList() {
+		alert("sen_test다녀올게용");
 		   $.ajax({
-		      url : "SentestList.do",
+		      url : "SentestList.do?day="+h_day,
 		      type : "get",
 		      dataType : "json",
-		      success : jsonHtml3,
+		      success : jsonHtml,
 		      error : function() {
 		      	alert("sen_testlist-error");}
 		      });
 	}
+	
+	function jsonHtml(data){ //콜백함수
+		
+		view="<div>";
+		    $.each(data, function(data, obj){
+			view+="<p>";
+			view+= obj.content;
+			view+="</p>";
+		    })
+
+		view+="</div>";
+	     	$(".602").html(view);
+
+		}
 	
 </script>
 </head>
@@ -172,7 +191,10 @@
 	String day = request.getParameter("day");
 	String cate = request.getParameter("cate"); //음절/단어/문장
 	%>
-	<input type='text' id='h_60' value='<%=cate%>' >
+	<!-- 히든으로 바꿀거임 -->
+	<input type='text' id='h_c' value='<%=cate%>' >
+	<input type='text' id='h_d' value='<%=day%>' >
+	
 	<!-- 배경색 돌아가고 싶으면 css -->
 	<!-- Header -->
 	<header id="header" class="alt"><p class="day">STEP1</p></header>
@@ -182,6 +204,13 @@
 		<!-- 제목(결과) -->
 		<div class="result">
 			<h2>${vo.user_name}님의 발음분석결과</h2>
+		</div>
+		
+		<div class="602">
+		여기에여
+		</div>
+		<div class="6021">
+		여기에여
 		</div>
 		
 		<!-- 점수표출 -->

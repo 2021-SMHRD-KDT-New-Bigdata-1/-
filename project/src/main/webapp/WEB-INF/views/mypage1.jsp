@@ -354,7 +354,7 @@ function Step_Result_sy(step) {
                                              display : true,
                                              scaleLabel : {
                                                 display : true,
-                                                labelString : 'STEP 정확도 비교'
+                                                labelString : "STEP 5개 단어"
                                              }
                                           } ],
                                           yAxes : [ {
@@ -377,19 +377,19 @@ function Step_Result_sy(step) {
                <div class="col-12-small"
                   style="width: 50%; margin-top: 30px;">
                   <div class="panel panel-primary">
-                     <div id="chart_title" class="panel-heading">${pron_acc[0] }</div>
+                     <div id="chart_title" class="panel-heading">음성 정확도</div>
                      <div class="panel-body">
                         <canvas id="doughnut-chart" width="300" height="250"></canvas>
                         <script>
                         new Chart(document.getElementById("doughnut-chart"), {
                             type: 'doughnut',
                             data: {
-                              labels: ["정상발음", "취약발음"],
+                              labels: ["정확도", "부정확도"],
                               datasets: [
                                 {
                                   label: "Population (millions)",
                                   backgroundColor: ["#3c80e5", "#9b938a"],
-                                  data: [ ${(pron_acc[1]/(pron_acc[1] + pron_acc[0]))*100}, ${(pron_acc[0]/(pron_acc[1] + pron_acc[0]))*100}]
+                                  data: [ ${(pron_acc[0].sp_good_acc/(pron_acc[0].sp_good_acc + pron_acc[0].sp_bad_acc))*100}, ${(pron_acc[0].sp_bad_acc/(pron_acc[0].sp_good_acc + pron_acc[0].sp_bad_acc))*100}]
                                 }
                               ]
                             },
@@ -421,7 +421,7 @@ function Step_Result_sy(step) {
                                 {
                                   label: "Population (millions)",
                                   backgroundColor: ["#3c80e5", "#9b938a"],
-                                  data: [80,20]
+                                  data: [ ${(pron_acc[0].lip_good_acc/(pron_acc[0].lip_good_acc + pron_acc[0].lip_bad_acc))*100}, ${(pron_acc[0].lip_bad_acc/(pron_acc[0].lip_good_acc + pron_acc[0].lip_bad_acc))*100}]
                                 }
                               ]
                             },

@@ -185,7 +185,7 @@ video {
 				<tr>
 					<td class="studycolor2"
 						style="text-align: center; vertical-align: middle;"><video
-							controls width="350">
+							controls autoplay muted playsinline width="350">
 
 							<source
 								src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"

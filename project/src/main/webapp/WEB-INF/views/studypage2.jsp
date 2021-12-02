@@ -134,7 +134,7 @@ video {
 	</div>
 	<div id="loadingd">
 		
-            <img id="limg"src="${pageContext.request.contextPath}/resources/images/load.gif" alt="분석 중..."  >
+            <img id="limg"src="${pageContext.request.contextPath}/resources/images/1484.gif" alt="분석 중..."  >
 		</div>
 
 	<!----table ----->

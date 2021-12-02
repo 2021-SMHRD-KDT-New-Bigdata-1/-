@@ -150,17 +150,17 @@
 		order by s.study_date;
 	</select>
 	<!-- 마이페이지 하단 원형 그래프 정보(STEP에 해당하는 발음, 입모양 정확도) 불러오기 -->
-	<select id="mypage1_pron_acc" parameterType="String" resultType="String">
-	    SELECT COUNT(CASE WHEN t.speak_accuracy <![CDATA[<]]>  7 THEN 1 END) AS sp_bad_acc,
+	<select id="mypage1_pron_acc" parameterType="String" resultType="kr.hong.domain.PronAcc">
+	    SELECT COUNT(CASE WHEN t.speak_accuracy &lt;  7 THEN 1 END) AS sp_bad_acc,
 		COUNT(CASE WHEN t.speak_accuracy >=7 THEN 1 END) AS sp_good_acc,
-		COUNT(CASE WHEN t.lip_accuracy <![CDATA[<]]> 7 THEN 1 END) AS lip_bad_acc,
+		COUNT(CASE WHEN t.lip_accuracy &lt; 7 THEN 1 END) AS lip_bad_acc,
 		COUNT(CASE WHEN t.lip_accuracy >= 7 THEN 1 END) AS lip_good_acc
 		FROM tbl_syllable AS s
 		JOIN tbl_syllable_test AS t
 		on s.num = t.num
 		WHERE t.user_id = #{id} AND s.study_date = #{step}
 	</select>
-	<select id="mypage2_pron_acc" parameterType="String" resultType="String">
+	<select id="mypage2_pron_acc" parameterType="String" resultType="kr.hong.domain.PronAcc">
 	    SELECT COUNT(CASE WHEN t.speak_accuracy &lt;  7 THEN 1 END) AS sp_bad_acc,
 		COUNT(CASE WHEN t.speak_accuracy >=7 THEN 1 END) AS sp_good_acc,
 		COUNT(CASE WHEN t.lip_accuracy &lt; 7 THEN 1 END) AS lip_bad_acc,
@@ -170,7 +170,7 @@
 		on s.num = t.num
 		WHERE t.user_id = #{id} AND s.study_date = #{step}
 	</select>
-	<select id="mypage3_pron_acc" parameterType="String" resultType="String">
+	<select id="mypage3_pron_acc" parameterType="String" resultType="kr.hong.domain.PronAcc">
 	    SELECT COUNT(CASE WHEN t.speak_accuracy &lt;  7 THEN 1 END) AS sp_bad_acc,
 		COUNT(CASE WHEN t.speak_accuracy >=7 THEN 1 END) AS sp_good_acc,
 		COUNT(CASE WHEN t.lip_accuracy &lt; 7 THEN 1 END) AS lip_bad_acc,

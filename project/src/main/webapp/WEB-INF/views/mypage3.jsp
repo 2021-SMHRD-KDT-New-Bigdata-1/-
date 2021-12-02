@@ -319,18 +319,18 @@ function Step_Result_se(step) {
                                        datasets : [
                                              {
                                                 label : '이전학습',
-                                                data : [ ${acc_list1[0].accuracy*10}, ${acc_list1[1].accuracy*10},
-                                                	${acc_list1[2].accuracy*10}, ${acc_list1[3].accuracy*10},
-                                                	${acc_list1[4].accuracy*10} ],
+                                                data : [ ${step_list1[0].accuracy*10}, ${step_list1[1].accuracy*10},
+                                                	${step_list1[2].accuracy*10}, ${step_list1[3].accuracy*10},
+                                                	${step_list1[4].accuracy*10} ],
                                                 borderColor : "#ffbb40",
                                                 fill : false,
                                                 lineTension : 0
                                              },
                                              {
                                                 label : '선택한학습',
-                                                data : [ ${acc_list2[0].accuracy*10}, ${acc_list2[1].accuracy*10},
-                                                	${acc_list2[2].accuracy*10}, ${acc_list2[3].accuracy*10},
-                                                	${acc_list2[4].accuracy*10} ],
+                                                data : [ ${step_list2[0].accuracy*10}, ${step_list2[1].accuracy*10},
+                                                	${step_list2[2].accuracy*10}, ${step_list2[3].accuracy*10},
+                                                	${step_list2[4].accuracy*10} ],
                                                 borderColor : "#6e9b52",
                                                 fill : false,
                                                 lineTension : 0
@@ -385,12 +385,12 @@ function Step_Result_se(step) {
                         new Chart(document.getElementById("doughnut-chart"), {
                             type: 'doughnut',
                             data: {
-                              labels: ["정상발음", "취약발음"],
+                              labels: ["정확도", "부정확도"],
                               datasets: [
                                 {
                                   label: "Population (millions)",
                                   backgroundColor: ["#3c80e5", "#9b938a"],
-                                  data: [80,20]
+                                  data: [${(pron_acc[0].sp_good_acc/(pron_acc[0].sp_good_acc + pron_acc[0].sp_bad_acc))*100}, ${(pron_acc[0].sp_bad_acc/(pron_acc[0].sp_good_acc + pron_acc[0].sp_bad_acc))*100}]
                                 }
                               ]
                             },
@@ -422,7 +422,7 @@ function Step_Result_se(step) {
                                 {
                                   label: "Population (millions)",
                                   backgroundColor: ["#3c80e5", "#9b938a"],
-                                  data: [80,20]
+                                  data: [${(pron_acc[0].lip_good_acc/(pron_acc[0].lip_good_acc + pron_acc[0].lip_bad_acc))*100}, ${(pron_acc[0].lip_bad_acc/(pron_acc[0].lip_good_acc + pron_acc[0].lip_bad_acc))*100}]
                                 }
                               ]
                             },

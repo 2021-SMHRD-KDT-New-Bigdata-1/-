@@ -264,11 +264,11 @@ public class BoardController {
 				List<Syllable> list = mapper.studypage2_sy(day); //cate,day 에 맞는 단어 뽑는 mapper
 				model.addAttribute("list", list);
 			}else if(cate.equals("2")) {
-				mapper.wo_test_insert(num, speak_accuracy, lip_accuracy, user_id, weak );
+				mapper.wo_test_insert(Integer.parseInt(num), speak_accuracy, lip_accuracy, user_id, weak );
 				List<Word> list = mapper.studypage2_wo(day);
 				model.addAttribute("list", list);
 			}else if(cate.equals("3")) {
-				mapper.sen_test_insert(num, speak_accuracy, lip_accuracy, user_id, weak);
+				mapper.sen_test_insert(Integer.parseInt(num), speak_accuracy, lip_accuracy, user_id, weak);
 				List<Sentence> list = mapper.studypage2_sen(day);
 				model.addAttribute("list", list);
 			}else{System.out.println("test_insert 오류");}

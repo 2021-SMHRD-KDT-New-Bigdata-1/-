@@ -173,16 +173,15 @@ video {
 			</thead>
 			<tbody>
 				<tr>
-					<td class="studycolor2" style="text-align: center; vertical-align: middle;">
-						<video controls autoplay muted playsinline width="350">
-
-						
+				<td class="studycolor2"
+						style="text-align: center; font-size: large;">
 						<c:forEach var="list" items="${list}" varStatus="status">
 						<c:if test="${status.index eq cnt}">
 							<h2>${list.content}</h2> <!-- id출력은   (${list.id}) -->
 						</c:if>
-						</c:forEach>						
-					</td>
+						</c:forEach>
+						</td>
+
 				</tr>
 				<tr>
 					<td class="studycolor2"

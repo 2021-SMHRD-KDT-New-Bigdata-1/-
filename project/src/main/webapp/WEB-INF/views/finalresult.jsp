@@ -15,6 +15,7 @@
 	<link href="${pageContext.request.contextPath}/resources/fonts.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<noscript>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
 	</noscript>
@@ -24,7 +25,7 @@
 	<!--이모티콘-->
 
 	<title>최종학습페이지</title>
-<style>
+	<style>
 
 	.day{
 		margin-left:auto;
@@ -113,28 +114,88 @@
 	
 </style>
 <script>
-		var num = '${num}';
-	
+	var h_cate = $("#h_c").val();
+	var h_day = $("#h_d").val();
+
 	$(document).ready(function() { //익명함수
-		  //alert("제이쿼리 가즈앗!");
+		  
+		alert("제이쿼리 가장");
+
 		
-		if(num==1){
-	    	Syl_loadList();
+		if(h_cate==1){
+	    	Syl_testList();
 		}
-		else if(num==2){
-			Word_loadList();
+		else if(h_cate==2){
+			Word_testList(;
 		}
-		else if(num==3){
-			Sen_loadList();
+		else if(h_cate==3){
+			Sen_testList();
 		}
 		else{
-			alert("num인식안됨");
+			alert("h_cate인식안됨");
 		}
 	   });
 	
+	function Syl_testList() {
+		alert("syn_test다녀올게용");
+		   $.ajax({
+		      url : "Syl_testList.do?day="+h_day,
+		      type : "get",
+		      dataType : "json",
+		      success : jsonHtml,
+		      error : function() {
+		      	alert("syl_testlist-error");}
+		      });
+	}
+	function Word_testList() {
+		alert("word_test다녀올게용");
+		   $.ajax({
+		      url : "WordtestList.do?day="+h_day,
+		      type : "get",
+		      dataType : "json",
+		      success : jsonHtml,
+		      error : function() {
+		      	alert("word_testlist-error");}
+		      });
+	}
+	function Sen_testList() {
+		alert("sen_test다녀올게용");
+		   $.ajax({
+		      url : "SentestList.do?day="+h_day,
+		      type : "get",
+		      dataType : "json",
+		      success : jsonHtml,
+		      error : function() {
+		      	alert("sen_testlist-error");}
+		      });
+	}
+	
+	function jsonHtml(data){ //콜백함수
+		
+		view="<div>";
+		    $.each(data, function(data, obj){
+			view+="<p>";
+			view+= obj.content;
+			view+="</p>";
+		    })
+
+		view+="</div>";
+	     	$(".602").html(view);
+
+		}
+	
 </script>
 </head>
-<body> <!-- 배경색 돌아가고 싶으면 css -->
+<body> 
+	<%
+	String day = request.getParameter("day");
+	String cate = request.getParameter("cate"); //음절/단어/문장
+	%>
+	<!-- 히든으로 바꿀거임 -->
+	<input type='text' id='h_c' value='<%=cate%>' >
+	<input type='text' id='h_d' value='<%=day%>' >
+	
+	<!-- 배경색 돌아가고 싶으면 css -->
 	<!-- Header -->
 	<header id="header" class="alt"><p class="day">STEP1</p></header>
 
@@ -143,6 +204,13 @@
 		<!-- 제목(결과) -->
 		<div class="result">
 			<h2>${vo.user_name}님의 발음분석결과</h2>
+		</div>
+		
+		<div class="602">
+		여기에여
+		</div>
+		<div class="6021">
+		여기에여
 		</div>
 		
 		<!-- 점수표출 -->
@@ -176,17 +244,29 @@
 		</nav>
 		<div class="b_utton">
 			<button id="btnexit" onclick="exit()">나가기</button>&nbsp;&nbsp;&nbsp;&nbsp;
-			<button id="btnexit" onclick="replay()">반복하기</button>
+			<button id="btnexit" onclick="replay(<%=day%>,<%=cate%>)">반복하기</button>
 		</div>
 		
 	</div>
 	<br>
 	<script>
+	
 		function exit() {
-			location.href = "studyhome.do";
+			location.href = "select.do";
 		}
-
+		function replay(day, cate){
+			if(cate==1){
+				location.href="studypage2_sy.do?day="+day;
+			}else if(cate==2){
+				location.href="studypage2_wo.do?day="+day;
+			}else if(cate==3){
+				location.href="studypage2_sen.do?day="+day;
+			}else{
+				alert("replay 오류!");
+			}
+		}
+		
 	</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
 </body>
 </html>

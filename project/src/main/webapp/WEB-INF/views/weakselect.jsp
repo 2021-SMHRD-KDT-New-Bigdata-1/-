@@ -290,10 +290,10 @@ footer {
 									<td style="float:left; margin-left:40px;" onclick="syl_weakstudy(${list.num})">${list.content },${list.num }</td>
 								</c:when>
 								<c:when test="${fn:length(list.content)>1 && fn:length(list.content)<6}" >
-									<td style="float:left; margin-left:40px;" onclick="word_weakstudy(${list.num}">${list.content },${list.num }</td>
+									<td style="float:left; margin-left:40px;" onclick="word_weakstudy(${list.num})">${list.content },${list.num }</td>
 								</c:when>
 								<c:otherwise>
-									<td style="float:left; margin-left:40px;" onclick="sen_weakstudy(${list.num}">${list.content },${list.num }</td>
+									<td style="float:left; margin-left:40px;" onclick="sen_weakstudy(${list.num})">${list.content },${list.num }</td>
 								</c:otherwise>
 								</c:choose>
                      			<td style="float:right; margin-right:50px;">입모양 : ${list.lip_accuracy }, 발음 : ${list.speak_accuracy }</td></tr>

@@ -152,7 +152,7 @@ table td {
 		//alert("버튼 누름");
 		//alert(speak_acc+" "+lip_acc+" "+word_num+" "+word_idx+" "+(cnt+1)+" "+day+" "+cate);
 		if (cnt==4){
-			location.href="finalresult.do"
+			location.href="finalresult.do?day="+day+"&cate="+cate;
 		}else{
 			location.href= "test_insert.do?speak_accuracy="+speak_acc+"&lip_accuracy="+lip_acc
 					+"&num="+word_num+"&id="+word_idx+"&cnt="+(cnt+1)+"&day="+day+"&cate="+cate;

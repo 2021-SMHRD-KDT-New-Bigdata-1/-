@@ -186,7 +186,7 @@ public class BoardController {
 			
 			List<PronAcc> pron_acc = mapper.mypage1_pron_acc(id, step);
 			model.addAttribute("pron_acc", pron_acc);
-			System.out.println(pron_acc);
+			
 			List<Mypage> list = mapper.mypage1_sy(id);
 			model.addAttribute("list", list);
 			return "mypage1";
@@ -203,6 +203,9 @@ public class BoardController {
 			List<MypageStep> step_list2 = mapper.mypage2_step_wo2(id, step);
 			model.addAttribute("step_list2", step_list2);
 			
+			List<PronAcc> pron_acc = mapper.mypage2_pron_acc(id, step);
+			model.addAttribute("pron_acc", pron_acc);
+			
 			List<Mypage> list = mapper.mypage1_wo(id);
 			model.addAttribute("list", list);
 			return "mypage2";
@@ -218,6 +221,9 @@ public class BoardController {
 			
 			List<MypageStep> step_list2 = mapper.mypage3_step_se2(id, step);
 			model.addAttribute("step_list2", step_list2);
+			
+			List<PronAcc> pron_acc = mapper.mypage3_pron_acc(id, step);
+			model.addAttribute("pron_acc", pron_acc);
 			
 			List<Mypage> list = mapper.mypage1_se(id);
 			model.addAttribute("list", list);
@@ -286,7 +292,7 @@ public class BoardController {
 		public String syl_weakstudy(Model model, HttpSession session, int num){
 		User vo = (User)session.getAttribute("vo");
 		String id = vo.getUser_id();
-		List<Test> list = mapper.syl_weakstudy(num, id);
+		Test list = mapper.syl_weakstudy(num, id);
 		model.addAttribute("list", list);
 		return "weakpage"; 
 		 }
@@ -295,7 +301,8 @@ public class BoardController {
 		public String word_weakstudy(Model model, HttpSession session, int num){
 			User vo = (User)session.getAttribute("vo");
 			String id = vo.getUser_id();
-			List<Test> list = mapper.word_weakstudy(num, id);
+			Test list = mapper.word_weakstudy(num, id);
+			System.out.println(list);
 			model.addAttribute("list", list);
 			return "weakpage"; 
 		}
@@ -304,7 +311,7 @@ public class BoardController {
 		public String sen_weakstudy(Model model, HttpSession session, int num){
 			User vo = (User)session.getAttribute("vo");
 			String id = vo.getUser_id();
-			List<Test> list = mapper.sen_weakstudy(num, id);
+			Test list = mapper.sen_weakstudy(num, id);
 			model.addAttribute("list", list);
 			return "weakpage"; 
 		}

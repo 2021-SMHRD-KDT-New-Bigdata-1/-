@@ -192,20 +192,14 @@ video {
 								enctype="multipart/form-data">
 								
 								<!-- type hidden으로 바꿔줄거 -->
-								<c:forEach var="list" items="${list}" varStatus="status">
-								<c:if test="${status.index eq cnt}">
-									<input type="text" id="h_num" name="h_num" value="${list.num}">
-									<input type="text" id="h_idx" name="h_idx" value="${list.id}">
-								</c:if>
-								</c:forEach>
 								
 								<input type="text" id="h_cnt" name="h_cnt" value="${cnt}"> 
 								
 								<c:choose>
-									<c:when test="${fn:length(list[0].content)==1}" >
+									<c:when test="${fn:length(list.content)==1}" >
 										<input type="text" id="h_cate" name="h_cate" value="1">
 									</c:when>
-									<c:when test="${fn:length(list[0].content)>1 and fn:length(list[0].content)<6}" >
+									<c:when test="${fn:length(list.content)>1 and fn:length(list.content)<6}" >
 										<input type="text" id="h_cate" name="h_cate" value="2">
 									</c:when>
 									<c:otherwise>

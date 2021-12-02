@@ -272,7 +272,7 @@
                                         </span>
                                     </div>
                                     <h2 class="hero__entry-title">
-                                        <a href="single-standard.html">
+                                        <a >
                                         		     정확한 입모양/발음 교정을 위해, 올바름이 함께 하겠습니다.    
 
                                         </a>

@@ -281,8 +281,7 @@ public class BoardController {
 			return "studypage2";
 		}
 
-<<<<<<< HEAD
-=======
+
 		@RequestMapping("/syl_weakstudy.do") 
 		public String syl_weakstudy(Model model, HttpSession session, int num){
 		User vo = (User)session.getAttribute("vo");
@@ -310,6 +309,6 @@ public class BoardController {
 			return "weakpage"; 
 		}
 		
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
+
 	}
 

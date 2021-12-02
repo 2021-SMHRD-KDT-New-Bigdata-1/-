@@ -31,6 +31,14 @@
    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
 </script>
 
+
+<!-- 상단바 뒤로가기 버튼 화살표  -->   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 상단바 뒤로가기 버튼 화살표  -->  
+
    <!--이모티콘-->
       <link rel="stylesheet"
          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -236,6 +244,20 @@ footer {
    justify-content: center;
    position: relative;
 }
+
+.weak_logo {
+    color: white;
+    padding-left: 580px;
+    font-size: x-large;'
+}
+
+button.btnback{
+	all:unset; 
+	margin-left:25px; 
+	margin-top:5px;
+	color:white;
+}
+
 </style>
 
 
@@ -250,7 +272,10 @@ footer {
       <!-- Header -->
       <section>
          <header class="nav_top">
-            <h1 id="title_name" style="margin-left: 20px;"><a href="main.do">Allbareum</a></h1>
+            <div>
+	         	<button onclick="back()"type="button" class="btnback"><i class="fas fa-arrow-left fa-2x"></i></button>
+	            <a href="main.do" class="weak_logo">Allbareum</a>
+         	</div>  
             <nav id="main_title_nav" role="navigation">
                <ul id="main-menu" style="list-style: none;">
                   <li><a onclick="Syl_weak();">음절</a></li>
@@ -350,6 +375,9 @@ footer {
 	   function word_weakstudy(num){
 	   location.href="word_weakstudy.do?num="+num;
    }
+	   function back(){
+	       location.href="select.do";
+	}
 
    
    </script>

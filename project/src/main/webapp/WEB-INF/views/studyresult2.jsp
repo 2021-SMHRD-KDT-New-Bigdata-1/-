@@ -65,10 +65,9 @@ body {
 	background-color: #f2f2f2;
 }
 h4{
-    margin-top: 15px;
-    margin-bottom: 10px;
-    color: white;
+    color: black;
     font-weight: 900;
+    font-size:x-large
 }
 
 table td {
@@ -110,10 +109,10 @@ table td {
 
 	<!-- Header -->
 	<header id="header" class="alt">
-		<button type="button" class="btnback">
+		<!--  <button type="button" class="btnback">
 			<i class="fas fa-arrow-left fa-2x"></i>
-		</button>
-		<h4 >결과 확인</h4>
+		</button>-->
+		
 	
 	</header>
 
@@ -124,6 +123,7 @@ table td {
 			<tr>
 				<td  colspan="3" class="result" style="height: 150px; width: 350px; 
 				 text-align: center; font-size: large; word-break: keep-all;">
+				 <h4 >결과 확인</h4>
 					발음 정확도 : <%=speak_acc %> 점 <br>
 					입모양 정확도 : <%=lip_acc %> 점
 				</td>

@@ -294,6 +294,9 @@ function Sentence_test() {
 function Step_Result_wo(step) {
     location.href="Step_Result_wo.do?step="+step;
 }
+function back(){
+    location.href="main.do";
+ }
 </script>
 
 <body class="is-preload alt">

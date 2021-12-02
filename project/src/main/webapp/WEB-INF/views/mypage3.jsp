@@ -293,6 +293,9 @@ function Sentence_test() {
 function Step_Result_se(step) {
     location.href="Step_Result_se.do?step="+step;
 }
+function back(){
+    location.href="main.do";
+ }
 
 </script>
 

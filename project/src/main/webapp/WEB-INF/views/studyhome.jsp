@@ -74,6 +74,22 @@
                    border-color: #f67822;
             }
             
+            .syll_logo{
+				           
+				    color: white;
+				    padding-left: 440px;
+				    font-size: large;'
+
+            }
+            
+            .word_logo{
+				           
+				    color: white;
+				    padding-left: 480px;
+				    font-size: large;'
+
+            }
+            
            </style>
    <script>
    //querystring
@@ -127,7 +143,15 @@
             });
    }
    function jsonHtml1(data){ //콜백함수
-      view = "<div id='wrapper'>";
+	   view ="<header id='header' class='alt'>"
+       view +="<div>"
+       view +="<button onclick=back() type='button' class='btnback'>"
+       view +="<i class='fas fa-arrow-left fa-2x'></i>"
+       view +="</button>"
+       view +="<a class='syll_logo'>음절 (Syllable)</a>"
+       view +="</div> " 
+       view +="</header>"
+      view += "<div id='wrapper'>";
       view += "<div id='main'>";
       view += "<div class='container'>";
       view += "<div class='row'>";
@@ -178,7 +202,15 @@
       $(".panel-body2").html(view);
    }
    function jsonHtml2(data){ //콜백함수
-      view = "<div id='wrapper'>";
+	   view ="<header id='header' class='alt'>"
+	   view +="<div>"
+	   view +="<button onclick=back() type='button' class='btnback'>"
+	   view +="<i class='fas fa-arrow-left fa-2x'></i>"
+	   view +="</button>"
+	   view +="<a class='word_logo'>단어 (Word)</a>"
+	   view +="</div> " 
+	   view +="</header>"
+      view += "<div id='wrapper'>";
       view += "<div id='main'>";
       view += "<div class='container'>";
       view += "<div class='row'>";
@@ -228,7 +260,16 @@
       $(".panel-body2").html(view);
    }
    function jsonHtml3(data){ //콜백함수
-      view = "<div id='wrapper'>";
+	   
+	  view ="<header id='header' class='alt'>"
+	  view +="<div>"
+	  view +="<button onclick=back() type='button' class='btnback'>"
+	  view +="<i class='fas fa-arrow-left fa-2x'></i>"
+	  view +="</button>"
+	  view +="<a class='syll_logo'>문장 (Sentense)</a>"
+	  view +="</div> " 
+	  view +="</header>"
+      view += "<div id='wrapper'>";
       view += "<div id='main'>";
       view += "<div class='container'>";
       view += "<div class='row'>";
@@ -297,17 +338,28 @@
       }
       
    }
+   
+   function back(){
+       location.href="select.do";
+    }
+   
+   
+   
    </script>
             
    </head>
    
    <body class="is-preload">
 
-      <!-- Header -->
+      <!-- Header 
                <header id="header" class="alt">
-               <button onclick="back()"type="button" class="btnback"><i class="fas fa-arrow-left fa-2x"></i></button>
-                  
-               </header>
+               <div>
+	           <button onclick="back()"type="button" class="btnback">
+	           <i class="fas fa-arrow-left fa-2x"></i>
+	           </button>
+		       <a class="syll_logo">음절 (Syllable)</a>
+	         	</div>  
+               </header>-->
 
       <!-- Wrapper -->
          <div id="wrapper">
@@ -338,10 +390,7 @@
 
       <script>
       
-      function back(){
-          location.href="select.do";
-       }
-      
+
       
       
       </script>

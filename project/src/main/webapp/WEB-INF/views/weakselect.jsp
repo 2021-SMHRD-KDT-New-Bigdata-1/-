@@ -1,6 +1,9 @@
+weakselect
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE HTML>
 
 <!--
@@ -283,11 +286,23 @@ footer {
                      			<td style="float:right; margin-right:50px; text-align:center; font-size:20px; font-weight: bold;">정확도</td>
                      			</tr>
                      	<c:forEach var="list" items="${list}" varStatus="status">
-                     			<tr style="width:100%;"><td style="float:left; margin-left:40px;">${list.content }</td>
-                     			<td style="float:right; margin-right:50px;">정확도:${list.accuracy }</td></tr>
+                     			
+                     			<tr style="width:100%;">
+                     			<c:choose>
+								<c:when test="${fn:length(list.content)==1}" >
+									<td style="float:left; margin-left:40px;" onclick="syl_weakstudy(${list.num})">${list.content },${list.num }</td>
+								</c:when>
+								<c:when test="${fn:length(list.content)>1 && fn:length(list.content)<6}" >
+									<td style="float:left; margin-left:40px;" onclick="word_weakstudy(${list.num}">${list.content },${list.num }</td>
+								</c:when>
+								<c:otherwise>
+									<td style="float:left; margin-left:40px;" onclick="sen_weakstudy(${list.num}">${list.content },${list.num }</td>
+								</c:otherwise>
+								</c:choose>
+                     			<td style="float:right; margin-right:50px;">입모양 : ${list.lip_accuracy }, 발음 : ${list.speak_accuracy }</td></tr>
                      	</c:forEach>
                      		</table>
-                     
+
                      </c:if>
                      </div>
                   </div>
@@ -328,6 +343,17 @@ footer {
    function Sen_weak() {
 	      location.href="Sen_weak.do";
 	}
+   
+   function syl_weakstudy(num){
+	   location.href="syl_weakstudy.do?num="+num;
+   }
+   function word_weakstudy(num){
+	   location.href="word_weakstudy.do?num="+num;
+   }
+   function sen_weakstudy(num){
+	   location.href="sen_weakstudy.do?num="+num;
+   }
+   
    </script>
 </body>
 </html>

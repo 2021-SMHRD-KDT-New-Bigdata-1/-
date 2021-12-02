@@ -112,10 +112,10 @@ select#my_select::-ms-expand { display: none; }
     display: table;
     border-collapse: separate;
 }
-#my_select {
+/*#my_select {
     height: 28px;
     cursor: pointer;
-   background:url('../img/input_arrow.png') no-repeat 93% 90%/12px auto;
+   	background:url('../assets/images/img_193723.png') no-repeat 93% 90%/12px auto;
  }
 #my_select{
     display: block;
@@ -127,7 +127,7 @@ select#my_select::-ms-expand { display: none; }
     color: #555;
     background-color: #fff;
     background-image: none;
-    border: 2px solid #ff8000;
+    border: 2px solid #ff8000;*/
 }
 /*select 끝*/
 

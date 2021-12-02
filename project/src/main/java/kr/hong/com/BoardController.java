@@ -124,6 +124,7 @@ public class BoardController {
 			User vo = (User)session.getAttribute("vo");
 			String id = vo.getUser_id();
 			List<Test> list = mapper.Sen_weak(id);
+			System.out.println(list);
 			model.addAttribute("list", list);
 			System.out.println(list);
 			return "weakselect"; 
@@ -293,6 +294,8 @@ public class BoardController {
 		User vo = (User)session.getAttribute("vo");
 		String id = vo.getUser_id();
 		Test list = mapper.syl_weakstudy(num, id);
+		System.out.println(list);
+		System.out.println(id);
 		model.addAttribute("list", list);
 		return "weakpage"; 
 		 }
@@ -301,6 +304,8 @@ public class BoardController {
 		public String word_weakstudy(Model model, HttpSession session, int num){
 			User vo = (User)session.getAttribute("vo");
 			String id = vo.getUser_id();
+			System.out.println(num);
+			System.out.println(id);
 			Test list = mapper.word_weakstudy(num, id);
 			System.out.println(list);
 			model.addAttribute("list", list);
@@ -309,12 +314,15 @@ public class BoardController {
 		
 		@RequestMapping("/sen_weakstudy.do") 
 		public String sen_weakstudy(Model model, HttpSession session, int num){
-			User vo = (User)session.getAttribute("vo");
-			String id = vo.getUser_id();
-			Test list = mapper.sen_weakstudy(num, id);
-			model.addAttribute("list", list);
-			return "weakpage"; 
-		}
+		User vo = (User)session.getAttribute("vo");
+		String id = vo.getUser_id();
+		System.out.println(num);
+		System.out.println(id);
+		Test list = mapper.sen_weakstudy(num, id);
+		System.out.println(list);
+		model.addAttribute("list", list);
+		return "weakpage";   
+		 }
 		
 
 	}

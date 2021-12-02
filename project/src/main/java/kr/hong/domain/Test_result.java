@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class Test_result {
+	private String content;
 	private float speak_accuracy;
 	private String user_id;
 	private String weak;

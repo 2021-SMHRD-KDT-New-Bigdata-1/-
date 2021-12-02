@@ -303,6 +303,9 @@ video {
 			//$(".loadingd").css("display","block")
 			 
 		}
+		function vdclickFn(){
+			$("#vdcheck").html('비디오 첨부 완료!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+		}
 	</script>
 </body>
 </html>

@@ -18,6 +18,7 @@ import kr.hong.domain.Test;
 import kr.hong.domain.Test_result;
 import kr.hong.domain.User;
 import kr.hong.domain.Word;
+import kr.hong.domain.weak;
 
 // 1. Mapper interface + @(에노테이션)
 // JDBC(Java+SQL) -> 생산성이떨어진다. 유지보수가 어렵다.
@@ -83,9 +84,9 @@ public interface MainMapper {
 	public List<Test_result> Sen_testList(@Param("id")String id, @Param("day")String day);
 	
 	//weakpage
-	public Test syl_weakstudy(@Param("num")int num, @Param("id")String id);
-	public Test word_weakstudy(@Param("num")int num, @Param("id")String id);
-	public Test sen_weakstudy(@Param("num")int num, @Param("id")String id);
+	public weak syl_weakstudy(@Param("num")int num, @Param("id")String id);
+	public weak word_weakstudy(@Param("num")int num, @Param("id")String id);
+	public weak sen_weakstudy(@Param("num")int num, @Param("id")String id);
 	
 }
 

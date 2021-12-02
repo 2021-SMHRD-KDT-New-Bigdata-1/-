@@ -114,11 +114,13 @@
 	
 </style>
 <script>
-	
+	var h_cate = $("#h_c").val();
+	var h_day = $("#h_d").val();
+
 	$(document).ready(function() { //익명함수
 		  
 		//alert("제이쿼리 가장");
-		var h_cate = $("#h_60").val();
+
 		
 		if(h_cate==1){
 	    	Syl_testList();
@@ -136,7 +138,7 @@
 	
 	function Syl_testList() {
 		   $.ajax({
-		      url : "Syl_testList.do",
+		      url : "Syl_testList.do?day="+h_day,
 		      type : "get",
 		      dataType : "json",
 		      success : jsonHtml1,
@@ -146,7 +148,7 @@
 	}
 	function Word_testList() {
 		   $.ajax({
-		      url : "WordtestList.do",
+		      url : "WordtestList.do?day="+h_day,
 		      type : "get",
 		      dataType : "json",
 		      success : jsonHtml2,
@@ -156,7 +158,7 @@
 	}
 	function Sen_testList() {
 		   $.ajax({
-		      url : "SentestList.do",
+		      url : "SentestList.do?day="+h_day,
 		      type : "get",
 		      dataType : "json",
 		      success : jsonHtml3,
@@ -172,7 +174,10 @@
 	String day = request.getParameter("day");
 	String cate = request.getParameter("cate"); //음절/단어/문장
 	%>
-	<input type='text' id='h_60' value='<%=cate%>' >
+	<!-- 히든으로 바꿀거임 -->
+	<input type='text' id='h_c' value='<%=cate%>' >
+	<input type='text' id='h_d' value='<%=day%>' >
+	
 	<!-- 배경색 돌아가고 싶으면 css -->
 	<!-- Header -->
 	<header id="header" class="alt"><p class="day">STEP1</p></header>

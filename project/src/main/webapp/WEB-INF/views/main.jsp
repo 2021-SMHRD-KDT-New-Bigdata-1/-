@@ -58,7 +58,7 @@
 
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="main.do" rel="home" style="color: black; margin-left: 590px; font-family: NanumSquareExtraBold;" >All바름</a>
+                    <a href="main.do" rel="home" style="color: black; margin-left: 610px; font-family: NanumSquareExtraBold;" >All바름</a>
                 </p>
             </div>
 
@@ -264,25 +264,21 @@
                                 <div class="hero__entry-text-inner">
                                     <div class="hero__entry-meta">
                                         <span class="cat-links">
-                                            <a>ALL BAREUM</a>
+                                            <a style="font-weight:700;">ALL BAREUM</a>
                                         </span>
                                     </div>
                                     <h2 class="hero__entry-title">
-
-                                        <a >
-                                        		     정확한 입모양/발음 교정을 위해, 올바름이 함께 하겠습니다.    
-
-                                        <a style="font-family: GmarketSansBold; font-size:x-large;">
-                                        		     정확한 입모양/발음 교정은  
-
-
-                                        </a><br>
-                                        <a style="font-family: NanumSquareExtraBold; font-size:xx-large;">올바름이 함께 하겠습니다. </a>
+										<!--style="font-family: GmarketSansBold; font-size:x-large;"  -->
+										<p class="hero__entry-desc" style="font-family: GmarketSansBold; font-size:large;" > - 입 모양 인식을 통한 바른 입 모양 교정 </p>
+                                        <p class="hero__entry-desc" style="font-family: GmarketSansBold; font-size:large;" > - 음성 인식을 통한 발음 정확도 교정   </p>
+                                        
+                                        <p style="font-family: NanumSquareExtraBold; font-size:xx-large;">정확한 입모양/발음 교정,</p> 
+                                        <p style="font-family: NanumSquareExtraBold; font-size:x-large; font-weight:500;">올바름이 함께 하겠습니다.</p>
+										
+                                       
                                     </h2>
                                     
-                                    <p class="hero__entry-desc">
-								                                     음성과 입모양 인식을 통해 발음교정을 돕습니다.
-                                    </p>
+                                 
                                     
                                 </div>
                             </div>

@@ -124,6 +124,7 @@ public class BoardController {
 			User vo = (User)session.getAttribute("vo");
 			String id = vo.getUser_id();
 			List<Test> list = mapper.Sen_weak(id);
+			System.out.println(list);
 			model.addAttribute("list", list);
 			System.out.println(list);
 			return "weakselect"; 

@@ -142,9 +142,7 @@ video {
 	<div class="word">
 
 
-		Step
-		<%=day%>
-		(${cnt+1}/5)
+		
 		<!-- 단어 : [
 
 	
@@ -160,7 +158,10 @@ video {
 
 
 		
-       
+       <div style="background-color:#ffaf42; border:0px; width:60px; height:42.2px;
+       		position: absolute; left:80%; top:83px; text-align:center;">Step
+		<%=day%>
+		(${cnt+1}/5)</div>
     
 		<table class="study2table">
 			<thead>

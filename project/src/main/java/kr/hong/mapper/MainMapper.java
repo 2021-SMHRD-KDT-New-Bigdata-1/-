@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import kr.hong.domain.LoginInfo;
 import kr.hong.domain.Mypage;
 import kr.hong.domain.MypageStep;
+import kr.hong.domain.PronAcc;
 import kr.hong.domain.Sentence;
 import kr.hong.domain.Syllable;
 import kr.hong.domain.Test;
@@ -51,6 +52,10 @@ public interface MainMapper {
 	public List<MypageStep> mypage3_step_se1(@Param("id")String id, @Param("step")String step);
 	public List<MypageStep> mypage3_step_se2(@Param("id")String id, @Param("step")String step);
 	
+	public List<PronAcc> mypage1_pron_acc(@Param("id")String id, @Param("step")String step);
+	public List<PronAcc> mypage2_pron_acc(@Param("id")String id, @Param("step")String step);
+	public List<PronAcc> mypage3_pron_acc(@Param("id")String id, @Param("step")String step);
+	
 	public String mypage();
 	public String main();
 	public String studyresult2();
@@ -70,6 +75,11 @@ public interface MainMapper {
 	public void sy_test_insert(@Param("num") int num,@Param("speak_accuracy") String speak_accuracy,@Param("lip_accuracy")String lip_accuracy, @Param("user_id")String user_id,@Param("weak")String weak);
 	public void wo_test_insert(@Param("num") int num,@Param("speak_accuracy") String speak_accuracy,@Param("lip_accuracy")String lip_accuracy, @Param("user_id")String user_id,@Param("weak")String weak);
 	public void sen_test_insert(@Param("num") int num,@Param("speak_accuracy") String speak_accuracy,@Param("lip_accuracy")String lip_accuracy, @Param("user_id")String user_id,@Param("weak")String weak);
+	//weakpage
+	public List<Test> syl_weakstudy(@Param("num")int num, @Param("id")String id);
+	public List<Test> word_weakstudy(@Param("num")int num, @Param("id")String id);
+	public List<Test> sen_weakstudy(@Param("num")int num, @Param("id")String id);
+	
 }
 
 

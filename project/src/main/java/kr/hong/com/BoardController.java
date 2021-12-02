@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import kr.hong.domain.LoginInfo;
 import kr.hong.domain.Mypage;
 import kr.hong.domain.MypageStep;
+import kr.hong.domain.PronAcc;
 import kr.hong.domain.Sentence;
 import kr.hong.domain.Syllable;
 import kr.hong.domain.Test;
@@ -183,6 +184,9 @@ public class BoardController {
 			List<MypageStep> step_list2 = mapper.mypage1_step_sy2(id, step);
 			model.addAttribute("step_list2", step_list2);
 			
+			List<PronAcc> pron_acc = mapper.mypage1_pron_acc(id, step);
+			model.addAttribute("pron_acc", pron_acc);
+			System.out.println(pron_acc);
 			List<Mypage> list = mapper.mypage1_sy(id);
 			model.addAttribute("list", list);
 			return "mypage1";
@@ -277,5 +281,35 @@ public class BoardController {
 			return "studypage2";
 		}
 
+<<<<<<< HEAD
+=======
+		@RequestMapping("/syl_weakstudy.do") 
+		public String syl_weakstudy(Model model, HttpSession session, int num){
+		User vo = (User)session.getAttribute("vo");
+		String id = vo.getUser_id();
+		List<Test> list = mapper.syl_weakstudy(num, id);
+		model.addAttribute("list", list);
+		return "weakpage"; 
+		 }
+		
+		@RequestMapping("/word_weakstudy.do") 
+		public String word_weakstudy(Model model, HttpSession session, int num){
+			User vo = (User)session.getAttribute("vo");
+			String id = vo.getUser_id();
+			List<Test> list = mapper.word_weakstudy(num, id);
+			model.addAttribute("list", list);
+			return "weakpage"; 
+		}
+		
+		@RequestMapping("/sen_weakstudy.do") 
+		public String sen_weakstudy(Model model, HttpSession session, int num){
+			User vo = (User)session.getAttribute("vo");
+			String id = vo.getUser_id();
+			List<Test> list = mapper.sen_weakstudy(num, id);
+			model.addAttribute("list", list);
+			return "weakpage"; 
+		}
+		
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 	}
 

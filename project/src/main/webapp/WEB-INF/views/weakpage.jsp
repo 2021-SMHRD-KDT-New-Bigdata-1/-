@@ -113,29 +113,13 @@ video {
 
 </head>
 <body class="is-preload">
-	<%
-		String day = request.getParameter("day");
-	%>
 
 	<!-- Wrapper -->
 
 	<!-- Header -->
 
 	<div class="word1"><p class="weakpro">취약발음</p>
-		<c:choose>
-			<c:when test="${fn:length(list[0].content)==1}">
-				<button onclick="back1(1)" type="button" class="btnback">
-			</c:when>
-			<c:when
-				test="${fn:length(list[0].content)>1 and fn:length(list[0].content)<6}">
-				<button onclick="back1(2)" type="button" class="btnback">
-			</c:when>
-			<c:otherwise>
-				<button onclick="back1(3)" type="button" class="btnback">
-			</c:otherwise>
-		</c:choose>
 		<i class="fas fa-arrow-left fa-2x"></i>
-		</button>
 		
 		<h3 class="stage_nm">${day}</h3>
 
@@ -147,17 +131,18 @@ video {
 	<div class="word">
 
 
-		Step
-		<%=day%>
-		단어 : [
-
-	
+<c:choose>
+			<c:when test="${fn:length(list.content)==1}" >
+			취약음절
+			</c:when>
+			<c:when test="${fn:length(list.content)>1 && fn:length(list.content)<6}" >
+			취약단어
+			</c:when>
+			<c:otherwise>
+			취약문장
+			</c:otherwise>
+			</c:choose>		
 		
-		
-		<c:forEach var="list" items="${list}" varStatus="status">
-			${list.content}
-		</c:forEach>
-		] <br>
 		<!--<c:set var="i" value="${i+1}" />-->
 
 
@@ -176,12 +161,7 @@ video {
 				<tr>
 					<td class="studycolor"
 						style="text-align: center; font-size: large;" id='test60'>
-						<c:forEach var="list" items="${list}" varStatus="status">
-						<c:if test="${status.index eq cnt}">
-							학습 단어 : ${list.content} (${list.id})
-						</c:if>
-						</c:forEach>
-
+							${list.content }
 					</td>
 					
 					
@@ -220,7 +200,6 @@ video {
 								</c:forEach>
 								
 								<input type="text" id="h_cnt" name="h_cnt" value="${cnt}"> 
-								<input type="text" id="h_day" name="h_day" value="<%=day%>">
 								
 								<c:choose>
 									<c:when test="${fn:length(list[0].content)==1}" >

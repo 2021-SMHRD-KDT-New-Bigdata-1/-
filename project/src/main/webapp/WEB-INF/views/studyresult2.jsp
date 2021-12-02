@@ -137,7 +137,7 @@ table td {
 					<!-- <video width="30%" height="30%" autoplay="autoplay" id="myVideo"></td> -->
 			</tr>
 			<tr>
-				<td colspan="3" calss="resultb" style=" height: 200px; text-align: center;">
+				<td colspan="3" class="resultb" style=" height: 200px; text-align: center;">
 					<button type="submit" class="btn btn-default" id="return" onclick="history.back()">다시하기</button> &nbsp; &nbsp;
 					<button class="btn btn-default" id="pass" onclick="insert_plus_nextFn( <%=speak_acc%>,<%=lip_acc%>,<%=word_num%>,<%=word_idx%>,<%=list_cnt%>,<%=day%>,<%=cate%> )">넘어가기</button> &nbsp; &nbsp;
 					<button class="btn btn-default" id="synonym">유사단어</button>
@@ -148,9 +148,13 @@ table td {
 <script>
 	function insert_plus_nextFn(speak_acc,lip_acc,word_num,word_idx,cnt,day,cate){
 		//alert("버튼 누름");
-		alert(speak_acc+" "+lip_acc+" "+word_num+" "+word_idx+" "+(cnt+1)+" "+day+" "+cate);
-		location.href= "test_insert.do?speak_accuracy="+speak_acc+"&lip_accuracy="+lip_acc
-				+"&num="+word_num+"&id="+word_idx+"&cnt="+(cnt+1)+"&day="+day+"&cate="+cate;
+		//alert(speak_acc+" "+lip_acc+" "+word_num+" "+word_idx+" "+(cnt+1)+" "+day+" "+cate);
+		if (cnt==4){
+			location.href="finalresult.do"
+		}else{
+			location.href= "test_insert.do?speak_accuracy="+speak_acc+"&lip_accuracy="+lip_acc
+					+"&num="+word_num+"&id="+word_idx+"&cnt="+(cnt+1)+"&day="+day+"&cate="+cate;
+		}
 	}
 </script>
 	

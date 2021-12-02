@@ -377,7 +377,7 @@ function Step_Result_sy(step) {
                <div class="col-12-small"
                   style="width: 50%; margin-top: 30px;">
                   <div class="panel panel-primary">
-                     <div id="chart_title" class="panel-heading">음성 정확도</div>
+                     <div id="chart_title" class="panel-heading">${pron_acc[0] }</div>
                      <div class="panel-body">
                         <canvas id="doughnut-chart" width="300" height="250"></canvas>
                         <script>
@@ -389,7 +389,7 @@ function Step_Result_sy(step) {
                                 {
                                   label: "Population (millions)",
                                   backgroundColor: ["#3c80e5", "#9b938a"],
-                                  data: [80,20]
+                                  data: [ ${(pron_acc[1]/(pron_acc[1] + pron_acc[0]))*100}, ${(pron_acc[0]/(pron_acc[1] + pron_acc[0]))*100}]
                                 }
                               ]
                             },

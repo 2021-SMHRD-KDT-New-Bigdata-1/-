@@ -95,8 +95,7 @@ td.results{
 #limg{
 	display: block; 
 	margin: 0 auto; 
-	width:280px; 
-	height:250px;
+	
 }
 
 
@@ -1961,17 +1960,31 @@ input, select, textarea {
 	}
 	
 	.cameraInput label {
-		    display: inline-block;
-		    padding: 10px 20px;
+			display: inline-block;
+		    padding: 10px 20px 20px 20px;
 		    color: #fff;
 		    vertical-align: middle;
 		    background-color: #ff8040;
-		    border-radius : 30px;
+		    border-radius: 30px;
+		    cursor: pointer;
+		    height: 42px;
+		    width: 77px;
+		    margin-left: 10px;
+		    margin-top: 0.5em;
+	}
+	button.cameraInput{
+		    display: inline-block;
+		    padding: 10px10px10px 10px;
+		    color: #fff;
+		    vertical-align: middle;
+		    font-weight: 700;
+		    background-color: #ff8040;
+		    border-radius: 30px;
 		    cursor: pointer;
 		    height: 40px;
 		    margin-left: 10px;
+		    margin-top: em;
 	}
-	
 	.cameraInput input[type="file"] {
 		    position: absolute;
 		    width: 0;

@@ -286,6 +286,10 @@ public class BoardController {
 			}else{System.out.println("test_insert 오류");}
 			
 			model.addAttribute("cnt",cnt);
+			if(cnt.equals("5")) {
+				return "redirect:finalresult.do?day="+day+"&cate="+cate;
+			}
+			
 			return "studypage2";
 		}
 

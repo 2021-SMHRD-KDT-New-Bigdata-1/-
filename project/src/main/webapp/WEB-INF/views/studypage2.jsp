@@ -134,7 +134,7 @@ video {
 	</div>
 	<div id="loadingd">
 		
-            <img id="limg"src="${pageContext.request.contextPath}/resources/images/loading2.gif" alt="분석 중..." >
+            <img id="limg"src="${pageContext.request.contextPath}/resources/images/1484.gif" alt="분석 중..."  >
 		</div>
 
 	<!----table ----->
@@ -242,7 +242,7 @@ video {
 									class="fas fa-microphone-alt fa-2x"></i>
 								</label> <input type="file" id="cameraInput" name="file"
 									accept="video/*" capture="user" />
-								<button type="submit" class="btn-default" onclick="Loading();">분석</button>
+								<button type="submit" class="cameraInput" onclick="Loading();">분석</button>
 								<!-- css 넣어주기,, button -->
 
 

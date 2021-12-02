@@ -159,7 +159,7 @@
 					
 					<div id="avg">평균 몇점</div> <!-- day1 -->
 					<div class="contents">
-					<p id="list55">가<i class="far fa-laugh-wink fa-1x"></i></p> <!-- 제시 단어 리스트 쫘라락 -->
+					<!-- <p id="list55">가<i class="far fa-laugh-wink fa-1x"></i></p> 제시 단어 리스트 쫘라락 -->
 						<div class="602">
 						여기에여
 						</div>
@@ -238,20 +238,38 @@
 	
 	function jsonHtml(data){ //콜백함수
 		
+		
+		var all_mean = 0;
 		view="<div>";
 		    $.each(data, function(data, obj){
-			view+="<p id='list55'>";
-			view+= obj.content;
-			view+="발음 점수 : ";
-			view+= obj.speak_accuracy;
+		    	var mean = (parseInt(obj.speak_accuracy) + parseInt(obj.lip_accuracy))/2;
+		    	
+				view+="<p id='list55'><b style='color:black;'>";
+				view+= obj.content;
+				view+=" </b>"; 
+				//view+="발음 점수 : ";
+				//view+= obj.speak_accuracy;
+				//view+= " / 입모양 점수 : "
+				//view+= obj.lip_accuracy;
+				//view+= " / 평균 : "
+				view+= mean;
+				all_mean += mean;
+				view+= "점   ";
+				if (mean > 90){
+					view+= "<i class='far fa-laugh-wink fa-1x'></i>";
+				}else if(mean >= 50){
+					view+= "<i class='far fa-meh fa-1x'></i>";
+				}else{
+					view+= "<i class='far fa-tired fa-1x'></i>";
+				}
+				view+="</p>";
+			    })
+			view+="</div>";
 			
-			view+= " / 입모양 점수 : "
-			view+= obj.lip_accuracy;
-			view+=" </p>";
-		    })
-
-		view+="</div>";
+			view2 = all_mean/5+" 점 ";
+		
 	     	$(".602").html(view);
+	     	$("#avg").html(view2);
 
 		}
 	

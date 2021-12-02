@@ -90,8 +90,19 @@ video {
 	src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js">
 	
 </script>
+<link rel="stylesheet" href="styles.css">
+<style type="text/css">
+#loading {
+	height: 150vw;
+}
+
+#loading-image {
+	margin-top: 60pt;
+	height: 200pt;
+	width: 400pt;
+}
+</style>
 <script>
-	
 	document.getElementById("cameraInput").addEventListener(
 			"change",
 			function() {
@@ -126,7 +137,7 @@ video {
 		</c:choose>
 		<i class="fas fa-arrow-left fa-2x"></i>
 		</button>
-		
+
 		<h3 class="stage_nm">${day}</h3>
 
 	</div>
@@ -138,7 +149,8 @@ video {
 
 
 		Step
-		<%=day%>  (${cnt+1}/5)
+		<%=day%>
+		(${cnt+1}/5)
 		<!-- 단어 : [
 
 	
@@ -154,40 +166,39 @@ video {
 
 
 		<div class="studycolor"></div>
-		
+
 		<c:set var="one" value="$" />
-		
-		<div class="studycolor">
-			
-		</div>
+
+		<div class="studycolor"></div>
 		<table class="study2table">
 			<thead>
 
 				<tr>
 					<td class="studycolor"
-						style="text-align: center; font-size: large;" id='test60'>
-						학습 단어
-					</td>
-											
+						style="text-align: center; font-size: large;" id='test60'>학습
+						단어</td>
+
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-				<td class="studycolor2"
-						style="text-align: center; font-size: large;">
-						<c:forEach var="list" items="${list}" varStatus="status">
-						<c:if test="${status.index eq cnt}">
-							<h2>${list.content}</h2> <!-- id출력은   (${list.id}) -->
-						</c:if>
-						</c:forEach>
-						</td>
+					<td class="studycolor2"
+						style="text-align: center; font-size: large;"><c:forEach
+							var="list" items="${list}" varStatus="status">
+							<c:if test="${status.index eq cnt}">
+								<h2>${list.content}</h2>
+								<!-- id출력은   (${list.id}) -->
+							</c:if>
+						</c:forEach></td>
 
 				</tr>
 				<tr>
 					<td class="studycolor2"
 						style="text-align: center; vertical-align: middle;"><video
-							controls autoplay muted playsinline width="350">
-	<source src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4" type="video/mp4">
+							controls playsinline width="350">
+							<source
+								src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"
+								type="video/mp4">
 
 						</video></td>
 				</tr>
@@ -202,23 +213,26 @@ video {
 
 							<form action="http://211.223.106.113:5000/dlModel" method="POST"
 								enctype="multipart/form-data">
-								
+
 								<!-- type hidden으로 바꿔줄거 -->
 								<c:forEach var="list" items="${list}" varStatus="status">
-								<c:if test="${status.index eq cnt}">
-									<input type="hidden" id="h_num" name="h_num" value="${list.num}">
-									<input type="hidden" id="h_idx" name="h_idx" value="${list.id}">
-								</c:if>
+									<c:if test="${status.index eq cnt}">
+										<input type="hidden" id="h_num" name="h_num"
+											value="${list.num}">
+										<input type="hidden" id="h_idx" name="h_idx"
+											value="${list.id}">
+									</c:if>
 								</c:forEach>
-								
-								<input type="hidden" id="h_cnt" name="h_cnt" value="${cnt}"> 
+
+								<input type="hidden" id="h_cnt" name="h_cnt" value="${cnt}">
 								<input type="hidden" id="h_day" name="h_day" value="<%=day%>">
-								
+
 								<c:choose>
-									<c:when test="${fn:length(list[0].content)==1}" >
+									<c:when test="${fn:length(list[0].content)==1}">
 										<input type="hidden" id="h_cate" name="h_cate" value="1">
 									</c:when>
-									<c:when test="${fn:length(list[0].content)>1 and fn:length(list[0].content)<6}" >
+									<c:when
+										test="${fn:length(list[0].content)>1 and fn:length(list[0].content)<6}">
 										<input type="hidden" id="h_cate" name="h_cate" value="2">
 									</c:when>
 									<c:otherwise>
@@ -227,19 +241,20 @@ video {
 								</c:choose>
 
 
-			
-  
-								<input type="hidden" class="cameraInput1" value="" placeholder="첨부파일"> 
-									<label for="cameraInput"> <i class="fas fa-microphone-alt fa-2x"></i>
-								</label> 
-								<input type="file" id="cameraInput" name="file" accept="video/*" capture="user" /> 
-								<button type="submit" class="btn-default" >분석</button>
+
+
+								<input type="hidden" class="cameraInput1" value=""
+									placeholder="첨부파일"> <label for="cameraInput"> <i
+									class="fas fa-microphone-alt fa-2x"></i>
+								</label> <input type="file" id="cameraInput" name="file"
+									accept="video/*" capture="user" />
+								<button type="submit" class="btn-default">분석</button>
 								<!-- css 넣어주기,, button -->
 
 
-								
-								
-								
+
+
+
 								<!-- 
 								<input type="hidden" class="cameraInput1" value=""
 									placeholder="첨부파일"> <label for="cameraInput"> <i
@@ -262,6 +277,40 @@ video {
 
 	<!-- table 끝읏 -->
 
+	<!-- 
+            <div class="loading1">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+  
+            </div>
+        <div class="wait">1분 이상 걸릴 수 있습니다.<br>
+        잠시만 기다려주세요.</div>
+
+	<script type="text/javascript">
+		window.onbeforeunload = function() {
+			$('#loading').show();
+		} //현재 페이지에서 다른 페이지로 넘어갈 때 표시해주는 기능
+		$(window).load(function() { //페이지가 로드 되면 로딩 화면을 없애주는 것
+			$('#loading').hide();
+		});
+	</script> -->
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -271,11 +320,9 @@ video {
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
-		
 		function back1(cate) {
 			location.href = "studyhome.do?cate=" + cate;
 		}
-
 	</script>
 </body>
 </html>

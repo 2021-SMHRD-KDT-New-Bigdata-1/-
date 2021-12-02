@@ -289,12 +289,13 @@ footer {
 								<c:when test="${fn:length(list.content)==1}" >
 									<td style="float:left; margin-left:40px;" onclick="syl_weakstudy(${list.num})">${list.content },${list.num }</td>
 								</c:when>
+								<c:when test="${list.id} > 1000" >
+									<td style="float:left; margin-left:40px;" onclick="sen_weakstudy(${list.num})">${list.content },번호:${list.num},아이디:${list.id }</td>
+								</c:when>
 								<c:otherwise>
 									<td style="float:left; margin-left:40px;" onclick="word_weakstudy(${list.num})">${list.content },${list.num }</td>
 								</c:otherwise>
-								<c:when test="${fn:endsWith('list.content', '다')" >
-									<td style="float:left; margin-left:40px;" onclick="sen_weakstudy(${list.num})">${list.content },${list.num }</td>
-								</c:when>
+								
 								</c:choose>
                      			<td style="float:right; margin-right:50px;">입모양 : ${list.lip_accuracy }, 발음 : ${list.speak_accuracy }</td></tr>
                      	</c:forEach>

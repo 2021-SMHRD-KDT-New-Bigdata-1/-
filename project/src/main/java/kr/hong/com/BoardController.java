@@ -318,6 +318,7 @@ public class BoardController {
 		System.out.println(num);
 		System.out.println(id);
 		Test list = mapper.sen_weakstudy(num, id);
+		System.out.println(list);
 		model.addAttribute("list", list);
 		return "weakpage";   
 		 }

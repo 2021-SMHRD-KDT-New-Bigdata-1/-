@@ -26,7 +26,18 @@
 	    select * from tbl_sentence order by study_date asc
 	</select>
 	
-	<!-- test result -->
+	<!-- test check -->
+	<select id="check_sy" parameterType="map" resultType="kr.hong.domain.Test_result">
+	    select * from tbl_syllable_test where user_id=#{id} and num=#{num}
+	</select>
+		<select id="check_word" parameterType="map" resultType="kr.hong.domain.Test_result">
+	    select * from tbl_word_test where user_id=#{id} and num=#{num}
+	</select>
+		<select id="check_sen" parameterType="map" resultType="kr.hong.domain.Test_result">
+	    select * from tbl_sentence_test where user_id=#{id} and num=#{num}
+	</select>	
+		
+	<!-- test final result -->
 	<select id="Syl_testList" parameterType="map" resultType="kr.hong.domain.Test_result">
 		select w.content, t.speak_accuracy, t.user_id, t.weak, t.lip_accuracy, w.study_date, w.id 
 		from tbl_syllable_test as t 

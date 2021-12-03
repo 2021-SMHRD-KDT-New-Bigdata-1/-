@@ -20,6 +20,7 @@ import kr.hong.domain.PronAcc;
 import kr.hong.domain.Sentence;
 import kr.hong.domain.Syllable;
 import kr.hong.domain.Test;
+import kr.hong.domain.Test_result;
 import kr.hong.domain.User;
 import kr.hong.domain.Word;
 import kr.hong.domain.weak;
@@ -259,30 +260,51 @@ public class BoardController {
 		@RequestMapping("/test_insert.do")
 		public String test_insert(String speak_accuracy, String lip_accuracy, String num, String id, String cnt, String day, String cate,
 				Model model, HttpSession Session) {
-			//System.out.println(num);
-			//System.out.println(speak_accuracy);
-			//System.out.println(lip_accuracy);
-			//System.out.println(id);
-			//System.out.println(cnt);
-			
+
 			User vo = (User)Session.getAttribute("vo");
 			String user_id = vo.getUser_id();
+			
+			
 			
 			String weak="N";
 			if(Integer.parseInt(speak_accuracy) < 50 || Integer.parseInt(lip_accuracy) < 50) {weak="Y";}
 			
 			if(cate.equals("1")) {
-				mapper.sy_test_insert(Integer.parseInt(num), speak_accuracy, lip_accuracy, user_id, weak); //test 테이블에 인서트하는 mapper
-				List<Syllable> list = mapper.studypage2_sy(day); //cate,day 에 맞는 단어 뽑는 mapper
-				model.addAttribute("list", list);
+				//우선 내 id, num에 이미 학습한 데이터가 존재하는가? - select문 진행
+				List<Test_result> list_t = mapper.check_sy(user_id, Integer.parseInt(num));
+
+				//학습한 데이터가 없다면 insert
+				if(list_t.isEmpty()) {
+					System.out.println("값이 없어요~ insert 할게여");
+					mapper.sy_test_insert(Integer.parseInt(num), speak_accuracy, lip_accuracy, user_id, weak); //test 테이블에 인서트하는 mapper
+					List<Syllable> list = mapper.studypage2_sy(day); //cate,day 에 맞는 단어 뽑는 mapper
+					model.addAttribute("list", list);
+					
+				}else { //존재한다면  update
+					System.out.println("이미 존재하므로 update 진행 .. 코드짜렴");
+				}
+				
 			}else if(cate.equals("2")) {
-				mapper.wo_test_insert(Integer.parseInt(num), speak_accuracy, lip_accuracy, user_id, weak );
-				List<Word> list = mapper.studypage2_wo(day);
-				model.addAttribute("list", list);
+				List<Test_result> list_t = mapper.check_word(user_id, Integer.parseInt(num));
+				if(list_t.isEmpty()) {
+					mapper.wo_test_insert(Integer.parseInt(num), speak_accuracy, lip_accuracy, user_id, weak );
+					List<Word> list = mapper.studypage2_wo(day);
+					model.addAttribute("list", list);
+				}else { 
+					System.out.println("이미 존재하므로 update 진행 .. 코드짜렴");
+				}
+				
 			}else if(cate.equals("3")) {
-				mapper.sen_test_insert(Integer.parseInt(num), speak_accuracy, lip_accuracy, user_id, weak);
-				List<Sentence> list = mapper.studypage2_sen(day);
-				model.addAttribute("list", list);
+				List<Test_result> list_t = mapper.check_sen(user_id, Integer.parseInt(num));
+				
+				if(list_t.isEmpty()) {
+					mapper.sen_test_insert(Integer.parseInt(num), speak_accuracy, lip_accuracy, user_id, weak);
+					List<Sentence> list = mapper.studypage2_sen(day);
+					model.addAttribute("list", list);
+				}else { 
+					System.out.println("이미 존재하므로 update 진행 .. 코드짜렴");
+				}
+					
 			}else{System.out.println("test_insert 오류");}
 			
 			model.addAttribute("cnt",cnt);

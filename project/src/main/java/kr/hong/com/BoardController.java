@@ -181,7 +181,9 @@ public class BoardController {
 			
 			User vo = (User)session.getAttribute("vo");
 			String id = vo.getUser_id();
+			
 			List<MypageStep> step_list = mapper.mypage1_step_sy(id, step);
+			System.out.println(step_list);
 			model.addAttribute("step_list", step_list);
 			
 			List<PronAcc> pron_acc = mapper.mypage1_pron_acc(id, step);
@@ -191,7 +193,6 @@ public class BoardController {
 			model.addAttribute("list", list);
 			
 			List<Test> test = mapper.Syl_weak_my(id, step);
-			System.out.println(test);
 			model.addAttribute("test", test);
 			return "mypage1";
 		}

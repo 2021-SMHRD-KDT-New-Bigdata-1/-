@@ -352,7 +352,7 @@ function back(){
 							  var labels = [];
 							  var backgroundColor = [];
 							  var borderColor = [];
-							  $.each(step_list, function(inx, obj)){
+							  $.each(step_list, function(inx, obj){
 								  data.push(obj.speak_accuracy);
 								  labels.push(obj.content);
 								  if(obj.speak_accuracy<50){
@@ -363,12 +363,12 @@ function back(){
 									  borderColor.push("rgba(54, 162, 235, 0.2)")
 								  }
 								  
-							  }
+							  })
 							  //입모양 정확도 그래프 데이터
 							  var data2 = [];
 							  var backgroundColor2 = [];
 							  var borderColor2 = [];
-							  $.each(step_list, function(inx, obj)){
+							  $.each(step_list, function(inx, obj){
 								  data.push(obj.lip_accuracy);
 								  if(obj.lip_accuracy<50){
 									  backgroundColor.push('rgba(255, 99, 132, 0.5)')
@@ -378,7 +378,7 @@ function back(){
 									  borderColor.push("rgba(54, 162, 235, 0.2)")
 								  }
 								  
-							  }
+							  })
 							  var myChart = new Chart(ctx, {
 							    type: "bar",
 							    data: {
@@ -555,7 +555,10 @@ function back(){
                      <c:forEach var="test" items="${test }" varStatus="satus">
                      <tr style="width:100%;">
                  		<td onclick="syl_weakstudy(${test.id})">단어 :${test.content }</td>
-                     <td style="float:right; margin-right:50px;">입모양 : ${test.lip_accuracy }%, 발음 : ${test.speak_accuracy }%</td>
+                    <td style="float:right; margin-right:50px;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy*10 }" pattern="" />%
+                    	입모양 :<fmt:formatNumber value="${test.lip_accuracy*10 }" pattern="" />%
+                    </td>
+                    
                      </tr>
                      </c:forEach>
                      </table>

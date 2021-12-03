@@ -132,7 +132,7 @@
 
 	<!-- 배경색 돌아가고 싶으면 css -->
 	<!-- Header -->
-	<header id="header" class="alt"><p class="day">STEP1</p></header>
+	<header id="header" class="alt"><p class="day">STEP <%=day %></p></header>
 
 	<div class="all">
 

@@ -228,7 +228,7 @@
                                 </div>
                                     
                                     <div id="Allbareum">
-                                    <h2 class="hero__entry-title" style="font-weight: bold;" >
+                                    <h2 class="hero__entry-title" style="font-weight: bold; margin-top: 21px;" >
                                         	올바름
                                     </h2>
                                      <button class='btnmain' onclick='login()'>로그인</button>

@@ -52,6 +52,7 @@
 	    margin: auto;
 	    font-size: xx-large;
 	    font-weight: bold;
+	    border-radius: 10px;
 	}
 	
 	
@@ -98,6 +99,7 @@
 		font-size: x-large;
 		border: 2px solid #ffaf42;
 		background-color: white;
+		border-radius: 10px;
 	}
 
 	.far fa-laugh-wink fa-3x{

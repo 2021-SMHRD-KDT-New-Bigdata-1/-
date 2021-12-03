@@ -555,7 +555,7 @@ function back(){
                      <table>
                      <c:forEach var="i" begin="0" end="4">
                      <tr>
-                 		<td>단어 :${test.num[i] },입모양정확도 : ${test.lip_accuracy[i] }, 발음정확도 : ${test.speak.accuracy[i]}</td>
+                 		<td>단어 :${test.content[i] },입모양정확도 : ${test.lip_accuracy[i] }, 발음정확도 : ${test.speak.accuracy[i]}</td>
                      </tr>
                      </c:forEach>
                      </table>

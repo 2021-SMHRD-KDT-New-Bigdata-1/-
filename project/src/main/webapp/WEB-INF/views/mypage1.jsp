@@ -347,8 +347,69 @@ function back(){
                      <div id="chart_title" class="panel-heading">정확도</div>
                      <div class="panel-body">
                         <canvas id="myChart"></canvas>
-
-                        <script>
+							<script>
+							  var ctx = document.getElementById("myChart").getContext("2d");
+							  var myChart = new Chart(ctx, {
+							    type: "bar",
+							    data: {
+							      labels: ["Red", "Blue", "Yellow", "Green", "purple"],
+							      datasets: [
+							        {
+							          label: "# of Votes",
+							          data: [100, 19, 3, 5, 2],
+							          backgroundColor: [
+							            "rgba(54, 162, 235, 0.2)",
+							            "rgba(54, 162, 235, 0.2)",
+							            "rgba(54, 162, 235, 0.2)",
+							            "rgba(54, 162, 235, 0.2)",
+							            "rgba(54, 162, 235, 0.2)",
+							          ],
+							          borderColor: [
+							            "rgba(54, 162, 235, 1)",
+							            "rgba(54, 162, 235, 1)",
+							            "rgba(54, 162, 235, 1)",
+							            "rgba(54, 162, 235, 1)",
+							            "rgba(54, 162, 235, 1)",
+							          ],
+							          borderWidth: 1,
+							        },
+							        {
+							          label: "# of Votes",
+							          data: [100, 19, 3, 5, 2],
+							          backgroundColor: [
+							            "rgba(75, 192, 192, 0.2)",
+							            "rgba(75, 192, 192, 0.2)",
+							            "rgba(75, 192, 192, 0.2)",
+							            "rgba(75, 192, 192, 0.2)",
+							            "rgba(75, 192, 192, 0.2)",
+							          ],
+							          borderColor: [
+							            "rgba(75, 192, 192, 1)",
+							            "rgba(75, 192, 192, 1)",
+							            "rgba(75, 192, 192, 1)",
+							            "rgba(75, 192, 192, 1)",
+							            "rgba(75, 192, 192, 1)",
+							          ],
+							          borderWidth: 1,
+							        },
+							      ],
+							    },
+							    options: {
+		                               maintainAspectRatio: false,
+		                                responsive: true,
+							      scales: {
+							        yAxes: [
+							          {
+							            ticks: {
+							              beginAtZero: true,
+							            },
+							          },
+							        ],
+							      },
+							    },
+							  });
+							</script>
+<!--                         <script>
                            new Chart(
                                  document.getElementById("myChart"),
                                  {
@@ -411,7 +472,7 @@ function back(){
                                        }
                                     }
                                  });
-                        </script>
+                        </script> -->
                      </div>
                   </div>
                </div>

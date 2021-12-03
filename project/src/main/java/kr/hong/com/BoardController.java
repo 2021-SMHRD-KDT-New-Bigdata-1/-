@@ -277,36 +277,37 @@ public class BoardController {
 				if(list_t.isEmpty()) {
 					System.out.println("값이 없어요~ insert 할게여");
 					mapper.sy_test_insert(Integer.parseInt(num), speak_accuracy, lip_accuracy, user_id, weak); //test 테이블에 인서트하는 mapper
-					List<Syllable> list = mapper.studypage2_sy(day); //cate,day 에 맞는 단어 뽑는 mapper
-					model.addAttribute("list", list);
 					
 				}else { //존재한다면  update
 					System.out.println("already insert...-> update 진행 ..");
 					mapper.sy_update(speak_accuracy, lip_accuracy, weak, Integer.parseInt(num),user_id);
 				}
 				
+				List<Syllable> list = mapper.studypage2_sy(day); //cate,day 에 맞는 단어 뽑는 mapper
+				model.addAttribute("list", list);
+				
 			}else if(cate.equals("2")) {
 				List<Test_result> list_t = mapper.check_word(user_id, Integer.parseInt(num));
 				if(list_t.isEmpty()) {
 					mapper.wo_test_insert(Integer.parseInt(num), speak_accuracy, lip_accuracy, user_id, weak );
-					List<Word> list = mapper.studypage2_wo(day);
-					model.addAttribute("list", list);
 				}else { 
 					System.out.println("already insert...-> update 진행 ..");
 					mapper.wo_update(speak_accuracy, lip_accuracy, weak, Integer.parseInt(num),user_id);
 				}
+				List<Word> list = mapper.studypage2_wo(day);
+				model.addAttribute("list", list);
 				
 			}else if(cate.equals("3")) {
 				List<Test_result> list_t = mapper.check_sen(user_id, Integer.parseInt(num));
 				
 				if(list_t.isEmpty()) {
 					mapper.sen_test_insert(Integer.parseInt(num), speak_accuracy, lip_accuracy, user_id, weak);
-					List<Sentence> list = mapper.studypage2_sen(day);
-					model.addAttribute("list", list);
 				}else { 
 					System.out.println("already insert...-> update 진행 ..");
 					mapper.sen_update(speak_accuracy, lip_accuracy, weak, Integer.parseInt(num),user_id);
 				}
+				List<Sentence> list = mapper.studypage2_sen(day);
+				model.addAttribute("list", list);
 					
 			}else{System.out.println("test_insert 오류");}
 			

@@ -83,6 +83,11 @@ public interface MainMapper {
 	public void wo_test_insert(@Param("num") int num,@Param("speak_accuracy") String speak_accuracy,@Param("lip_accuracy")String lip_accuracy, @Param("user_id")String user_id,@Param("weak")String weak);
 	public void sen_test_insert(@Param("num") int num,@Param("speak_accuracy") String speak_accuracy,@Param("lip_accuracy")String lip_accuracy, @Param("user_id")String user_id,@Param("weak")String weak);
 	
+	//test_update
+	public void sy_update(@Param("speak_accuracy") String speak_accuracy,@Param("lip_accuracy")String lip_accuracy, @Param("weak")String weak,@Param("num") int num,@Param("user_id")String user_id);
+	public void wo_update(@Param("speak_accuracy") String speak_accuracy,@Param("lip_accuracy")String lip_accuracy, @Param("weak")String weak,@Param("num") int num,@Param("user_id")String user_id);
+	public void sen_update(@Param("speak_accuracy") String speak_accuracy,@Param("lip_accuracy")String lip_accuracy, @Param("weak")String weak,@Param("num") int num,@Param("user_id")String user_id);
+	
 	//test result
 	public List<Test_result> Syl_testList(@Param("id")String id, @Param("day")String day);
 	public List<Test_result> Word_testList(@Param("id")String id, @Param("day")String day);

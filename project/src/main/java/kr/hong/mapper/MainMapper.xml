@@ -36,6 +36,16 @@
 		<select id="check_sen" parameterType="map" resultType="kr.hong.domain.Test_result">
 	    select * from tbl_sentence_test where user_id=#{id} and num=#{num}
 	</select>	
+	<!-- test update -->
+	<update id="sy_update" parameterType="map">
+	    update tbl_syllable_test set speak_accuracy = #{speak_accuracy}, lip_accuracy=#{lip_accuracy}, weak=#{weak}, reg_date=now() where user_id=#{user_id} and num=#{num}
+	</update>
+	<update id="wo_update" parameterType="map">
+	    update tbl_word_test set speak_accuracy = #{speak_accuracy}, lip_accuracy=#{lip_accuracy}, weak=#{weak}, reg_date=now() where user_id=#{user_id} and num=#{num}
+	</update>
+	<update id="sen_update" parameterType="map">
+	    update tbl_sentence_test set speak_accuracy = #{speak_accuracy}, lip_accuracy=#{lip_accuracy}, weak=#{weak}, reg_date=now() where user_id=#{user_id} and num=#{num}
+	</update>
 		
 	<!-- test final result -->
 	<select id="Syl_testList" parameterType="map" resultType="kr.hong.domain.Test_result">

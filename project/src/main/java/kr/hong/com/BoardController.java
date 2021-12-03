@@ -286,7 +286,8 @@ public class BoardController {
 					model.addAttribute("list", list);
 					
 				}else { //존재한다면  update
-					System.out.println("이미 존재하므로 update 진행 .. 코드짜렴");
+					System.out.println("already insert...-> update 진행 ..");
+					mapper.sy_update(speak_accuracy, lip_accuracy, weak, Integer.parseInt(num),user_id);
 				}
 				
 			}else if(cate.equals("2")) {
@@ -296,7 +297,8 @@ public class BoardController {
 					List<Word> list = mapper.studypage2_wo(day);
 					model.addAttribute("list", list);
 				}else { 
-					System.out.println("이미 존재하므로 update 진행 .. 코드짜렴");
+					System.out.println("already insert...-> update 진행 ..");
+					mapper.wo_update(speak_accuracy, lip_accuracy, weak, Integer.parseInt(num),user_id);
 				}
 				
 			}else if(cate.equals("3")) {
@@ -307,7 +309,8 @@ public class BoardController {
 					List<Sentence> list = mapper.studypage2_sen(day);
 					model.addAttribute("list", list);
 				}else { 
-					System.out.println("이미 존재하므로 update 진행 .. 코드짜렴");
+					System.out.println("already insert...-> update 진행 ..");
+					mapper.sen_update(speak_accuracy, lip_accuracy, weak, Integer.parseInt(num),user_id);
 				}
 					
 			}else{System.out.println("test_insert 오류");}
@@ -319,7 +322,6 @@ public class BoardController {
 			
 			return "studypage2";
 		}
-
 
 		@RequestMapping("/syl_weakstudy.do") 
 		public String syl_weakstudy(Model model, HttpSession session, int num){

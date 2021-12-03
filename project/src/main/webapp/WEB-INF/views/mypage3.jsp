@@ -479,6 +479,24 @@ function back(){
                      </div>
                   </div>
                </div>
+               <div class="col-12-small" style="width: 100%; min-width: 349.5px; margin-top: 60px;">
+                  <div class="panel panel-primary">
+                     <div id="chart_title" class="panel-heading">취약단어</div>
+                     <div class="panel-body">
+                    <table>
+                     <c:forEach var="test" items="${test }" varStatus="satus">
+                     <tr style="width:100%;">
+                 		<td onclick="syl_weakstudy(${test.id})">단어 :${test.content }</td>
+                    <td style="float:right; margin-right:50px;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy*10 }" pattern="" />%
+                    	입모양 :<fmt:formatNumber value="${test.lip_accuracy*10 }" pattern="" />%
+                    </td>
+                    
+                     </tr>
+                     </c:forEach>
+                     </table>
+                     </div>
+                     </div>
+                     </div>
             </div>
          </div>
       </div>

@@ -47,12 +47,9 @@ public interface MainMapper {
 	public List<Mypage> mypage1_wo(String id);
 	public List<Mypage> mypage1_se(String id);
 	
-	public List<MypageStep> mypage1_step_sy1(@Param("id")String id, @Param("step")String step);
-	public List<MypageStep> mypage1_step_sy2(@Param("id")String id, @Param("step")String step);
-	public List<MypageStep> mypage2_step_wo1(@Param("id")String id, @Param("step")String step);
-	public List<MypageStep> mypage2_step_wo2(@Param("id")String id, @Param("step")String step);
-	public List<MypageStep> mypage3_step_se1(@Param("id")String id, @Param("step")String step);
-	public List<MypageStep> mypage3_step_se2(@Param("id")String id, @Param("step")String step);
+	public List<MypageStep> mypage1_step_sy(@Param("id")String id, @Param("step")String step);
+	public List<MypageStep> mypage2_step_wo(@Param("id")String id, @Param("step")String step);
+	public List<MypageStep> mypage3_step_se(@Param("id")String id, @Param("step")String step);
 	
 	public List<PronAcc> mypage1_pron_acc(@Param("id")String id, @Param("step")String step);
 	public List<PronAcc> mypage2_pron_acc(@Param("id")String id, @Param("step")String step);
@@ -98,6 +95,9 @@ public interface MainMapper {
 	public weak word_weakstudy(@Param("num")int num, @Param("id")String id);
 	public weak sen_weakstudy(@Param("num")int num, @Param("id")String id);
 	
+	public List<Test> Syl_weak_my(@Param("id")String id, @Param("step")String step);
+	public List<Test> Word_weak_my(@Param("id")String id, @Param("step")String step);
+	public List<Test> Sen_weak_my(@Param("id")String id, @Param("step")String step);
 }
 
 

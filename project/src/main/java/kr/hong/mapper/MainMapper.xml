@@ -116,28 +116,28 @@
 		order by s.study_date;
 	</select>
 	<!-- 마이페이지 상단 선 그래프 정보(STEP에 해당하는 단어 5개) 불러오기 -->
-	<select id="mypage1_step_sy1" parameterType="String" resultType="kr.hong.domain.Test">
+	<select id="mypage1_step_sy" parameterType="String" resultType="kr.hong.domain.Test">
 	    SELECT s.num, s.content, s.study_date, t.speak_accuracy, t.lip_accuracy
 		FROM tbl_syllable AS s
 		JOIN tbl_syllable_test AS t
 		ON s.num = t.num
-		WHERE t.user_id ='guest' AND s.study_date = 1
+		WHERE t.user_id =#{id} AND s.study_date = #{step}
 		order by s.study_date;
 	</select>
-	<select id="mypage2_step_wo1" parameterType="String" resultType="kr.hong.domain.Test">
+	<select id="mypage2_step_wo" parameterType="String" resultType="kr.hong.domain.Test">
 	    SELECT s.num, s.content, s.study_date, t.speak_accuracy, t.lip_accuracy
 		FROM tbl_word AS s
 		JOIN tbl_word_test AS t
 		ON s.num = t.num
-		WHERE t.user_id ='guest' AND s.study_date = 1
+		WHERE t.user_id =#{id} AND s.study_date = #{step}
 		order by s.study_date;
 	</select>
-	<select id="mypage3_step_se1" parameterType="String" resultType="kr.hong.domain.Test">
+	<select id="mypage3_step_se" parameterType="String" resultType="kr.hong.domain.Test">
 	    SELECT s.num, s.content, s.study_date, t.speak_accuracy, t.lip_accuracy
 		FROM tbl_sentence AS s
 		JOIN tbl_sentence_test AS t
 		ON s.num = t.num
-		WHERE t.user_id ='guest' AND s.study_date = 1
+		WHERE t.user_id =#{id} AND s.study_date = #{step}
 		order by s.study_date;
 	</select>
 	<!-- 마이페이지 하단 원형 그래프 정보(STEP에 해당하는 발음, 입모양 정확도) 불러오기 -->
@@ -232,6 +232,31 @@
 		JOIN tbl_sentence_test AS t
 		ON t.num = s.num
 		WHERE t.user_id = #{id} AND s.id=#{num}
+	</select>
+	<!-- 마이페이지 취약단어 -->
+		<select id="Syl_weak_my" parameterType="String" resultType="kr.hong.domain.Test">
+		SELECT s.content, t.speak_accuracy, t.weak, t.lip_accuracy, t.num, s.id
+	    FROM tbl_syllable AS s
+		JOIN tbl_syllable_test AS t
+		ON t.num = s.num
+		WHERE t.user_id = #{id} AND s.study_date = #{step} AND t.weak = 'y'
+        order by s.study_date;
+	</select>
+		<select id="Word_weak_my" parameterType="String" resultType="kr.hong.domain.Test">
+	    SELECT s.content, t.speak_accuracy, t.weak, t.lip_accuracy, t.num, s.id
+	    FROM tbl_word AS s
+		JOIN tbl_word_test AS t
+		ON t.num = s.num
+		WHERE t.user_id = #{id} AND s.study_date = #{step} AND t.weak = 'y'
+        order by s.study_date;
+	</select>
+		<select id="Sen_weak_my" parameterType="String" resultType="kr.hong.domain.Test">
+	    SELECT s.content, t.speak_accuracy, t.weak, t.lip_accuracy, t.num, s.id
+	    FROM tbl_sentence AS s
+		JOIN tbl_sentence_test AS t
+		ON t.num = s.num
+		WHERE t.user_id = #{id} AND s.study_date = #{step} AND t.weak = 'y'
+        order by s.study_date;
 	</select>
 	
 </mapper> 

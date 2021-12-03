@@ -181,11 +181,8 @@ public class BoardController {
 			
 			User vo = (User)session.getAttribute("vo");
 			String id = vo.getUser_id();
-			List<MypageStep> step_list1 = mapper.mypage1_step_sy1(id, step);
-			model.addAttribute("step_list1", step_list1);
-			
-			List<MypageStep> step_list2 = mapper.mypage1_step_sy2(id, step);
-			model.addAttribute("step_list2", step_list2);
+			List<MypageStep> step_list = mapper.mypage1_step_sy(id, step);
+			model.addAttribute("step_list", step_list);
 			
 			List<PronAcc> pron_acc = mapper.mypage1_pron_acc(id, step);
 			model.addAttribute("pron_acc", pron_acc);
@@ -193,7 +190,8 @@ public class BoardController {
 			List<Mypage> list = mapper.mypage1_sy(id);
 			model.addAttribute("list", list);
 			
-			List<Test> test = mapper.Syl_weak(id);
+			List<Test> test = mapper.Syl_weak_my(id, step);
+			model.addAttribute("test", test);
 			return "mypage1";
 		}
 		
@@ -202,17 +200,17 @@ public class BoardController {
 			
 			User vo = (User)session.getAttribute("vo");
 			String id = vo.getUser_id();
-			List<MypageStep> step_list1 = mapper.mypage2_step_wo1(id, step);
-			model.addAttribute("step_list1", step_list1);
-			
-			List<MypageStep> step_list2 = mapper.mypage2_step_wo2(id, step);
-			model.addAttribute("step_list2", step_list2);
+			List<MypageStep> step_list = mapper.mypage2_step_wo(id, step);
+			model.addAttribute("step_list", step_list);
 			
 			List<PronAcc> pron_acc = mapper.mypage2_pron_acc(id, step);
 			model.addAttribute("pron_acc", pron_acc);
 			
 			List<Mypage> list = mapper.mypage1_wo(id);
 			model.addAttribute("list", list);
+			
+			List<Test> test = mapper.Word_weak_my(id, step);
+			model.addAttribute("test", test);
 			return "mypage2";
 		}
 		
@@ -221,17 +219,17 @@ public class BoardController {
 			
 			User vo = (User)session.getAttribute("vo");
 			String id = vo.getUser_id();
-			List<MypageStep> step_list1 = mapper.mypage3_step_se1(id, step);
-			model.addAttribute("step_list1", step_list1);
-			
-			List<MypageStep> step_list2 = mapper.mypage3_step_se2(id, step);
-			model.addAttribute("step_list2", step_list2);
+			List<MypageStep> step_list = mapper.mypage3_step_se(id, step);
+			model.addAttribute("step_list", step_list);
 			
 			List<PronAcc> pron_acc = mapper.mypage3_pron_acc(id, step);
 			model.addAttribute("pron_acc", pron_acc);
 			
 			List<Mypage> list = mapper.mypage1_se(id);
 			model.addAttribute("list", list);
+			
+			List<Test> test = mapper.Sen_weak_my(id, step);
+			model.addAttribute("test", test);
 			return "mypage3";
 		}
 		

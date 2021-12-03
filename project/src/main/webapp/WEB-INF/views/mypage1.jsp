@@ -552,7 +552,13 @@ function back(){
                   <div class="panel panel-primary">
                      <div id="chart_title" class="panel-heading">정확도</div>
                      <div class="panel-body">
-                     <%-- <td style="float:left; margin-left:40px;" onclick="syl_weakstudy(${list.id})">단어 : ${list.content },번호 : ${list.num },아이디 : ${list.id }</td> --%>
+                     <table>
+                     <c:forEach var="i" begin="0" end="4">
+                     <tr>
+                 		<td>단어 :${test.num[i] },입모양정확도 : ${test.lip_accuracy[i] }, 발음정확도 : ${test.speak.accuracy[i]}</td>
+                     </tr>
+                     </c:forEach>
+                     </table>
                      </div>
                      </div>
                      </div>

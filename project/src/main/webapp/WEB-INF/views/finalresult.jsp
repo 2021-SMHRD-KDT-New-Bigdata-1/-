@@ -132,7 +132,7 @@
 
 	<!-- 배경색 돌아가고 싶으면 css -->
 	<!-- Header -->
-	<header id="header" class="alt"><p class="day">STEP1</p></header>
+	<header id="header" class="alt"><p class="day">STEP <%=day %></p></header>
 
 	<div class="all">
 
@@ -205,7 +205,7 @@
 	   });
 	
 	function Syl_testList() {
-		alert("syn_test다녀올게용");
+		//alert("syn_test다녀올게용");
 		   $.ajax({
 		      url : "Syl_testList.do?day="+h_day,
 		      type : "get",
@@ -216,7 +216,7 @@
 		      });
 	}
 	function Word_testList() {
-		alert("word_test다녀올게용");
+		//alert("word_test다녀올게용");
 		   $.ajax({
 		      url : "Word_testList.do?day="+h_day,
 		      type : "get",
@@ -227,7 +227,7 @@
 		      });
 	}
 	function Sen_testList() {
-		alert("sen_test다녀올게용");
+		//alert("sen_test다녀올게용");
 		   $.ajax({
 		      url : "Sen_testList.do?day="+h_day,
 		      type : "get",

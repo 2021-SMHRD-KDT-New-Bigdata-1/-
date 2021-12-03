@@ -191,6 +191,7 @@ public class BoardController {
 			model.addAttribute("list", list);
 			
 			List<Test> test = mapper.Syl_weak_my(id, step);
+			System.out.println(test);
 			model.addAttribute("test", test);
 			return "mypage1";
 		}
@@ -323,7 +324,9 @@ public class BoardController {
 		public String syl_weakstudy(Model model, HttpSession session, int num){
 		User vo = (User)session.getAttribute("vo");
 		String id = vo.getUser_id();
+		System.out.println(num);
 		weak list = mapper.syl_weakstudy(num, id);
+		System.out.println(list);
 		model.addAttribute("list", list);
 		return "weakpage"; 
 		 }

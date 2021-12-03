@@ -53,7 +53,6 @@ html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
    header, hgroup, menu, nav, output, ruby, section, summary, time, mark,
    audio, video {
    margin: 0;
-   height: 100%;
    padding: 0;
    border: 0;
    font-size: 100%;
@@ -550,12 +549,13 @@ function back(){
                	
                		<div class="col-12-small" style="width: 100%; min-width: 349.5px; margin-top: 60px;">
                   <div class="panel panel-primary">
-                     <div id="chart_title" class="panel-heading">정확도</div>
+                     <div id="chart_title" class="panel-heading">취약단어</div>
                      <div class="panel-body">
-                     <table>
-                     <c:forEach var="i" begin="0" end="4">
-                     <tr>
-                 		<td>단어 :${test.content[i] },입모양정확도 : ${test.lip_accuracy[i] }, 발음정확도 : ${test.speak.accuracy[i]}</td>
+                    <table>
+                     <c:forEach var="test" items="${test }" varStatus="satus">
+                     <tr style="width:100%;">
+                 		<td onclick="syl_weakstudy(${test.id})">단어 :${test.content }</td>
+                     <td style="float:right; margin-right:50px;">입모양 : ${test.lip_accuracy }%, 발음 : ${test.speak_accuracy }%</td>
                      </tr>
                      </c:forEach>
                      </table>
@@ -588,6 +588,10 @@ function back(){
    <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
    <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<script>
+function syl_weakstudy(num){
+	   location.href="syl_weakstudy.do?num="+num;
+}
+</script>
 </body>
 </html>

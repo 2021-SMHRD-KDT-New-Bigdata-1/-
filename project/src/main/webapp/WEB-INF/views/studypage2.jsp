@@ -146,9 +146,10 @@ video {
 		<h3 class="stage_nm">${day}</h3>
 
 	</div>
-	<div id="loadingd">
+	<div id="loadingd" style="position:absolute; margin-top:300px; width:100%;">
 		
-            <img id="limg"src="${pageContext.request.contextPath}/resources/images/1484.gif" alt="분석 중..."  >
+            <img id="limg" style="m"
+            src="${pageContext.request.contextPath}/resources/images/1484.gif" alt="분석 중..."  >
 		</div>
 
 	<!----table ----->

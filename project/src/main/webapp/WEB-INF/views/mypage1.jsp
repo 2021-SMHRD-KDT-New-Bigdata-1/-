@@ -348,47 +348,55 @@ function back(){
                         <canvas id="myChart"></canvas>
 							<script>
 							  var ctx = document.getElementById("myChart").getContext("2d");
+							  //발음 정확도 그래프 데이터
+							  var data = [];
+							  var labels = [];
+							  var backgroundColor = [];
+							  var borderColor = [];
+							  $.each(step_list, function(inx, obj)){
+								  data.push(obj.speak_accuracy);
+								  labels.push(obj.content);
+								  if(obj.speak_accuracy<50){
+									  backgroundColor.push('rgba(255, 99, 132, 0.5)')
+									  borderColor.push('rgba(255, 99, 132, 0.5)')
+								  }else{
+									  backgroundColor.push("rgba(54, 162, 235, 0.2)")
+									  borderColor.push("rgba(54, 162, 235, 0.2)")
+								  }
+								  
+							  }
+							  //입모양 정확도 그래프 데이터
+							  var data2 = [];
+							  var backgroundColor2 = [];
+							  var borderColor2 = [];
+							  $.each(step_list, function(inx, obj)){
+								  data.push(obj.lip_accuracy);
+								  if(obj.lip_accuracy<50){
+									  backgroundColor.push('rgba(255, 99, 132, 0.5)')
+									  borderColor.push('rgba(255, 99, 132, 0.5)')
+								  }else{
+									  backgroundColor.push("rgba(54, 162, 235, 0.2)")
+									  borderColor.push("rgba(54, 162, 235, 0.2)")
+								  }
+								  
+							  }
 							  var myChart = new Chart(ctx, {
 							    type: "bar",
 							    data: {
-							      labels: ["Red", "Blue", "Yellow", "Green", "purple"],
+							      labels: labels,
 							      datasets: [
 							        {
-							          label: "# of Votes",
-							          data: [100, 19, 3, 5, 2],
-							          backgroundColor: [
-							            "rgba(54, 162, 235, 0.2)",
-							            "rgba(54, 162, 235, 0.2)",
-							            "rgba(54, 162, 235, 0.2)",
-							            "rgba(54, 162, 235, 0.2)",
-							            "rgba(54, 162, 235, 0.2)",
-							          ],
-							          borderColor: [
-							            "rgba(54, 162, 235, 1)",
-							            "rgba(54, 162, 235, 1)",
-							            "rgba(54, 162, 235, 1)",
-							            "rgba(54, 162, 235, 1)",
-							            "rgba(54, 162, 235, 1)",
-							          ],
+							          label: "발음 정확도",
+							          data: data,
+							          backgroundColor: backgroundColor,
+							          borderColor: borderColor,
 							          borderWidth: 1,
 							        },
 							        {
-							          label: "# of Votes",
-							          data: [100, 19, 3, 5, 2],
-							          backgroundColor: [
-							            "rgba(75, 192, 192, 0.2)",
-							            "rgba(75, 192, 192, 0.2)",
-							            "rgba(75, 192, 192, 0.2)",
-							            "rgba(75, 192, 192, 0.2)",
-							            "rgba(75, 192, 192, 0.2)",
-							          ],
-							          borderColor: [
-							            "rgba(75, 192, 192, 1)",
-							            "rgba(75, 192, 192, 1)",
-							            "rgba(75, 192, 192, 1)",
-							            "rgba(75, 192, 192, 1)",
-							            "rgba(75, 192, 192, 1)",
-							          ],
+							          label: "입모양 정확도",
+							          data: data2,
+							          backgroundColor: backgroundColor2,
+							          borderColor: borderColor2,
 							          borderWidth: 1,
 							        },
 							      ],

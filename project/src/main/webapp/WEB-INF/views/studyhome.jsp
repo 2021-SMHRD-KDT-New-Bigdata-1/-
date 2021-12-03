@@ -266,7 +266,7 @@
 	  view +="<button onclick=back() type='button' class='btnback'>"
 	  view +="<i class='fas fa-arrow-left fa-2x'></i>"
 	  view +="</button>"
-	  view +="<a class='syll_logo'>문장 (Sentense)</a>"
+	  view +="<a class='syll_logo'>문장 (Sentence)</a>"
 	  view +="</div> " 
 	  view +="</header>"
       view += "<div id='wrapper'>";

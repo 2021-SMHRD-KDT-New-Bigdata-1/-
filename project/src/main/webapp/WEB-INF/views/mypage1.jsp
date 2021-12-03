@@ -298,7 +298,6 @@ function back(){
     location.href="main.do";
  }
 </script>
-
 <body class="is-preload alt">
 
    <!-- Wrapper -->
@@ -540,6 +539,16 @@ function back(){
                      </div>
                   </div>
                </div>
+               	
+               		<div class="col-12-small" style="width: 100%; min-width: 349.5px; margin-top: 60px;">
+                  <div class="panel panel-primary">
+                     <div id="chart_title" class="panel-heading">정확도</div>
+                     <div class="panel-body">
+                     <%-- <td style="float:left; margin-left:40px;" onclick="syl_weakstudy(${list.id})">단어 : ${list.content },번호 : ${list.num },아이디 : ${list.id }</td> --%>
+                     </div>
+                     </div>
+                     </div>
+               
             </div>
          </div>
       </div>

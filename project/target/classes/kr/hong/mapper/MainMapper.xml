@@ -117,57 +117,27 @@
 	</select>
 	<!-- 마이페이지 상단 선 그래프 정보(STEP에 해당하는 단어 5개) 불러오기 -->
 	<select id="mypage1_step_sy1" parameterType="String" resultType="kr.hong.domain.Test">
-	    SELECT s.num, s.content, s.study_date, SUM(t.speak_accuracy+t.lip_accuracy)/2 AS accuracy
+	    SELECT s.num, s.content, s.study_date, t.speak_accuracy, t.lip_accuracy
 		FROM tbl_syllable AS s
 		JOIN tbl_syllable_test AS t
 		ON s.num = t.num
-		WHERE t.user_id = #{id} AND study_date = #{step}-1
-		GROUP BY s.num
-		order by s.study_date;
-	</select>
-	<select id="mypage1_step_sy2" parameterType="String" resultType="kr.hong.domain.Test">
-	    SELECT s.num, s.content, s.study_date, SUM(t.speak_accuracy+t.lip_accuracy)/2 AS accuracy
-		FROM tbl_syllable AS s
-		JOIN tbl_syllable_test AS t
-		ON s.num = t.num
-		WHERE t.user_id = #{id} AND study_date = #{step}
-		GROUP BY s.num
+		WHERE t.user_id ='guest' AND s.study_date = 1
 		order by s.study_date;
 	</select>
 	<select id="mypage2_step_wo1" parameterType="String" resultType="kr.hong.domain.Test">
-	    SELECT w.num, w.content, w.study_date, SUM(t.speak_accuracy+t.lip_accuracy)/2 AS accuracy
-		FROM tbl_word AS w
+	    SELECT s.num, s.content, s.study_date, t.speak_accuracy, t.lip_accuracy
+		FROM tbl_word AS s
 		JOIN tbl_word_test AS t
-		ON w.num = t.num
-		WHERE t.user_id = #{id} AND study_date = #{step}-1
-		GROUP BY w.num
-		order by w.study_date;
-	</select>
-	<select id="mypage2_step_wo2" parameterType="String" resultType="kr.hong.domain.Test">
-	    SELECT w.num, w.content, w.study_date, SUM(t.speak_accuracy+t.lip_accuracy)/2 AS accuracy
-		FROM tbl_word AS w
-		JOIN tbl_word_test AS t
-		ON w.num = t.num
-		WHERE t.user_id = #{id} AND study_date = #{step}
-		GROUP BY w.num
-		order by w.study_date;
-	</select>
-	<select id="mypage3_step_se1" parameterType="String" resultType="kr.hong.domain.Test">
-	    SELECT s.num, s.content, s.study_date, SUM(t.speak_accuracy+t.lip_accuracy)/2 AS accuracy
-		FROM tbl_sentence AS s
-		JOIN tbl_sentence_test AS t
 		ON s.num = t.num
-		WHERE t.user_id = #{id} AND study_date = #{step}-1
-		GROUP BY s.num
+		WHERE t.user_id ='guest' AND s.study_date = 1
 		order by s.study_date;
 	</select>
-	<select id="mypage3_step_se2" parameterType="String" resultType="kr.hong.domain.Test">
-	    SELECT s.num, s.content, s.study_date, SUM(t.speak_accuracy+t.lip_accuracy)/2 AS accuracy
+	<select id="mypage3_step_se1" parameterType="String" resultType="kr.hong.domain.Test">
+	    SELECT s.num, s.content, s.study_date, t.speak_accuracy, t.lip_accuracy
 		FROM tbl_sentence AS s
 		JOIN tbl_sentence_test AS t
 		ON s.num = t.num
-		WHERE t.user_id = #{id} AND study_date = #{step}
-		GROUP BY s.num
+		WHERE t.user_id ='guest' AND s.study_date = 1
 		order by s.study_date;
 	</select>
 	<!-- 마이페이지 하단 원형 그래프 정보(STEP에 해당하는 발음, 입모양 정확도) 불러오기 -->

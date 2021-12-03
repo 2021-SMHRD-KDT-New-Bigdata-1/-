@@ -148,11 +148,6 @@ public class BoardController {
 			
 			return "select";
 		}
-		@RequestMapping("/charttest.do")
-		public String charttest() {
-			
-			return "charttest";
-		}
 
 		@RequestMapping("/Syllable_test.do")
 		public String Syllable_test(HttpSession session, Model model, String num) {
@@ -197,6 +192,8 @@ public class BoardController {
 			
 			List<Mypage> list = mapper.mypage1_sy(id);
 			model.addAttribute("list", list);
+			
+			List<Test> test = mapper.Syl_weak(id);
 			return "mypage1";
 		}
 		
@@ -328,8 +325,6 @@ public class BoardController {
 		User vo = (User)session.getAttribute("vo");
 		String id = vo.getUser_id();
 		weak list = mapper.syl_weakstudy(num, id);
-		System.out.println(list);
-		System.out.println(id);
 		model.addAttribute("list", list);
 		return "weakpage"; 
 		 }
@@ -338,10 +333,7 @@ public class BoardController {
 		public String word_weakstudy(Model model, HttpSession session, int num){
 			User vo = (User)session.getAttribute("vo");
 			String id = vo.getUser_id();
-			System.out.println(num);
-			System.out.println(id);
 			weak list = mapper.word_weakstudy(num, id);
-			System.out.println(list);
 			model.addAttribute("list", list);
 			return "weakpage"; 
 		}
@@ -350,9 +342,7 @@ public class BoardController {
 		public String sen_weakstudy(Model model, HttpSession session, int num){
 		User vo = (User)session.getAttribute("vo");
 		String id = vo.getUser_id();
-		System.out.println(num);
 		weak list = mapper.sen_weakstudy(num, id);
-		System.out.println(list);
 		model.addAttribute("list", list);
 		return "weakpage";   
 		 }

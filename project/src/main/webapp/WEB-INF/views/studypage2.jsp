@@ -215,9 +215,26 @@ video {
 								<c:if test="${list.id<1000}">
 									<video
 									controls playsinline width="350">
-									<source
-										src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"
-										type="video/mp4">
+									
+										<c:choose>
+											<c:when test="${list.id<10}">
+									 			<source 
+												src= "${pageContext.request.contextPath}/resources/images/show_video/000${list.id}/train/000${list.id}_M047_C.mp4"
+												type="video/mp4">
+											</c:when>
+											<c:when test="${list.id<100}">
+												<source
+												src= "${pageContext.request.contextPath}/resources/images/show_video/00${list.id}/train/00${list.id}_M047_C.mp4"
+												type="video/mp4">
+											</c:when>
+											<c:otherwise>
+												<source
+												src= "${pageContext.request.contextPath}/resources/images/show_video/0${list.id}/train/0${list.id}_M047_C.mp4"
+												type="video/mp4">
+											</c:otherwise>
+										</c:choose>
+										<!-- src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4" -->
+										
 								</video>
 								</c:if>		
 								<!-- 문장의 경우에 다른 소스로 설정할 수 있도록 코드 구현-->

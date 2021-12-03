@@ -32,14 +32,6 @@
 		href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
 </noscript>
 <title>study</title>
-<!-- 상단바 뒤로가기 버튼 화살표  -->
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-	integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-	crossorigin="anonymous" />
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<!-- 상단바 뒤로가기 버튼 화살표  -->
 
 <style>
 .btn-default {
@@ -67,7 +59,8 @@ body {
 h4{
     color: black;
     font-weight: 900;
-    font-size:x-large
+    font-size:x-large;
+    margin-top: 10px;
 }
 
 table td {
@@ -121,8 +114,9 @@ table td {
 			<tbody>
 			<tr>
 				<td  colspan="3" class="result" style="height: 150px; width: 350px; 
-				 text-align: center; font-size: large; word-break: keep-all;">
+				 text-align: center; font-size: large; word-break: keep-all; color:black;">
 				 <h4 >결과 확인</h4>
+				 <hr>
 					발음 정확도 : <%=speak_acc %> 점 <br>
 					입모양 정확도 : <%=lip_acc %> 점
 				</td>

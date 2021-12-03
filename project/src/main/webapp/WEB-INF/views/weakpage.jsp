@@ -118,8 +118,18 @@ video {
 
 	<!-- Header -->
 
-	<div class="word1"><p class="weakpro">취약발음</p>
-		<i class="fas fa-arrow-left fa-2x"></i>
+	<div class="word1"><p class="weakpro"><c:choose>
+			<c:when test="${fn:length(list.content)==1}" >
+			취약음절
+			</c:when>
+			<c:when test="${fn:length(list.content)>1 && fn:length(list.content)<6}" >
+			취약단어
+			</c:when>
+			<c:otherwise>
+			취약문장
+			</c:otherwise>
+			</c:choose></p>
+		<i class="fas fa-arrow-left fa-2x" style="color: white; margin-left: 21px; margin-top: 9px;"></i>
 		
 		<h3 class="stage_nm">${day}</h3>
 
@@ -131,17 +141,6 @@ video {
 	<div class="word">
 
 
-<c:choose>
-			<c:when test="${fn:length(list.content)==1}" >
-			취약음절
-			</c:when>
-			<c:when test="${fn:length(list.content)>1 && fn:length(list.content)<6}" >
-			취약단어
-			</c:when>
-			<c:otherwise>
-			취약문장
-			</c:otherwise>
-			</c:choose>		
 		
 		<!--<c:set var="i" value="${i+1}" />-->
 
@@ -181,7 +180,7 @@ video {
 				</tr>
 				<tr>
 					<td class="studycolor2"
-						style="text-align: center; font-size: large;">발음해보세요 !</td>
+						style="text-align: center; font-size: large;">발음해보세요</td>
 				</tr>
 				<tr>
 					<td class="studycolor"
@@ -195,7 +194,7 @@ video {
 								
 								<input type="text" id="h_cnt" name="h_cnt" value="${cnt}"> 
 								
-								<c:choose>
+<%-- 								<c:choose>
 									<c:when test="${fn:length(list.content)==1}" >
 										<input type="text" id="h_cate" name="h_cate" value="1">
 									</c:when>
@@ -205,7 +204,7 @@ video {
 									<c:otherwise>
 										<input type="text" id="h_cate" name="h_cate" value="3">
 									</c:otherwise>
-								</c:choose>
+								</c:choose> --%>
 
 
 			
@@ -214,7 +213,7 @@ video {
 									<label for="cameraInput"> <i class="fas fa-microphone-alt fa-2x"></i>
 								</label> 
 								<input type="file" id="cameraInput" name="file" accept="video/*" capture="user" /> 
-								<button type="submit" class="btn-default" >분석</button>
+								<button type="submit" class="cameraInput" >분석</button>
 								<!-- css 넣어주기,, button -->
 
 

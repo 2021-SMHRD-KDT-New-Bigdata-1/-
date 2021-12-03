@@ -147,6 +147,11 @@ public class BoardController {
 			
 			return "select";
 		}
+		@RequestMapping("/charttest.do")
+		public String charttest() {
+			
+			return "charttest";
+		}
 
 		@RequestMapping("/Syllable_test.do")
 		public String Syllable_test(HttpSession session, Model model, String num) {

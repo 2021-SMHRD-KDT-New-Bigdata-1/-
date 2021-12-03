@@ -142,6 +142,7 @@ table td {
 		</tbody>
 	</table>
 <script>
+	if(${list.seapaccuarcy} > <%=speak_acc %>)
 	function insert_plus_nextFn(speak_acc,lip_acc,word_num,word_idx,cnt,day,cate){
 		//alert("버튼 누름");
 		//alert(speak_acc+" "+lip_acc+" "+word_num+" "+word_idx+" "+(cnt+1)+" "+day+" "+cate);

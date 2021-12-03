@@ -58,7 +58,7 @@
 
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="main.do" rel="home" style="color: black; margin-left: 610px; font-family: NanumSquareExtraBold;" >All바름</a>
+                    <a href="main.do" rel="home" style="color: black; margin-left: 570px; font-family: var(--font-2);" >Allbareum</a>
                 </p>
             </div>
 
@@ -228,7 +228,7 @@
                                 </div>
                                     
                                     <div id="Allbareum">
-                                    <h2 class="hero__entry-title" >
+                                    <h2 class="hero__entry-title" style="font-weight: bold;" >
                                         	올바름
                                     </h2>
                                      <button class='btnmain' onclick='login()'>로그인</button>
@@ -252,7 +252,7 @@
                                      <button class='btnmain' onclick="mypageGo(1)">마이페이지</button>
                                     
                                      </div><br>
-                                      <p type="button" style="font-size: initial;">학습을 종료하려면?<a onclick="logout()">로그아웃</a> </p> 
+                                      <p type="button" style="font-size: initial;">학습을 종료하려면?<a onclick="logout()" style="margin-left:10px;">로그아웃</a> </p> 
                              </c:if>
                                
               <!--  loginform close...........................------------------------------------>     

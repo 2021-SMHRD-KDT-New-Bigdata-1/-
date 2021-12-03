@@ -90,7 +90,7 @@ video {
     width: 60px;
     height: 42.2px;
     position: absolute;
-    left: 75%;
+    left: 79%;
     top: 117px;
     text-align: center;
     border-left: 1px solid #ce712e;
@@ -189,11 +189,14 @@ video {
 			<tbody>
 				<tr>
 					<td class="studycolor2"
-						style="text-align: center; font-size: large; font-family: GowunDodum-Regular;"><c:forEach
+						style="text-align: center; font-size: large; font-family: GowunDodum-Regular;">
+						<c:forEach
 							var="list" items="${list}" varStatus="status">
 							<c:if test="${status.index eq cnt}">
 								<h2>${list.content}</h2>
-								[${list.pron}]
+								<c:if test="${list.id<1000}">
+									[${list.pron}] <!-- 문장의 경우에 발음이 없으니 안뜨도록 -->
+								</c:if>
 								<!-- id출력은   (${list.id}) -->
 							</c:if>
 						</c:forEach>
@@ -203,13 +206,32 @@ video {
 				</tr>
 				<tr>
 					<td class="studycolor2"
-						style="text-align: center; vertical-align: middle;"><video
-							controls playsinline width="350">
-							<source
-								src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"
-								type="video/mp4">
+						style="text-align: center; vertical-align: middle;">
+						<c:forEach
+							var="list" items="${list}" varStatus="status">
+							<c:if test="${status.index eq cnt}">
+								<!-- 음절/단어의 경우 비디오 소스 -->
+								<c:if test="${list.id<1000}">
+									<video
+									controls playsinline width="350">
+									<source
+										src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"
+										type="video/mp4">
+								</video>
+								</c:if>		
+								<!-- 문장의 경우에 다른 소스로 설정할 수 있도록 코드 구현-->
+								<c:if test="${list.id>=1000}">
+									<video
+									controls playsinline width="350">
+									<source
+										src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"
+										type="video/mp4">
+								</video>
+								</c:if>
+							</c:if>
+						</c:forEach>
 
-						</video></td>
+						</td>
 				</tr>
 				<tr>
 					<td class="studycolor2"

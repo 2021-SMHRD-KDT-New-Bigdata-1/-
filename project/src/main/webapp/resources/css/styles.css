@@ -3959,7 +3959,7 @@ body.search-is-visible .s-header__search-inner {
     font-size      : calc(var(--entry-title-size) * var(--text-multiplier));
     line-height    : 1.158;
     letter-spacing : -0.015em;
-    margin-top     : 0;
+    margin-top     : 21px;
     margin-bottom  : var(--vspace-1_5);
 }
 

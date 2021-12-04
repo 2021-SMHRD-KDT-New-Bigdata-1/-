@@ -347,70 +347,73 @@ function back(){
                      <div id="chart_title" class="panel-heading">정확도</div>
                      <div class="panel-body">
                         <canvas id="myChart"></canvas>
-
-                        <script>
-                           new Chart(
-                                 document.getElementById("myChart"),
-                                 {
-                                    type : 'line',
-                                    data : {
-                                       labels : [ '1', '2', '3',
-                                             '4', '5'],
-                                       datasets : [
-                                             {
-                                                label : '이전학습',
-                                                data : [ ${step_list1[0].accuracy*10}, ${step_list1[1].accuracy*10},
-                                                	${step_list1[2].accuracy*10}, ${step_list1[3].accuracy*10},
-                                                	${step_list1[4].accuracy*10} ],
-                                                borderColor : "#ffbb40",
-                                                fill : false,
-                                                lineTension : 0
-                                             },
-                                             {
-                                                label : '선택한학습',
-                                                data : [ ${step_list2[0].accuracy*10}, ${step_list2[1].accuracy*10},
-                                                	${step_list2[2].accuracy*10}, ${step_list2[3].accuracy*10},
-                                                	${step_list2[4].accuracy*10} ],
-                                                borderColor : "#6e9b52",
-                                                fill : false,
-                                                lineTension : 0
-                                             }
-
-                                       ]
-
-                                    },
-                                    options : {
-                                       maintainAspectRatio : false,
-                                       responsive : true,
-                                       tooltips : {
-                                          mode : 'index',
-                                          intersect : false,
-                                       },
-                                       hover : {
-                                          mode : 'nearest',
-                                          intersect : true
-                                       },
-                                       scales : {
-                                          xAxes : [ {
-                                             display : true,
-                                             scaleLabel : {
-                                                display : true,
-                                                labelString : 'STEP 정확도 비교'
-                                             }
-                                          } ],
-                                          yAxes : [ {
-                                             display : true,
-                                             ticks : {
-                                                suggestedMin : 0,
-                                             },
-                                             scaleLabel : {
-                                                display : true,
-                                                labelString : '정 확 도'
-                                             }
-                                          } ]
-                                       }
-                                    }
-                                 });
+							<script>
+							  var ctx = document.getElementById("myChart").getContext("2d");
+							  //발음 정확도 그래프 데이터
+							  var data = [];
+							  var labels = [];
+							  var backgroundColor = [];
+							  var borderColor = [];
+							  <c:forEach var="data" items="${step_list}" varStatus="status">
+								  data.push(${data.speak_accuracy})
+								  labels.push("${data.content}")
+								  if(${data.speak_accuracy}<50){
+									  backgroundColor.push('rgba(255, 99, 132, 0.5)')
+									  borderColor.push('rgba(255, 206, 86, 1.5)')
+								  }else{
+									  backgroundColor.push("rgba(54, 162, 235, 0.2)")
+									  borderColor.push("rgba(54, 162, 235, 0.2)")
+								  }
+							 </c:forEach>
+							  //입모양 정확도 그래프 데이터
+							  var data2 = [];
+							  var backgroundColor2 = [];
+							  var borderColor2 = [];
+							  <c:forEach var="data" items="${step_list}" varStatus="status">
+								  data2.push(${data.lip_accuracy})
+								  if(${data.lip_accuracy}<50){
+									  backgroundColor2.push('rgba(255, 99, 132, 0.5)')
+									  borderColor2.push('rgba(255, 206, 86, 1.5)')
+								  }else{
+									  backgroundColor2.push("rgba(75, 192, 192, 0.5)")
+									  borderColor2.push("rgba(75, 192, 192, 1.5)")
+								  }
+							  </c:forEach>
+							  var myChart = new Chart(ctx, {
+							    type: "bar",
+							    data: {
+							      labels: labels,
+							      datasets: [
+							        {
+							          label: "발음 정확도",
+							          data: data,
+							          backgroundColor: backgroundColor,
+							          borderColor: borderColor,
+							          borderWidth: 1,
+							        },
+							        {
+							          label: "입모양 정확도",
+							          data: data2,
+							          backgroundColor: backgroundColor2,
+							          borderColor: borderColor2,
+							          borderWidth: 1,
+							        },
+							      ],
+							    },
+							    options: {
+		                               maintainAspectRatio: false,
+		                                responsive: true,
+							      scales: {
+							        yAxes: [
+							          {
+							            ticks: {
+							              beginAtZero: true,
+							            },
+							          },
+							        ],
+							      },
+							    },
+							  });
                         </script>
                      </div>
                   </div>

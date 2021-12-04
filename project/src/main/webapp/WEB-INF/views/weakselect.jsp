@@ -1,301 +1,205 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<!DOCTYPE HTML>
-
-<!--
-   Forty by HTML5 UP
-   html5up.net | @ajlkn
-   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
 <head>
-<title>Forty by HTML5 UP</title>
-<meta charset="UTF-8" />
-<meta name="viewport"
-   content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet"
-   href="${pageContext.request.contextPath}/resources/assets/css/csstest.css" />
-<link rel="stylesheet"
-   href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
-<script
-   src="${pageContext.request.contextPath}/resources/assets/js/Chart.js"></script>
-<link href="${pageContext.request.contextPath}/resources/css/styles.css"
-   rel="stylesheet" type="text/css">
-<link rel="stylesheet"
-   href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script
-   src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script
-   src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
-</script>
 
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spurgeon</title>
 
-<!-- 상단바 뒤로가기 버튼 화살표  -->   
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-    crossorigin="anonymous" />
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<!-- 상단바 뒤로가기 버튼 화살표  -->  
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
 
-   <!--이모티콘-->
-      <link rel="stylesheet"
-         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   <!--이모티콘-->
+    <!-- CSS
+    ================================================== -->
+<link href="${pageContext.request.contextPath}/resources/css/vendor.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
 
-<style>
-/* Remove the navbar's default rounded borders and increase the bottom margin */
-html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-   blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
-   em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
-   b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
-   table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer,
-   header, hgroup, menu, nav, output, ruby, section, summary, time, mark,
-   audio, video {
-   margin: 0;
-   padding: 0;
-   border: 0;
-   font-size: 100%;
-   font-family: "Pretendard-Regular";
-   vertical-align: baseline;
-}
-
-html, body {
-   width: 100%;
-   height: 100%;
-   margin: 0;
-   padding: 0;
-}
-
-select { -
-   -input-height: var(- -vspace-2); -
-   -input-line-height: var(- -vspace-1); -
-   -input-vpadding: calc((( var(- -input-height)- var(- -input-line-height))/2)-
-      
-       1px);
-   display: block;
-   height: var(- -input-height);
-   padding: var(- -input-vpadding) calc(2.4rem - 1px);
-   border: 0;
-   outline: 0;
-   color: var(- -color-placeholder);
-   font-family: var(- -font-1);
-   font-size: var(- -text-sm);
-   font-size: calc(var(- -text-size)* 0.8889);
-   line-height: var(- -input-line-height);
-   max-width: 100%;
-   background-color: var(- -color-gray-3);
-   border: 1px solid transparent;
-   transition: all .3s ease-in-out;
-   border-radius: var(- -border-radius);
-}
-
-* .is-preload.alt {
-   margin: 0;
-   padding: 0;
-}
-
-body {
-   font-size: 14px;
-   line-height: 1.42857143;
-   color: #333;
-   background-color:#f2f2f2;
-}
-
-body {
-   -webkit-text-size-adjust: none;
-}
-
-.navbar {
-   margin-bottom: 50px;
-   border-radius: 0;
-}
-
-.panel-primary {
-   border-color: #D2691E;
-   border-radius: 10px;
-}
-
-body {
-   margin: 0 0 0 4em;
-}
-
-/* Remove the jumbotron's default bottom margin */
-.jumbotron {
-   margin-bottom: 0;
-}
-
-/* Add a gray background color and some padding to the footer */
-footer {
-   background-color: #f2f2f2;
-   padding: 25px;
-}
-
-.container {
-   padding-right: 15px;
-   padding-left: 15px;
-   margin-right: auto;
-   margin-left: auto;
-}
-
-.panel-primary>.panel-heading {
-   font-size: 1rem;
-    font-weight: bolder;
-   color: #fff;
-   background-color: #ff8040;
-   align: center;
-   border-block-color: unset;
-}
-
-.alt.top {
-   display: -moz-flex;
-   display: -webkit-flex;
-   display: -ms-flex;
-   display: flex;
-   background-color: ##D2691E;
-   box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
-   cursor: default;
-   font-weight: 600;
-   height: 3.25em;
-   left: 0;
-   letter-spacing: 0.25em;
-   line-height: 3.25em;
-   margin: 0;
-   position: fixed;
-   text-transform: uppercase;
-   top: 0;
-   width: 100%;
-   z-index: 10000;
-}
-
-.nav_top {
-   background-color: #ff8040;
-}
-
-/* header nav a .pl{
-                border: 0;
-                display: block;
-                font-size: 0.8em;
-                float: left;
-                height: inherit;
-            } */
-.title_menu {
-   margin-left: 50px;
-   background-color: #D2691E
-}
-
-.title_menu>ul>li {
-   background-color: #D2691E;
-}
-
-#weekday {
-   float: left;
-   font-size: 1.2rem;
-   color: rgba(255, 255, 255, 0);
-   display: inline-block;
-   background-color: #D2691E;
-}
-
-#pl {
-   color: white;
-   background-color: #000000;
-   display: block;
-}
-
-#chart_title {
-   text-align: center;
-}
-
-#main-menu>li {
-   float: left;
-   position: relative;
-}
-
-#main-menu>li>a {
-   font-size: 1rem;
-    font-weight: bolder;
-   color: rgba(255, 255, 255, 0.85);
-   text-align: center;
-   text-decoration: none;
-   letter-spacing: 0.05em;
-   display: block;
-   padding: 14px 20px;
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-#sub_menu {
-   margin: 0;
-   padding: 0;
-   list-style-type: none;
-   background-color: ##D2691E;
-   color: white;
-   display: none;
-}
-
-#title_name {
-   color: white;
-   font-size: 30px;
-}
-
-#main_title_nav {
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   position: relative;
-}
-
-.weak_logo {
-    color: white;
-    padding-left: 580px;
-    font-size: x-large;'
-}
-
-button.btnback{
-	all:unset; 
-	margin-left:25px; 
-	margin-top:5px;
-	color:white;
-}
-
-</style>
+    <!-- favicons
+    ================================================== -->
+<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon" sizes="180x180" href="${pageContext.request.contextPath}/resources/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="${pageContext.request.contextPath}/resources/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
+    <link rel="manifest" href="site.webmanifest">
 
 
 </head>
 
-<body class="is-preload alt">
 
-   <!-- Wrapper -->
-
-   <div id="wrapper" style="padding: 0;">
-
-      <!-- Header -->
-      <section>
-         <header class="nav_top">
-            <div>
-	         	<button onclick="back()"type="button" class="btnback"><i class="fas fa-arrow-left fa-2x"></i></button>
-	            <a href="main.do" class="weak_logo">Allbareum</a>
-         	</div>  
-            <nav id="main_title_nav" role="navigation">
-               <ul id="main-menu" style="list-style: none;">
-                  <li><a onclick="Syl_weak();">음절</a></li>
-                  <li><a onclick="Word_weak();">단어</a></li>
-                  <li><a onclick="Sen_weak();">문장</a></li>
-               </ul>
-            </nav>
-         </header>
-      </section>
-
-      <!-- Main -->
-      <div id="main">
-         <div class="container">
-            <div class="row" style="margin-left: -32px;margin-top: 32px;">
+<body id="top">
 
 
-               <div class="col-12-small"
-                  style="width: 100%; min-width: 349.5px; margin-top: 20px;">
-                  <div class="panel panel-primary">
-                     <div id="chart_title" class="panel-heading">취약단어</div>
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap ss-home">
+
+
+        <!-- # site header 
+        ================================================== -->
+        <header id="masthead" class="s-header">
+
+            <div class="s-header__branding">
+                <p class="site-title">
+                    <a href="main.do" rel="home" style="color: black; margin-left: 570px; font-family: var(--font-2);" >Allbareum</a>
+                </p>
+            </div>
+
+            <div class="row s-header__navigation">
+
+                <nav class="s-header__nav-wrap">
+    
+                    <h3 class="s-header__nav-heading">Navigate to</h3>
+    
+                    <ul class="s-header__nav">
+                        <li class="current-menu-item"><a href="index.html" title="">Home</a></li>
+                        <li class="has-children">
+                            <a href="#0" title="" class="">Categories</a>
+                            <ul class="sub-menu">
+                                <li><a href="category.html">Design</a></li>
+                                <li><a href="category.html">Lifestyle</a></li>
+                                <li><a href="category.html">Inspiration</a></li>
+                                <li><a href="category.html">Work</a></li>
+                                <li><a href="category.html">Health</a></li>
+                                <li><a href="category.html">Photography</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="#0" title="" class="">Blog</a>
+                            <ul class="sub-menu">
+                                <li><a href="single-standard.html">Standard Post</a></li>
+                                <li><a href="single-video.html">Video Post</a></li>
+                                <li><a href="single-audio.html">Audio Post</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="styles.html" title="">Styles</a></li>
+                        <li><a href="about.html" title="">About</a></li>
+                        <li><a href="contact.html" title="">Contact</a></li>
+                    </ul> <!-- end s-header__nav -->
+
+                </nav> <!-- end s-header__nav-wrap -->
+    
+            </div> <!-- end s-header__navigation -->
+
+            <div class="s-header__search">
+
+                <div class="s-header__search-inner">
+                    <div class="row">
+    
+                        <form role="search" method="get" class="s-header__search-form" action="#">
+                            <label>
+                                <span class="u-screen-reader-text">Search for:</span>
+                                <input type="search" class="s-header__search-field" placeholder="Search for..." value="" name="s" title="Search for:" autocomplete="off">
+                            </label>
+                            <input type="submit" class="s-header__search-submit" value="Search"> 
+                        </form>
+    
+                        <a href="#0" title="Close Search" class="s-header__search-close">Close</a>
+    
+                    </div> <!-- end row -->
+                </div> <!-- s-header__search-inner -->
+    
+            </div> <!-- end s-header__search -->
+
+        
+
+        </header> <!-- end s-header -->
+
+
+        <!-- # site-content
+        ================================================== -->
+        <section id="content" class="s-content">
+
+
+            <!-- hero -->
+            <div class="hero">
+
+                <div class="hero__slider swiper-container">
+
+                    <div class="swiper-wrapper">
+                        <article class="hero__slide swiper-slide">
+                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
+                            <div class="hero__entry-text">
+                                <div class="hero__entry-text-inner">
+                                
+                                
+                                <div id="join" style="display:none">
+									<form action="join.do" method="post">
+										<div class="form-group input-group">
+    										<div class="input-group-prepend" name="id">
+											    <span class="input-group-text">아이디<i class="fa fa-envelope"></i> </span>
+											 </div>
+									        <input name="user_id" class="form-control" type="text" id="user_id" required>
+									        <span id="sp"></span>
+									    </div> <!-- id-group// -->
+									    
+									    <div class="form-group input-group">
+									    	<div class="input-group-prepend">
+											    <span class="input-group-text">비밀번호<i class="fa fa-lock"></i> </span>
+											</div>
+									        <input name="user_pw" class="form-control"  type="password" id="user_pw" required>
+									    </div> <!-- form-group// -->
+									    
+									    <div class="form-group input-group">
+									    	<div class="input-group-prepend">
+											    <span class="input-group-text">이름<i class="fa fa-lock"></i> </span>
+											</div>
+									        <input name="user_name" class="form-control"  type="text" id="user_name" required>
+									    </div> <!-- form-group// -->
+									    <div class="form-group input-group">
+									    	<div class="input-group-prepend">
+											    <span class="input-group-text">생년월일<i class="fa fa-lock"></i> </span>
+											</div>
+									        <input name="user_birthdate" class="form-control" placeholder="yyyymmdd" type="text" id="user_birthdate" required>
+									    </div> <!-- form-group// -->
+									    <div class="form-group input-group">
+									    	<div class="input-group-prepend">
+											    <span class="input-group-text">국적<i class="fa fa-lock"></i> </span>
+											</div>
+									        <select id="user_nationality" name="user_nationality" style="width: 272px;" required>
+												<option value="lang" selected>국가선택</option> 
+												<option value="USA">USA</option> 
+												<option value="KOREA">KOREA</option>
+												<option value="JAPAN">JAPAN</option>
+												<option value="CHINA">CHINA</option>
+												<option value="GERMANY">GERMANY</option>
+											</select>
+									    </div> <!-- form-group// -->
+									    <button type="submit" class='btnmain'>회원가입</button>
+                                     <button type="button" class="btnmain" onclick="close_join();"> 닫기  </button>
+									</form>
+								
+								</div>
+			<!--  loginform...........................----------------------------------------->
+								<div id="main">
+                                    <div id="hero__entry-meta">
+                                        <div class="panel panel-primary">
+                     <div id="chart_title" class="panel-heading">
+						<table style=width:100%;>
+							<tr>
+							<td style="text-align:center;"><a onclick="Syl_weak();">음절</a></td>
+							<td style="text-align:center;"><a onclick="Word_weak();">단어</a></td>
+							<td style="text-align:center;"><a onclick="Sen_weak();">문장</a></td>
+							</tr>
+						</table>
+					</div>
                      <div class="panel-body">
                      <c:if test="${list==null}">
                     	 취약단어가 없군요 대단합니다!
@@ -327,34 +231,43 @@ button.btnback{
                      </c:if>
                      </div>
                   </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <br>
+                                </div>
+                                    
+                             
+                               
+              <!--  loginform close...........................------------------------------------>     
+                            </div>
+                        </article>
+                     
+                    </div> <!-- swiper-wrapper -->
+
+                    <div class="swiper-pagination"></div>
+    
+                </div> <!-- end hero slider -->
+
+               
+
+            </div> <!-- end hero -->
 
 
+            <!--  masonry -->
+            
+        </section> <!-- end s-content -->
 
-   </div>
+
+        <!-- # site-footer
+        ================================================== -->
+        
 
 
-
-
-   <!-- Scripts -->
-   <script src="assets/js/jquery.min.js"></script>
-   <script src="assets/js/jquery.scrolly.min.js"></script>
-   <script src="assets/js/jquery.scrollex.min.js"></script>
-   <script src="assets/js/browser.min.js"></script>
-   <script src="assets/js/breakpoints.min.js"></script>
-   <script src="assets/js/util.js"></script>
-   <script src="assets/js/main.js"></script>
-   <script
-      src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
-   <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
-   <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-   <script>
+    <!-- Java Script
+    ================================================== -->
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
+    
+    <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
    function Syl_weak() {
 	      location.href="Syl_weak.do";
 	}

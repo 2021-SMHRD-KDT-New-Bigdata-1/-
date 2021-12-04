@@ -339,7 +339,7 @@ function back(){
       <div id="main">
          <div class="container">
             <div class="row" style="margin-left: -20px;margin-top: 32px; margin-top:40px;">
-            	<c:if test="${pron_acc != null }">
+				<c:if test="${pron_acc != null }">
 				<div style="position:absolute; top:676px; left:187px;">${(pron_acc[0].sp_good_acc/(pron_acc[0].sp_good_acc + pron_acc[0].sp_bad_acc))*100}%</div>
 				<div style="position:absolute; top:676px; left:518px;">${(pron_acc[0].lip_good_acc/(pron_acc[0].lip_good_acc + pron_acc[0].lip_bad_acc))*100}%</div>
                 </c:if>
@@ -373,13 +373,8 @@ function back(){
 							  <c:forEach var="data" items="${step_list}" varStatus="status">
 								  data.push(${data.speak_accuracy})
 								  labels.push("${data.content}")
-								  if(${data.speak_accuracy}<50){
-									  backgroundColor.push('rgba(255, 99, 132, 0.5)')
-									  borderColor.push('rgba(255, 206, 86, 1.5)')
-								  }else{
-									  backgroundColor.push("rgba(54, 162, 235, 0.2)")
-									  borderColor.push("rgba(54, 162, 235, 0.2)")
-								  }
+								  backgroundColor.push("rgba(54, 162, 235, 0.2)")
+								  borderColor.push("rgba(54, 162, 235, 0.2)")
 							 </c:forEach>
 							  //입모양 정확도 그래프 데이터
 							  var data2 = [];
@@ -387,13 +382,8 @@ function back(){
 							  var borderColor2 = [];
 							  <c:forEach var="data" items="${step_list}" varStatus="status">
 								  data2.push(${data.lip_accuracy})
-								  if(${data.lip_accuracy}<50){
-									  backgroundColor2.push('rgba(255, 99, 132, 0.5)')
-									  borderColor2.push('rgba(255, 206, 86, 1.5)')
-								  }else{
-									  backgroundColor2.push("rgba(75, 192, 192, 0.5)")
-									  borderColor2.push("rgba(75, 192, 192, 1.5)")
-								  }
+								  backgroundColor2.push("rgba(75, 192, 192, 0.5)")
+								  borderColor2.push("rgba(75, 192, 192, 1.5)")
 							  </c:forEach>
 							  var myChart = new Chart(ctx, {
 							    type: "bar",

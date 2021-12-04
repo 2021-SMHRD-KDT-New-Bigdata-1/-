@@ -3908,7 +3908,7 @@ body.search-is-visible .s-header__search-inner {
     margin-left     : 50%;
     margin-right    : 6rem;
     padding-top     : calc(8.8rem + var(--vspace-3));
-    padding-bottom  : var(--vspace-4);
+    pdding-bottom  : var(--vspace-4);
 }
 
 .hero__entry-text-inner {
@@ -4195,7 +4195,7 @@ body.search-is-visible .s-header__search-inner {
 	.hero__entry-text-inner {
 	    max-width: 80%;
 	    max-height: 850px;
-	    padding: var(--vspace-2) var(--vspace-1_5) var(--vspace-1_5);
+	   *padding: var(--vspace-2) var(--vspace-1_5) var(--vspace-1_5);
 	    border: 1px solid var(--color-gray-2);
 	    box-shadow: 0 1px 1px rgb(0 0 0 / 6%), 0 2px 2px rgb(0 0 0 / 6%), 0 4px 4px rgb(0 0 0 / 6%), 0 8px 8px rgb(0 0 0 / 6%);
 	}

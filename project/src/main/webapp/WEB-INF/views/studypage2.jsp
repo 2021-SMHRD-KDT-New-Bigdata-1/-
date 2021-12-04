@@ -1,3 +1,4 @@
+<%@page import="java.net.URLDecoder"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -169,7 +170,7 @@
                                         <span class="cat-links" style="font-size:13px;">
                                                <!-- 여기에..들어가볼까? -->
                                            Step<%=day%> (${cnt+1}/5)
-                                        <table class="study2table">
+                                        <table class="study2table" style="margin-bottom: 10px;">
          <thead>
 
             <tr>
@@ -198,7 +199,7 @@
             </tr>
             <tr>
                <td class="studycolor2"
-                  style="text-align: center; vertical-align: middle; padding-top:50px;">
+                  style="text-align: center; vertical-align: middle; padding-top:10px;">
                   <c:forEach
                      var="list" items="${list}" varStatus="status">
                      <c:if test="${status.index eq cnt}">
@@ -244,7 +245,7 @@
             </tr>
             <tr>
                <td class="studycolor2"
-                  style="text-align: center; font-size: large;">발음해보세요</td>
+                  style="text-align: center; font-size: large; padding-bottom: 10px;">발음해보세요</td>
             </tr>
             <tr>
                <td class="cameraInput"
@@ -252,7 +253,7 @@
                   
 
                      <form action="http://211.223.106.113:5000/dlModel" method="POST"
-                        enctype="multipart/form-data">
+                        enctype="multipart/form-data" style="margin-bottom: 10px;">
 
                         <!-- type hidden으로 바꿔줄거 -->
                         <c:forEach var="list" items="${list}" varStatus="status">
@@ -266,6 +267,7 @@
 
                         <input type="hidden" id="h_cnt" name="h_cnt" value="${cnt}">
                         <input type="hidden" id="h_day" name="h_day" value="<%=day%>">
+                        <input type="hidden" id="h_u_id" name="h_u_id" value="${vo.user_id}">
 
                         <c:choose>
                            <c:when test="${fn:length(list[0].content)==1}">
@@ -283,6 +285,7 @@
 
 
 
+<<<<<<< HEAD
                          
 	                        <label for="cameraInput"> 
 	                        	<button class="cameraInput"><i class="fas fa-microphone-alt fa-2x"></i></button>
@@ -295,6 +298,15 @@
                         
                         
                         <p id='vdcheck'>&nbsp;</p>
+=======
+                        <input type="hidden" class="cameraInput1" value=""
+                           placeholder="첨부파일" > <label for="cameraInput"> <i
+                           class="fas fa-microphone-alt fa-2x"></i>
+                        </label> <input type="file" id="cameraInput" name="file"
+                           accept="video/*" capture="user" onclick='vdclickFn()'/>
+                        <button type="submit" class="cameraInput" onclick="Loading();">분석</button>
+                        <p id='vdcheck' style="margin-bottom: 10px;">&nbsp;</p>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
                         <!-- css 넣어주기,, button -->
 
 
@@ -323,7 +335,7 @@
                         <article class="hero__slide swiper-slide">
                             <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
                             <div class="hero__entry-text">
-                                <div class="hero__entry-text-inner">
+                                <div class="hero__entry-text-inner" style="width: 798px;padding-left:8px;padding-right:8px;">
                                     <div class="hero__entry-meta">
                                         <span class="cat-links">
                                             <a style="font-weight:700;">ALL BAREUM</a>

@@ -260,6 +260,7 @@
 
                         <input type="hidden" id="h_cnt" name="h_cnt" value="${cnt}">
                         <input type="hidden" id="h_day" name="h_day" value="<%=day%>">
+                        <input type="hidden" id="h_u_id" name="h_u_id" value="${vo.user_id}">
 
                         <c:choose>
                            <c:when test="${fn:length(list[0].content)==1}">

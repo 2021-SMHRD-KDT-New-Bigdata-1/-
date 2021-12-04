@@ -41,7 +41,7 @@
    var cate = '${cate}';
    
    $(document).ready(function() { //익명함수
-        alert("제이쿼리 가즈앗!");
+        //alert("제이쿼리 가즈앗!");
       
       if(cate==1){
           Syl_loadList();

@@ -165,13 +165,13 @@ function login() {
 									<span class="cat-links">${vo.user_name }님</span>
 									<div><h2 class="hero_entry-title" style="margin-top: 5px;">원하는 학습을 선택하세요.</h2></div>
 								    <div id="btngroup" >
-                                       <button id="btnselect" onclick="study60home(1)">음절 (Syllable)</button>
+                                       <button id="btnselect" onclick="studyhome(1)">음절 (Syllable)</button>
                                     </div>
                                     <div id="btngroup">
-                                        <button id="btnselect" onclick="study60home(2)">단어 (Word)</button>
+                                        <button id="btnselect" onclick="studyhome(2)">단어 (Word)</button>
                                     </div>
                       				<div id="btngroup">
-                                        <button id="btnselect" onclick="study60home(3)">문장 (Sentense)</button>
+                                        <button id="btnselect" onclick="studyhome(3)">문장 (Sentense)</button>
                                     </div>
                                     <div id="btngroup">
                                         <button id="btnselect" onclick='Syl_weak()'>복습 (Review)</button>
@@ -205,8 +205,8 @@ function login() {
     <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 	<script>
-	function study60home(cate){
- 		location.href="study60home.do?cate="+cate;
+	function studyhome(cate){
+ 		location.href="studyhome.do?cate="+cate;
  	}
 	function Syl_weak(){
  		location.href="Syl_weak.do";

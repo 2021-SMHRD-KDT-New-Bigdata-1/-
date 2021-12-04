@@ -4188,14 +4188,14 @@ body.search-is-visible .s-header__search-inner {
 .hero__entry-text {
     width: 100%;
     margin: 0 0 8rem;
-    /* padding-top: calc(5.5 * var(--space)); */
-    /* padding-bottom: var(--vspace-4_5);*/
+    padding-top: calc(5.5 * var(--space));
+    padding-bottom: var(--vspace-4_5);
 }
 
 	.hero__entry-text-inner {
 	    max-width: 80%;
 	    max-height: 850px;
-	   *padding: var(--vspace-2) var(--vspace-1_5) var(--vspace-1_5);
+	   padding: var(--vspace-2) var(--vspace-1_5) var(--vspace-1_5);
 	    border: 1px solid var(--color-gray-2);
 	    box-shadow: 0 1px 1px rgb(0 0 0 / 6%), 0 2px 2px rgb(0 0 0 / 6%), 0 4px 4px rgb(0 0 0 / 6%), 0 8px 8px rgb(0 0 0 / 6%);
 	}

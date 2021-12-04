@@ -163,7 +163,7 @@
                                         <span class="cat-links" style="font-size:13px;">
                                                <!-- 여기에..들어가볼까? -->
                                            Step<%=day%> (${cnt+1}/5)
-                                        <table class="study2table">
+                                        <table class="study2table" style="margin-bottom: 10px;">
          <thead>
 
             <tr>
@@ -192,7 +192,7 @@
             </tr>
             <tr>
                <td class="studycolor2"
-                  style="text-align: center; vertical-align: middle; padding-top:50px;">
+                  style="text-align: center; vertical-align: middle; padding-top:10px;">
                   <c:forEach
                      var="list" items="${list}" varStatus="status">
                      <c:if test="${status.index eq cnt}">
@@ -238,7 +238,7 @@
             </tr>
             <tr>
                <td class="studycolor2"
-                  style="text-align: center; font-size: large;">발음해보세요</td>
+                  style="text-align: center; font-size: large; padding-bottom: 10px;">발음해보세요</td>
             </tr>
             <tr>
                <td class="studycolor"
@@ -246,7 +246,7 @@
                   <div class="cameraInput">
 
                      <form action="http://211.223.106.113:5000/dlModel" method="POST"
-                        enctype="multipart/form-data">
+                        enctype="multipart/form-data" style="margin-bottom: 10px;">
 
                         <!-- type hidden으로 바꿔줄거 -->
                         <c:forEach var="list" items="${list}" varStatus="status">
@@ -284,7 +284,7 @@
                         </label> <input type="file" id="cameraInput" name="file"
                            accept="video/*" capture="user" onclick='vdclickFn()'/>
                         <button type="submit" class="cameraInput" onclick="Loading();">분석</button>
-                        <p id='vdcheck'>&nbsp;</p>
+                        <p id='vdcheck' style="margin-bottom: 10px;">&nbsp;</p>
                         <!-- css 넣어주기,, button -->
 
 
@@ -324,7 +324,7 @@
                         <article class="hero__slide swiper-slide">
                             <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
                             <div class="hero__entry-text">
-                                <div class="hero__entry-text-inner">
+                                <div class="hero__entry-text-inner" style="width: 798px;padding-left:8px;padding-right:8px;">
                                     <div class="hero__entry-meta">
                                         <span class="cat-links">
                                             <a style="font-weight:700;">ALL BAREUM</a>

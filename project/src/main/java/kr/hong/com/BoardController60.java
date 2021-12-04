@@ -39,13 +39,39 @@ public class BoardController60 {
 			return "select60";
 		}
 		
-
-		
 		@RequestMapping("/study60home.do")
 		public String study60home(String cate, Model model) {
 			model.addAttribute("cate", cate);
 			
 			return "test60";
+		}
+		
+		@RequestMapping("/studypage602.do")
+		public String studypage2() {
+			System.out.println("컨트롤러에 왔니..?");
+			return "studypage602";
+		}
+		
+		@RequestMapping("/studypage602_sy.do")
+		public String studypage602_sy(String day, Model model){
+			List<Syllable> list = mapper.studypage2_sy(day);
+			model.addAttribute("list", list);
+			model.addAttribute("cnt",0);
+			return "studypage602";
+		}
+		@RequestMapping("/studypage602_wo.do")
+		public String studypage602_wo(String day,Model model){
+			List<Word> list = mapper.studypage2_wo(day);
+			model.addAttribute("list", list);
+			model.addAttribute("cnt",0);
+			return "studypage602";
+		}
+		@RequestMapping("/studypage602_sen.do")
+		public String studypage602_sen(String day,Model model){
+			List<Sentence> list = mapper.studypage2_sen(day);
+			model.addAttribute("list", list);
+			model.addAttribute("cnt",0);
+			return "studypage602";
 		}
 	}
 

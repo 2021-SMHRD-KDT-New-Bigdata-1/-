@@ -273,11 +273,11 @@
    
    function studypageGo(day, cate){
       if(cate==1){
-         location.href="studypage2_sy.do?day="+day;
+         location.href="studypage602_sy.do?day="+day;
       }else if(cate==2){
-         location.href="studypage2_wo.do?day="+day;
+         location.href="studypage602_wo.do?day="+day;
       }else if(cate==3){
-         location.href="studypage2_sen.do?day="+day;
+         location.href="studypage602_sen.do?day="+day;
       }else{
          alert("studypageGo 오류!");
       }

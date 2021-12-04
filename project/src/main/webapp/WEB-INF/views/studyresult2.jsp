@@ -1,3 +1,4 @@
+<%@page import="java.net.URLDecoder"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -54,7 +55,9 @@
 		int list_cnt = Integer.parseInt(request.getParameter("list_cnt"));
 		String day = request.getParameter("day");
 		String cate = request.getParameter("cate");
-	
+		
+		String text_en = request.getParameter("text_en");
+		
 	%>
 
     <!-- preloader
@@ -175,9 +178,10 @@
 				<td  colspan="3" class="result" style="height: 150px; width: 350px; 
 				 text-align: center; font-size: large; word-break: keep-all; color:black;">
 				 <h4 style="font-family: GowunDodum-Regular; font-size: xx-large;">결과 확인</h4>
-				 
+				 	
 					발음 정확도 : <%=speak_acc %> 점 <br>
-					입모양 정확도 : <%=lip_acc %> 점
+					입모양 정확도 : <%=lip_acc %> 점 <br>
+					인식된 발음 : <%= URLDecoder.decode(text_en, "UTF-8") %>
 				</td>
 			</tr>
 			<tr>
@@ -205,23 +209,7 @@
             </tr>
          </thead>
          <tbody>
-            <tr>
-               <td class="studycolor2"
-                  style="text-align: center; font-family: GowunDodum-Regular; font-size: large;">
-                  <c:forEach
-                     var="list" items="${list}" varStatus="status">
-                     <c:if test="${status.index eq cnt}">
-                        <h2 style="margin-top:10px; margin-bottom:0px; font-family: GowunDodum-Regular; font-size: xx-large;">${list.content}</h2>
-                        <c:if test="${list.id<1000}">
-                           [${list.pron}] <!-- 문장의 경우에 발음이 없으니 안뜨도록 -->
-                        </c:if>
-                        <!-- id출력은   (${list.id}) -->
-                     </c:if>
-                  </c:forEach>
-                  
-                  </td>
 
-            </tr>
             <tr>
                <td class="studycolor2"
                   style="text-align: center; vertical-align: middle; padding-top:50px;">

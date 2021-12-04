@@ -2837,7 +2837,7 @@ img.u-pull-left {
 /* ------------------------------------------------------------------- 
  * ## swiper overrides
  * ------------------------------------------------------------------- */
-.swiper-container .swiper-pagination-bullets .swiper-pagination-bullet {
+/*.swiper-container .swiper-pagination-bullets .swiper-pagination-bullet {
     margin : 0 1.2rem;
 }
 
@@ -2851,7 +2851,7 @@ img.u-pull-left {
 .swiper-container .swiper-pagination-bullet-active {
     background : black;
     opacity    : 1;
-}
+}*/
 
 /* ------------------------------------------------------------------- 
  * ## bricks masonry 

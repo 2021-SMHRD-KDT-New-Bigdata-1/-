@@ -189,9 +189,9 @@
 				
 				<td style="width: 400px; height: 300px; border: 3px solid ; border-color: #ff8040; background-color: white; ">
 				<!-- 여기에 비디오넣기 -->
-				<video>
+				<video controls playsinline width="350" style="width:600px; height:400px;">
 				<source
-                src= "${pageContext.request.contextPath}/resources/images/upload_video/${vo.user_id}_<%=word_num%>.mp4"
+                src= "${pageContext.request.contextPath}/resources/images/upload_video/${vo.user_id}_<%=word_idx%>.mp4"
                 type="video/mp4">
                 </video>
 				

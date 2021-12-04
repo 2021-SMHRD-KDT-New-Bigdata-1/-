@@ -1,127 +1,56 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js" >
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-
-	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-	<link href="${pageContext.request.contextPath}/resources/default.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="${pageContext.request.contextPath}/resources/fonts.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<noscript>
-		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
-	</noscript>
-	<script src="https://kit.fontawesome.com/6d7bf23579.js" crossorigin="anonymous"></script>
-	<!--이모티콘-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/6d7bf23579.js" crossorigin="anonymous"></script>
+    <!--이모티콘-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!--이모티콘-->
+    
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>최종학습페이지</title>
 
-	<title>최종학습페이지</title>
-	<style>
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
 
-	.day{
-		margin-left:auto;
-		margin-right: 70px;
-		font-size:x-large;
-	}
-	
-	.all{
-		margin-top: 120px;
-	}
-	
-	h2{
-		vertical-align: middle;
-		text-align: center;
-		color:black;
-		margin:auto;
-	}
-	#avg{
-		color: white; 
-	    background-color: #ff8040;
-		margin-top: 21px;
-		margin-bottom: 24px;
-	    text-align: center;
-	    margin: auto;
-	    font-size: xx-large;
-	    font-weight: bold;
-	    border-radius: 10px;
-	}
-	
-	
-	nav{
-		width: 622px;
-		margin: auto;
-	}
-	
-	ul {
-		padding: 0;
-		padding-left: 0;
-	}
-	
-	div.b_utton{
-		height: 100px;
-		text-align: center;
-		margin: auto;
-	}
-	
-	li.first {
-		padding-left: 0;
-	}
-	
-	#btnexit{
-	    margin-top: 0;
-	    border: 1px solid #ff8040;
-	    background-color: #ff8040;
-	    border-radius: 17px;
-	    height: 50px;
-	    width: 128px;
-	    color: white;
-		font-weight:900;
-	}
-	
-	#list55{
-		color: black;
-		text-align: center;
-		margin: 56px;
-	}
-		
-	.contents{
-		height: 600px;
-		padding-top: 20px;
-		font-size: x-large;
-		border: 2px solid #ffaf42;
-		background-color: white;
-		border-radius: 10px;
-	}
+    <!-- CSS
+    ================================================== -->
+<link href="${pageContext.request.contextPath}/resources/css/vendor.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
 
-	.far fa-laugh-wink fa-3x{
-		color: green;
-	}
-	
-	.far fa-laugh-meh fa-3x{
-		color: orange;
-	}
-	
-	.far fa-laugh-tired fa-3x{
-		color: red;
-	}
-	
-</style>
+    <!-- favicons
+    ================================================== -->
+<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon" sizes="180x180" href="${pageContext.request.contextPath}/resources/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="${pageContext.request.contextPath}/resources/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
+    <link rel="manifest" href="site.webmanifest">
+<script src="http://code.jquery.com/jquery-latest.js"></script> 
 <script>
 
-	
-	
+
+   
 </script>
+
 </head>
-<body> 
+
+
+<body id="top" class="is-preload" id="is-preload">
 	<%
 	String day = request.getParameter("day");
 	String cate = request.getParameter("cate"); //음절/단어/문장
@@ -130,57 +59,242 @@
 	<input type='hidden' id='h_c' name='h_c' value='<%=cate%>' >
 	<input type='hidden' id='h_d' name='h_d' value="<%=day%>" >
 
-	<!-- 배경색 돌아가고 싶으면 css -->
-	<!-- Header -->
-	<header id="header" class="alt"><p class="day">STEP <%=day %></p></header>
-
-	<div class="all">
-
-		<!-- 제목(결과) -->
-		<div class="result">
-			<h2>${vo.user_name}님의 발음분석결과</h2>
-		</div>
-		
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 
 
-		
-		<!-- 점수표출 -->
-		<!-- <div id="score">
-			<h2 class="score1">100</h2>
-		</div>  -->
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap ss-home">
 
-		<!-- 결과리스트  -->
-		<nav>
-			<ul>
-				<li class="first">
-					<p class="date">
-						<c:if test="${score >= 90 }"> <i class="far fa-laugh-wink fa-3x"></i></c:if>
-						<c:if test="${score >= 60 }"> <i class="far fa-meh fa-3x"></i></c:if>
-						<c:if test="${score >= 40 }"> <i class="far fa-tired fa-3x"></i></c:if>
-					</p>
-					
-					<div id="avg">평균 몇점</div> <!-- day1 -->
-					<div class="contents">
-					<!-- <p id="list55">가<i class="far fa-laugh-wink fa-1x"></i></p> 제시 단어 리스트 쫘라락 -->
-						<div class="602">
-						여기에여
-						</div>
+
+        <!-- # site header 
+        ================================================== -->
+        <header id="masthead" class="s-header">
+
+            <div class="s-header__branding">
+                <p class="site-title">
+                    <a href="main.do" rel="home" style="color: black; margin-left: 570px; font-family: var(--font-2);" >Allbareum</a>
+                </p>
+            </div>
+
+            <div class="row s-header__navigation">
+
+                <nav class="s-header__nav-wrap">
+    
+                    <h3 class="s-header__nav-heading">Navigate to</h3>
+    
+                    <ul class="s-header__nav">
+                        <li class="current-menu-item"><a href="index.html" title="">Home</a></li>
+                        <li class="has-children">
+                            <a href="#0" title="" class="">Categories</a>
+                            <ul class="sub-menu">
+                                <li><a href="category.html">Design</a></li>
+                                <li><a href="category.html">Lifestyle</a></li>
+                                <li><a href="category.html">Inspiration</a></li>
+                                <li><a href="category.html">Work</a></li>
+                                <li><a href="category.html">Health</a></li>
+                                <li><a href="category.html">Photography</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="#0" title="" class="">Blog</a>
+                            <ul class="sub-menu">
+                                <li><a href="single-standard.html">Standard Post</a></li>
+                                <li><a href="single-video.html">Video Post</a></li>
+                                <li><a href="single-audio.html">Audio Post</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="styles.html" title="">Styles</a></li>
+                        <li><a href="about.html" title="">About</a></li>
+                        <li><a href="contact.html" title="">Contact</a></li>
+                    </ul> <!-- end s-header__nav -->
+
+                </nav> <!-- end s-header__nav-wrap -->
+    
+            </div> <!-- end s-header__navigation -->
+
+            <div class="s-header__search">
+
+                <div class="s-header__search-inner">
+                    <div class="row">
+    
+                        <form role="search" method="get" class="s-header__search-form" action="#">
+                            <label>
+                                <span class="u-screen-reader-text">Search for:</span>
+                                <input type="search" class="s-header__search-field" placeholder="Search for..." value="" name="s" title="Search for:" autocomplete="off">
+                            </label>
+                            <input type="submit" class="s-header__search-submit" value="Search"> 
+                        </form>
+    
+                        <a href="#0" title="Close Search" class="s-header__search-close">Close</a>
+    
+                    </div> <!-- end row -->
+                </div> <!-- s-header__search-inner -->
+    
+            </div> <!-- end s-header__search -->
+
+        
+
+        </header> <!-- end s-header -->
+
+
+        <!-- # site-content
+        ================================================== -->
+        <section id="content" class="s-content">
+
+
+            <!-- hero -->
+            <div class="hero">
+
+                <div class="hero__slider swiper-container">
+
+                    <div class="swiper-wrapper">
+                        <article class="hero__slide swiper-slide">
+                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
+                            <div class="hero__entry-text">
+                                <div class="hero__entry-text-inner" style="width: 798px; padding-left:8px; padding-right:8px;padding-top:15px;">
+                                
+   
+           
+         <!--  loginform...........................----------------------------------------->
+                    
+                        <div id="main">
+                                    <div id="hero__entry-meta">
+                                        <span class="cat-links" style="font-size:13px;">
+                                               <!-- 여기에..들어가볼까? -->
+          
+         <table class="study2table">
+         <thead>
+			<tr>
+				<td  colspan="3" class="result" style="height: 150px; width: 350px; 
+				 text-align: center; font-size: large; word-break: keep-all; color:black;">
+				 <h4 style="font-family: GowunDodum-Regular; font-size: large; margin-top: 10px;">STEP <%=day  %> 결과 확인</h4>
+					<div class="result">
+						<h2 style="font-family: GowunDodum-Regular; font-size: xx-large; margin-top: 30px;">${vo.user_name}님의 발음분석결과</h2>
 					</div>
-				</li>
-				
-			</ul>
+				</td>
+			</tr>
+			<tr>
 
-			<br>
-		</nav>
-		<div class="b_utton">
+				
+					<!-- <video width="30%" height="30%" autoplay="autoplay" id="myVideo"></td> -->
+			</tr>
+
+            <tr>
+               <td class="studycolor"
+                  style="text-align: center; font-family: GowunDodum-Regular; font-size: xx-large; padding-top: 10px; padding-bottom: 10px; " id='test60' >
+				<p id="avg" style="font-size:x-large; margin-bottom: 0px;">평균 몇점</p> <!-- day1 --></td>
+            </tr>
+         </thead>
+         <tbody>
+
+            <tr>
+               <td class="studycolor2"
+                  style="text-align: center; vertical-align: middle; padding-top:30px; padding-right: 60px;padding-left: 60px;">
+				<!-- 결과리스트  -->
+						<nav>
+							<ul>
+								<!-- <li class="first"> -->
+									<p class="date">
+										<c:if test="${score >= 90 }"> <i class="far fa-laugh-wink fa-3x"></i></c:if>
+										<c:if test="${score >= 60 }"> <i class="far fa-meh fa-3x"></i></c:if>
+										<c:if test="${score >= 40 }"> <i class="far fa-tired fa-3x"></i></c:if>
+									</p>
+									
+									
+									<div class="contents">
+									<!-- <p id="list55">가<i class="far fa-laugh-wink fa-1x"></i></p> 제시 단어 리스트 쫘라락 -->
+										<div class="602">
+										여기에여
+										</div>
+									</div>
+								<!-- </li> -->
+								
+							</ul>
+				
+							<br>
+						</nav>
+			<div class="b_utton">
 			<button id="btnexit" onclick="exit()">나가기</button>&nbsp;&nbsp;&nbsp;&nbsp;
 			<button id="btnexit" onclick="replay(<%=day%>,<%=cate%>)">반복하기</button>
-		</div>
-		
-	</div>
-	<br>
-	<script>
-	
+			</div>  
+
+            </td>
+            </tr>
+
+         </tbody>
+
+      </table>
+     
+         </span>
+                                </div>
+                                    
+              <!--  loginform close...........................------------------------------------>     
+                            </div>
+                        </article>
+                        <article class="hero__slide swiper-slide">
+                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
+                            <div class="hero__entry-text">
+                                <div class="hero__entry-text-inner">
+                                    <div class="hero__entry-meta">
+                                        <span class="cat-links">
+                                            <a style="font-weight:700;">ALL BAREUM</a>
+                                        </span>
+                                    </div>
+                                    <h2 class="hero__entry-title">
+                              <!--style="font-family: GmarketSansBold; font-size:x-large;"  -->
+                              <p class="hero__entry-desc" style="font-family: GmarketSansBold; font-size:large;" > - 입 모양 인식을 통한 바른 입 모양 교정 </p>
+                                        <p class="hero__entry-desc" style="font-family: GmarketSansBold; font-size:large;" > - 음성 인식을 통한 발음 정확도 교정   </p>
+                                        
+                                        <p style="font-family: NanumSquareExtraBold; font-size:xx-large;">정확한 입모양/발음 교정,</p> 
+                                        <p style="font-family: NanumSquareExtraBold; font-size:x-large; font-weight:500;">올바름이 함께 하겠습니다.</p>
+                              
+                                       
+                                    </h2>
+                                    
+                                 
+                                    
+                                </div>
+                            </div>
+                        </article>
+                     
+                    </div> <!-- swiper-wrapper -->
+
+                    <div class="swiper-pagination"></div>
+    
+                </div> <!-- end hero slider -->
+
+               
+
+            </div> <!-- end hero -->
+
+
+            <!--  masonry -->
+            
+        </section> <!-- end s-content -->
+
+
+        <!-- # site-footer
+        ================================================== -->
+        
+
+
+    <!-- Java Script
+    ================================================== -->
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
+
+    <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script>
 	var h_cate = $("#h_c").val();
 	var h_day = $("input[name=h_d]").val();
 	
@@ -242,13 +356,13 @@
 		
 		
 		var all_mean = 0;
-		view="<div>";
+		view="<div><table style='text-align: center;'>";
 		    $.each(data, function(data, obj){
 		    	var mean = (parseInt(obj.speak_accuracy) + parseInt(obj.lip_accuracy))/2;
-		    	
-				view+="<p id='list55'><b style='color:black;'>";
+		    	view+="<tr>"
+				view+="<td colspan='3' id='list55' style='font-size:x-large; text-align:center;'><b style='color:black;'>";
 				view+= obj.content;
-				view+=" </b>"; 
+				view+=" </b></td><td style='text-align:center; font-size: large;'>"; 
 				//view+="발음 점수 : ";
 				//view+= obj.speak_accuracy;
 				//view+= " / 입모양 점수 : "
@@ -256,17 +370,17 @@
 				//view+= " / 평균 : "
 				view+= mean;
 				all_mean += mean;
-				view+= "점   ";
+				view+= " 점  </td><td> ";
 				if (mean > 90){
-					view+= "<i class='far fa-laugh-wink fa-1x'></i>";
+					view+= "<i class='far fa-laugh-wink fa-2x'></i>";
 				}else if(mean >= 50){
-					view+= "<i class='far fa-meh fa-1x'></i>";
+					view+= "<i class='far fa-meh fa-2x'></i>";
 				}else{
-					view+= "<i class='far fa-tired fa-1x'></i>";
+					view+= "<i class='far fa-tired fa-2x'></i>";
 				}
-				view+="</p>";
+				view+="</td>";
 			    })
-			view+="</div>";
+			view+="</table></div>";
 			
 			view2 = all_mean/5+" 점 ";
 		
@@ -291,7 +405,6 @@
 			}
 		}
 		
-	</script>
-
+</script>
 </body>
 </html>

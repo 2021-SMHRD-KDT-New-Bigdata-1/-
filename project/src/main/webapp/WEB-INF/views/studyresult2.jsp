@@ -187,9 +187,9 @@
 			<tr>
 				<td class="results"></td>
 				
-				<td style="width: 400px; height: 300px; border: 3px solid ; border-color: #ff8040; background-color: white; ">
+				<td style="width: 400px; height: 300px;background-color: white; ">
 				<!-- 여기에 비디오넣기 -->
-				<video controls playsinline width="350" style="width:600px; height:400px;">
+				<video controls playsinline width="800" style="width:600px; height:400px; border: 3px solid; border-color: #ff8040; padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
 				<source
                 src= "${pageContext.request.contextPath}/resources/images/upload_video/${vo.user_id}_<%=word_idx%>.mp4"
                 type="video/mp4">

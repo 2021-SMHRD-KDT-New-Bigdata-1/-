@@ -339,7 +339,7 @@ function back(){
       <div id="main">
          <div class="container">
             <div class="row" style="margin-left: -20px;margin-top: 32px; margin-top:40px;">
-            	<c:if test="${pron_acc != null }">
+				<c:if test="${pron_acc != null }">
 				<div style="position:absolute; top:676px; left:187px;">${(pron_acc[0].sp_good_acc/(pron_acc[0].sp_good_acc + pron_acc[0].sp_bad_acc))*100}%</div>
 				<div style="position:absolute; top:676px; left:518px;">${(pron_acc[0].lip_good_acc/(pron_acc[0].lip_good_acc + pron_acc[0].lip_bad_acc))*100}%</div>
                 </c:if>

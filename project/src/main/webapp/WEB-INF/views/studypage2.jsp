@@ -242,7 +242,7 @@ video {
 									<video
 									controls playsinline width="350">
 									<source
-										src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"
+										src="${pageContext.request.contextPath}/resources/images/listen_sound/sen_${list.id}.mp3"
 										type="video/mp4">
 								</video>
 								</c:if>

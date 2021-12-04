@@ -113,7 +113,8 @@
 	.far fa-laugh-tired fa-3x{
 		color: red;
 	}
-	
+	.f60{
+	color:}
 </style>
 <script>
 
@@ -138,7 +139,7 @@
 
 		<!-- 제목(결과) -->
 		<div class="result">
-			<h2>${vo.user_name}님의 발음분석결과</h2>
+			<h2>${vo.user_name}님의 발음분석결과 DD </h2>
 		</div>
 		
 
@@ -152,7 +153,7 @@
 		<!-- 결과리스트  -->
 		<nav>
 			<ul>
-				<li class="first">
+				<!-- <li class="first f60">-->
 					<p class="date">
 						<c:if test="${score >= 90 }"> <i class="far fa-laugh-wink fa-3x"></i></c:if>
 						<c:if test="${score >= 60 }"> <i class="far fa-meh fa-3x"></i></c:if>
@@ -166,11 +167,11 @@
 						여기에여
 						</div>
 					</div>
-				</li>
+				<!-- </li> -->
 				
 			</ul>
 
-			<br>
+			<br> 
 		</nav>
 		<div class="b_utton">
 			<button id="btnexit" onclick="exit()">나가기</button>&nbsp;&nbsp;&nbsp;&nbsp;

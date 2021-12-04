@@ -311,13 +311,13 @@ button.btnback{
                      			<tr style="width:100%;">
                      			<c:choose>
 								<c:when test="${list.num  < 200 && list.num>=0}" >
-									<td style="float:left; margin-left:40px;" onclick="syl_weakstudy(${list.id})">단어 : ${list.content },번호 : ${list.num },아이디 : ${list.id }</td>
+									<td style="float:left; margin-left:40px;" onclick="syl_weakstudy(${list.id})">단어 : ${list.content }</td>
 								</c:when>
 								<c:when test="${list.num < 500 && list.num > 200}" >
-									<td style="float:left; margin-left:40px;" onclick="sen_weakstudy(${list.id})">문장 : ${list.content },번호:${list.num},아이디:${list.id }</td>
+									<td style="float:left; margin-left:40px;" onclick="sen_weakstudy(${list.id})">문장 : ${list.content }</td>
 								</c:when>
 								<c:when test="${list.num < 1500 && list.num > 500}">
-									<td style="float:left; margin-left:40px;" onclick="word_weakstudy(${list.id})">단어 : ${list.content },번호 : ${list.num },아이디 : ${list.id }</td>
+									<td style="float:left; margin-left:40px;" onclick="word_weakstudy(${list.id})">단어 : ${list.content }</td>
 								</c:when>
 								</c:choose>
                      			<td style="float:right; margin-right:50px;">입모양 : ${list.lip_accuracy }, 발음 : ${list.speak_accuracy }</td></tr>

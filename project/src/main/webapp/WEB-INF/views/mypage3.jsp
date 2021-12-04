@@ -299,11 +299,21 @@ function back(){
 
 </script>
 
-<body class="is-preload alt">
+<body id="top" style="margin:0px;">
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap ss-home">
    <!-- Wrapper -->
 
-   <div id="wrapper" style="padding: 0;">
+   <!-- <div id="wrapper" style="padding: 0;"> -->
 
       <!-- Header -->
       <section>
@@ -419,7 +429,7 @@ function back(){
                   </div>
                </div>
                <div class="col-12-small"
-                  style="width: 50%; margin-top: 40px;">
+                  style="width: 50%; margin-top: 20px;">
                   <div class="panel panel-primary">
                      <div id="chart_title" class="panel-heading">음성 정확도</div>
                      <div class="panel-body">

@@ -167,7 +167,7 @@
 
 				<tr>
 					<td class="studycolor"
-						style="text-align: center; font-size: large; padding-top: 5px; padding-bottom: 0px;" id='test60' ></td>
+						style="text-align: center; font-size: large; padding-top: 5px; padding-bottom: 10px;" id='test60' ></td>
 
 				</tr>
 			</thead>
@@ -198,7 +198,7 @@
 								<!-- 음절/단어의 경우 비디오 소스 -->
 								<c:if test="${list.id<1000}">
 									<video
-									controls playsinline width="350">
+									controls playsinline width="350" style="width:600px; height:400px;">
 									
 										<c:choose>
 											<c:when test="${list.id<10}">
@@ -224,7 +224,7 @@
 								<!-- 문장의 경우에 다른 소스로 설정할 수 있도록 코드 구현-->
 								<c:if test="${list.id>=1000}">
 									<video
-									controls playsinline width="350">
+									controls playsinline width="350" style="width:600px; height:400px;">
 									<source
 										src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"
 										type="video/mp4">

@@ -325,7 +325,7 @@ function back(){
       <!-- Main -->
       <div id="main">
          <div class="container">
-            <div class="row" style="margin-left: -20px;margin-top: 32px; margin-top:80px;">
+            <div class="row" style="margin-left: -20px;margin-top: 32px; margin-top:40px;">
 
                 <select id="my_select" style="margin-left:auto; margin-right:auto; text-align:center;"
                 onchange="Step_Result_se(this.options[this.selectedIndex].value)" >
@@ -342,7 +342,7 @@ function back(){
 
 
                <div class="col-12-small"
-                  style="width: 100%; min-width: 349.5px; margin-top: 60px;">
+                  style="width: 100%; min-width: 349.5px; margin-top: 20px;">
                   <div class="panel panel-primary">
                      <div id="chart_title" class="panel-heading">정확도</div>
                      <div class="panel-body">
@@ -451,7 +451,7 @@ function back(){
                   </div>
                </div>
                <div class="col-12-small"
-                  style="width: 50%; margin-top: 40px;">
+                  style="width: 50%; margin-top: 20px;">
                   <div class="panel panel-primary">
                      <div id="chart_title" class="panel-heading">입모양 정확도</div>
                      <div class="panel-body">
@@ -482,15 +482,19 @@ function back(){
                      </div>
                   </div>
                </div>
-               <div class="col-12-small" style="width: 100%; min-width: 349.5px; margin-top: 60px;">
+               <div class="col-12-small" style="width: 100%; min-width: 349.5px; margin-top: 20px;">
                   <div class="panel panel-primary">
                      <div id="chart_title" class="panel-heading">취약단어</div>
-                     <div class="panel-body">
+                     <div class="panel-body"  style="margin:0px; padding:0px;">
                     <table>
+                     <tr>
+                    <td style="padding-left:30px; font-weight:bold; font-size:17px;">취약단어</td>
+                    <td style="position:absolute; right:120px; font-weight:bold; font-size:17px;">정확도</td>
+                    </tr>
                      <c:forEach var="test" items="${test }" varStatus="satus">
-                     <tr style="width:100%;">
-                 		<td onclick="syl_weakstudy(${test.id})">단어 :${test.content }</td>
-                    <td style="float:right; margin-right:50px;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy*10 }" pattern="" />%
+                     <tr>
+                 		<td onclick="syl_weakstudy(${test.id})" style="padding-left:20px;">단어 :${test.content }</td>
+                    <td style="position:absolute; right:60px;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy*10 }" pattern="" />%
                     	입모양 :<fmt:formatNumber value="${test.lip_accuracy*10 }" pattern="" />%
                     </td>
                     

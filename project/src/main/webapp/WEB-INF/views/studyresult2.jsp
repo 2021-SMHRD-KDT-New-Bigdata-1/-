@@ -1,94 +1,51 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
-<html lang="en" class="js ss-loaded">
+<html lang="en" class="no-js" >
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<link
-	href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900"
-	rel="stylesheet" />
-<link href="${pageContext.request.contextPath}/resources/default.css"
-	rel="stylesheet" type="text/css" media="all" />
-<link href="${pageContext.request.contextPath}/resources/fonts.css"
-	rel="stylesheet" type="text/css" media="all" />
-	
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
-<noscript>
-	<link rel="stylesheet"
-		href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
-</noscript>
-<title>study</title>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spurgeon</title>
 
-<style>
-.btn-default {
-	background-color: #ff8040;
-	width: 100px;
-	color: white;
-	border-radius: 15px;
-}
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
 
-.myResult {
-	padding: 0px !important;
-	height: 10px;
-}
+    <!-- CSS
+    ================================================== -->
+<link href="${pageContext.request.contextPath}/resources/css/vendor.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
 
-#result {
-	clear: both !important;
-	position: static !important;
-	margin-top: 120px !important;
-	height: 800px;
-}
-
-body {
-	background-color: #f2f2f2;
-}
-h4{
-    color: black;
-    font-weight: 900;
-    font-size:x-large;
-    margin-top: 10px;
-}
-
-table td {
-    background: #ffaf42;
-    
-
-}
+    <!-- favicons
+    ================================================== -->
+<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon" sizes="180x180" href="${pageContext.request.contextPath}/resources/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="${pageContext.request.contextPath}/resources/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
+    <link rel="manifest" href="site.webmanifest">
+<script src="http://code.jquery.com/jquery-latest.js"></script> 
+<script>
 
 
-}
+   
+</script>
 
-</style>
-<head>
-<!-- <script>
-	        function load() {
-	            var video = document.getElementById('myVideo');
-	            if (navigator.webkitGetUserMedia) {
-	                navigator.webkitGetUserMedia({audio:true, video:true},
-	                    function(stream) { video.src = webkitURL.createObjectURL(stream); },
-	                    function(error) { alert('ERROR: ' + error.toString()); } );
-	            } else {
-	                alert('webkitGetUserMedia not supported');
-	            }
-	        }
-        </script> -->
 </head>
-<body>
 
+
+<body id="top" class="is-preload" id="is-preload">
 	<%
 		String speak_acc = request.getParameter("speak_acc");
 		String lip_acc = request.getParameter("lip_acc");
@@ -100,23 +57,125 @@ table td {
 	
 	%>
 
-	<!-- Header -->
-	<header id="header" class="alt">
-		<!--  <button type="button" class="btnback">
-			<i class="fas fa-arrow-left fa-2x"></i>
-		</button>-->
-		
-	</header>
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 
-	<!-- 한 단어당 보여주는 결과창 -->
-	<table id="result" style="margin: auto;">
-		
-			<tbody>
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap ss-home">
+
+
+        <!-- # site header 
+        ================================================== -->
+        <header id="masthead" class="s-header">
+
+            <div class="s-header__branding">
+                <p class="site-title">
+                    <a href="main.do" rel="home" style="color: black; margin-left: 570px; font-family: var(--font-2);" >Allbareum</a>
+                </p>
+            </div>
+
+            <div class="row s-header__navigation">
+
+                <nav class="s-header__nav-wrap">
+    
+                    <h3 class="s-header__nav-heading">Navigate to</h3>
+    
+                    <ul class="s-header__nav">
+                        <li class="current-menu-item"><a href="index.html" title="">Home</a></li>
+                        <li class="has-children">
+                            <a href="#0" title="" class="">Categories</a>
+                            <ul class="sub-menu">
+                                <li><a href="category.html">Design</a></li>
+                                <li><a href="category.html">Lifestyle</a></li>
+                                <li><a href="category.html">Inspiration</a></li>
+                                <li><a href="category.html">Work</a></li>
+                                <li><a href="category.html">Health</a></li>
+                                <li><a href="category.html">Photography</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="#0" title="" class="">Blog</a>
+                            <ul class="sub-menu">
+                                <li><a href="single-standard.html">Standard Post</a></li>
+                                <li><a href="single-video.html">Video Post</a></li>
+                                <li><a href="single-audio.html">Audio Post</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="styles.html" title="">Styles</a></li>
+                        <li><a href="about.html" title="">About</a></li>
+                        <li><a href="contact.html" title="">Contact</a></li>
+                    </ul> <!-- end s-header__nav -->
+
+                </nav> <!-- end s-header__nav-wrap -->
+    
+            </div> <!-- end s-header__navigation -->
+
+            <div class="s-header__search">
+
+                <div class="s-header__search-inner">
+                    <div class="row">
+    
+                        <form role="search" method="get" class="s-header__search-form" action="#">
+                            <label>
+                                <span class="u-screen-reader-text">Search for:</span>
+                                <input type="search" class="s-header__search-field" placeholder="Search for..." value="" name="s" title="Search for:" autocomplete="off">
+                            </label>
+                            <input type="submit" class="s-header__search-submit" value="Search"> 
+                        </form>
+    
+                        <a href="#0" title="Close Search" class="s-header__search-close">Close</a>
+    
+                    </div> <!-- end row -->
+                </div> <!-- s-header__search-inner -->
+    
+            </div> <!-- end s-header__search -->
+
+        
+
+        </header> <!-- end s-header -->
+
+
+        <!-- # site-content
+        ================================================== -->
+        <section id="content" class="s-content">
+
+
+            <!-- hero -->
+            <div class="hero">
+
+                <div class="hero__slider swiper-container">
+
+                    <div class="swiper-wrapper">
+                        <article class="hero__slide swiper-slide">
+                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
+                            <div class="hero__entry-text">
+                                <div class="hero__entry-text-inner" style="width: 798px; padding-left:8px; padding-right:8px;padding-top:15px;">
+                                
+   
+           
+         <!--  loginform...........................----------------------------------------->
+                    
+                        <div id="main">
+                                    <div id="hero__entry-meta">
+                                        <span class="cat-links" style="font-size:13px;">
+                                               <!-- 여기에..들어가볼까? -->
+          
+         <table class="study2table">
+         <thead>
 			<tr>
 				<td  colspan="3" class="result" style="height: 150px; width: 350px; 
 				 text-align: center; font-size: large; word-break: keep-all; color:black;">
-				 <h4 >결과 확인</h4>
-				 <hr>
+				 <h4 style="font-family: GowunDodum-Regular; font-size: xx-large;">결과 확인</h4>
+				 
 					발음 정확도 : <%=speak_acc %> 점 <br>
 					입모양 정확도 : <%=lip_acc %> 점
 				</td>
@@ -124,7 +183,7 @@ table td {
 			<tr>
 				<td class="results"></td>
 				
-				<td style="width: 400px; border: 3px solid ; border-color: #ff8040; background-color: white; ">
+				<td style="width: 400px; height: 300px; border: 3px solid ; border-color: #ff8040; background-color: white; ">
 				
 				</td>
 				
@@ -139,11 +198,143 @@ table td {
 					<button class="btn btn-default" id="synonym">유사단어</button>
 				</td>
 			</tr>
-		</tbody>
-	</table>
-	<!-- if(${lis.seapaccuarcy} > <'%=speak_acc %>)  아랫 줄 -->
-<script>
+            <tr>
+               <td class="studycolor"
+                  style="text-align: center; font-family: GowunDodum-Regular; font-size: xx-large; padding-top: 5px; padding-bottom: 10px;" id='test60' ></td>
 
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td class="studycolor2"
+                  style="text-align: center; font-family: GowunDodum-Regular; font-size: large;">
+                  <c:forEach
+                     var="list" items="${list}" varStatus="status">
+                     <c:if test="${status.index eq cnt}">
+                        <h2 style="margin-top:10px; margin-bottom:0px; font-family: GowunDodum-Regular; font-size: xx-large;">${list.content}</h2>
+                        <c:if test="${list.id<1000}">
+                           [${list.pron}] <!-- 문장의 경우에 발음이 없으니 안뜨도록 -->
+                        </c:if>
+                        <!-- id출력은   (${list.id}) -->
+                     </c:if>
+                  </c:forEach>
+                  
+                  </td>
+
+            </tr>
+            <tr>
+               <td class="studycolor2"
+                  style="text-align: center; vertical-align: middle; padding-top:50px;">
+                  <c:forEach
+                     var="list" items="${list}" varStatus="status">
+                     <c:if test="${status.index eq cnt}">
+                        <!-- 음절/단어의 경우 비디오 소스 -->
+                        <c:if test="${list.id<1000}">
+                           <video
+                           controls playsinline width="350" style="width:600px; height:400px;">
+                           
+                              <c:choose>
+                                 <c:when test="${list.id<10}">
+                                     <source 
+                                    src= "${pageContext.request.contextPath}/resources/images/show_video/000${list.id}/train/000${list.id}_M047_C.mp4"
+                                    type="video/mp4">
+                                 </c:when>
+                                 <c:when test="${list.id<100}">
+                                    <source
+                                    src= "${pageContext.request.contextPath}/resources/images/show_video/00${list.id}/train/00${list.id}_M047_C.mp4"
+                                    type="video/mp4">
+                                 </c:when>
+                                 <c:otherwise>
+                                    <source
+                                    src= "${pageContext.request.contextPath}/resources/images/show_video/0${list.id}/train/0${list.id}_M047_C.mp4"
+                                    type="video/mp4">
+                                 </c:otherwise>
+                              </c:choose>
+                              <!-- src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4" -->
+                              
+                        </video>
+                        </c:if>      
+                        <!-- 문장의 경우에 다른 소스로 설정할 수 있도록 코드 구현-->
+                        <c:if test="${list.id>=1000}">
+                           <video
+                           controls playsinline width="350" style="width:600px; height:400px;">
+                           <source
+                              src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"
+                              type="video/mp4">
+                        </video>
+                        </c:if>
+                     </c:if>
+                  </c:forEach>
+
+                  </td>
+            </tr>
+
+         </tbody>
+
+      </table>
+                                  
+         </span>
+                                </div>
+                                    
+              <!--  loginform close...........................------------------------------------>     
+                            </div>
+                        </article>
+                        <article class="hero__slide swiper-slide">
+                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
+                            <div class="hero__entry-text">
+                                <div class="hero__entry-text-inner">
+                                    <div class="hero__entry-meta">
+                                        <span class="cat-links">
+                                            <a style="font-weight:700;">ALL BAREUM</a>
+                                        </span>
+                                    </div>
+                                    <h2 class="hero__entry-title">
+                              <!--style="font-family: GmarketSansBold; font-size:x-large;"  -->
+                              <p class="hero__entry-desc" style="font-family: GmarketSansBold; font-size:large;" > - 입 모양 인식을 통한 바른 입 모양 교정 </p>
+                                        <p class="hero__entry-desc" style="font-family: GmarketSansBold; font-size:large;" > - 음성 인식을 통한 발음 정확도 교정   </p>
+                                        
+                                        <p style="font-family: NanumSquareExtraBold; font-size:xx-large;">정확한 입모양/발음 교정,</p> 
+                                        <p style="font-family: NanumSquareExtraBold; font-size:x-large; font-weight:500;">올바름이 함께 하겠습니다.</p>
+                              
+                                       
+                                    </h2>
+                                    
+                                 
+                                    
+                                </div>
+                            </div>
+                        </article>
+                     
+                    </div> <!-- swiper-wrapper -->
+
+                    <div class="swiper-pagination"></div>
+    
+                </div> <!-- end hero slider -->
+
+               
+
+            </div> <!-- end hero -->
+
+
+            <!--  masonry -->
+            
+        </section> <!-- end s-content -->
+
+
+        <!-- # site-footer
+        ================================================== -->
+        
+
+
+    <!-- Java Script
+    ================================================== -->
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
+
+    <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script>
+   
 	function insert_plus_nextFn(speak_acc,lip_acc,word_num,word_idx,cnt,day,cate){
 
 		
@@ -157,6 +348,5 @@ table td {
 		//}
 	}
 </script>
-	
 </body>
 </html>

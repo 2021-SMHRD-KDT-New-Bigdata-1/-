@@ -12,6 +12,7 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/6d7bf23579.js" crossorigin="anonymous"></script>
     <!--이모티콘-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!--이모티콘-->
@@ -175,53 +176,47 @@
 			<tr>
 				<td  colspan="3" class="result" style="height: 150px; width: 350px; 
 				 text-align: center; font-size: large; word-break: keep-all; color:black;">
-				 <h4 style="font-family: GowunDodum-Regular; font-size: xx-large;">결과 확인</h4>
+				 <h4 style="font-family: GowunDodum-Regular; font-size: large; margin-top: 10px;">STEP <%=day  %> 결과 확인</h4>
 					<div class="result">
-						<h2>${vo.user_name}님의 발음분석결과</h2>
+						<h2 style="font-family: GowunDodum-Regular; font-size: xx-large; margin-top: 30px;">${vo.user_name}님의 발음분석결과</h2>
 					</div>
 				</td>
 			</tr>
 			<tr>
-				<td class="results"></td>
-				
-				<td style="width: 400px; height: 300px; border: 3px solid ; border-color: #ff8040; background-color: white; ">
-				
-				</td>
-				
-				<td class="results"></td>
+
 				
 					<!-- <video width="30%" height="30%" autoplay="autoplay" id="myVideo"></td> -->
 			</tr>
 
             <tr>
                <td class="studycolor"
-                  style="text-align: center; font-family: GowunDodum-Regular; font-size: xx-large; padding-top: 5px; padding-bottom: 10px;" id='test60' ></td>
-
+                  style="text-align: center; font-family: GowunDodum-Regular; font-size: xx-large; padding-top: 10px; padding-bottom: 10px; " id='test60' >
+				<p id="avg" style="font-size:x-large; margin-bottom: 0px;">평균 몇점</p> <!-- day1 --></td>
             </tr>
          </thead>
          <tbody>
 
             <tr>
                <td class="studycolor2"
-                  style="text-align: center; vertical-align: middle; padding-top:50px;">
+                  style="text-align: center; vertical-align: middle; padding-top:30px; padding-right: 60px;padding-left: 60px;">
 				<!-- 결과리스트  -->
 						<nav>
 							<ul>
-								<li class="first">
+								<!-- <li class="first"> -->
 									<p class="date">
 										<c:if test="${score >= 90 }"> <i class="far fa-laugh-wink fa-3x"></i></c:if>
 										<c:if test="${score >= 60 }"> <i class="far fa-meh fa-3x"></i></c:if>
 										<c:if test="${score >= 40 }"> <i class="far fa-tired fa-3x"></i></c:if>
 									</p>
 									
-									<div id="avg">평균 몇점</div> <!-- day1 -->
+									
 									<div class="contents">
 									<!-- <p id="list55">가<i class="far fa-laugh-wink fa-1x"></i></p> 제시 단어 리스트 쫘라락 -->
 										<div class="602">
 										여기에여
 										</div>
 									</div>
-								</li>
+								<!-- </li> -->
 								
 							</ul>
 				
@@ -361,13 +356,13 @@
 		
 		
 		var all_mean = 0;
-		view="<div>";
+		view="<div><table style='text-align: center;'>";
 		    $.each(data, function(data, obj){
 		    	var mean = (parseInt(obj.speak_accuracy) + parseInt(obj.lip_accuracy))/2;
-		    	
-				view+="<p id='list55'><b style='color:black;'>";
+		    	view+="<tr>"
+				view+="<td colspan='3' id='list55' style='font-size:x-large; text-align:center;'><b style='color:black;'>";
 				view+= obj.content;
-				view+=" </b>"; 
+				view+=" </b></td><td style='text-align:center; font-size: large;'>"; 
 				//view+="발음 점수 : ";
 				//view+= obj.speak_accuracy;
 				//view+= " / 입모양 점수 : "
@@ -375,17 +370,17 @@
 				//view+= " / 평균 : "
 				view+= mean;
 				all_mean += mean;
-				view+= "점   ";
+				view+= " 점  </td><td> ";
 				if (mean > 90){
-					view+= "<i class='far fa-laugh-wink fa-1x'></i>";
+					view+= "<i class='far fa-laugh-wink fa-2x'></i>";
 				}else if(mean >= 50){
-					view+= "<i class='far fa-meh fa-1x'></i>";
+					view+= "<i class='far fa-meh fa-2x'></i>";
 				}else{
-					view+= "<i class='far fa-tired fa-1x'></i>";
+					view+= "<i class='far fa-tired fa-2x'></i>";
 				}
-				view+="</p>";
+				view+="</td>";
 			    })
-			view+="</div>";
+			view+="</table></div>";
 			
 			view2 = all_mean/5+" 점 ";
 		

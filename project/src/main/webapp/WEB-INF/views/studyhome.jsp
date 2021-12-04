@@ -1,47 +1,102 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html lang="en" class="no-js" >
-<head>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Spurgeon</title>
+<!DOCTYPE HTML>
+<!--
+   Forty by HTML5 UP
+   html5up.net | @ajlkn
+   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+   <head>
+   
+      <title>Forty by HTML5 UP</title>
+      <meta charset="euc-kr" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
+      <noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" /></noscript>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+   
+<!-- 상단바 뒤로가기 버튼 화살표  -->   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 상단바 뒤로가기 버튼 화살표  -->   
+      
+         <style>
+             /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+             .navbar {
+               margin-bottom: 50px;
+               border-radius: 0;
+             }
+             .panel-primary {
+                border-color: #f67822;
+                 width: 550px;
+            }
+            
+            .panel-danger {
+                border-color: #f67822;
+            }
+            .panel-success {
+                border-color: #f67822;
+            }
+            
+            body {
+                   margin: 0 0 0 0em;
+                   background-color: #f2f2f2;
+               }
+             
+             /* Remove the jumbotron's default bottom margin */ 
+              .jumbotron {
+               margin-bottom: 0;
+             }
+            
+             /* Add a gray background color and some padding to the footer */
+             footer {
+               background-color: #f2f2f2;
+               padding: 25px;
+             }
+             
+             .container {
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 50px;
+            }          
+            
+            .panel-primary>.panel-heading {
+                   color: #fff;
+                   background-color: #f67822;
+                   border-color: #f67822;
+            }
+            
+            .syll_logo{
+				           
+				    color: white;
+				    padding-left: 440px;
+				    font-size: large;'
 
-    <script>
-        document.documentElement.classList.remove('no-js');
-        document.documentElement.classList.add('js');
-    </script>
+            }
+            
+            .word_logo{
+				           
+				    color: white;
+				    padding-left: 480px;
+				    font-size: large;'
 
-    <!-- CSS
-    ================================================== -->
-<link href="${pageContext.request.contextPath}/resources/css/vendor.css" rel="stylesheet" type="text/css">
-<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
-
-    <!-- favicons
-    ================================================== -->
-<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
-    <link rel="apple-touch-icon" sizes="180x180" href="${pageContext.request.contextPath}/resources/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="${pageContext.request.contextPath}/resources/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
-    <link rel="manifest" href="site.webmanifest">
-<script src="http://code.jquery.com/jquery-latest.js"></script> 
-<script>
-
+            }
+            
+           </style>
+   <script>
    //querystring
    var cate = '${cate}';
    
    $(document).ready(function() { //익명함수
-        alert("제이쿼리 가즈앗!");
+        //alert("제이쿼리 가즈앗!");
       
       if(cate==1){
           Syl_loadList();
@@ -90,10 +145,10 @@
    function jsonHtml1(data){ //콜백함수
 	   view ="<header id='header' class='alt'>"
        view +="<div>"
-       //view +="<button onclick=back() type='button' class='btnback'>"
-       //view +="<i class='fas fa-arrow-left fa-2x'></i>"
-       //view +="</button>"
-       view +="<a class='syll_logo'><strong>음절 (Syllable)</strong></a><br><br>"
+       view +="<button onclick=back() type='button' class='btnback'>"
+       view +="<i class='fas fa-arrow-left fa-2x'></i>"
+       view +="</button>"
+       view +="<a class='syll_logo'>음절 (Syllable)</a>"
        view +="</div> " 
        view +="</header>"
       view += "<div id='wrapper'>";
@@ -149,10 +204,10 @@
    function jsonHtml2(data){ //콜백함수
 	   view ="<header id='header' class='alt'>"
 	   view +="<div>"
-	   //view +="<button onclick=back() type='button' class='btnback'>"
-	   //view +="<i class='fas fa-arrow-left fa-2x'></i>"
-	   //view +="</button>"
-	   view +="<a class='word_logo'><strong>단어 (Word)</strong></a><br><br>"
+	   view +="<button onclick=back() type='button' class='btnback'>"
+	   view +="<i class='fas fa-arrow-left fa-2x'></i>"
+	   view +="</button>"
+	   view +="<a class='word_logo'>단어 (Word)</a>"
 	   view +="</div> " 
 	   view +="</header>"
       view += "<div id='wrapper'>";
@@ -208,10 +263,10 @@
 	   
 	  view ="<header id='header' class='alt'>"
 	  view +="<div>"
-	  //view +="<button onclick=back() type='button' class='btnback'>"
-	  //view +="<i class='fas fa-arrow-left fa-2x'></i>"
-	  //view +="</button>"
-	  view +="<a class='syll_logo'><strong>문장 (Sentence)</strong></a><br><br>"
+	  view +="<button onclick=back() type='button' class='btnback'>"
+	  view +="<i class='fas fa-arrow-left fa-2x'></i>"
+	  view +="</button>"
+	  view +="<a class='syll_logo'>문장 (Sentence)</a>"
 	  view +="</div> " 
 	  view +="</header>"
       view += "<div id='wrapper'>";
@@ -223,7 +278,6 @@
       view += "<div class='panel panel-primary' onclick=studypageGo("+1+",3)>";
       view += "<div class='panel-heading'>Step1</div>";
       view += "<div class='panel-body'>";
-      
        view +="<table>";
        var count = 0;
        var day = 2;
@@ -268,7 +322,6 @@
        view += "</div>";
        view += "</div>";
        view += "</div>";
-       
 
       $(".panel-body2").html(view);
    }
@@ -293,193 +346,61 @@
    
    
    </script>
-
-</head>
-
-
-<body id="top">
-
-
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-
-
-    <!-- page wrap
-    ================================================== -->
-    <div id="page" class="s-pagewrap ss-home">
-
-
-        <!-- # site header 
-        ================================================== -->
-        <header id="masthead" class="s-header">
-
-            <div class="s-header__branding">
-                <p class="site-title">
-                    <a href="main.do" rel="home" style="color: black; margin-left: 570px; font-family: var(--font-2);" >Allbareum</a>
-                </p>
-            </div>
-
-            <div class="row s-header__navigation">
-
-                <nav class="s-header__nav-wrap">
-    
-                    <h3 class="s-header__nav-heading">Navigate to</h3>
-    
-                    <ul class="s-header__nav">
-                        <li class="current-menu-item"><a href="index.html" title="">Home</a></li>
-                        <li class="has-children">
-                            <a href="#0" title="" class="">Categories</a>
-                            <ul class="sub-menu">
-                                <li><a href="category.html">Design</a></li>
-                                <li><a href="category.html">Lifestyle</a></li>
-                                <li><a href="category.html">Inspiration</a></li>
-                                <li><a href="category.html">Work</a></li>
-                                <li><a href="category.html">Health</a></li>
-                                <li><a href="category.html">Photography</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-children">
-                            <a href="#0" title="" class="">Blog</a>
-                            <ul class="sub-menu">
-                                <li><a href="single-standard.html">Standard Post</a></li>
-                                <li><a href="single-video.html">Video Post</a></li>
-                                <li><a href="single-audio.html">Audio Post</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="styles.html" title="">Styles</a></li>
-                        <li><a href="about.html" title="">About</a></li>
-                        <li><a href="contact.html" title="">Contact</a></li>
-                    </ul> <!-- end s-header__nav -->
-
-                </nav> <!-- end s-header__nav-wrap -->
-    
-            </div> <!-- end s-header__navigation -->
-
-            <div class="s-header__search">
-
-                <div class="s-header__search-inner">
-                    <div class="row">
-    
-                        <form role="search" method="get" class="s-header__search-form" action="#">
-                            <label>
-                                <span class="u-screen-reader-text">Search for:</span>
-                                <input type="search" class="s-header__search-field" placeholder="Search for..." value="" name="s" title="Search for:" autocomplete="off">
-                            </label>
-                            <input type="submit" class="s-header__search-submit" value="Search"> 
-                        </form>
-    
-                        <a href="#0" title="Close Search" class="s-header__search-close">Close</a>
-    
-                    </div> <!-- end row -->
-                </div> <!-- s-header__search-inner -->
-    
-            </div> <!-- end s-header__search -->
-
-        
-
-        </header> <!-- end s-header -->
-
-
-        <!-- # site-content
-        ================================================== -->
-        <section id="content" class="s-content">
-
-
-            <!-- hero -->
-            <div class="hero">
-
-                <div class="hero__slider swiper-container">
-
-                    <div class="swiper-wrapper">
-                        <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
-                            <div class="hero__entry-text">
-                                <div class="hero__entry-text-inner" style="margin-top: 40px; padding-top:30px;">
-                                
-
-          
-			<!--  loginform...........................----------------------------------------->
-							
-								<div id="main">
-                                    <div id="hero__entry-meta">
-                                        <span class="cat-links">
-                                            	<!-- 여기에..들어가볼까? -->
-                                            	
-                						<div class="panel-body2">dd
-                						</div>
-                                        </span>
-                                </div>
-                                    
-                                    
-                          
-              
- 
-              <!--  loginform close...........................------------------------------------>     
-                            </div>
-                        </article>
-                        <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
-                            <div class="hero__entry-text">
-                                <div class="hero__entry-text-inner">
-                                    <div class="hero__entry-meta">
-                                        <span class="cat-links">
-                                            <a style="font-weight:700;">ALL BAREUM</a>
-                                        </span>
-                                    </div>
-                                    <h2 class="hero__entry-title">
-										<!--style="font-family: GmarketSansBold; font-size:x-large;"  -->
-										<p class="hero__entry-desc" style="font-family: GmarketSansBold; font-size:large;" > - 입 모양 인식을 통한 바른 입 모양 교정 </p>
-                                        <p class="hero__entry-desc" style="font-family: GmarketSansBold; font-size:large;" > - 음성 인식을 통한 발음 정확도 교정   </p>
-                                        
-                                        <p style="font-family: NanumSquareExtraBold; font-size:xx-large;">정확한 입모양/발음 교정,</p> 
-                                        <p style="font-family: NanumSquareExtraBold; font-size:x-large; font-weight:500;">올바름이 함께 하겠습니다.</p>
-										
-                                       
-                                    </h2>
-                                    
-                                 
-                                    
-                                </div>
-                            </div>
-                        </article>
-                     
-                    </div> <!-- swiper-wrapper -->
-
-                    <div class="swiper-pagination"></div>
-    
-                </div> <!-- end hero slider -->
-
-               
-
-            </div> <!-- end hero -->
-
-
-            <!--  masonry -->
             
-        </section> <!-- end s-content -->
+   </head>
+   
+   <body class="is-preload">
+
+      <!-- Header 
+               <header id="header" class="alt">
+               <div>
+	           <button onclick="back()"type="button" class="btnback">
+	           <i class="fas fa-arrow-left fa-2x"></i>
+	           </button>
+		       <a class="syll_logo">음절 (Syllable)</a>
+	         	</div>  
+               </header>-->
+
+      <!-- Wrapper -->
+         <div id="wrapper">
+
+      
+
+            
+
+            <!-- Main -->
+
+                     
+         </div><br>
+
+         <div class="panel-body2"></div>
 
 
-        <!-- # site-footer
-        ================================================== -->
-        
+            
 
 
-    <!-- Java Script
-    ================================================== -->
-    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
+      <!-- Scripts -->
+         <script src="assets/js/jquery.min.js"></script>
+         <script src="assets/js/jquery.scrolly.min.js"></script>
+         <script src="assets/js/jquery.scrollex.min.js"></script>
+         <script src="assets/js/browser.min.js"></script>
+         <script src="assets/js/breakpoints.min.js"></script>
+         <script src="assets/js/util.js"></script>
+         <script src="assets/js/main.js"></script>
 
-    <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script>
- 	
-</script>
-</body>
+      <script>
+      
+
+      
+      
+      </script>
+
+         
+         <script>
+            //휘 코드 안녕..
+           
+         </script>
+
+
+   </body>
 </html>

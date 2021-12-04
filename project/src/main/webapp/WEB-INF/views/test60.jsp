@@ -223,6 +223,7 @@
       view += "<div class='panel panel-primary' onclick=studypageGo("+1+",3)>";
       view += "<div class='panel-heading'>Step1</div>";
       view += "<div class='panel-body'>";
+      
        view +="<table>";
        var count = 0;
        var day = 2;
@@ -267,6 +268,7 @@
        view += "</div>";
        view += "</div>";
        view += "</div>";
+       
 
       $(".panel-body2").html(view);
    }
@@ -399,7 +401,7 @@
                         <article class="hero__slide swiper-slide">
                             <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
                             <div class="hero__entry-text">
-                                <div class="hero__entry-text-inner" style="width: 798px; padding-left:8px; padding-right:8px;padding-top:30px;">
+                                <div class="hero__entry-text-inner" style="margin-top: 40px; padding-top:30px;">
                                 
            <!----------------------login/join form --------------------------------->       
                                 <div id="login" style="display:none">
@@ -470,7 +472,7 @@
 												<option value="USA">USA</option> 
 												<option value="KOREA">KOREA</option>
 												<option value="JAPAN">JAPAN</option>
-												<option value="CHINA">CHINA</option>
+											<option value="CHINA">CHINA</option>
 												<option value="GERMANY">GERMANY</option>
 											</select>
 									    </div> <!-- form-group// -->
@@ -491,11 +493,7 @@
                                         </span>
                                 </div>
                                     
-                                    <div id="Allbareum">
-                                    <h2 class="hero__entry-title" style="font-weight: bold; margin-top: 21px;" >
-                                        	올바름
-                                    </h2>
-                                     </div>
+                                    
                              </c:if>
                              <c:if test="${vo!=null }">
                              	<div id="main">

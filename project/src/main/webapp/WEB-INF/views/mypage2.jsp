@@ -299,11 +299,24 @@ function back(){
  }
 </script>
 
-<body class="is-preload alt">
+<body id="top" style="margin:0px;">
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap ss-home">
+   <!-- Wrapper -->
+
 
    <!-- Wrapper -->
 
-   <div id="wrapper" style="padding: 0;">
+   <!-- <div id="wrapper" style="padding: 0;"> -->
 
       <!-- Header -->
       <section>

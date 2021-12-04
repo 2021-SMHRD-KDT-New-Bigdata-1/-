@@ -272,6 +272,8 @@ button.btnback{
 	color:white;
 }
 
+
+
 </style>
 
 
@@ -297,11 +299,20 @@ function back(){
     location.href="main.do";
  }
 </script>
-<body class="is-preload alt">
+<body id="top" style="margin:0px;">
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap ss-home">
    <!-- Wrapper -->
 
-   <div id="wrapper" style="padding: 0;">
 
       <!-- Header -->
       <section>
@@ -511,11 +522,10 @@ function back(){
 
 
 
-   </div>
 
 
 
-
+</div>
    <!-- Scripts -->
    <script src="assets/js/jquery.min.js"></script>
    <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -534,5 +544,6 @@ function syl_weakstudy(num){
 	   location.href="syl_weakstudy.do?num="+num;
 }
 </script>
+
 </body>
 </html>

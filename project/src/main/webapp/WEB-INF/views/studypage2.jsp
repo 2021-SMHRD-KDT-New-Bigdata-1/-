@@ -167,18 +167,18 @@
 
             <tr>
                <td class="studycolor"
-                  style="text-align: center; font-size: large; padding-top: 5px; padding-bottom: 10px;" id='test60' ></td>
+                  style="text-align: center; font-family: GowunDodum-Regular; font-size: xx-large; padding-top: 5px; padding-bottom: 10px;" id='test60' ></td>
 
             </tr>
          </thead>
          <tbody>
             <tr>
                <td class="studycolor2"
-                  style="text-align: center; font-size: large; font-family: GowunDodum-Regular;">
+                  style="text-align: center; font-family: GowunDodum-Regular; font-size: large;">
                   <c:forEach
                      var="list" items="${list}" varStatus="status">
                      <c:if test="${status.index eq cnt}">
-                        <h2 style="margin-top:10px; margin-bottom:0px">${list.content}</h2>
+                        <h2 style="margin-top:10px; margin-bottom:0px; font-family: GowunDodum-Regular; font-size: xx-large;">${list.content}</h2>
                         <c:if test="${list.id<1000}">
                            [${list.pron}] <!-- 문장의 경우에 발음이 없으니 안뜨도록 -->
                         </c:if>

@@ -70,7 +70,7 @@ public interface MainMapper {
 	public List<Test> Word_weak(String id);
 	public List<Test> Sen_weak(String id);
 	
-	//test_select
+	//test_select1
 	public List<Test_result> check_sy(@Param("id")String id, @Param("num")int num);
 	public List<Test_result> check_word(@Param("id")String id, @Param("num")int num);
 	public List<Test_result> check_sen(@Param("id")String id, @Param("num")int num);

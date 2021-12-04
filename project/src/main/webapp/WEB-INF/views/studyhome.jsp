@@ -322,7 +322,7 @@
 
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="main.do" rel="home" style="color: black; margin-left: 570px; font-family: var(--font-2);" >Allbareum</a>
+                    <a  href="select.do" rel="home" style="color: black; margin-left: 570px; font-family: var(--font-2);" >Allbareum</a>
                 </p>
             </div>
 
@@ -430,7 +430,7 @@
                                 <div class="hero__entry-text-inner">
                                     <div class="hero__entry-meta">
                                         <span class="cat-links">
-                                            <a style="font-weight:700;" href="select.do">ALL BAREUM</a>
+                                            <a style="font-weight:700;">ALL BAREUM</a>
                                         </span>
                                     </div>
                                     <h2 class="hero__entry-title">

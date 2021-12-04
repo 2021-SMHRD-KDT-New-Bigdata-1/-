@@ -29,6 +29,13 @@
 <link href="${pageContext.request.contextPath}/resources/css/vendor.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
 
+<!--이모티콘-->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/6d7bf23579.js"
+	crossorigin="anonymous"></script>
+<!--이모티콘-->
+
     <!-- favicons
     ================================================== -->
 <link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
@@ -150,7 +157,7 @@
 
                     <div class="swiper-wrapper">
                         <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
+                            
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner" style="width: 798px; padding-left:8px; padding-right:8px;padding-top:15px;">
                                 
@@ -241,9 +248,9 @@
                   style="text-align: center; font-size: large; padding-bottom: 10px;">발음해보세요</td>
             </tr>
             <tr>
-               <td class="studycolor"
+               <td class="cameraInput"
                   style="text-align: center; vertical-align: middle;">
-                  <div class="cameraInput">
+                  
 
                      <form action="http://211.223.106.113:5000/dlModel" method="POST"
                         enctype="multipart/form-data" style="margin-bottom: 10px;">
@@ -278,6 +285,20 @@
 
 
 
+<<<<<<< HEAD
+                         
+	                        <label for="cameraInput"> 
+	                        	<button class="cameraInput"><i class="fas fa-microphone-alt fa-2x"></i></button>
+	                        	<button type="submit" class="cameraInput" onclick="Loading();"><i class="fas fa-chart-pie fa-2x"></i></button>
+	                        </label> 
+	                        
+                       		 <input type="file" id="cameraInput" name="file" accept="video/*" capture="user" onclick='vdclickFn()'/>
+                        
+                      
+                        
+                        
+                        <p id='vdcheck'>&nbsp;</p>
+=======
                         <input type="hidden" class="cameraInput1" value=""
                            placeholder="첨부파일" > <label for="cameraInput"> <i
                            class="fas fa-microphone-alt fa-2x"></i>
@@ -285,22 +306,12 @@
                            accept="video/*" capture="user" onclick='vdclickFn()'/>
                         <button type="submit" class="cameraInput" onclick="Loading();">분석</button>
                         <p id='vdcheck' style="margin-bottom: 10px;">&nbsp;</p>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
                         <!-- css 넣어주기,, button -->
 
 
-
- 
-
-                        <!-- 
-                        <input type="hidden" class="cameraInput1" value=""
-                           placeholder="첨부파일"> <label for="cameraInput"> <i
-                           class="fas fa-microphone-alt fa-2x"></i>
-                        </label> <input type="file" id="cameraInput" name="file"
-                           accept="video/*" capture="user" /> <input type="submit"
-                           value="녹화완료" />
- -->
                      </form>
-                  </div>
+              
 
                </td>
             </tr>

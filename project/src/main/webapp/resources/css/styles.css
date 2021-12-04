@@ -3862,7 +3862,7 @@ body.search-is-visible .s-header__search-inner {
 .hero__slide::before {
     content          : "";
     display          : block;
-    background-color : #ffffff;
+    background-color : #f9fafb;
     width            : 50%;
     height           : 100%;
     position         : absolute;
@@ -4201,6 +4201,42 @@ body.search-is-visible .s-header__search-inner {
 	}
 }
 /* 여기서부터 안쪽 div 끝나씀--------------------------------------*/
+
+
+/* 여기서부터 버튼 css수정--------------------------------*/
+
+.cameraInput{
+	
+    border-radius: 30px;
+    width: 70px;
+    height: 40px;
+}
+	
+	
+}
+
+
+.cameraInput label{
+	display: inline-block;
+	border-radius: 5px;
+	line-height:45px
+	
+}
+
+.cameraInput input[type="file"]{
+	
+	position:absolute;
+	width:1px;
+	height:1px;
+	clip:rect(0,0,0,0);
+	overflow:hidden;
+	padding:0;
+	
+}
+
+
+/* 여기서부터 버튼 css수정끝--------------------------------*/
+
 
 /* 여기서부터 안쪽 div css수정--------------------------------*/
 .panel-body {

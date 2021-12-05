@@ -4297,10 +4297,39 @@ button.btn-result {
     height: 45px;
     border-radius: 30px;
     padding: 5px 5px 5px 5px;
+   background: white;
+}
+
+/*finalresult 버튼 수정*/
+
+button#btnexit {
+    border: 2px solid gray;
+    width: 100px;
+    height: 45px;
+    border-radius: 70px;
+    padding: 5px 5px 5px 5px;
+    font-size: initial;
+    background: white;
+    font-weight: 900;
 }
 
 /* 여기서부터 버튼 css수정끝--------------------------------*/
 
+
+
+
+/* 여기서부터 복습페이지 수정--------------------------------*/
+
+.weak_a {
+    
+    border: 2px solid orange;
+    padding: 8px 8px 8px 8px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+
+/* 여기서부터  복습페이지 수정끝--------------------------------*/
 
 /* 여기서부터 안쪽 div css수정--------------------------------*/
 .panel-body {

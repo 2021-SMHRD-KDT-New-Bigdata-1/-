@@ -296,7 +296,7 @@
                            <input type="file" id="cameraInput" name="file" accept="video/*" capture="user" onclick='vdclickFn()'/>
                            
                   		 </label>
-                        <button type="submit" onclick="Loading();"><i class="fas fa-chart-pie fa-2x"></i></button>
+                        <button type="submit" class="cameraInput" onclick="Loading();"><i class="fas fa-chart-pie fa-2x"></i></button>
                        
                         <p id='vdcheck' style="margin-bottom: 10px;">&nbsp;</p>
                         <!-- css 넣어주기,, button -->

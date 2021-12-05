@@ -399,7 +399,7 @@
 
                     <div class="swiper-wrapper">
                         <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
+                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/select_back.png');"></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner" style="margin-top: 40px; padding-top:30px;">
                                 

@@ -159,8 +159,8 @@
                 <div class="hero__slider swiper-container">
 
                     <div class="swiper-wrapper">
-                        <article class="hero__slide swiper-slide">
-                            
+                        <article class="hero__slide swiper-slide" style="background: #fc965a; background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/back222.png');">
+                            <div class="hero__entry-image" style="background:#fc965a; background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/back222.png');"></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner" style="width: 798px; padding-left:8px; padding-right:8px;padding-top:15px;">
                                 
@@ -170,7 +170,7 @@
                     
                         <div id="main">
                                     <div id="hero__entry-meta">
-                                        <span class="cat-links" style="font-size:20px;">
+                                        <span class="cat-links" style="font-size:20px; color: dimgray; font-weight: 500;}">
                                                <!-- 여기에..들어가볼까? -->
                                            Step<%=day%> (${cnt+1}/5)
                                         <table class="study2table" style="margin-bottom: 10px;">
@@ -202,7 +202,7 @@
             </tr>
             <tr>
                <td class="studycolor2"
-                  style="text-align: center; vertical-align: middle; padding-top:10px;">
+                  style="text-align: center; vertical-align: middle; padding-top:10px; background: white;">
                   <c:forEach
                      var="list" items="${list}" varStatus="status">
                      <c:if test="${status.index eq cnt}">
@@ -248,7 +248,7 @@
             </tr>
             <tr>
                <td class="studycolor2"
-                  style="text-align: center; font-size: large; padding-bottom: 10px;">발음해보세요</td>
+                  style="text-align: center; font-family: GowunDodum-Regular; font-size: large; padding-bottom: 10px; color: black; font-weight: 600;">발음해보세요</td>
             </tr>
             <tr>
                <td class="cameraInput"
@@ -325,7 +325,7 @@
                             </div>
                         </article>
                         <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" ></div>
+                            <div class="hero__entry-image" style="background-image: url(/web/resources/images/thumbs/featured/back22.png);" ></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner" style="width: 798px;padding-left:8px;padding-right:8px;">
                                     <div class="hero__entry-meta">

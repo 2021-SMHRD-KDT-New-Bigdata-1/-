@@ -158,8 +158,8 @@
                 <div class="hero__slider swiper-container">
 
                     <div class="swiper-wrapper">
-                        <article class="hero__slide swiper-slide">
-                            
+                       <article class="hero__slide swiper-slide" style="background: #fc965a; background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/back222.png');">
+                            <div class="hero__entry-image" style="background:#fc965a; background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/back222.png');"></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner" style="width: 798px; padding-left:8px; padding-right:8px;padding-top:15px;">
                                 
@@ -177,17 +177,18 @@
 			<tr>
 				<td  colspan="3" class="result" style="height: 150px; width: 350px; 
 				 text-align: center; font-size: large; word-break: keep-all; color:black;">
-				 <h4 style="margin-top:15px; margin-bottom:15px; font-family: GowunDodum-Regular; font-size: xx-large;">결과 확인</h4>
+				 <h4 style=" padding: 0px 0px 20px 0px; margin-top:0px; margin-bottom:0px; font-family: GowunDodum-Regular; font-size: xx-large; border-bottom: none;">결과 확인</h4>
 				 
+				 	인식된 발음 : <%= URLDecoder.decode(text_en, "UTF-8") %><br>
 					발음 정확도 : <%=speak_acc %> 점 <br>
-					입모양 정확도 : <%=lip_acc %> 점 <br>
-					인식된 발음 : <%= URLDecoder.decode(text_en, "UTF-8") %>
+					입모양 정확도 : <%=lip_acc %> 점 
+					
 				</td>
 			</tr>
 			<tr>
 				<td class="results"></td>
 				
-				<td style="width: 400px; height: 300px; border: 3px solid; border-radius: 10px; border-color: #ff8040; background-color: white; ">
+				<td style="width: 600px; height: 300px; border-radius: 10px;  background-color: white; border-bottom: 2px solid lightgray; border-top: 2px solid lightgray; ">
 				<!-- 여기에 비디오넣기 -->
 				<video controls playsinline width="800" style="width:600px; height:400px;  padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
 				<source
@@ -202,7 +203,7 @@
 					<!-- <video width="30%" height="30%" autoplay="autoplay" id="myVideo"></td> -->
 			</tr>
 			<tr>
-				<td colspan="3" class="resultb" style=" height: 200px; text-align: center;">
+				<td colspan="3" class="resultb" style=" height: 10px; text-align: center; padding: 50px 0px 20px 0px;">
 					<button style="font-family: GowunDodum-Regular; font-size: samll;" type="submit" class="btn-result" id="return" onclick="history.back()">다시하기</button> &nbsp; &nbsp;
 					<button style="font-family: GowunDodum-Regular; font-size: samll;" class="btn-result" id="pass" onclick="insert_plus_nextFn( <%=speak_acc%>,<%=lip_acc%>,<%=word_num%>,<%=word_idx%>,<%=list_cnt%>,<%=day%>,<%=cate%> )">넘어가기</button> &nbsp; &nbsp;
 					<button style="font-family: GowunDodum-Regular; font-size: samll;" class="btn-result" id="synonym">유사단어</button>

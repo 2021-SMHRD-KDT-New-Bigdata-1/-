@@ -167,7 +167,7 @@
                     
                         <div id="main">
                                     <div id="hero__entry-meta">
-                                        <span class="cat-links" style="font-size:13px;">
+                                        <span class="cat-links" style="font-size:20px;">
                                                <!-- 여기에..들어가볼까? -->
                                            Step<%=day%> (${cnt+1}/5)
                                         <table class="study2table" style="margin-bottom: 10px;">
@@ -294,15 +294,6 @@
                               <input type="file" id="cameraInput" name="file" accept="video/*" capture="user" onclick='vdclickFn()'/>
                         
                       
-                        
-                        
-                        <p id='vdcheck'>&nbsp;</p>
-                        <input type="hidden" class="cameraInput1" value=""
-                           placeholder="첨부파일" > <label for="cameraInput"> <i
-                           class="fas fa-microphone-alt fa-2x"></i>
-                        </label> <input type="file" id="cameraInput" name="file"
-                           accept="video/*" capture="user" onclick='vdclickFn()'/>
-                        <button type="submit" class="cameraInput" onclick="Loading();">분석</button>
                         <p id='vdcheck' style="margin-bottom: 10px;">&nbsp;</p>
                         <!-- css 넣어주기,, button -->
 

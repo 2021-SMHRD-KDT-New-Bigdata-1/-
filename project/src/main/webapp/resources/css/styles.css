@@ -4188,7 +4188,7 @@ body.search-is-visible .s-header__search-inner {
 .hero__entry-text {
     width: 100%;
     margin: 0 0 8rem;
-    padding-top: calc(5.5 * var(--space));
+    padding-top: calc(7.5 * var(--space));
     padding-bottom: var(--vspace-4_5);
 }
 

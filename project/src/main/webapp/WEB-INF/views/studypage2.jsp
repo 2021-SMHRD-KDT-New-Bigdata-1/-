@@ -379,10 +379,11 @@
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    function vdclickFn(){
-    	alert("클릭 인식은 되냐 ?");
-    	$(".cameraInput").css("display","none");
-    }
+//    function vdclickFn(){
+//    	alert("클릭 인식은 되냐 ?");
+//    	$(".cameraInput2").css("display","block");
+//    	$(".cameraInput").css("display","none");
+//    }
 </script>
 </body>
 </html>

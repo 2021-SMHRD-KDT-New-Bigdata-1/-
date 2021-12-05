@@ -381,7 +381,7 @@ function back(){
                <div class="col-12-small"
                   style="width: 50%; margin-top: 20px;">
                   <div class="panel panel-primary">
-                     <div id="chart_title" class="panel-heading">음성 정확도</div>
+                     <div id="chart_title" class="panel-heading" style="border-bottom:1px rgba(0,0,0,0.3)">음성 정확도</div>
                      <div class="panel-body">
                         <canvas id="doughnut-chart" width="300" height="250"></canvas>
                         <script>

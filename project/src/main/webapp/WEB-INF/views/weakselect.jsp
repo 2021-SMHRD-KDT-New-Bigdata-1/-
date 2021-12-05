@@ -58,7 +58,7 @@
 
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="main.do" rel="home" style="color: black; margin-left: 570px; font-family: var(--font-2);" >Allbareum</a>
+                    <a href="select.do" rel="home" style="color: black; font-size: x-large; margin-left: 570px; font-family: var(--font-2);" >Allbareum</a>
                 </p>
             </div>
 
@@ -135,7 +135,7 @@
 
                     <div class="swiper-wrapper">
                         <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
+                            <div class="hero__entry-image" ></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner">
                                 
@@ -191,12 +191,12 @@
                         <div id="main">
                                     <div id="hero__entry-meta">
                                         <div class="panel panel-primary">
-                     <div id="chart_title" class="panel-heading">
+                     <div id="chart_title">
                   <table style=width:100%;>
                      <tr>
-                     <td style="text-align:center;"><a onclick="Syl_weak();">음절</a></td>
-                     <td style="text-align:center;"><a onclick="Word_weak();">단어</a></td>
-                     <td style="text-align:center;"><a onclick="Sen_weak();">문장</a></td>
+                     <td style="text-align:center;"><a class="weak_a" onclick="Syl_weak();">음절</a></td>
+                     <td style="text-align:center;"><a class="weak_a" onclick="Word_weak();">단어</a></td>
+                     <td style="text-align:center;"><a class="weak_a" onclick="Sen_weak();">문장</a></td>
                      </tr>
                   </table>
                </div>

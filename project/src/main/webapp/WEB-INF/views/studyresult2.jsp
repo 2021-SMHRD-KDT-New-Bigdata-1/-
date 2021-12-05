@@ -177,8 +177,8 @@
 			<tr>
 				<td  colspan="3" class="result" style="height: 150px; width: 350px; 
 				 text-align: center; font-size: large; word-break: keep-all; color:black;">
-				 <h4 style="font-family: GowunDodum-Regular; font-size: xx-large;">결과 확인</h4>
-				 	
+				 <h4 style="margin-top:15px; margin-bottom:15px; font-family: GowunDodum-Regular; font-size: xx-large;">결과 확인</h4>
+				 
 					발음 정확도 : <%=speak_acc %> 점 <br>
 					입모양 정확도 : <%=lip_acc %> 점 <br>
 					인식된 발음 : <%= URLDecoder.decode(text_en, "UTF-8") %>
@@ -187,9 +187,9 @@
 			<tr>
 				<td class="results"></td>
 				
-				<td style="width: 400px; height: 300px;background-color: white; ">
+				<td style="width: 400px; height: 300px; border: 3px solid; border-radius: 10px; border-color: #ff8040; background-color: white; ">
 				<!-- 여기에 비디오넣기 -->
-				<video controls playsinline width="800" style="width:600px; height:400px; border: 3px solid; border-color: #ff8040; padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+				<video controls playsinline width="800" style="width:600px; height:400px;  padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
 				<source
                 src= "${pageContext.request.contextPath}/resources/images/upload_video/${vo.user_id}_<%=word_idx%>.mp4"
                 type="video/mp4">
@@ -224,7 +224,7 @@
                             </div>
                         </article>
                         <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
+                            <div class="hero__entry-image" ></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner">
                                     <div class="hero__entry-meta">

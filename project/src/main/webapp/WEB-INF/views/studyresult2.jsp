@@ -93,7 +93,7 @@
                     <h3 class="s-header__nav-heading">Navigate to</h3>
     
                     <ul class="s-header__nav">
-                        <li class="current-menu-item"><a href="index.html" title="">Home</a></li>
+                        <li class="current-menu-item"><a href="index.html" title="">Home<fa></li>
                         <li class="has-children">
                             <a href="#0" title="" class="">Categories</a>
                             <ul class="sub-menu">
@@ -159,7 +159,7 @@
 
                     <div class="swiper-wrapper">
                         <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
+                            
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner" style="width: 798px; padding-left:8px; padding-right:8px;padding-top:15px;">
                                 
@@ -203,9 +203,9 @@
 			</tr>
 			<tr>
 				<td colspan="3" class="resultb" style=" height: 200px; text-align: center;">
-					<button type="submit" class="btn btn-default" id="return" onclick="history.back()">다시하기</button> &nbsp; &nbsp;
-					<button class="btn btn-default" id="pass" onclick="insert_plus_nextFn( <%=speak_acc%>,<%=lip_acc%>,<%=word_num%>,<%=word_idx%>,<%=list_cnt%>,<%=day%>,<%=cate%> )">넘어가기</button> &nbsp; &nbsp;
-					<button class="btn btn-default" id="synonym">유사단어</button>
+					<button style="font-family: GowunDodum-Regular; font-size: samll;" type="submit" class="cameraInput" id="return" onclick="history.back()">다시하기</button> &nbsp; &nbsp;
+					<button style="font-family: GowunDodum-Regular; font-size: samll;" class="cameraInput" id="pass" onclick="insert_plus_nextFn( <%=speak_acc%>,<%=lip_acc%>,<%=word_num%>,<%=word_idx%>,<%=list_cnt%>,<%=day%>,<%=cate%> )">넘어가기</button> &nbsp; &nbsp;
+					<button style="font-family: GowunDodum-Regular; font-size: samll;" class="cameraInput" id="synonym">유사단어</button>
 				</td>
 			</tr>
             <tr>

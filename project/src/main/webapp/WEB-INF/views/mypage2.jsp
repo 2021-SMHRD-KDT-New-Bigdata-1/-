@@ -294,8 +294,8 @@ function back(){
          <div class="container">
             <div class="row" style="margin-left: -20px;margin-top: 32px; margin-top:40px;">
             <c:if test="${pron_acc != null }">
-            <div style="position:absolute; top:676px; left:187px;">${(pron_acc[0].sp_good_acc/(pron_acc[0].sp_good_acc + pron_acc[0].sp_bad_acc))*100}%</div>
-            <div style="position:absolute; top:676px; left:518px;">${(pron_acc[0].lip_good_acc/(pron_acc[0].lip_good_acc + pron_acc[0].lip_bad_acc))*100}%</div>
+            <div style="position:absolute; top:676px; left:187px;">${(pron_acc[0].sp_good_acc/5)*100}%</div>
+            <div style="position:absolute; top:676px; left:518px;">${(pron_acc[0].lip_good_acc/5)*100}%</div>
                 </c:if>
                 <select id="my_select" style="margin-left:auto; margin-right:auto; text-align:center;"
                 onchange="Step_Result_wo(this.options[this.selectedIndex].value)" >
@@ -393,7 +393,7 @@ function back(){
                                 {
                                   label: "Population (millions)",
                                   backgroundColor: ["#3c80e5", "#9b938a"],
-                                  data: [${(pron_acc[0].sp_good_acc/(pron_acc[0].sp_good_acc + pron_acc[0].sp_bad_acc))*100}, ${(pron_acc[0].sp_bad_acc/(pron_acc[0].sp_good_acc + pron_acc[0].sp_bad_acc))*100}]
+                                  data: [${(pron_acc[0].sp_good_acc/5)*100}, ${(pron_acc[0].sp_bad_acc/5)*100}]
                                 }
                               ]
                             },
@@ -425,7 +425,7 @@ function back(){
                                 {
                                   label: "Population (millions)",
                                   backgroundColor: ["#3c80e5", "#9b938a"],
-                                  data: [${(pron_acc[0].lip_good_acc/(pron_acc[0].lip_good_acc + pron_acc[0].lip_bad_acc))*100}, ${(pron_acc[0].lip_bad_acc/(pron_acc[0].lip_good_acc + pron_acc[0].lip_bad_acc))*100}]
+                                  data: [${(pron_acc[0].lip_good_acc/5)*100}, ${(pron_acc[0].lip_bad_acc/5)*100}]
                                 }
                               ]
                             },
@@ -454,8 +454,8 @@ function back(){
                      <c:forEach var="test" items="${test }" varStatus="satus">
                      <tr>
                        <td onclick="syl_weakstudy(${test.id})" style="padding-left:20px;">단어 :${test.content }</td>
-                    <td style="position:absolute; right:60px;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy*10 }" pattern="" />%
-                       입모양 :<fmt:formatNumber value="${test.lip_accuracy*10 }" pattern="" />%
+                    <td style="position:absolute; right:60px;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy }" pattern="" />%
+                       입모양 :<fmt:formatNumber value="${test.lip_accuracy }" pattern="" />%
                     </td>
                     
                      </tr>

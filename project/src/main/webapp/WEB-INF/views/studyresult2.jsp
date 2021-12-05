@@ -82,7 +82,7 @@
 
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="main.do" rel="home" style="color: black; margin-left: 570px; font-family: var(--font-2);" >Allbareum</a>
+                    <a href="main.do" rel="home" style="color: black;font-size: x-large; margin-left: 570px; font-family: var(--font-2);" >Allbareum</a>
                 </p>
             </div>
 
@@ -203,9 +203,9 @@
 			</tr>
 			<tr>
 				<td colspan="3" class="resultb" style=" height: 200px; text-align: center;">
-					<button style="font-family: GowunDodum-Regular; font-size: samll;" type="submit" class="cameraInput" id="return" onclick="history.back()">다시하기</button> &nbsp; &nbsp;
-					<button style="font-family: GowunDodum-Regular; font-size: samll;" class="cameraInput" id="pass" onclick="insert_plus_nextFn( <%=speak_acc%>,<%=lip_acc%>,<%=word_num%>,<%=word_idx%>,<%=list_cnt%>,<%=day%>,<%=cate%> )">넘어가기</button> &nbsp; &nbsp;
-					<button style="font-family: GowunDodum-Regular; font-size: samll;" class="cameraInput" id="synonym">유사단어</button>
+					<button style="font-family: GowunDodum-Regular; font-size: samll;" type="submit" class="btn-result" id="return" onclick="history.back()">다시하기</button> &nbsp; &nbsp;
+					<button style="font-family: GowunDodum-Regular; font-size: samll;" class="btn-result" id="pass" onclick="insert_plus_nextFn( <%=speak_acc%>,<%=lip_acc%>,<%=word_num%>,<%=word_idx%>,<%=list_cnt%>,<%=day%>,<%=cate%> )">넘어가기</button> &nbsp; &nbsp;
+					<button style="font-family: GowunDodum-Regular; font-size: samll;" class="btn-result" id="synonym">유사단어</button>
 				</td>
 			</tr>
             <tr>

@@ -4221,17 +4221,17 @@ body.search-is-visible .s-header__search-inner {
 }
 
 a.syll_logo {
-    color: #ff8040;
+    color: #6b6968;
     transition: all 0.3s ease-in-out;
     font-size: 25px;
 }
 a.word_logo {
-    color: #ff8040;
+    color: #6b6968;
     transition: all 0.3s ease-in-out;
     font-size: 25px;
 }
 a.word_logo {
-    color: #ff8040;
+    color: #6b6968;
     transition: all 0.3s ease-in-out;
     font-size: 25px;
 }
@@ -4245,12 +4245,28 @@ a.word_logo {
 
 .cameraInput{
 	
-    border-radius: 30px;
+ 	
     width: 70px;
     height: 40px;
+    background-color: white;
+    border: none;
+    color: #6b6968;
+}
+
+i#mic {
+    border: 2px solid gray;
+    width: 60px;
+        height: 45px;
+    border-radius: 70px;
+    padding: 5px 5px 5px 5px;
 }
 	
-	
+i#analysis {
+    border: 2px solid gray;
+    width: 60px;
+    height: 43px;
+    border-radius: 70px;
+    padding: 5px 5px 5px 5px;
 }
 
 
@@ -4272,6 +4288,16 @@ a.word_logo {
 	
 }
 
+
+/*result버튼 수정*/
+
+button.btn-result {
+    border: 2px solid #ff792a;
+    width: 100px;
+    height: 45px;
+    border-radius: 30px;
+    padding: 5px 5px 5px 5px;
+}
 
 /* 여기서부터 버튼 css수정끝--------------------------------*/
 

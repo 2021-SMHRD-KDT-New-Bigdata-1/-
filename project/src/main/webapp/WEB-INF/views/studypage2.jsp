@@ -292,11 +292,11 @@
                       
                         <input type="hidden" class="cameraInput" value="" placeholder="첨부파일" > 
                         <label for="cameraInput"> 
-                           <a class="cameraInput"><i class="fas fa-microphone-alt fa-2x"></i></a>
+                           <a class="cameraInput"><i id="mic" class="fas fa-microphone-alt fa-2x"></i></a>
                            <input type="file" id="cameraInput" name="file" accept="video/*" capture="user" onclick='vdclickFn()'/>
-                           
+                            <button type="submit" class="cameraInput" onclick="Loading();"><i id="analysis"class="fas fa-chart-pie fa-2x"></i></button>
                   		 </label>
-                        <button type="submit" class="cameraInput" onclick="Loading();"><i class="fas fa-chart-pie fa-2x"></i></button>
+                       
                        
                         <p id='vdcheck' style="margin-bottom: 10px;">&nbsp;</p>
                         <!-- css 넣어주기,, button -->

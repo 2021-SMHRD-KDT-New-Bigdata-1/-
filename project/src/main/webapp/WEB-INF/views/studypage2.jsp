@@ -31,9 +31,9 @@
 
 <!--이모티콘-->
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/6d7bf23579.js"
-	crossorigin="anonymous"></script>
+   crossorigin="anonymous"></script>
 <!--이모티콘-->
 
     <!-- favicons
@@ -286,12 +286,12 @@
 
 
                          
-	                        <label for="cameraInput"> 
-	                        	<button class="cameraInput"><i class="fas fa-microphone-alt fa-2x"></i></button>
-	                        	<button type="submit" class="cameraInput" onclick="Loading();"><i class="fas fa-chart-pie fa-2x"></i></button>
-	                        </label> 
-	                        
-                       		 <input type="file" id="cameraInput" name="file" accept="video/*" capture="user" onclick='vdclickFn()'/>
+                           <label for="cameraInput"> 
+                              <button class="cameraInput"><i class="fas fa-microphone-alt fa-2x"></i></button>
+                              <button type="submit" class="cameraInput" onclick="Loading();"><i class="fas fa-chart-pie fa-2x"></i></button>
+                           </label> 
+                           
+                              <input type="file" id="cameraInput" name="file" accept="video/*" capture="user" onclick='vdclickFn()'/>
                         
                       
                         

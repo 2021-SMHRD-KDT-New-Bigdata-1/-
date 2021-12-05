@@ -141,92 +141,92 @@
                                 
                                 
                                 <div id="join" style="display:none">
-									<form action="join.do" method="post">
-										<div class="form-group input-group">
-    										<div class="input-group-prepend" name="id">
-											    <span class="input-group-text">아이디<i class="fa fa-envelope"></i> </span>
-											 </div>
-									        <input name="user_id" class="form-control" type="text" id="user_id" required>
-									        <span id="sp"></span>
-									    </div> <!-- id-group// -->
-									    
-									    <div class="form-group input-group">
-									    	<div class="input-group-prepend">
-											    <span class="input-group-text">비밀번호<i class="fa fa-lock"></i> </span>
-											</div>
-									        <input name="user_pw" class="form-control"  type="password" id="user_pw" required>
-									    </div> <!-- form-group// -->
-									    
-									    <div class="form-group input-group">
-									    	<div class="input-group-prepend">
-											    <span class="input-group-text">이름<i class="fa fa-lock"></i> </span>
-											</div>
-									        <input name="user_name" class="form-control"  type="text" id="user_name" required>
-									    </div> <!-- form-group// -->
-									    <div class="form-group input-group">
-									    	<div class="input-group-prepend">
-											    <span class="input-group-text">생년월일<i class="fa fa-lock"></i> </span>
-											</div>
-									        <input name="user_birthdate" class="form-control" placeholder="yyyymmdd" type="text" id="user_birthdate" required>
-									    </div> <!-- form-group// -->
-									    <div class="form-group input-group">
-									    	<div class="input-group-prepend">
-											    <span class="input-group-text">국적<i class="fa fa-lock"></i> </span>
-											</div>
-									        <select id="user_nationality" name="user_nationality" style="width: 272px;" required>
-												<option value="lang" selected>국가선택</option> 
-												<option value="USA">USA</option> 
-												<option value="KOREA">KOREA</option>
-												<option value="JAPAN">JAPAN</option>
-												<option value="CHINA">CHINA</option>
-												<option value="GERMANY">GERMANY</option>
-											</select>
-									    </div> <!-- form-group// -->
-									    <button type="submit" class='btnmain'>회원가입</button>
+                           <form action="join.do" method="post">
+                              <div class="form-group input-group">
+                                  <div class="input-group-prepend" name="id">
+                                     <span class="input-group-text">아이디<i class="fa fa-envelope"></i> </span>
+                                  </div>
+                                   <input name="user_id" class="form-control" type="text" id="user_id" required>
+                                   <span id="sp"></span>
+                               </div> <!-- id-group// -->
+                               
+                               <div class="form-group input-group">
+                                  <div class="input-group-prepend">
+                                     <span class="input-group-text">비밀번호<i class="fa fa-lock"></i> </span>
+                                 </div>
+                                   <input name="user_pw" class="form-control"  type="password" id="user_pw" required>
+                               </div> <!-- form-group// -->
+                               
+                               <div class="form-group input-group">
+                                  <div class="input-group-prepend">
+                                     <span class="input-group-text">이름<i class="fa fa-lock"></i> </span>
+                                 </div>
+                                   <input name="user_name" class="form-control"  type="text" id="user_name" required>
+                               </div> <!-- form-group// -->
+                               <div class="form-group input-group">
+                                  <div class="input-group-prepend">
+                                     <span class="input-group-text">생년월일<i class="fa fa-lock"></i> </span>
+                                 </div>
+                                   <input name="user_birthdate" class="form-control" placeholder="yyyymmdd" type="text" id="user_birthdate" required>
+                               </div> <!-- form-group// -->
+                               <div class="form-group input-group">
+                                  <div class="input-group-prepend">
+                                     <span class="input-group-text">국적<i class="fa fa-lock"></i> </span>
+                                 </div>
+                                   <select id="user_nationality" name="user_nationality" style="width: 272px;" required>
+                                    <option value="lang" selected>국가선택</option> 
+                                    <option value="USA">USA</option> 
+                                    <option value="KOREA">KOREA</option>
+                                    <option value="JAPAN">JAPAN</option>
+                                    <option value="CHINA">CHINA</option>
+                                    <option value="GERMANY">GERMANY</option>
+                                 </select>
+                               </div> <!-- form-group// -->
+                               <button type="submit" class='btnmain'>회원가입</button>
                                      <button type="button" class="btnmain" onclick="close_join();"> 닫기  </button>
-									</form>
-								
-								</div>
-			<!--  loginform...........................----------------------------------------->
-								<div id="main">
+                           </form>
+                        
+                        </div>
+         <!--  loginform...........................----------------------------------------->
+                        <div id="main">
                                     <div id="hero__entry-meta">
                                         <div class="panel panel-primary">
                      <div id="chart_title" class="panel-heading">
-						<table style=width:100%;>
-							<tr>
-							<td style="text-align:center;"><a onclick="Syl_weak();">음절</a></td>
-							<td style="text-align:center;"><a onclick="Word_weak();">단어</a></td>
-							<td style="text-align:center;"><a onclick="Sen_weak();">문장</a></td>
-							</tr>
-						</table>
-					</div>
+                  <table style=width:100%;>
+                     <tr>
+                     <td style="text-align:center;"><a onclick="Syl_weak();">음절</a></td>
+                     <td style="text-align:center;"><a onclick="Word_weak();">단어</a></td>
+                     <td style="text-align:center;"><a onclick="Sen_weak();">문장</a></td>
+                     </tr>
+                  </table>
+               </div>
                      <div class="panel-body">
                      <c:if test="${list==null}">
-                    	 취약단어가 없군요 대단합니다!
+                        취약단어가 없군요 대단합니다!
                      </c:if>
                      <c:if test="${list!=null }">
-                     		<table>
-                     			<tr style="width:100%;">
-                     			<td style="float:left; margin-left:90px; text-align:center; font-size:20px; font-weight: bold;">취약단어</td>
-                     			<td style="float:right; margin-right:90px; text-align:center; font-size:20px; font-weight: bold;">정확도</td>
-                     			</tr>
-                     	<c:forEach var="list" items="${list}" varStatus="status">
-                     			
-                     			<tr style="width:100%;">
-                     			<c:choose>
-								<c:when test="${list.num  < 200 && list.num>=0}" >
-									<td style="float:left; margin-left:40px;" onclick="syl_weakstudy(${list.id})">단어 : ${list.content }</td>
-								</c:when>
-								<c:when test="${list.num < 500 && list.num > 200}" >
-									<td style="float:left; margin-left:40px;" onclick="sen_weakstudy(${list.id})">문장 : ${list.content }</td>
-								</c:when>
-								<c:when test="${list.num < 1500 && list.num > 500}">
-									<td style="float:left; margin-left:40px;" onclick="word_weakstudy(${list.id})">단어 : ${list.content }</td>
-								</c:when>
-								</c:choose>
-                     			<td style="float:right; margin-right:50px;">입모양 : ${list.lip_accuracy }, 발음 : ${list.speak_accuracy }</td></tr>
-                     	</c:forEach>
-                     		</table>
+                           <table>
+                              <tr style="width:100%;">
+                              <td style="float:left; margin-left:90px; text-align:center; font-size:20px; font-weight: bold;">취약단어</td>
+                              <td style="float:right; margin-right:90px; text-align:center; font-size:20px; font-weight: bold;">정확도</td>
+                              </tr>
+                        <c:forEach var="list" items="${list}" varStatus="status">
+                              
+                              <tr style="width:100%;">
+                              <c:choose>
+                        <c:when test="${list.num  < 200 && list.num>=0}" >
+                           <td style="float:left; margin-left:40px;" onclick="syl_weakstudy(${list.id})">단어 : ${list.content }</td>
+                        </c:when>
+                        <c:when test="${list.num < 500 && list.num > 200}" >
+                           <td style="float:left; margin-left:40px;" onclick="sen_weakstudy(${list.id})">문장 : ${list.content }</td>
+                        </c:when>
+                        <c:when test="${list.num < 1500 && list.num > 500}">
+                           <td style="float:left; margin-left:40px;" onclick="word_weakstudy(${list.id})">단어 : ${list.content }</td>
+                        </c:when>
+                        </c:choose>
+                              <td style="float:right; margin-right:50px;">입모양 : ${list.lip_accuracy }, 발음 : ${list.speak_accuracy }</td></tr>
+                        </c:forEach>
+                           </table>
 
                      </c:if>
                      </div>
@@ -269,28 +269,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
    function Syl_weak() {
-	      location.href="Syl_weak.do";
-	}
+         location.href="Syl_weak.do";
+   }
    function Word_weak() {
-	      location.href="Word_weak.do";
-	}
+         location.href="Word_weak.do";
+   }
    function Sen_weak() {
-	      location.href="Sen_weak.do";
-	}
+         location.href="Sen_weak.do";
+   }
    
    
    function syl_weakstudy(num){
-	   location.href="syl_weakstudy.do?num="+num;
+      location.href="syl_weakstudy.do?num="+num;
    }
-	   function sen_weakstudy(num){
-	   location.href="sen_weakstudy.do?num="+num;
+      function sen_weakstudy(num){
+      location.href="sen_weakstudy.do?num="+num;
    }
-	   function word_weakstudy(num){
-	   location.href="word_weakstudy.do?num="+num;
+      function word_weakstudy(num){
+      location.href="word_weakstudy.do?num="+num;
    }
-	   function back(){
-	       location.href="select.do";
-	}
+      function back(){
+          location.href="select.do";
+   }
 
    
    </script>

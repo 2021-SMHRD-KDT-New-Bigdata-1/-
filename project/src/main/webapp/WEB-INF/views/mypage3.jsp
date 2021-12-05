@@ -101,7 +101,7 @@ body {
    font-size: 14px;
    line-height: 1.42857143;
    color: #333;
-   background-color:#f2f2f2;
+   background-color:#ffffff;
 }
 
 body {
@@ -114,8 +114,9 @@ body {
 }
 
 .panel-primary {
-   border-color: #D2691E;
-   border-radius: 10px;
+   border:0px;
+   box-shadow: 0 1px 1px rgb(0 0 0 / 6%), 0 2px 2px rgb(0 0 0 / 6%), 0 4px 4px rgb(0 0 0 / 6%), 0 8px 8px rgb(0 0 0 / 6%);
+}
 }
 
 body {
@@ -143,35 +144,15 @@ footer {
 .panel-primary>.panel-heading {
    font-size: 1rem;
     font-weight: bolder;
-   color: #fff;
-   background-color: #ff8040;
+   color: #000000;
+   background-color: #ffffff;
    align: center;
    border-block-color: unset;
 }
 
-.alt.top {
-   display: -moz-flex;
-   display: -webkit-flex;
-   display: -ms-flex;
-   display: flex;
-   background-color: ##D2691E;
-   box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
-   cursor: default;
-   font-weight: 600;
-   height: 3.25em;
-   left: 0;
-   letter-spacing: 0.25em;
-   line-height: 3.25em;
-   margin: 0;
-   position: fixed;
-   text-transform: uppercase;
-   top: 0;
-   width: 100%;
-   z-index: 10000;
-}
 
 .nav_top {
-   background-color: #ff8040;
+   background-color: #ffffff;
 }
 
 /* header nav a .pl{
@@ -190,19 +171,6 @@ footer {
    background-color: #D2691E;
 }
 
-#weekday {
-   float: left;
-   font-size: 1.2rem;
-   color: rgba(255, 255, 255, 0);
-   display: inline-block;
-   background-color: #D2691E;
-}
-
-#pl {
-   color: white;
-   background-color: #000000;
-   display: block;
-}
 
 #chart_title {
    text-align: center;
@@ -216,7 +184,7 @@ footer {
 #main-menu>li>a {
    font-size: 1rem;
     font-weight: bolder;
-   color: rgba(255, 255, 255, 0.85);
+   color: rgba(0, 0, 0, 0.85);
    text-align: center;
    text-decoration: none;
    letter-spacing: 0.05em;
@@ -225,25 +193,12 @@ footer {
    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-#sub_menu {
-   margin: 0;
-   padding: 0;
-   list-style-type: none;
-   background-color: #D2691E;
-   color: white;
-   display: none;
-}
-
-#title_name {
-   color: white;
-   font-size: 30px;
-}
-
 #main_title_nav {
    width: 100%;
    display: flex;
    justify-content: center;
    position: relative;
+   
 }
 
 #my_select{
@@ -256,20 +211,20 @@ footer {
     color: #555;
     
     background:url('../../resources/assets/images/img_193723.png') no-repeat 93% 90%/12px auto;
-    border: 2px solid #ff8000;
+    border: 2px solid #000000;
    }
    
 .mypage_logo {
-    color: white;
+    color: black;
     padding-left: 580px;
     font-size: x-large;'
 }
 
 button.btnback{
-	all:unset; 
-	margin-left:25px; 
-	margin-top:5px;
-	color:white;
+   all:unset; 
+   margin-left:25px; 
+   margin-top:5px;
+   color:black;
 }
 
 </style>
@@ -284,19 +239,18 @@ function Syllable_test() {
       location.href="Syllable_test.do";
 }
 function Word_test() {
-	  location.href="Word_test.do";
+     location.href="Word_test.do";
 }
 function Sentence_test() {
-	  location.href="Sentence_test.do";
+     location.href="Sentence_test.do";
 }
 
-function Step_Result_se(step) {
+function Step_Result_wo(step) {
     location.href="Step_Result_se.do?step="+step;
 }
 function back(){
     location.href="main.do";
  }
-
 </script>
 
 <body id="top" style="margin:0px;">
@@ -313,15 +267,18 @@ function back(){
     <div id="page" class="s-pagewrap ss-home">
    <!-- Wrapper -->
 
+
+   <!-- Wrapper -->
+
    <!-- <div id="wrapper" style="padding: 0;"> -->
 
       <!-- Header -->
       <section>
          <header class="nav_top">
-             <div>
-		         <button onclick="back()"type="button" class="btnback"><i class="fas fa-arrow-left fa-2x"></i></button>
-		            <a href="main.do" class="mypage_logo">Allbareum</a>
-         	</div>  
+           <div>
+               <button onclick="back()"type="button" class="btnback"><i class="fas fa-arrow-left fa-2x"></i></button>
+                  <a href="main.do" class="mypage_logo">Allbareum</a>
+            </div>  
             <nav id="main_title_nav" role="navigation">
                <ul id="main-menu" style="list-style: none;">
                   <li><a onclick="Syllable_test();">음절</a></li>
@@ -336,19 +293,19 @@ function back(){
       <div id="main">
          <div class="container">
             <div class="row" style="margin-left: -20px;margin-top: 32px; margin-top:40px;">
-            	<c:if test="${pron_acc != null }">
-				<div style="position:absolute; top:676px; left:187px;">${(pron_acc[0].sp_good_acc/(pron_acc[0].sp_good_acc + pron_acc[0].sp_bad_acc))*100}%</div>
-				<div style="position:absolute; top:676px; left:518px;">${(pron_acc[0].lip_good_acc/(pron_acc[0].lip_good_acc + pron_acc[0].lip_bad_acc))*100}%</div>
+            <c:if test="${pron_acc != null }">
+            <div style="position:absolute; top:676px; left:187px;">${(pron_acc[0].sp_good_acc/(pron_acc[0].sp_good_acc + pron_acc[0].sp_bad_acc))*100}%</div>
+            <div style="position:absolute; top:676px; left:518px;">${(pron_acc[0].lip_good_acc/(pron_acc[0].lip_good_acc + pron_acc[0].lip_bad_acc))*100}%</div>
                 </c:if>
                 <select id="my_select" style="margin-left:auto; margin-right:auto; text-align:center;"
-                onchange="Step_Result_se(this.options[this.selectedIndex].value)" >
+                onchange="Step_Result_wo(this.options[this.selectedIndex].value)" >
                   <option value="" selected disabled><a><i class="fas fa-angle-down">STEP</i></a></option>
                   <c:if test="${list==null}">
-               	  </c:if>
+                    </c:if>
                   <c:if test="${list!=null }">
-                  	<c:forEach var="list" items="${list}" varStatus="status">
-                  		<option value="${list.study_date }">STEP${list.study_date}</option>
-                  	</c:forEach>
+                     <c:forEach var="list" items="${list}" varStatus="status">
+                        <option value="${list.study_date }">STEP${list.study_date}</option>
+                     </c:forEach>
                   </c:if>
                </select>
 
@@ -360,63 +317,63 @@ function back(){
                      <div id="chart_title" class="panel-heading">정확도</div>
                      <div class="panel-body">
                         <canvas id="myChart"></canvas>
-							<script>
-							  var ctx = document.getElementById("myChart").getContext("2d");
-							  //발음 정확도 그래프 데이터
-							  var data = [];
-							  var labels = [];
-							  var backgroundColor = [];
-							  var borderColor = [];
-							  <c:forEach var="data" items="${step_list}" varStatus="status">
-								  data.push(${data.speak_accuracy})
-								  labels.push("${data.content}")
-								  backgroundColor.push("rgba(54, 162, 235, 0.2)")
-								  borderColor.push("rgba(54, 162, 235, 0.2)")
-							 </c:forEach>
-							  //입모양 정확도 그래프 데이터
-							  var data2 = [];
-							  var backgroundColor2 = [];
-							  var borderColor2 = [];
-							  <c:forEach var="data" items="${step_list}" varStatus="status">
-								  data2.push(${data.lip_accuracy})
-								  backgroundColor2.push("rgba(75, 192, 192, 0.5)")
-								  borderColor2.push("rgba(75, 192, 192, 1.5)")
-							  </c:forEach>
-							  var myChart = new Chart(ctx, {
-							    type: "bar",
-							    data: {
-							      labels: labels,
-							      datasets: [
-							        {
-							          label: "발음 정확도",
-							          data: data,
-							          backgroundColor: backgroundColor,
-							          borderColor: borderColor,
-							          borderWidth: 1,
-							        },
-							        {
-							          label: "입모양 정확도",
-							          data: data2,
-							          backgroundColor: backgroundColor2,
-							          borderColor: borderColor2,
-							          borderWidth: 1,
-							        },
-							      ],
-							    },
-							    options: {
-		                               maintainAspectRatio: false,
-		                                responsive: true,
-							      scales: {
-							        yAxes: [
-							          {
-							            ticks: {
-							              beginAtZero: true,
-							            },
-							          },
-							        ],
-							      },
-							    },
-							  });
+                     <script>
+                       var ctx = document.getElementById("myChart").getContext("2d");
+                       //발음 정확도 그래프 데이터
+                       var data = [];
+                       var labels = [];
+                       var backgroundColor = [];
+                       var borderColor = [];
+                       <c:forEach var="data" items="${step_list}" varStatus="status">
+                          data.push(${data.speak_accuracy})
+                          labels.push("${data.content}")
+                          backgroundColor.push("rgba(54, 162, 235, 0.2)")
+                          borderColor.push("rgba(54, 162, 235, 0.2)")
+                      </c:forEach>
+                       //입모양 정확도 그래프 데이터
+                       var data2 = [];
+                       var backgroundColor2 = [];
+                       var borderColor2 = [];
+                       <c:forEach var="data" items="${step_list}" varStatus="status">
+                          data2.push(${data.lip_accuracy})
+                          backgroundColor2.push("rgba(75, 192, 192, 0.5)")
+                          borderColor2.push("rgba(75, 192, 192, 1.5)")
+                       </c:forEach>
+                       var myChart = new Chart(ctx, {
+                         type: "bar",
+                         data: {
+                           labels: labels,
+                           datasets: [
+                             {
+                               label: "발음 정확도",
+                               data: data,
+                               backgroundColor: backgroundColor,
+                               borderColor: borderColor,
+                               borderWidth: 1,
+                             },
+                             {
+                               label: "입모양 정확도",
+                               data: data2,
+                               backgroundColor: backgroundColor2,
+                               borderColor: borderColor2,
+                               borderWidth: 1,
+                             },
+                           ],
+                         },
+                         options: {
+                                     maintainAspectRatio: false,
+                                      responsive: true,
+                           scales: {
+                             yAxes: [
+                               {
+                                 ticks: {
+                                   beginAtZero: true,
+                                 },
+                               },
+                             ],
+                           },
+                         },
+                       });
                         </script>
                      </div>
                   </div>
@@ -489,16 +446,16 @@ function back(){
                   <div class="panel panel-primary">
                      <div id="chart_title" class="panel-heading">취약단어</div>
                      <div class="panel-body"  style="margin:0px; padding:0px;">
-                    <table>
+                                        <table>
                      <tr>
                     <td style="padding-left:30px; font-weight:bold; font-size:17px;">취약단어</td>
                     <td style="position:absolute; right:120px; font-weight:bold; font-size:17px;">정확도</td>
                     </tr>
                      <c:forEach var="test" items="${test }" varStatus="satus">
                      <tr>
-                 		<td onclick="syl_weakstudy(${test.id})" style="padding-left:20px;">단어 :${test.content }</td>
+                       <td onclick="syl_weakstudy(${test.id})" style="padding-left:20px;">단어 :${test.content }</td>
                     <td style="position:absolute; right:60px;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy*10 }" pattern="" />%
-                    	입모양 :<fmt:formatNumber value="${test.lip_accuracy*10 }" pattern="" />%
+                       입모양 :<fmt:formatNumber value="${test.lip_accuracy*10 }" pattern="" />%
                     </td>
                     
                      </tr>

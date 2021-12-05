@@ -285,7 +285,6 @@
 
 
 
-<<<<<<< HEAD
                          
 	                        <label for="cameraInput"> 
 	                        	<button class="cameraInput"><i class="fas fa-microphone-alt fa-2x"></i></button>
@@ -298,7 +297,6 @@
                         
                         
                         <p id='vdcheck'>&nbsp;</p>
-=======
                         <input type="hidden" class="cameraInput1" value=""
                            placeholder="첨부파일" > <label for="cameraInput"> <i
                            class="fas fa-microphone-alt fa-2x"></i>
@@ -306,7 +304,6 @@
                            accept="video/*" capture="user" onclick='vdclickFn()'/>
                         <button type="submit" class="cameraInput" onclick="Loading();">분석</button>
                         <p id='vdcheck' style="margin-bottom: 10px;">&nbsp;</p>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
                         <!-- css 넣어주기,, button -->
 
 

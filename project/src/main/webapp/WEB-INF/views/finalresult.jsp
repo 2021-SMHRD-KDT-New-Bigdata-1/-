@@ -360,7 +360,7 @@
 		    $.each(data, function(data, obj){
 		    	var mean = (parseInt(obj.speak_accuracy) + parseInt(obj.lip_accuracy))/2;
 		    	view+="<tr>"
-				view+="<td colspan='3' id='list55' style='font-size:x-large; text-align:center;padding: 0px 15px 0px 0px;'><b style='color:black;'>";
+				view+="<td colspan='3' id='list55' style='font-size:x-large; text-align:center;padding: 0px 15px 0px 0px;border-bottom: none;'><b style='color:black;'>";
 				view+= obj.content;
 				view+=" </b></td><td style='text-align:center; font-size: large;'>"; 
 				//view+="발음 점수 : ";

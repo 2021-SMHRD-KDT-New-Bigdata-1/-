@@ -44,8 +44,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
     <link rel="manifest" href="site.webmanifest">
 <script src="http://code.jquery.com/jquery-latest.js"></script> 
-<script>
-
+<script> <%--
+	window.onload = function(){
+		alert("로딩은 되냐 ?");
+		$(".cameraInput2").css("display","none");
+	} --%>
 
    
 </script>
@@ -293,7 +296,7 @@
                            <input type="file" id="cameraInput" name="file" accept="video/*" capture="user" onclick='vdclickFn()'/>
                            
                   		 </label>
-                        <button type="submit" class="cameraInput" onclick="Loading();"><i class="fas fa-chart-pie fa-1.5x"></i></button>
+                        <button type="submit" onclick="Loading();"><i class="fas fa-chart-pie fa-2x"></i></button>
                        
                         <p id='vdcheck' style="margin-bottom: 10px;">&nbsp;</p>
                         <!-- css 넣어주기,, button -->
@@ -375,8 +378,11 @@
     <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script>
-    
+<script>
+    function vdclickFn(){
+    	alert("클릭 인식은 되냐 ?");
+    	$(".cameraInput").css("display","none");
+    }
 </script>
 </body>
 </html>

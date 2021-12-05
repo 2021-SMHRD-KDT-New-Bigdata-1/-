@@ -44,8 +44,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
     <link rel="manifest" href="site.webmanifest">
 <script src="http://code.jquery.com/jquery-latest.js"></script> 
-<script>
-
+<script> <%--
+	window.onload = function(){
+		alert("로딩은 되냐 ?");
+		$(".cameraInput2").css("display","none");
+	} --%>
 
    
 </script>
@@ -80,7 +83,7 @@
 
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="main.do" rel="home" style="color: black; margin-left: 570px; font-family: var(--font-2);" >Allbareum</a>
+                    <a href="main.do" rel="home" style="color: black; font-size: x-large; margin-left: 570px; font-family: var(--font-2);" >Allbareum</a>
                 </p>
             </div>
 
@@ -167,7 +170,7 @@
                     
                         <div id="main">
                                     <div id="hero__entry-meta">
-                                        <span class="cat-links" style="font-size:13px;">
+                                        <span class="cat-links" style="font-size:20px;">
                                                <!-- 여기에..들어가볼까? -->
                                            Step<%=day%> (${cnt+1}/5)
                                         <table class="study2table" style="margin-bottom: 10px;">
@@ -286,23 +289,15 @@
 
 
                          
-                           <label for="cameraInput"> 
-                              <button class="cameraInput"><i class="fas fa-microphone-alt fa-2x"></i></button>
-                              <button type="submit" class="cameraInput" onclick="Loading();"><i class="fas fa-chart-pie fa-2x"></i></button>
-                           </label> 
-                           
-                              <input type="file" id="cameraInput" name="file" accept="video/*" capture="user" onclick='vdclickFn()'/>
-                        
                       
-                        
-                        
-                        <p id='vdcheck'>&nbsp;</p>
-                        <input type="hidden" class="cameraInput1" value=""
-                           placeholder="첨부파일" > <label for="cameraInput"> <i
-                           class="fas fa-microphone-alt fa-2x"></i>
-                        </label> <input type="file" id="cameraInput" name="file"
-                           accept="video/*" capture="user" onclick='vdclickFn()'/>
-                        <button type="submit" class="cameraInput" onclick="Loading();">분석</button>
+                        <input type="hidden" class="cameraInput" value="" placeholder="첨부파일" > 
+                        <label for="cameraInput"> 
+                           <a class="cameraInput"><i class="fas fa-microphone-alt fa-2x"></i></a>
+                           <input type="file" id="cameraInput" name="file" accept="video/*" capture="user" onclick='vdclickFn()'/>
+                           
+                  		 </label>
+                        <button type="submit" class="cameraInput" onclick="Loading();"><i class="fas fa-chart-pie fa-2x"></i></button>
+                       
                         <p id='vdcheck' style="margin-bottom: 10px;">&nbsp;</p>
                         <!-- css 넣어주기,, button -->
 
@@ -330,7 +325,7 @@
                             </div>
                         </article>
                         <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
+                            <div class="hero__entry-image" ></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner" style="width: 798px;padding-left:8px;padding-right:8px;">
                                     <div class="hero__entry-meta">
@@ -383,8 +378,12 @@
     <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script>
-    
+<script>
+//    function vdclickFn(){
+//    	alert("클릭 인식은 되냐 ?");
+//    	$(".cameraInput2").css("display","block");
+//    	$(".cameraInput").css("display","none");
+//    }
 </script>
 </body>
 </html>

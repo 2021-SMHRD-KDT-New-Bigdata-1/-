@@ -240,7 +240,6 @@ button.btnback{
 </head>
 
 <script>
-
 // 음절, 단어, 문장 STEP별 정확도 불러오기
 function Syllable_test() {
       location.href="Syllable_test.do";
@@ -261,6 +260,9 @@ function back(){
 </script>
 
 <body id="top" style="margin:0px; background-color:#f2f2f2">
+<%
+	String step = request.getParameter("step");
+%>
     <div id="preloader">
         <div id="loader" class="dots-fade">
             <div></div>
@@ -322,6 +324,9 @@ function back(){
                   style="width: 100%; min-width: 349.5px; margin-top: 20px;">
                   <div class="panel panel-primary">
                      <div id="chart_title">${list.study_date }STEP</div>
+
+                     <div id="chart_title">STEP<%=step %> 정확도</div>
+
                      <div class="panel-body">
                         <canvas id="myChart"></canvas>
                      <script>

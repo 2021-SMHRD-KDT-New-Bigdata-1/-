@@ -151,7 +151,7 @@
 							<div class="hero__entry-image"
 								style="background: #fc965a; background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/back222.png');"></div>
 							<div class="hero__entry-text">
-								<div class="hero__entry-text-inner">
+								<div class="hero__entry-text-inner" style="width: 798px; padding-left: 8px;padding-right: 8px; padding-top: 15px;">
 
 
 									<div id="join" style="display: none">
@@ -238,7 +238,7 @@
 														</tr>
 													</table>
 												</div>
-												<div class="panel-body">
+												<div class="panel-body_32">
 													<c:if test="${list==null}">
                       									  취약단어가 없군요 대단합니다!
                     								</c:if>

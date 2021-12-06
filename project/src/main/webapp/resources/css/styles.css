@@ -4344,6 +4344,17 @@ button#btnexit {
 /* 여기서부터  복습페이지 수정끝--------------------------------*/
 
 /* 여기서부터 안쪽 div css수정--------------------------------*/
+
+.panel-body_32 {
+    margin-top: -10px;
+    color: #747474;
+    font-weight: 600;
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+    position:relative;
+
+}
+
 .panel-body {
     margin-top: -10px;
     color: #747474;

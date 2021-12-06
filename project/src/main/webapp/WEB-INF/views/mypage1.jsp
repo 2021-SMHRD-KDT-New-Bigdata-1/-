@@ -324,11 +324,9 @@ function syl_weakstudy(num){
                </select>
 
 
-
                <div class="col-12-small"
                   style="width: 100%; min-width: 349.5px; margin-top: 20px;">
                   <div class="panel panel-primary">
-                     <div id="chart_title">STEP<%=step %> 정확도</div>
                      <div class="panel-body">
                         <canvas id="myChart"></canvas>
                      <script>

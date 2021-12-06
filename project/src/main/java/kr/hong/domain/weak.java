@@ -13,4 +13,5 @@ public class weak {
 		private int id;
 		private String content;
 		private String user_id;
+		private String pron;
 }

@@ -209,9 +209,12 @@
 			<thead>
 
 				<tr>
-					<td class="studycolor"
-						style="text-align: center; font-size: large;" id='test60'>
-							${list.content }
+					 <td class="studycolor2"
+                  style="text-align: center; font-family: GowunDodum-Regular; font-size: large;">
+							<h2>${list.content }</h2>
+							<c:if test="${list.id<1000}">
+							[${list.pron }]
+							</c:if>
 					</td>
 					
 					
@@ -220,8 +223,8 @@
 			<tbody>
 				<tr>
 					<td class="studycolor2"
-						style="text-align: center; vertical-align: middle;"><video
-							controls autoplay width="350">
+						style="text-align: center; vertical-align: middle;">
+						<video controls autoplay width="350;" style="width:600px; height:400px;">
 
 							<source
 								src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"
@@ -236,22 +239,22 @@
 				<tr>
 					<td class="studycolor"
 						style="text-align: center; vertical-align: middle;">
-						<div class="cameraInput">
 
 							<form action="http://211.223.106.113:5000/dlModel" method="POST"
 								enctype="multipart/form-data">
 								
 								<!-- type hidden으로 바꿔줄거 -->
 								
-								<input type="hidden" id="h_cnt" name="h_cnt" value="${cnt}"> 
-								
-  
-								<input type="hidden" class="cameraInput1" value="" placeholder="첨부파일"> 
-									<label for="cameraInput"> <i class="fas fa-microphone-alt fa-2x"></i>
-								</label> 
-								<input type="file" id="cameraInput" name="file" accept="video/*" capture="user" /> 
-								<button type="submit" class="cameraInput" >분석</button>
-								<!-- css 넣어주기,, button -->
+						<input type="hidden" class="cameraInput" value="" placeholder="첨부파일" > 
+                        <label for="cameraInput"> 
+                           <a class="cameraInput"><i id="mic" class="fas fa-microphone-alt fa-2x"></i></a>
+                           <input type="file" id="cameraInput" name="file" accept="video/*" capture="user" onclick='vdclickFn()'/>
+                            <button type="submit" class="cameraInput" onclick="Loading();"><i id="analysis"class="fas fa-chart-pie fa-2x"></i></button>
+                  		 </label>
+                       
+                       
+                        <p id='vdcheck' style="margin-bottom: 10px;">&nbsp;</p>
+                        <!-- css 넣어주기,, button -->
 
 
 								
@@ -266,7 +269,6 @@
 									value="녹화완료" />
  -->
 							</form>
-						</div>
 
 					</td>
 				</tr>

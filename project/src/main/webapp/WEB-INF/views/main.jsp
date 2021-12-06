@@ -138,7 +138,7 @@
                             <div class="hero__entry-image" style="background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/main_back.png');"></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner">
-                                
+                               
            <!----------------------login/join form --------------------------------->       
                                 <div id="login" style="display:none">
                                 
@@ -249,7 +249,7 @@
                                         	환영합니다
                                     </h2>
                                      <button class='btnmain' onclick="studying()">학습하기</button>
-                                     <button class='btnmain' onclick="mypageGo(1)">마이페이지</button>
+                                     <button class='btnmain' onclick="mypageGo(1)">학습체크</button>
                                     
                                      </div><br>
                                       <p type="button" style="font-size: initial;">학습을 종료하려면?<a onclick="logout()" style="margin-left:10px;">로그아웃</a> </p> 

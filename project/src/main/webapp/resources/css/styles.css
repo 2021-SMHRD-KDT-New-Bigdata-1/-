@@ -4243,56 +4243,7 @@ td.results {
     border: none;
 }
 
-.syll_home{
-	
-	border: 2px solid #fc965a;
-   padding: 5px 5px 5px 5px;
-	
-}
 
-
-/* hover..
-
-div.pan el-body{
-	display: flex;
-  	justify-content: center;
-  	align-items: center;
-  	flex-wrap: wrap;
-	 width: 100%;
- 	 max-width: 760px;
-	
-} 
-
-
-
-table .syll_home{
-	list-style: none;
-  cursor: pointer;
-  background: white;
-  border: 2px solid white;
-  white-space: nowrap;
-  position: relative;
-  line-height: 70px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-div table .syll_home:hover{
-  color: #fc965a;
-}
-
-.syll_home::before{
-	content:"";
-	position:absolute;
-	display:inline-block;
-	transition: all 0.5s;
-	width:0%;
-	height:0%;
-}
-
-figure:hover .syll::before{
-	width:100%;*/
-	
 /* 여기서부터 home step구분 끝--------------------------------------*/
 
 /* 여기서부터 버튼 css수정--------------------------------*/

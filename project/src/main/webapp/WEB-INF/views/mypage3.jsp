@@ -154,7 +154,7 @@ footer {
 
 
 .nav_top {
-   background-color: #ffffff;
+   background-color: #f2f2f2 ;
 }
 
 /* header nav a .pl{
@@ -175,13 +175,15 @@ footer {
 
 
 #chart_title {
-   border-bottom: 1px solid gray;
+    border-bottom: 1px solid lightgrey;
     margin-left: auto;
     margin-right: auto;
-    text-align:center;
-    font-weight:bold;
-    font-size:1rem;
-       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: dimgray;
+    font-size: 1rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #main-menu>li {
@@ -190,15 +192,17 @@ footer {
 }
 
 #main-menu>li>a {
-   font-size: 1rem;
+	font-size: 1rem;
     font-weight: bolder;
-   color: rgba(0, 0, 0, 0.85);
-   text-align: center;
-   text-decoration: none;
-   letter-spacing: 0.05em;
-   display: block;
-   padding: 14px 20px;
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: dimgray;
+    /* border: 1px solid #ff8040; */
+    border-right: 1px solid darkgray;
+    border-left: 1px solid darkgray;
+    height: 2px;
+    letter-spacing: 0.05em;
+    display: block;
+    padding: 3px 20px 20px 20px;
 }
 
 #main_title_nav {
@@ -206,20 +210,21 @@ footer {
    display: flex;
    justify-content: center;
    position: relative;
+   padding: 3px 20px 20px 20px;
    box-shadow: 0 1px 1px rgb(0 0 0 / 6%), 0 2px 2px rgb(0 0 0 / 6%), 0 4px 4px rgb(0 0 0 / 6%), 0 8px 8px rgb(0 0 0 / 6%);
 }
 
 #my_select{
-    display: block;
+ 	 display: block;
     width: 300px;
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.4;
-    color: #555;
-    
-    background:url('../../resources/assets/images/img_193723.png') no-repeat 93% 90%/12px auto;
-    border: 2px solid #000000;
+    color: black;
+    font-weight: 700;
+    background: url(../../resources/assets/images/img_193723.png) no-repeat 93% 90%/12px auto;
+    border: 2px solid #fc965a;
    }
    
 .mypage_logo {
@@ -232,7 +237,7 @@ button.btnback{
    all:unset; 
    margin-left:25px; 
    margin-top:5px;
-   color:black;
+   color:dimgray;
 }
 
 </style>
@@ -258,9 +263,6 @@ function Step_Result_wo(step) {
 }
 function back(){
     location.href="main.do";
- }
-function sen_weakstudy(num){
-    location.href="sen_weakstudy.do?num="+num;
  }
 </script>
 
@@ -306,10 +308,10 @@ function sen_weakstudy(num){
       <!-- Main -->
       <div id="main">
          <div class="container">
-            <div class="row" style="margin-left: -20px;margin-top: 32px; margin-top:40px;">
+            <div class="row" style="margin-left: auto; margin-right:auto; margin-top:40px;">
             <c:if test="${pron_acc != null }">
-            <div style="position:absolute; top:594px;  left:188px;">${(pron_acc[0].sp_good_acc/5)*100}%</div>
-            <div style="position:absolute; top:594px;  left:514px;">${(pron_acc[0].lip_good_acc/5)*100}%</div>
+            <div style="position:absolute; top:625px;  left:206px; font-weight:bold;">${(pron_acc[0].sp_good_acc/5)*100}%</div>
+            <div style="position:absolute; top:625px;  left:480px; font-weight:bold;">${(pron_acc[0].lip_good_acc/5)*100}%</div>
                 </c:if>
                 <select id="my_select" style="margin-left:auto; margin-right:auto; text-align:center;"
                 onchange="Step_Result_wo(this.options[this.selectedIndex].value)" >
@@ -462,8 +464,8 @@ function sen_weakstudy(num){
                      <div class="panel-body"  style="margin:0px; padding:0px;">
                                         <table>
                      <tr>
-                    <td style="text-align:center; font-weight:bold; font-size:17px;">취약음절</td>
-                    <td style="text-align:center; font-weight:bold; font-size:17px;">정확도</td>
+                    <td style="text-align:center; font-weight:bold; font-size:15px; width:50%; text-decoration: underline; text-underline-position: under;">취약음절</td>
+                    <td style="text-align:center; font-weight:bold; font-size:15px; width:50%; text-decoration: underline; text-underline-position: under;">정확도</td>
                     </tr>
                      <c:forEach var="test" items="${test }" varStatus="satus">
                      <tr>

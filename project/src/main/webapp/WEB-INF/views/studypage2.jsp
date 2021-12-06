@@ -308,9 +308,7 @@
          </tbody>
 
       </table>
-                                  
-                                  
-                                  
+ 
                                         </span>
                                 </div>
                                     
@@ -362,6 +360,13 @@
             <!--  masonry -->
             
         </section> <!-- end s-content -->
+        
+        
+       	<div id="loadingd" style="position:absolute; margin-top:300px; width:100%;">
+		
+            <img id="limg" style="m"
+            src="${pageContext.request.contextPath}/resources/images/1484.gif" alt="분석 중..."  >
+		</div>
 
 
         <!-- # site-footer
@@ -387,7 +392,7 @@
 		}
 		function Loading(){
 			if($("#loadingd").css("display")=="none"){
-				$(".word").css("display","none")
+				$(".study2table").css("display","none")
 				$("#loadingd").css("display","block");
 			}else{
 				

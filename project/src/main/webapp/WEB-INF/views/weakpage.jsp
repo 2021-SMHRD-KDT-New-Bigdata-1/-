@@ -243,7 +243,7 @@
 						style="text-align: center; font-size: large;">발음해보세요</td>
 				</tr>
 				<tr>
-					<td class="studycolor"
+					<td class="cameraInput"
 						style="text-align: center; vertical-align: middle;">
 
 							<form action="http://211.223.106.113:5000/dlModel" method="POST"

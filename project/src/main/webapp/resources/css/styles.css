@@ -2306,14 +2306,14 @@ table {
     width           : 100%;
     max-width       : 100%;
     font-family     : var(--font-1);
-    /*border-collapse : collapse;*/
+    border-collapse : collapse;
 }
 
 th,
 td {
-    padding       : var(--vspace-0_5) 3.2rem calc(var(--vspace-0_5) - 1px);
-    text-align    : left;
-    border-bottom : 1px solid var(--color-border);
+    padding       :  15px 5px 10px 5px;
+   /* text-align    : left;
+    border-bottom : 1px solid var(--color-border);*/
 }
 
 th {
@@ -4212,11 +4212,13 @@ body.search-is-visible .s-header__search-inner {
 
 .panel-heading{
 	
-	border: 2px solid #f89316;
-    border-radius: 20px;
+    border: 2px solid #f8f8f2;
+    border-radius: 10px; 
     width: 100px;
     margin-left: auto;
+    background: #fc965a;
     margin-right: auto;
+    color: white;
 	
 }
 
@@ -4241,6 +4243,56 @@ td.results {
     border: none;
 }
 
+.syll_home{
+	
+	border: 2px solid #fc965a;
+   padding: 5px 5px 5px 5px;
+	
+}
+
+
+/* hover..
+
+div.pan el-body{
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	flex-wrap: wrap;
+	 width: 100%;
+ 	 max-width: 760px;
+	
+} 
+
+
+
+table .syll_home{
+	list-style: none;
+  cursor: pointer;
+  background: white;
+  border: 2px solid white;
+  white-space: nowrap;
+  position: relative;
+  line-height: 70px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+div table .syll_home:hover{
+  color: #fc965a;
+}
+
+.syll_home::before{
+	content:"";
+	position:absolute;
+	display:inline-block;
+	transition: all 0.5s;
+	width:0%;
+	height:0%;
+}
+
+figure:hover .syll::before{
+	width:100%;*/
+	
 /* 여기서부터 home step구분 끝--------------------------------------*/
 
 /* 여기서부터 버튼 css수정--------------------------------*/
@@ -4342,9 +4394,13 @@ button#btnexit {
 
 /* 여기서부터 안쪽 div css수정--------------------------------*/
 .panel-body {
-    margin-top: 10px;
+    margin-top: -10px;
     color: #747474;
     font-weight: 600;
+    width: 400px;
+    padding: 0px 10px 0px 10px;
+    position:relative;
+
 }
 
 /*finalresult 테이블 따로 조건주기*/

@@ -89,7 +89,7 @@
    }
    function jsonHtml1(data){ //콜백함수
 	   view ="<header id='header' class='alt'>"
-       view +="<div>"
+       view +="<div style='text-align: left; padding: 4px 0px 0px 25px;'>"
        //view +="<button onclick=back() type='button' class='btnback'>"
        //view +="<i class='fas fa-arrow-left fa-2x'></i>"
        //view +="</button>"
@@ -103,9 +103,9 @@
       view += "<div class='main col-lg-4' style='margin-right:auto; margin-left:auto;'>";
       view += "<div class='col-sm-4'>";
       view += "<div class='panel panel-primary' onclick=studypageGo("+1+",1)>";
-      view += "<div class='panel-heading'>Step1</div>";
+      view += "<div class='panel-heading' >Step1</div>";
       view += "<div class='panel-body'>";
-       view +="<table>";
+       view +="<table class='syll_home'	style='border: 2px solid #fc965a; padding: 5px 5px 5px 5px;'>";
        view += "<tr>";
        var count = 0;
        var day = 2;
@@ -131,7 +131,7 @@
              view += "<div class='panel panel-primary' onclick=studypageGo("+day+",1)>";
              view += "<div class='panel-heading'>Step"+day+"</div>";
              view += "<div class='panel-body'>";
-              view +="<table>";
+              view +="<table style='border: 2px solid #fc965a; padding: 5px 5px 5px 5px;'>";
               view += "<tr>";
               day += 1;
                count = 0;
@@ -148,7 +148,7 @@
    }
    function jsonHtml2(data){ //콜백함수
 	   view ="<header id='header' class='alt'>"
-	   view +="<div>"
+	   view +="<div style='text-align:left; padding: 0px 0px 0px 30px;'>"
 	   //view +="<button onclick=back() type='button' class='btnback'>"
 	   //view +="<i class='fas fa-arrow-left fa-2x'></i>"
 	   //view +="</button>"
@@ -164,7 +164,7 @@
       view += "<div class='panel panel-primary' onclick=studypageGo("+1+",2)>";
       view += "<div class='panel-heading'>Step1</div>";
       view += "<div class='panel-body'>";
-       view +="<table>";
+       view +="<table class='word_home' style='border: 2px solid #fc965a; padding: 5px 5px 5px 5px;'>";
        view += "<tr>";
        var count = 0;
        var day = 2;
@@ -190,7 +190,7 @@
              view += "<div class='panel panel-primary' onclick=studypageGo("+day+",2)>";
              view += "<div class='panel-heading'>Step"+day+"</div>";
              view += "<div class='panel-body'>";
-              view +="<table>";
+              view +="<table class='word_home' style='border: 2px solid #fc965a; padding: 5px 5px 5px 5px;'>";
               view += "<tr>";
               day += 1;
                count = 0;
@@ -207,7 +207,7 @@
    function jsonHtml3(data){ //콜백함수
 	   
 	  view ="<header id='header' class='alt'>"
-	  view +="<div>"
+	  view +="<div style='text-align:left; padding: 0px 0px 0px 30px;'>"
 	  //view +="<button onclick=back() type='button' class='btnback'>"
 	  //view +="<i class='fas fa-arrow-left fa-2x'></i>"
 	  //view +="</button>"
@@ -224,7 +224,7 @@
       view += "<div class='panel-heading'>Step1</div>";
       view += "<div class='panel-body'>";
       
-       view +="<table>";
+       view +="<table style='border: 2px solid #fc965a; padding: 5px 5px 5px 5px;'>";
        var count = 0;
        var day = 2;
        $.each(data, function(data, obj){
@@ -252,13 +252,13 @@
              view += "<div class='panel panel-primary' onclick=studypageGo("+day+",3)>";
              view += "<div class='panel-heading'>Step"+day+"</div>";
              view += "<div class='panel-body'>";
-              view +="<table>";
+              view +="<table style='border: 2px solid #fc965a; padding: 5px 5px 5px 5px;'>";
               day += 1;
                count = 0;
           }
              
        })
-       view += "</table>";
+       view += "</table >";
        
        view += "</div>";
        view += "</div>";

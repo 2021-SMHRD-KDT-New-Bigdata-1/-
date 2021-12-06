@@ -21,7 +21,7 @@
    href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
 <script
    src="${pageContext.request.contextPath}/resources/assets/js/Chart.js"></script>
-<link href="${pageContext.request.contextPath}/resources/css/styles.css"
+<link href="${pageContext.request.contextPath}/resources/css/styles_mypage.css"
    rel="stylesheet" type="text/css">
 <link rel="stylesheet"
    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -303,8 +303,8 @@ function back(){
          <div class="container">
             <div class="row" style="margin-left: -20px;margin-top: 32px; margin-top:40px;">
             <c:if test="${pron_acc != null }">
-            <div style="position:absolute; top:634px; left:188px;">${(pron_acc[0].sp_good_acc/5)*100}%</div>
-            <div style="position:absolute; top:634px; left:514px;">${(pron_acc[0].lip_good_acc/5)*100}%</div>
+            <div style="position:absolute; top:594px; left:188px;">${(pron_acc[0].sp_good_acc/5)*100}%</div>
+            <div style="position:absolute; top:594px; left:514px;">${(pron_acc[0].lip_good_acc/5)*100}%</div>
                 </c:if>
                 <select id="my_select" style="margin-left:auto; margin-right:auto; text-align:center;"
                 onchange="Step_Result_wo(this.options[this.selectedIndex].value)" >

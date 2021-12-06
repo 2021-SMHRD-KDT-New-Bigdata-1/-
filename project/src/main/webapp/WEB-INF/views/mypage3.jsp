@@ -321,7 +321,7 @@ function back(){
                <div class="col-12-small"
                   style="width: 100%; min-width: 349.5px; margin-top: 20px;">
                   <div class="panel panel-primary">
-                     <div id="chart_title">정확도</div>
+                     <div id="chart_title">${list.study_date }STEP</div>
                      <div class="panel-body">
                         <canvas id="myChart"></canvas>
                      <script>
@@ -451,17 +451,17 @@ function back(){
                </div>
                <div class="col-12-small" style="width: 100%; min-width: 349.5px; margin-top: 20px;">
                   <div class="panel panel-primary">
-                     <div id="chart_title">취약단어</div>
+                     <div id="chart_title">취약문장</div>
                      <div class="panel-body"  style="margin:0px; padding:0px;">
                                         <table>
                      <tr>
-                    <td style="padding-left:30px; font-weight:bold; font-size:17px;">취약단어</td>
-                    <td style="position:absolute; right:120px; font-weight:bold; font-size:17px;">정확도</td>
+                    <td style=text-align:center; font-weight:bold; font-size:17px;">취약문장</td>
+                    <td style="text-align:center; font-weight:bold; font-size:17px;">정확도</td>
                     </tr>
                      <c:forEach var="test" items="${test }" varStatus="satus">
                      <tr>
-                       <td onclick="syl_weakstudy(${test.id})" style="padding-left:20px;">단어 :${test.content }</td>
-                    <td style="position:absolute; right:60px;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy }" pattern="" />%
+                       <td onclick="syl_weakstudy(${test.id})" style="text-align:center;">${test.content }</td>
+                    <td style="text-align:center;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy }" pattern="" />%
                        입모양 :<fmt:formatNumber value="${test.lip_accuracy }" pattern="" />%
                     </td>
                     

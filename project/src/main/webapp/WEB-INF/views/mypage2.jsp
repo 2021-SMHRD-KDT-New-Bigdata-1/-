@@ -454,13 +454,13 @@ function back(){
                      <div class="panel-body"  style="margin:0px; padding:0px;">
                                         <table>
                      <tr>
-                    <td style="padding-left:30px; font-weight:bold; font-size:17px;">취약단어</td>
-                    <td style="position:absolute; right:120px; font-weight:bold; font-size:17px;">정확도</td>
+                    <td style="text-align:center; padding-left:30px; font-weight:bold; font-size:17px;">취약단어</td>
+                    <td style="text-align:center; font-weight:bold; font-size:17px; float:right; padding-right:150px;">정확도</td>
                     </tr>
                      <c:forEach var="test" items="${test }" varStatus="satus">
                      <tr>
-                       <td onclick="syl_weakstudy(${test.id})" style="padding-left:20px;">단어 :${test.content }</td>
-                    <td style="position:absolute; right:60px;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy }" pattern="" />%
+                       <td onclick="syl_weakstudy(${test.id})" style="text-align:center;">${test.content }</td>
+                    <td style="text-align:center; float:right; padding-right:100px;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy }" pattern="" />%
                        입모양 :<fmt:formatNumber value="${test.lip_accuracy }" pattern="" />%
                     </td>
                     

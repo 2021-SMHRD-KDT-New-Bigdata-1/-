@@ -147,6 +147,8 @@ footer {
    color: #000000;
    background-color: #ffffff;
    align: center;
+   border-color: #000000;
+   box-shadow: 0 1px 1px rgb(0 0 0 / 6%), 0 2px 2px rgb(0 0 0 / 6%), 0 4px 4px rgb(0 0 0 / 6%), 0 8px 8px rgb(0 0 0 / 6%);
    border-block-color: unset;
 }
 
@@ -173,7 +175,13 @@ footer {
 
 
 #chart_title {
-   text-align: center;
+   border-bottom: 1px solid gray;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    font-weight:bold;
+    font-size:1rem;
+       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #main-menu>li {
@@ -198,7 +206,7 @@ footer {
    display: flex;
    justify-content: center;
    position: relative;
-   
+   box-shadow: 0 1px 1px rgb(0 0 0 / 6%), 0 2px 2px rgb(0 0 0 / 6%), 0 4px 4px rgb(0 0 0 / 6%), 0 8px 8px rgb(0 0 0 / 6%);
 }
 
 #my_select{
@@ -253,7 +261,7 @@ function back(){
  }
 </script>
 
-<body id="top" style="margin:0px;">
+<body id="top" style="margin:0px; background-color:#f2f2f2">
     <div id="preloader">
         <div id="loader" class="dots-fade">
             <div></div>
@@ -294,8 +302,8 @@ function back(){
          <div class="container">
             <div class="row" style="margin-left: -20px;margin-top: 32px; margin-top:40px;">
             <c:if test="${pron_acc != null }">
-            <div style="position:absolute; top:676px; left:187px;">${(pron_acc[0].sp_good_acc/5)*100}%</div>
-            <div style="position:absolute; top:676px; left:518px;">${(pron_acc[0].lip_good_acc/5)*100}%</div>
+            <div style="position:absolute; top:634px;  left:188px;">${(pron_acc[0].sp_good_acc/5)*100}%</div>
+            <div style="position:absolute; top:634px;  left:514px;;">${(pron_acc[0].lip_good_acc/5)*100}%</div>
                 </c:if>
                 <select id="my_select" style="margin-left:auto; margin-right:auto; text-align:center;"
                 onchange="Step_Result_wo(this.options[this.selectedIndex].value)" >
@@ -314,7 +322,7 @@ function back(){
                <div class="col-12-small"
                   style="width: 100%; min-width: 349.5px; margin-top: 20px;">
                   <div class="panel panel-primary">
-                     <div id="chart_title" class="panel-heading">정확도</div>
+                     <div id="chart_title">정확도</div>
                      <div class="panel-body">
                         <canvas id="myChart"></canvas>
                      <script>
@@ -381,7 +389,7 @@ function back(){
                <div class="col-12-small"
                   style="width: 50%; margin-top: 20px;">
                   <div class="panel panel-primary">
-                     <div id="chart_title" class="panel-heading">음성 정확도</div>
+                     <div id="chart_title">음성 정확도</div>
                      <div class="panel-body">
                         <canvas id="doughnut-chart" width="300" height="250"></canvas>
                         <script>
@@ -413,7 +421,7 @@ function back(){
                <div class="col-12-small"
                   style="width: 50%; margin-top: 20px;">
                   <div class="panel panel-primary">
-                     <div id="chart_title" class="panel-heading">입모양 정확도</div>
+                     <div id="chart_title">입모양 정확도</div>
                      <div class="panel-body">
                         <canvas id="doughnut-chart1" width="300" height="250"></canvas>
                         <script>
@@ -444,7 +452,7 @@ function back(){
                </div>
                <div class="col-12-small" style="width: 100%; min-width: 349.5px; margin-top: 20px;">
                   <div class="panel panel-primary">
-                     <div id="chart_title" class="panel-heading">취약단어</div>
+                     <div id="chart_title">취약단어</div>
                      <div class="panel-body"  style="margin:0px; padding:0px;">
                                         <table>
                      <tr>

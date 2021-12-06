@@ -255,20 +255,20 @@
 																<tr style="width: 100%;">
 																	<c:choose>
 																		<c:when test="${list.num  < 200 && list.num>=0}">
-																			<td style="text-align: center; width:40%"
+																			<td style="text-align: center; width:40%; font-weight:40;"
 																				onclick="syl_weakstudy(${list.id})">${list.content }</td>
 																		</c:when>
 																		<c:when test="${list.num < 500 && list.num > 200}">
-																			<td style="text-align: center; width:40%"
+																			<td style="text-align: center; width:40%; font-weight:40;"
 																				onclick="sen_weakstudy(${list.id})">${list.content }</td>
 																		</c:when>
 																		<c:when test="${list.num < 1500 && list.num > 500}">
-																			<td style="text-align: center; width:40%"
+																			<td style="text-align: center; width:40%; font-weight:40;"
 																				onclick="word_weakstudy(${list.id})">${list.content }</td>
 																		</c:when>
 																	</c:choose>
-																	<td style="text-align: center;">입모양 :
-																		${list.lip_accuracy }, 발음 : ${list.speak_accuracy }</td>
+																	<td style="text-align: center; font-weight:40;"><strong>입모양 :</strong>
+																		${list.lip_accuracy } <strong>/ 발음 :</strong> ${list.speak_accuracy }</td>
 																</tr>
 															</c:forEach>
 														</table>

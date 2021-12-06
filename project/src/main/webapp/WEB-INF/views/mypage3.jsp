@@ -315,12 +315,12 @@ function back(){
                 </c:if>
                 <select id="my_select" style="margin-left:auto; margin-right:auto; text-align:center;"
                 onchange="Step_Result_wo(this.options[this.selectedIndex].value)" >
-                  <option value="" selected disabled><a><i class="fas fa-angle-down">STEP</i></a></option>
+                  <option value="" selected disabled><a><i class="fas fa-angle-down">STEP  ▼</i></a></option>
                   <c:if test="${list==null}">
                     </c:if>
                   <c:if test="${list!=null }">
                      <c:forEach var="list" items="${list}" varStatus="status">
-                        <option value="${list.study_date }">STEP${list.study_date}</option>
+                        <option value="${list.study_date }">STEP ${list.study_date}</option>
                      </c:forEach>
                   </c:if>
                </select>

@@ -170,7 +170,7 @@
                    <div id="loadingd" style="position:absolute; margin-top:300px; width:100%; display:none; height:832px;">
 		
             <img id="limg" style="m;"
-            src="${pageContext.request.contextPath}/resources/images/1484.gif" alt="분석 중..."  >
+            src="${pageContext.request.contextPath}/resources/images/14842.gif" alt="분석 중..."  >
 		</div>
                                     <div id="hero__entry-meta">
                                         <span class="cat-links" style="font-size:20px; color: dimgray; font-weight: 500;}">

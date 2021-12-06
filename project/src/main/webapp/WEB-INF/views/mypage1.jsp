@@ -509,6 +509,10 @@ function back(){
    <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
    <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<script>
+function syl_weakstudy(num){
+	location.href="syl_weakstudy.do?num="+num;
+}
+</script>
 </body>
 </html>

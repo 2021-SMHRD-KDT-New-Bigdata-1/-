@@ -473,7 +473,7 @@ function back(){
                     </tr>
                      <c:forEach var="test" items="${test }" varStatus="satus">
                      <tr>
-                       <td onclick="syl_weakstudy(${test.id})" style="text-align:center;">${test.content }</td>
+                       <td onclick="sen_weakstudy(${test.id})" style="text-align:center;">${test.content }</td>
                     <td style="text-align:center;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy }" pattern="" />%
                        입모양 :<fmt:formatNumber value="${test.lip_accuracy }" pattern="" />%
                     </td>
@@ -509,6 +509,10 @@ function back(){
    <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
    <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<script>
+function sen_weakstudy(num){
+	location.href="sen_weakstudy.do?num="+num;
+}
+</script>
 </body>
 </html>

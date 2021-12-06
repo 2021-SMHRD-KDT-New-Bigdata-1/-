@@ -252,6 +252,7 @@
 								<!-- type hidden으로 바꿔줄거 -->
 								
 						<input type="hidden" class="cameraInput" value="" placeholder="첨부파일" > 
+                       
                         <label for="cameraInput"> 
                            <a class="cameraInput"><i id="mic" class="fas fa-microphone-alt fa-2x"></i></a>
                            <input type="file" id="cameraInput" name="file" accept="video/*" capture="user" onclick='vdclickFn()'/>

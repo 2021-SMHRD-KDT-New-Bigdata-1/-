@@ -259,6 +259,9 @@ function Step_Result_wo(step) {
 function back(){
     location.href="main.do";
  }
+function sen_weakstudy(num){
+    location.href="sen_weakstudy.do?num="+num;
+ }
 </script>
 
 <body id="top" style="margin:0px; background-color:#f2f2f2">

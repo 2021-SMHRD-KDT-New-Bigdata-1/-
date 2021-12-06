@@ -257,6 +257,9 @@ function Step_Result_wo(step) {
 function back(){
     location.href="main.do";
  }
+function word_weakstudy(num){
+    location.href="word_weakstudy.do?num="+num;
+ }
 </script>
 
 <body id="top" style="margin:0px; background-color:#f2f2f2">
@@ -457,8 +460,8 @@ function back(){
                      <div class="panel-body"  style="margin:0px; padding:0px;">
                                         <table>
                      <tr>
-                    <td style="text-align:center; padding-left:30px; font-weight:bold; font-size:17px;">취약단어</td>
-                    <td style="text-align:center; font-weight:bold; font-size:17px; float:right; padding-right:150px;">정확도</td>
+                    <td style="text-align:center; font-weight:bold; font-size:17px;">취약단어</td>
+                    <td style="text-align:center; font-weight:bold; font-size:17px;">정확도</td>
                     </tr>
                      <c:forEach var="test" items="${test }" varStatus="satus">
                      <tr>

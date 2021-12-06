@@ -44,14 +44,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
     <link rel="manifest" href="site.webmanifest">
 <script src="http://code.jquery.com/jquery-latest.js"></script> 
-<script> <%--
-	window.onload = function(){
-		alert("로딩은 되냐 ?");
-		$(".cameraInput2").css("display","none");
-	} --%>
 
-   
-</script>
+<style>
+.is-preload {
+	background-color: #f2f2f2;
+}
+</style>
 
 </head>
 
@@ -252,7 +250,7 @@
             </tr>
             <tr>
                <td class="cameraInput"
-                  style="text-align: center; vertical-align: middle;">
+                  style="text-align: center; vertical-align: middle; background-color:rgb(249, 250, 251);">
                   
 
                      <form action="http://211.223.106.113:5000/dlModel" method="POST"
@@ -298,7 +296,7 @@
                   		 </label>
                        
                        
-                        <p id='vdcheck' style="margin-bottom: 10px;">&nbsp;</p>
+                        <p id='vdcheck' style="margin-bottom: 10px; line-height:1px; font-size:small;">&nbsp;</p>
                         <!-- css 넣어주기,, button -->
 
 
@@ -310,9 +308,7 @@
          </tbody>
 
       </table>
-                                  
-                                  
-                                  
+ 
                                         </span>
                                 </div>
                                     
@@ -364,6 +360,13 @@
             <!--  masonry -->
             
         </section> <!-- end s-content -->
+        
+        
+       	<div id="loadingd" style="position:absolute; margin-top:300px; width:100%;">
+		
+            <img id="limg" style="m"
+            src="${pageContext.request.contextPath}/resources/images/1484.gif" alt="분석 중..."  >
+		</div>
 
 
         <!-- # site-footer
@@ -384,6 +387,27 @@
 //    	$(".cameraInput2").css("display","block");
 //    	$(".cameraInput").css("display","none");
 //    }
+		function back1(cate) {
+			location.href = "studyhome.do?cate=" + cate;
+		}
+		function Loading(){
+			if($("#loadingd").css("display")=="none"){
+				$(".study2table").css("display","none")
+				$("#loadingd").css("display","block");
+			}else{
+				
+			}
+			
+			//div word를 없애기~
+			
+			// loadingd를 열기~
+			//$(".loadingd").css("display","block")
+			 
+		}
+		function vdclickFn(){
+			//alert("클릭 인식은 되냐 ?");
+			$("#vdcheck").html('비디오 첨부 완료!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+		}
 </script>
 </body>
 </html>

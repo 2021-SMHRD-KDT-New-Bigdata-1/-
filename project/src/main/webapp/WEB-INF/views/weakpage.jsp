@@ -196,13 +196,19 @@
                         <article class="hero__slide swiper-slide" style="background: #fc965a; background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/back222.png');">
                             <div class="hero__entry-image" style="background:#fc965a; background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/back222.png');"></div>
                             <div class="hero__entry-text">
-                                <div class="hero__entry-text-inner" style="width: 798px; padding-left:8px; padding-right:8px;padding-top:15px;">
+                                <div class="hero__entry-text-inner" style="width: 798px; padding-left:8px; padding-right:8px;padding-top:15px;
+                                min-width:614px; min-height:832px;">
                                 
    
            
          <!--  loginform...........................----------------------------------------->
                     
                         <div id="main">
+                        <div id="loadingd" style="position:absolute; margin-top:300px; width:100%; display:none; height:832px;">
+		
+            <img id="limg" style="m;"
+            src="${pageContext.request.contextPath}/resources/images/14842.gif" alt="분석 중..."  >
+		</div>
                                     <div id="hero__entry-meta">
                                         <span class="cat-links" style="font-size:20px; color: dimgray; font-weight: 500;}">
 			<table class="study2table" >
@@ -357,6 +363,24 @@
 //    }
 		function back1(cate) {
 			location.href = "studyhome.do?cate=" + cate;
+		}
+		function Loading(){
+			if($("#loadingd").css("display")=="none"){
+				$(".study2table").css("display","none");
+				$("#loadingd").css("display","block");
+			}else{
+				
+			}
+			
+			//div word를 없애기~
+			
+			// loadingd를 열기~
+			//$(".loadingd").css("display","block")
+			 
+		}
+		function vdclickFn(){
+			//alert("클릭 인식은 되냐 ?");
+			$("#vdcheck").html('비디오 첨부 완료!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
 		}
 </script>
 </body>

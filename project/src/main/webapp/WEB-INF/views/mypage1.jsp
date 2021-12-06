@@ -264,9 +264,6 @@ function Step_Result_wo(step) {
 function back(){
     location.href="main.do";
  }
-function syl_weakstudy(num){
-    location.href="syl_weakstudy.do?num="+num;
- }
 </script>
 
 <body id="top" style="margin:0px; background-color:#f2f2f2">
@@ -329,9 +326,11 @@ function syl_weakstudy(num){
                </select>
 
 
+
                <div class="col-12-small"
                   style="width: 100%; min-width: 349.5px; margin-top: 20px;">
                   <div class="panel panel-primary">
+                     <div id="chart_title">STEP<%=step %> 정확도</div>
                      <div class="panel-body">
                         <canvas id="myChart"></canvas>
                      <script>

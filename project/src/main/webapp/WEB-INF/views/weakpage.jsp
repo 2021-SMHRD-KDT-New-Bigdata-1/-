@@ -243,7 +243,7 @@
 								
 								<!-- type hidden으로 바꿔줄거 -->
 								
-								<input type="text" id="h_cnt" name="h_cnt" value="${cnt}"> 
+								<input type="hidden" id="h_cnt" name="h_cnt" value="${cnt}"> 
 								
   
 								<input type="hidden" class="cameraInput1" value="" placeholder="첨부파일"> 

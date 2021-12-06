@@ -2306,7 +2306,7 @@ table {
     width           : 100%;
     max-width       : 100%;
     font-family     : var(--font-1);
-    border-collapse : collapse;
+    /*border-collapse : collapse;*/
 }
 
 th,
@@ -4237,7 +4237,9 @@ a.word_logo {
 }
 
 
-
+td.results {
+    border: none;
+}
 
 /* 여기서부터 home step구분 끝--------------------------------------*/
 
@@ -4254,19 +4256,23 @@ a.word_logo {
 }
 
 i#mic {
-    border: 2px solid gray;
-    width: 60px;
-        height: 45px;
+    border: 2px solid white;
+    width: 80px;
+    height: 60px;
     border-radius: 70px;
-    padding: 5px 5px 5px 5px;
+    padding: 13px 10px 10px 10px;
+    background: #c0c0c0;
+    color: white;
 }
 	
 i#analysis {
-    border: 2px solid gray;
-    width: 60px;
-    height: 43px;
+    border: 2px solid white;
+    width: 80px;
+    height: 59px;
     border-radius: 70px;
-    padding: 5px 5px 5px 5px;
+    padding: 14px 10px 10px 10px;
+    color: white;
+    background: #fc965a;
 }
 
 
@@ -4292,25 +4298,28 @@ i#analysis {
 /*result버튼 수정*/
 
 button.btn-result {
-    border: 2px solid #ff792a;
+ 	 border: 2px solid white;
     width: 100px;
     height: 45px;
     border-radius: 30px;
     padding: 5px 5px 5px 5px;
-   background: white;
+    background: #fc965a;
+    color: white;
+    font-weight: 700;
 }
 
 /*finalresult 버튼 수정*/
 
 button#btnexit {
-    border: 2px solid gray;
+    border: 2px solid #f9fafb;
     width: 100px;
     height: 45px;
     border-radius: 70px;
     padding: 5px 5px 5px 5px;
     font-size: initial;
-    background: white;
-    font-weight: 900;
+    background: #ff8040;
+    color: white;
+    font-weight: 700;
 }
 
 /* 여기서부터 버튼 css수정끝--------------------------------*/
@@ -4334,7 +4343,20 @@ button#btnexit {
 /* 여기서부터 안쪽 div css수정--------------------------------*/
 .panel-body {
     margin-top: 10px;
+    color: #747474;
+    font-weight: 600;
 }
+
+/*finalresult 테이블 따로 조건주기*/
+table.study2table {
+    border-width: 0;
+    width: 615px;
+    max-width: 110%;
+    font-family: var(--font-1);
+    /* border-collapse: collapse; */
+    margin-left: -10px;
+}
+
 
 /* 여기서부터 안쪽 div css수정 끄으읏--------------------------------*/
 

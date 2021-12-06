@@ -157,8 +157,8 @@
                 <div class="hero__slider swiper-container">
 
                     <div class="swiper-wrapper">
-                        <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" ></div>
+                        <article class="hero__slide swiper-slide" style="background:#f2f2f2;" >
+                            <div class="hero__entry-image" style="background:#f2f2f2;" ></div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner" style="width: 798px; padding-left:8px; padding-right:8px;padding-top:15px;">
                                 
@@ -175,8 +175,8 @@
          <thead>
 			<tr>
 				<td  colspan="3" class="result" style="height: 150px; width: 350px; 
-				 text-align: center; font-size: large; word-break: keep-all; color:black;">
-				 <h4 style="font-family: GowunDodum-Regular; font-size: large; margin-top: 10px;">STEP <%=day  %> 결과 확인</h4>
+				 text-align: center; font-size: large; word-break: keep-all; color:black;border-bottom: none;">
+				 <h4 style="font-family: GowunDodum-Regular; font-size: large; margin-top: 10px; font-weight:600;">STEP <%=day  %> </h4>
 					<div class="result">
 						<h2 style="font-family: GowunDodum-Regular; font-size: xx-large; margin-top: 30px;">${vo.user_name}님의 발음분석결과</h2>
 					</div>
@@ -190,15 +190,15 @@
 
             <tr>
                <td class="studycolor"
-                  style="text-align: center; font-family: GowunDodum-Regular; font-size: xx-large; padding-top: 10px; padding-bottom: 10px; " id='test60' >
+                  style="text-align: center; font-family: GowunDodum-Regular; font-size: xx-large; padding-top: 10px; 
+                  padding-bottom: 10px; border: 2px solid #fc965a; background: #eee; " id='test60' >
 				<p id="avg" style="font-size:x-large; margin-bottom: 0px;">평균 몇점</p> <!-- day1 --></td>
             </tr>
          </thead>
          <tbody>
 
             <tr>
-               <td class="studycolor2"
-                  style="text-align: center; vertical-align: middle; padding-top:30px; padding-right: 60px;padding-left: 60px;">
+               <td style="text-align: center; vertical-align: middle; padding-top:30px; padding-right: 60px;padding-left: 60px;">
 				<!-- 결과리스트  -->
 						<nav>
 							<ul>
@@ -360,7 +360,7 @@
 		    $.each(data, function(data, obj){
 		    	var mean = (parseInt(obj.speak_accuracy) + parseInt(obj.lip_accuracy))/2;
 		    	view+="<tr>"
-				view+="<td colspan='3' id='list55' style='font-size:x-large; text-align:center;'><b style='color:black;'>";
+				view+="<td colspan='3' id='list55' style='font-size:x-large; text-align:center;padding: 0px 15px 0px 0px;border-bottom: none;'><b style='color:black;'>";
 				view+= obj.content;
 				view+=" </b></td><td style='text-align:center; font-size: large;'>"; 
 				//view+="발음 점수 : ";

@@ -160,14 +160,26 @@
                         <article class="hero__slide swiper-slide" style="background: #fc965a; background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/back222.png');">
                             <div class="hero__entry-image" style="background:#fc965a; background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/back222.png');"></div>
                             <div class="hero__entry-text">
-                                <div class="hero__entry-text-inner" style="width: 798px; padding-left:8px; padding-right:8px;padding-top:15px;">
+                                <div class="hero__entry-text-inner" style="width: 798px; padding-left:8px; padding-right:8px;padding-top:15px;
+                                min-width:614px; min-height:832px;">
                                 
    
+<<<<<<< HEAD
            
          <!--  loginform...........................----------------------------------------->
                    	
                    
                         <div id="main">
+=======
+           	
+         <!--  loginform...........................----------------------------------------->
+                        <div id="main">
+                   <div id="loadingd" style="position:absolute; margin-top:300px; width:100%; display:none; height:832px;">
+		
+            <img id="limg" style="m;"
+            src="${pageContext.request.contextPath}/resources/images/1484.gif" alt="분석 중..."  >
+		</div>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
                                     <div id="hero__entry-meta">
                                     
                                     <%-- <div id="loadingd" style="position:absolute; margin-top:300px; width:100%;">
@@ -371,7 +383,10 @@
         </section> <!-- end s-content -->
         
         
+<<<<<<< HEAD
        
+=======
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
 
         <!-- # site-footer
         ================================================== -->

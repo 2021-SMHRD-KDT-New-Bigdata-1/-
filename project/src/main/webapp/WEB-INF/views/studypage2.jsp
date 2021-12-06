@@ -163,9 +163,13 @@
                                 <div class="hero__entry-text-inner" style="width: 798px; padding-left:8px; padding-right:8px;padding-top:15px;">
                                 
    
-           
+           	<div id="loadingd" style="position:absolute; margin-top:300px; width:100%;">
+		
+            <img id="limg" style="m"
+            src="${pageContext.request.contextPath}/resources/images/1484.gif" alt="분석 중..."  >
+		</div>
          <!--  loginform...........................----------------------------------------->
-                    
+                   
                         <div id="main">
                                     <div id="hero__entry-meta">
                                         <span class="cat-links" style="font-size:20px; color: dimgray; font-weight: 500;}">
@@ -392,7 +396,7 @@
 		}
 		function Loading(){
 			if($("#loadingd").css("display")=="none"){
-				$(".study2table").css("display","none")
+				$(".study2table").css("display","none");
 				$("#loadingd").css("display","block");
 			}else{
 				

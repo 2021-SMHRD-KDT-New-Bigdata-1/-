@@ -21,7 +21,7 @@
    href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
 <script
    src="${pageContext.request.contextPath}/resources/assets/js/Chart.js"></script>
-<link href="${pageContext.request.contextPath}/resources/css/styles.css"
+<link href="${pageContext.request.contextPath}/resources/css/styles_mypage.css"
    rel="stylesheet" type="text/css">
 <link rel="stylesheet"
    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -303,8 +303,8 @@ function back(){
          <div class="container">
             <div class="row" style="margin-left: -20px;margin-top: 32px; margin-top:40px;">
             <c:if test="${pron_acc != null }">
-            <div style="position:absolute; top:634px; left:188px;">${(pron_acc[0].sp_good_acc/5)*100}%</div>
-            <div style="position:absolute; top:634px; left:514px;">${(pron_acc[0].lip_good_acc/5)*100}%</div>
+            <div style="position:absolute; top:594px; left:188px;">${(pron_acc[0].sp_good_acc/5)*100}%</div>
+            <div style="position:absolute; top:594px; left:514px;">${(pron_acc[0].lip_good_acc/5)*100}%</div>
                 </c:if>
                 <select id="my_select" style="margin-left:auto; margin-right:auto; text-align:center;"
                 onchange="Step_Result_wo(this.options[this.selectedIndex].value)" >
@@ -457,13 +457,13 @@ function back(){
                      <div class="panel-body"  style="margin:0px; padding:0px;">
                                         <table>
                      <tr>
-                    <td style="padding-left:30px; font-weight:bold; font-size:17px;">취약단어</td>
-                    <td style="position:absolute; right:120px; font-weight:bold; font-size:17px;">정확도</td>
+                    <td style="text-align:center; padding-left:30px; font-weight:bold; font-size:17px;">취약단어</td>
+                    <td style="text-align:center; font-weight:bold; font-size:17px; float:right; padding-right:150px;">정확도</td>
                     </tr>
                      <c:forEach var="test" items="${test }" varStatus="satus">
                      <tr>
-                       <td onclick="syl_weakstudy(${test.id})" style="padding-left:20px;">단어 :${test.content }</td>
-                    <td style="position:absolute; right:60px;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy }" pattern="" />%
+                       <td onclick="syl_weakstudy(${test.id})" style="text-align:center;">${test.content }</td>
+                    <td style="text-align:center; float:right; padding-right:100px;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy }" pattern="" />%
                        입모양 :<fmt:formatNumber value="${test.lip_accuracy }" pattern="" />%
                     </td>
                     

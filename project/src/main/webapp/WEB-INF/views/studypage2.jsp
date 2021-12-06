@@ -163,15 +163,18 @@
                                 <div class="hero__entry-text-inner" style="width: 798px; padding-left:8px; padding-right:8px;padding-top:15px;">
                                 
    
-           	<div id="loadingd" style="position:absolute; margin-top:300px; width:100%;">
-		
-            <img id="limg" style="m"
-            src="${pageContext.request.contextPath}/resources/images/1484.gif" alt="분석 중..."  >
-		</div>
+           
          <!--  loginform...........................----------------------------------------->
+                   	
                    
                         <div id="main">
                                     <div id="hero__entry-meta">
+                                    
+                                    <%-- <div id="loadingd" style="position:absolute; margin-top:300px; width:100%;">
+		
+            <img id="limg"
+            src="${pageContext.request.contextPath}/resources/images/1484.gif" alt="분석 중..."  >
+		</div> --%>
                                         <span class="cat-links" style="font-size:20px; color: dimgray; font-weight: 500;}">
                                                <!-- 여기에..들어가볼까? -->
                                            Step<%=day%> (${cnt+1}/5)
@@ -210,7 +213,9 @@
                      <c:if test="${status.index eq cnt}">
                         <!-- 음절/단어의 경우 비디오 소스 -->
                         <c:if test="${list.id<1000}">
-                           <video
+                        <img id="limg"
+            				src="${pageContext.request.contextPath}/resources/images/1484.gif" alt="분석 중..."  >
+                           <video id="vidid"
                            controls playsinline width="350" style="width:600px; height:400px;">
                            
                               <c:choose>
@@ -296,7 +301,7 @@
                         <label for="cameraInput"> 
                            <a class="cameraInput"><i id="mic" class="fas fa-microphone-alt fa-2x"></i></a>
                            <input type="file" id="cameraInput" name="file" accept="video/*" capture="user" onclick='vdclickFn()'/>
-                            <button type="submit" class="cameraInput" onclick="Loading();"><i id="analysis"class="fas fa-chart-pie fa-2x"></i></button>
+                            <button type="submit" class="cameraInput"><i id="analysis"class="fas fa-chart-pie fa-2x" onclick="Loading();"></i></button>
                   		 </label>
                        
                        
@@ -366,12 +371,7 @@
         </section> <!-- end s-content -->
         
         
-       	<div id="loadingd" style="position:absolute; margin-top:300px; width:100%;">
-		
-            <img id="limg" style="m"
-            src="${pageContext.request.contextPath}/resources/images/1484.gif" alt="분석 중..."  >
-		</div>
-
+       
 
         <!-- # site-footer
         ================================================== -->
@@ -396,7 +396,7 @@
 		}
 		function Loading(){
 			if($("#loadingd").css("display")=="none"){
-				$(".study2table").css("display","none");
+				$("#vidid").css("display","none");
 				$("#loadingd").css("display","block");
 			}else{
 				

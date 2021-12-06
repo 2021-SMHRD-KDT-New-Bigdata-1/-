@@ -1,37 +1,35 @@
+<%@page import="java.net.URLDecoder"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js" >
 <head>
-<meta charset="euc-kr">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://kit.fontawesome.com/6d7bf23579.js"
-	crossorigin="anonymous"></script>
-<!--이모티콘-->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--이모티콘-->
-<title>study</title>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>study</title>
 
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- CSS
+    ================================================== -->
+<link href="${pageContext.request.contextPath}/resources/css/vendor.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
+
+<!--이모티콘-->
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
-<noscript>
-	<link rel="stylesheet"
-		href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" />
-</noscript>
+   href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/6d7bf23579.js"
+   crossorigin="anonymous"></script>
+<!--이모티콘-->
 <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
 	integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
 	crossorigin="anonymous"></script>
@@ -43,58 +41,24 @@
 	rel="stylesheet">
 <script
 	src="https://unpkg.com/@silvermine/videojs-quality-selector/dist/js/silvermine-videojs-quality-selector.min.js"></script>
-<!-- 상단바 뒤로가기 버튼 화살표  -->
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-	integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-	crossorigin="anonymous" />
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<!-- 상단바 뒤로가기 버튼 화살표  -->
 
-<style>
-.btn-default {
-	background-color: #ff8040;
-	width: 80px;
-	color: white;
-	border-radius: 15px;
-}
 
-.is-preload {
-	background-color: #f2f2f2;
-}
+    <!-- favicons
+    ================================================== -->
+<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon" sizes="180x180" href="${pageContext.request.contextPath}/resources/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="${pageContext.request.contextPath}/resources/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/images/favicon-16x16.png.png">
+    <link rel="manifest" href="site.webmanifest">
+<script src="http://code.jquery.com/jquery-latest.js"></script> 
+<script> <%--
+	window.onload = function(){
+		alert("로딩은 되냐 ?");
+		$(".cameraInput2").css("display","none");
+	} --%>
 
-.word1 {
-	background-color: #ff8040;
-	height: 45px;
-}
-
-table {
-	width: 100%;
-	height: 95%;
-	border: 2px solid;
-	border-collapse: seperate !important;
-	border-radius: 10px;
-	border-style: hidden;
-	box-shadow: #f2c587;
-}
-
-video {
-	width: 100%;
-	height: 350px;
-}
-.weakpro{
-	
-	float: right;
-	font-weight: 700;
-	margin-top: 7px;
-	margin-right: 70px;
-	font-size:x-large;
-	color: white;
-	font
-}
-
-</style>
+   
+</script>
 <!-- flask -->
 <script type="text/javascript"
 	src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js">
@@ -109,16 +73,12 @@ video {
 						"src", window.URL.createObjectURL(this.files[0]));
 			});
 </script>
-<!-- flask close -->
 
 </head>
-<body class="is-preload">
 
-	<!-- Wrapper -->
 
-	<!-- Header -->
-
-	<div class="word1"><p class="weakpro"><c:choose>
+<body id="top" class="is-preload" id="is-preload">
+<%-- 	<div class="word1"><p class="weakpro"><c:choose>
 			<c:when test="${fn:length(list.content)==1}" >
 			취약음절
 			</c:when>
@@ -133,28 +93,119 @@ video {
 		
 		<h3 class="stage_nm">${day}</h3>
 
-	</div>
+	</div> --%>
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 
 
-	<!----table ----->
-
-	<div class="word">
-
-
-		
-		<!--<c:set var="i" value="${i+1}" />-->
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap ss-home">
 
 
+        <!-- # site header 
+        ================================================== -->
+        <header id="masthead" class="s-header">
+
+            <div class="s-header__branding">
+                <p class="site-title">
+                    <a href="main.do" rel="home" style="color: black; font-size: x-large; margin-left: 570px; font-family: var(--font-2);" >Allbareum</a>
+                </p>
+            </div>
+
+            <div class="row s-header__navigation">
+
+                <nav class="s-header__nav-wrap">
+    
+                    <h3 class="s-header__nav-heading">Navigate to</h3>
+    
+                    <ul class="s-header__nav">
+                        <li class="current-menu-item"><a href="index.html" title="">Home</a></li>
+                        <li class="has-children">
+                            <a href="#0" title="" class="">Categories</a>
+                            <ul class="sub-menu">
+                                <li><a href="category.html">Design</a></li>
+                                <li><a href="category.html">Lifestyle</a></li>
+                                <li><a href="category.html">Inspiration</a></li>
+                                <li><a href="category.html">Work</a></li>
+                                <li><a href="category.html">Health</a></li>
+                                <li><a href="category.html">Photography</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="#0" title="" class="">Blog</a>
+                            <ul class="sub-menu">
+                                <li><a href="single-standard.html">Standard Post</a></li>
+                                <li><a href="single-video.html">Video Post</a></li>
+                                <li><a href="single-audio.html">Audio Post</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="styles.html" title="">Styles</a></li>
+                        <li><a href="about.html" title="">About</a></li>
+                        <li><a href="contact.html" title="">Contact</a></li>
+                    </ul> <!-- end s-header__nav -->
+
+                </nav> <!-- end s-header__nav-wrap -->
+    
+            </div> <!-- end s-header__navigation -->
+
+            <div class="s-header__search">
+
+                <div class="s-header__search-inner">
+                    <div class="row">
+    
+                        <form role="search" method="get" class="s-header__search-form" action="#">
+                            <label>
+                                <span class="u-screen-reader-text">Search for:</span>
+                                <input type="search" class="s-header__search-field" placeholder="Search for..." value="" name="s" title="Search for:" autocomplete="off">
+                            </label>
+                            <input type="submit" class="s-header__search-submit" value="Search"> 
+                        </form>
+    
+                        <a href="#0" title="Close Search" class="s-header__search-close">Close</a>
+    
+                    </div> <!-- end row -->
+                </div> <!-- s-header__search-inner -->
+    
+            </div> <!-- end s-header__search -->
+
+        
+
+        </header> <!-- end s-header -->
 
 
-		<div class="studycolor"></div>
-		
-		<c:set var="one" value="$" />
-		
-		<div class="studycolor">
-			
-		</div>
-		<table class="study2table">
+        <!-- # site-content
+        ================================================== -->
+        <section id="content" class="s-content">
+
+
+            <!-- hero -->
+            <div class="hero">
+
+                <div class="hero__slider swiper-container">
+
+                    <div class="swiper-wrapper">
+                        <article class="hero__slide swiper-slide" style="background: #fc965a; background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/back222.png');">
+                            <div class="hero__entry-image" style="background:#fc965a; background-image: url('${pageContext.request.contextPath}/resources/images/thumbs/featured/back222.png');"></div>
+                            <div class="hero__entry-text">
+                                <div class="hero__entry-text-inner" style="width: 798px; padding-left:8px; padding-right:8px;padding-top:15px;">
+                                
+   
+           
+         <!--  loginform...........................----------------------------------------->
+                    
+                        <div id="main">
+                                    <div id="hero__entry-meta">
+                                        <span class="cat-links" style="font-size:20px; color: dimgray; font-weight: 500;}">
+			<table class="study2table" >
 			<thead>
 
 				<tr>
@@ -194,20 +245,6 @@ video {
 								
 								<input type="text" id="h_cnt" name="h_cnt" value="${cnt}"> 
 								
-<%-- 								<c:choose>
-									<c:when test="${fn:length(list.content)==1}" >
-										<input type="text" id="h_cate" name="h_cate" value="1">
-									</c:when>
-									<c:when test="${fn:length(list.content)>1 and fn:length(list.content)<6}" >
-										<input type="text" id="h_cate" name="h_cate" value="2">
-									</c:when>
-									<c:otherwise>
-										<input type="text" id="h_cate" name="h_cate" value="3">
-									</c:otherwise>
-								</c:choose> --%>
-
-
-			
   
 								<input type="hidden" class="cameraInput1" value="" placeholder="첨부파일"> 
 									<label for="cameraInput"> <i class="fas fa-microphone-alt fa-2x"></i>
@@ -236,13 +273,73 @@ video {
 			</tbody>
 
 		</table>
-		<br>
+                                  
+                                  
+                                  
+                                        </span>
+                                </div>
+                                    
+                             <c:if test="${vo!=null }">
+                   
+                                    
+                             </c:if>
+                               
+              <!--  loginform close...........................------------------------------------>     
+                            </div>
+                        </article>
+                        <article class="hero__slide swiper-slide">
+                            <div class="hero__entry-image" style="background-image: url(/web/resources/images/thumbs/featured/back22.png);" ></div>
+                            <div class="hero__entry-text">
+                                <div class="hero__entry-text-inner" style="width: 798px;padding-left:8px;padding-right:8px;">
+                                    <div class="hero__entry-meta">
+                                        <span class="cat-links">
+                                            <a style="font-weight:700;">ALL BAREUM</a>
+                                        </span>
+                                    </div>
+                                    <h2 class="hero__entry-title">
+                              <!--style="font-family: GmarketSansBold; font-size:x-large;"  -->
+                              <p class="hero__entry-desc" style="font-family: GmarketSansBold; font-size:large;" > - 입 모양 인식을 통한 바른 입 모양 교정 </p>
+                                        <p class="hero__entry-desc" style="font-family: GmarketSansBold; font-size:large;" > - 음성 인식을 통한 발음 정확도 교정   </p>
+                                        
+                                        <p style="font-family: NanumSquareExtraBold; font-size:xx-large;">정확한 입모양/발음 교정,</p> 
+                                        <p style="font-family: NanumSquareExtraBold; font-size:x-large; font-weight:500;">올바름이 함께 하겠습니다.</p>
+                              
+                                       
+                                    </h2>
+                                    
+                                 
+                                    
+                                </div>
+                            </div>
+                        </article>
+                     
+                    </div> <!-- swiper-wrapper -->
 
-	</div>
+                    <div class="swiper-pagination"></div>
+    
+                </div> <!-- end hero slider -->
 
-	<!-- table 끝읏 -->
+               
 
-	<!-- Scripts -->
+            </div> <!-- end hero -->
+
+
+            <!--  masonry -->
+            
+        </section> <!-- end s-content -->
+
+
+        <!-- # site-footer
+        ================================================== -->
+        
+
+
+    <!-- Java Script
+    ================================================== -->
+
+    <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -250,12 +347,15 @@ video {
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script>
-		
+<script>
+//    function vdclickFn(){
+//    	alert("클릭 인식은 되냐 ?");
+//    	$(".cameraInput2").css("display","block");
+//    	$(".cameraInput").css("display","none");
+//    }
 		function back1(cate) {
 			location.href = "studyhome.do?cate=" + cate;
 		}
-
-	</script>
+</script>
 </body>
 </html>

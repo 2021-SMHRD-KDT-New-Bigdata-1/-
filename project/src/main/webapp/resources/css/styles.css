@@ -4333,11 +4333,13 @@ button#btnexit {
 /* 여기서부터 복습페이지 수정--------------------------------*/
 
 .weak_a {
-    
-    border: 2px solid orange;
-    padding: 8px 8px 8px 8px;
+    border: 2px solid #fc965a;
+    background: #fc965a;
+    color: white;
+    padding: 10px 30px;
     border-radius: 15px;
     font-weight: bold;
+
 }
 
 

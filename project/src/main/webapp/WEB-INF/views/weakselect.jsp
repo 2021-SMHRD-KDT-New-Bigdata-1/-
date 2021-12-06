@@ -230,11 +230,12 @@
 													<table style="width: 100%;">
 														<tr>
 															<td style="text-align: center;"><a class="weak_a" style=" border: 2px solid orange; padding: 10px 30px;border-radius: 15px;font-weight: bold;"
-																onclick="Syl_weak();">음절</a></td>
-															<td style="text-align: center;"><a class="weak_a" style=" border: 2px solid orange; padding: 10px 30px;border-radius: 15px;font-weight: bold;"
-																onclick="Word_weak();">단어</a></td>
-															<td style="text-align: center;"><a class="weak_a" style=" border: 2px solid orange; padding: 10px 30px;border-radius: 15px;font-weight: bold;"
-																onclick="Sen_weak();">문장</a></td>
+																onclick="Syl_weak();">음절</a>
+																<a class="weak_a" style=" border: 2px solid orange; padding: 10px 30px;border-radius: 15px;font-weight: bold;"
+																onclick="Word_weak();">단어</a>
+																<a class="weak_a" style=" border: 2px solid orange; padding: 10px 30px;border-radius: 15px;font-weight: bold;"
+																onclick="Sen_weak();">문장</a>
+																</td>
 														</tr>
 													</table>
 												</div>
@@ -246,7 +247,7 @@
 														<table>
 															<tr
 																style="width: 100%; border-bottom: 1px solid lightgray;">
-																<td style="text-align: center; font-size: 20px; font-weight: bold;">취약단어</td>
+																<td style="text-align: center; font-size: 20px; font-weight: bold; width:40%">취약단어</td>
 																<td style="text-align: center; font-size: 20px; font-weight: bold;">정확도</td>
 															</tr>
 															<c:forEach var="list" items="${list}" varStatus="status">
@@ -254,15 +255,15 @@
 																<tr style="width: 100%;">
 																	<c:choose>
 																		<c:when test="${list.num  < 200 && list.num>=0}">
-																			<td style="text-align: center;"
+																			<td style="text-align: center; width:40%"
 																				onclick="syl_weakstudy(${list.id})">${list.content }</td>
 																		</c:when>
 																		<c:when test="${list.num < 500 && list.num > 200}">
-																			<td style="text-align: center;"
+																			<td style="text-align: center; width:40%"
 																				onclick="sen_weakstudy(${list.id})">${list.content }</td>
 																		</c:when>
 																		<c:when test="${list.num < 1500 && list.num > 500}">
-																			<td style="text-align: center;"
+																			<td style="text-align: center; width:40%"
 																				onclick="word_weakstudy(${list.id})">${list.content }</td>
 																		</c:when>
 																	</c:choose>

@@ -195,7 +195,7 @@ footer {
 	font-size: 1rem;
     font-weight: bolder;
     text-align: center;
-    color: dimgray;
+    color: black;
     /* border: 1px solid #ff8040; */
     border-right: 1px solid darkgray;
     border-left: 1px solid darkgray;
@@ -310,8 +310,8 @@ function back(){
          <div class="container">
             <div class="row" style="margin-left: auto; margin-right:auto; margin-top:40px;">
             <c:if test="${pron_acc != null }">
-            <div style="position:absolute; top:625px;  left:206px; font-weight:bold;">${(pron_acc[0].sp_good_acc/5)*100}%</div>
-            <div style="position:absolute; top:625px;  left:480px; font-weight:bold;">${(pron_acc[0].lip_good_acc/5)*100}%</div>
+            <div style="position:absolute; top:625px;  left:190px; font-weight:bold;">${(pron_acc[0].sp_good_acc/5)*100}%</div>
+            <div style="position:absolute; top:625px;  left:518px; font-weight:bold;">${(pron_acc[0].lip_good_acc/5)*100}%</div>
                 </c:if>
                 <select id="my_select" style="margin-left:auto; margin-right:auto; text-align:center;"
                 onchange="Step_Result_wo(this.options[this.selectedIndex].value)" >
@@ -464,8 +464,8 @@ function back(){
                      <div class="panel-body"  style="margin:0px; padding:0px;">
                                         <table>
                      <tr>
-                    <td style="text-align:center; font-weight:bold; font-size:15px; width:50%; text-decoration: underline; text-underline-position: under;">취약음절</td>
-                    <td style="text-align:center; font-weight:bold; font-size:15px; width:50%; text-decoration: underline; text-underline-position: under;">정확도</td>
+                    <td style="text-align:center; font-weight:bold; color:black; font-size:15px; width:50%; text-decoration: underline; text-underline-position: under;">취약음절</td>
+                    <td style="text-align:center; font-weight:bold; color:black; font-size:15px; width:50%; text-decoration: underline; text-underline-position: under;">정확도</td>
                     </tr>
                      <c:forEach var="test" items="${test }" varStatus="satus">
                      <tr>

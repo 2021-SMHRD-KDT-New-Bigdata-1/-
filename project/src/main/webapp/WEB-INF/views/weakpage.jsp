@@ -229,7 +229,7 @@
          <tbody>
             <tr>
                <td class="studycolor2"
-                  style="text-align: center; vertical-align: middle;">
+                  style="text-align: center; vertical-align: middle; padding-top:10px; background: white;">
                   <video controls autoplay width="350;" style="width:600px; height:400px;">
 
 					<c:choose>
@@ -254,11 +254,11 @@
             </tr>
             <tr>
                <td class="studycolor2"
-                  style="text-align: center; font-size: large;">발음해보세요</td>
+                  style="text-align: center; font-size: large;font-family: GowunDodum-Regular; ">발음해보세요</td>
             </tr>
             <tr>
                <td class="cameraInput"
-                  style="text-align: center; vertical-align: middle;">
+                  style="text-align: center; vertical-align: middle; background-color:rgb(249, 250, 251);">
 
 
                      <form action="http://211.223.106.113:5000/dlModel" method="POST"

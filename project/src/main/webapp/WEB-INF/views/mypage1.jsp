@@ -89,6 +89,7 @@ select { -
    border: 1px solid transparent;
    transition: all .3s ease-in-out;
    border-radius: var(- -border-radius);
+   text-align:center;
 }
 
 * .is-preload.alt {
@@ -310,8 +311,8 @@ function back(){
          <div class="container">
             <div class="row" style="margin-left: auto; margin-right:auto; margin-top:40px;">
             <c:if test="${pron_acc != null }">
-            <div style="position:absolute; top:625px;  left:190px; font-weight:bold;">${(pron_acc[0].sp_good_acc/5)*100}%</div>
-            <div style="position:absolute; top:625px;  left:518px; font-weight:bold;">${(pron_acc[0].lip_good_acc/5)*100}%</div>
+            <div style="position:absolute; top:59.9%;  left:26.8%; font-weight:bold;">${(pron_acc[0].sp_good_acc/5)*100}%</div>
+            <div style="position:absolute; top:59.9%;  right:26.4%; font-weight:bold;">${(pron_acc[0].lip_good_acc/5)*100}%</div>
                 </c:if>
                 <select id="my_select" style="margin-left:auto; margin-right:auto; text-align:center;"
                 onchange="Step_Result_wo(this.options[this.selectedIndex].value)" >

@@ -330,7 +330,7 @@
                         <article class="hero__slide swiper-slide">
                             <div class="hero__entry-image" style="background-image: url(/web/resources/images/thumbs/featured/back22.png);" ></div>
                             <div class="hero__entry-text">
-                                <div class="hero__entry-text-inner" style="width: 798px;padding-left:8px;padding-right:8px;">
+                                <div class="hero__entry-text-inner" style="width: 80%;padding-left:8px;padding-right:8px;">
                                     <div class="hero__entry-meta">
                                         <span class="cat-links">
                                             <a style="font-weight:700;">ALL BAREUM</a>

@@ -222,12 +222,12 @@
                                  </c:when>
                                  <c:when test="${list.id<100}">
                                     <source
-                                    src= "${pageContext.request.contextPath}/resources/images/show_video/00${list.id}/train/00${list.id}_M047_C.mp4"
+                                    src= "${pageContext.request.contextPath}/resources/images/show_video/00${list.id}/train/00${list.id}_M021_C.mp4"
                                     type="video/mp4">
                                  </c:when>
                                  <c:otherwise>
                                     <source
-                                    src= "${pageContext.request.contextPath}/resources/images/show_video/0${list.id}/train/0${list.id}_M047_C.mp4"
+                                    src= "${pageContext.request.contextPath}/resources/images/show_video/0${list.id}/train/0${list.id}_M021_C.mp4"
                                     type="video/mp4">
                                  </c:otherwise>
                               </c:choose>

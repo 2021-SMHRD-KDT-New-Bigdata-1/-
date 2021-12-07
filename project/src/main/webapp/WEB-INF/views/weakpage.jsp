@@ -232,9 +232,23 @@
                   style="text-align: center; vertical-align: middle;">
                   <video controls autoplay width="350;" style="width:600px; height:400px;">
 
-                     <source
-                        src="${pageContext.request.contextPath}/resources/images/show_video/003_51_C.mp4"
-                        type="video/mp4">
+					<c:choose>
+                                 <c:when test="${list.id<10}">
+                                     <source 
+                                    src= "${pageContext.request.contextPath}/resources/images/show_video/000${list.id}/train/000${list.id}_M047_C.mp4"
+                                    type="video/mp4">
+                                 </c:when>
+                                 <c:when test="${list.id<100}">
+                                    <source
+                                    src= "${pageContext.request.contextPath}/resources/images/show_video/00${list.id}/train/00${list.id}_M021_C.mp4"
+                                    type="video/mp4">
+                                 </c:when>
+                                 <c:otherwise>
+                                    <source
+                                    src= "${pageContext.request.contextPath}/resources/images/show_video/0${list.id}/train/0${list.id}_M021_C.mp4"
+                                    type="video/mp4">
+                                 </c:otherwise>
+                              </c:choose>
 
                   </video></td>
             </tr>

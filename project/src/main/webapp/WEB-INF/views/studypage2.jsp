@@ -27,7 +27,6 @@
     <!-- CSS
     ================================================== -->
 <link href="${pageContext.request.contextPath}/resources/css/vendor.css" rel="stylesheet" type="text/css">
-<link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" type="text/css">
 
 <!--이모티콘-->
 <link rel="stylesheet"
@@ -297,8 +296,8 @@
                         <label for="cameraInput"> 
                            <a class="cameraInput"><i id="mic" class="fas fa-microphone-alt fa-2x"></i></a>
                            <input type="file" id="cameraInput" name="file" accept="video/*" capture="user" onclick='vdclickFn()'/>
-                            <button type="submit" class="cameraInput" onclick="Loading();"><i id="analysis"class="fas fa-chart-pie fa-2x"></i></button>
                   		 </label>
+                            <button type="submit" class="cameraInput" onclick="Loading();"><i id="analysis"class="fas fa-chart-pie fa-2x"></i></button>
                        
                        
                         <p id='vdcheck' style="margin-bottom: 10px; line-height:1px; font-size:small;">&nbsp;</p>

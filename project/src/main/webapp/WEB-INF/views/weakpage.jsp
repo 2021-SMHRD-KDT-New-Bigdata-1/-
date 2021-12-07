@@ -217,7 +217,7 @@
             <tr>
                 <td class="studycolor2"
                   style="text-align: center; font-family: GowunDodum-Regular; font-size: large;">
-                     <h2>${list.content }</h2>
+                     <h2 style="margin-top:10px; margin-bottom:0px; font-family: GowunDodum-Regular; font-size: xx-large;">${list.content}</h2>
                      <c:if test="${list.id<1000}">
                      [${list.pron }]
                      </c:if>

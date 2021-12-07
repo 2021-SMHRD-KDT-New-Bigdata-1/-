@@ -178,7 +178,7 @@
 	    FROM tbl_syllable AS s
 		JOIN tbl_syllable_test AS t
 		ON t.num = s.num
-		WHERE t.user_id = #{id}
+		WHERE t.user_id = #{id} and t.weak='y'
 		order by s.study_date;
 	</select>
 	<select id="Word_weak" parameterType="String" resultType="kr.hong.domain.Test">
@@ -187,14 +187,14 @@
 		JOIN tbl_word_test AS t
 		ON t.num = s.num
 		WHERE t.user_id = #{id}
-		order by s.study_date;
+		order by s.study_date; and t.weak='y'
 	</select>
 	<select id="Sen_weak" parameterType="String" resultType="kr.hong.domain.Test">
 	    SELECT s.content, t.speak_accuracy, t.weak, t.lip_accuracy, t.num, s.id
 	    FROM tbl_sentence AS s
 		JOIN tbl_sentence_test AS t
 		ON t.num = s.num
-		WHERE t.user_id = #{id}
+		WHERE t.user_id = #{id} and t.weak='y'
 		order by s.study_date;
 	</select>
 	

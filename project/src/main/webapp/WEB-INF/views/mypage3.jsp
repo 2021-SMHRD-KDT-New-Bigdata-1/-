@@ -464,7 +464,7 @@ function back(){
                </div>
                <div class="col-12-small" style="width: 100%; min-width: 349.5px; margin-top: 20px;">
                   <div class="panel panel-primary">
-                     <div id="chart_title">취약음절</div>
+                     <div id="chart_title">부족한 음절</div>
                      <div class="panel-body"  style="margin:0px; padding:0px;">
                                         <table>
                      <tr>

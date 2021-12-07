@@ -4258,6 +4258,13 @@ td.results {
     border: none;
     color: #6b6968;
 }
+.send_8{
+	width: 92px;
+    height: 59px;
+    background-color: white;
+    border: none;
+    color: #6b6968;
+}
 
 i#mic {
     border: 2px solid white;
@@ -4371,12 +4378,12 @@ button#btnexit {
 /*finalresult 테이블 따로 조건주기*/
 table.study2table {
     border-width: 0;
-    width: 615px;
     max-width: 110%;
     font-family: var(--font-1);
     /* border-collapse: collapse; */
     margin-left: -10px;
 }
+
 
 
 /* 여기서부터 안쪽 div css수정 끄으읏--------------------------------*/
@@ -4894,6 +4901,8 @@ table.study2table {
         width  : 4.8rem;
     }
 }
+
+
 
 @media screen and (max-width: 400px) {
     .s-footer {

@@ -163,7 +163,7 @@ function login() {
 								</div>
 								<div id="main">
 									<span class="cat-links">${vo.user_name }님</span>
-									<div><h2 class="hero_entry-title" style="margin-top: 5px;">원하는 학습을 선택하세요.</h2></div>
+									<div><h2 class="hero_entry-title" style="margin-top: 5px;">원하는 학습을<br> 선택하세요.</h2></div>
 								    <div id="btngroup" >
                                        <button id="btnselect" onclick="studyhome(1)">음절 (Syllable)</button>
                                     </div>

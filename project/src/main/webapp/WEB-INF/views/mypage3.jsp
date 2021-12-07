@@ -464,17 +464,17 @@ function back(){
                </div>
                <div class="col-12-small" style="width: 100%; min-width: 349.5px; margin-top: 20px;">
                   <div class="panel panel-primary">
-                     <div id="chart_title">부족한 음절</div>
+                     <div id="chart_title">부족한 문장</div>
                      <div class="panel-body"  style="margin:0px; padding:0px;">
                                         <table>
                      <tr>
-                    <td style="text-align:center; font-weight:bold; color:black; font-size:15px; width:50%; text-decoration: underline; text-underline-position: under;">취약음절</td>
+                    <td style="text-align:center; font-weight:bold; color:black; font-size:15px; width:50%; text-decoration: underline; text-underline-position: under;">부족한 문장</td>
                     <td style="text-align:center; font-weight:bold; color:black; font-size:15px; width:50%; text-decoration: underline; text-underline-position: under;">정확도</td>
                     </tr>
                      <c:forEach var="test" items="${test }" varStatus="satus">
                      <tr>
                        <td onclick="sen_weakstudy(${test.id})" style="text-align:center;">${test.content }</td>
-                    <td style="text-align:center;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy }" pattern="" />%
+                    <td style="text-align:center;">발음 :<fmt:formatNumber value="${test.speak_accuracy }" pattern="" />%
                        입모양 :<fmt:formatNumber value="${test.lip_accuracy }" pattern="" />%
                     </td>
                     

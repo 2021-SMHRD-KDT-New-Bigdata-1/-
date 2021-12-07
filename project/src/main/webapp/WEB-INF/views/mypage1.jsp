@@ -469,13 +469,13 @@ function back(){
                      <div class="panel-body"  style="margin:0px; padding:0px;">
                                         <table>
                      <tr>
-                    <td style="text-align:center; font-weight:bold; color:black; font-size:15px; width:50%; text-decoration: underline; text-underline-position: under;">취약음절</td>
+                    <td style="text-align:center; font-weight:bold; color:black; font-size:15px; width:50%; text-decoration: underline; text-underline-position: under;">부족한 음절</td>
                     <td style="text-align:center; font-weight:bold; color:black; font-size:15px; width:50%; text-decoration: underline; text-underline-position: under;">정확도</td>
                     </tr>
                      <c:forEach var="test" items="${test }" varStatus="satus">
                      <tr>
                        <td onclick="syl_weakstudy(${test.id})" style="text-align:center;">${test.content }</td>
-                    <td style="text-align:center;">발음모양 :<fmt:formatNumber value="${test.speak_accuracy }" pattern="" />%
+                    <td style="text-align:center;">발음 :<fmt:formatNumber value="${test.speak_accuracy }" pattern="" />%
                        입모양 :<fmt:formatNumber value="${test.lip_accuracy }" pattern="" />%
                     </td>
                     

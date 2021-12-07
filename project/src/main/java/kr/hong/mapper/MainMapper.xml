@@ -186,8 +186,8 @@
 	    FROM tbl_word AS s
 		JOIN tbl_word_test AS t
 		ON t.num = s.num
-		WHERE t.user_id = #{id}
-		order by s.study_date; and t.weak='y'
+		WHERE t.user_id = #{id} and t.weak='y'
+		order by s.study_date
 	</select>
 	<select id="Sen_weak" parameterType="String" resultType="kr.hong.domain.Test">
 	    SELECT s.content, t.speak_accuracy, t.weak, t.lip_accuracy, t.num, s.id

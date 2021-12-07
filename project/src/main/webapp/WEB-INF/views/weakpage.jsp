@@ -246,22 +246,14 @@
                <td class="cameraInput"
                   style="text-align: center; vertical-align: middle;">
 
-<<<<<<< HEAD
+
                      <form action="http://211.223.106.113:5000/dlModel" method="POST"
                         enctype="multipart/form-data">
                         
                         <!-- type hidden으로 바꿔줄거 -->
                         
                   <input type="hidden" class="cameraInput" value="" placeholder="첨부파일" > 
-=======
-							<form action="http://211.223.106.113:5000/dlModel" method="POST"
-								enctype="multipart/form-data">
-								
-								<!-- type hidden으로 바꿔줄거 -->
-								
-						<input type="hidden" class="cameraInput" value="" placeholder="첨부파일" > 
-                       
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-1/Allbareum.git
+
                         <label for="cameraInput"> 
                            <a class="cameraInput"><i id="mic" class="fas fa-microphone-alt fa-2x"></i></a>
                            <input type="file" id="cameraInput" name="file" accept="video/*" capture="user" onclick='vdclickFn()'/>

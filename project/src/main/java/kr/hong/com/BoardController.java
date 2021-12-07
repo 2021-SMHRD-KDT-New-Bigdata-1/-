@@ -267,7 +267,7 @@ public class BoardController {
 			
 			
 			String weak="N";
-			if(Integer.parseInt(speak_accuracy) < 50 || Integer.parseInt(lip_accuracy) < 50) {weak="Y";}
+			if(Integer.parseInt(speak_accuracy) < 51 || Integer.parseInt(lip_accuracy) < 51) {weak="Y";}
 			
 			if(cate.equals("1")) {
 				//우선 내 id, num에 이미 학습한 데이터가 존재하는가? - select문 진행

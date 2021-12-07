@@ -291,11 +291,9 @@ video {
 
 
 
-								<input type="hidden" class="cameraInput1" value=""
-									placeholder="첨부파일" > <label for="cameraInput"> <i
-									class="fas fa-microphone-alt fa-2x"></i>
-								</label> <input type="file" id="cameraInput" name="file"
-									accept="video/*" capture="user" onclick='vdclickFn()'/>
+								<input type="hidden" class="cameraInput1" value=""placeholder="첨부파일" > 
+								<label for="cameraInput"> <i class="fas fa-microphone-alt fa-2x"></i></label> 
+								<input type="file" id="cameraInput" name="file" accept="video/*" capture="user" onclick='vdclickFn()'/>
 								<button type="submit" class="cameraInput" onclick="Loading();">분석</button>
 								<p id='vdcheck'>&nbsp;</p>
 								<!-- css 넣어주기,, button -->

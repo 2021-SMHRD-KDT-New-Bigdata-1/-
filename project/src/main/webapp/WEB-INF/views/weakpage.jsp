@@ -261,7 +261,7 @@
                   style="text-align: center; vertical-align: middle; background-color:rgb(249, 250, 251);">
 
 
-                     <form action="http://211.223.106.113:5000/dlModel" method="POST"
+                     <form action="http://192.168.209.151:5000/dlModel" method="POST"
                         enctype="multipart/form-data">
                         
                         <!-- type hidden으로 바꿔줄거 -->
